@@ -1,0 +1,3 @@
+Subtotal: 80.47
+Discount: 8.0470
+Payable: 72.42

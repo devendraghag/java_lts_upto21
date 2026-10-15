@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exception + Visibility Rules in Method Overriding</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #f7f8fa;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 14px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 30px;
+      border-bottom: 3px solid #111827;
+      padding-bottom: 10px;
+    }
+    h2 {
+      margin-top: 30px;
+      font-size: 22px;
+    }
+    h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .rule {
+      background: #f9fafb;
+      border-left: 5px solid #374151;
+      padding: 18px 20px;
+      margin: 18px 0;
+      border-radius: 8px;
+    }
+    ul {
+      margin: 8px 0 0 22px;
+    }
+    .ok { color: #15803d; font-weight: 700; }
+    .no { color: #b91c1c; font-weight: 700; }
+    code, pre {
+      font-family: Consolas, "Courier New", monospace;
+    }
+    pre {
+      background: #111827;
+      color: #f9fafb;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+    }
+    th, td {
+      border: 1px solid #d1d5db;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background: #f3f4f6;
+    }
+    .highlight {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      padding: 16px;
+      border-radius: 10px;
+      margin-top: 24px;
+    }
+    .memory {
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      padding: 16px;
+      border-radius: 10px;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Exception + Visibility Rules in Method Overriding</h1>
+
+    <div class="rule">
+      <h2>1. Parent method declares NO checked exception</h2>
+      <ul>
+        <li>Child method cannot introduce a checked exception <span class="no">❌</span></li>
+        <li>Child method can declare an unchecked exception <span class="ok">✅</span></li>
+        <li>Child method can declare no exception <span class="ok">✅</span></li>
+      </ul>
+    </div>
+
+    <div class="rule">
+      <h2>2. Parent method declares a checked exception</h2>
+      <ul>
+        <li>Child method can declare the same checked exception <span class="ok">✅</span></li>
+        <li>Child method can declare a narrower/subclass checked exception <span class="ok">✅</span></li>
+        <li>Child method can declare no exception <span class="ok">✅</span></li>
+        <li>Child method cannot declare a broader/superclass checked exception <span class="no">❌</span></li>
+        <li>Child method cannot introduce a new unrelated checked exception <span class="no">❌</span></li>
+        <li>Child method can declare an unchecked exception <span class="ok">✅</span></li>
+      </ul>
+    </div>
+
+    <div class="rule">
+      <h2>3. Parent method declares multiple checked exceptions</h2>
+      <ul>
+        <li>Child method can declare the same exceptions <span class="ok">✅</span></li>
+        <li>Child method can declare a subset of those exceptions <span class="ok">✅</span></li>
+        <li>Child method can declare narrower/subclass exceptions <span class="ok">✅</span></li>
+        <li>Child method can declare a combination of same + narrower exceptions <span class="ok">✅</span></li>
+        <li>Child method can declare no exception <span class="ok">✅</span></li>
+        <li>Child method cannot declare broader checked exceptions <span class="no">❌</span></li>
+        <li>Child method cannot introduce unrelated checked exceptions <span class="no">❌</span></li>
+      </ul>
+    </div>
+
+    <div class="rule">
+      <h2>4. Visibility / Access Modifier Rule</h2>
+      <ul>
+        <li>Child method can have the SAME visibility <span class="ok">✅</span></li>
+        <li>Child method can have WIDER / MORE accessible visibility <span class="ok">✅</span></li>
+        <li>Child method cannot have NARROWER / LESS accessible visibility <span class="no">❌</span></li>
+      </ul>
+
+      <h3>Visibility Order</h3>
+      <pre>private &lt; default (package-private) &lt; protected &lt; public</pre>
+
+      <h3>Examples</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Parent Visibility</th>
+            <th>Child Visibility</th>
+            <th>Allowed?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>protected</td><td>protected</td><td class="ok">✅</td></tr>
+          <tr><td>protected</td><td>public</td><td class="ok">✅</td></tr>
+          <tr><td>protected</td><td>default</td><td class="no">❌</td></tr>
+          <tr><td>protected</td><td>private</td><td class="no">❌</td></tr>
+
+          <tr><td>public</td><td>public</td><td class="ok">✅</td></tr>
+          <tr><td>public</td><td>protected</td><td class="no">❌</td></tr>
+          <tr><td>public</td><td>default</td><td class="no">❌</td></tr>
+          <tr><td>public</td><td>private</td><td class="no">❌</td></tr>
+
+          <tr><td>default</td><td>default</td><td class="ok">✅</td></tr>
+          <tr><td>default</td><td>protected</td><td class="ok">✅</td></tr>
+          <tr><td>default</td><td>public</td><td class="ok">✅</td></tr>
+          <tr><td>default</td><td>private</td><td class="no">❌</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight">
+      <h2>Important</h2>
+      <ul>
+        <li><code>private</code> methods cannot be overridden <span class="no">❌</span></li>
+        <li><code>private</code> methods are not inherited by the child class</li>
+        <li>A <code>default</code> / package-private method can be overridden only when the child class has access to it, typically when both classes are in the same package.</li>
+      </ul>
+    </div>
+
+    <div class="rule">
+      <h2>Golden Rule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>Allowed</th>
+            <th>Not Allowed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Checked Exception</td>
+            <td>Same, Narrower/Subclass, None</td>
+            <td>Broader/Superclass, Unrelated checked exception</td>
+          </tr>
+          <tr>
+            <td>Unchecked Exception</td>
+            <td>Allowed</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Visibility</td>
+            <td>Same, Wider</td>
+            <td>Narrower</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="memory">
+      <h2>Easy Memory Rule</h2>
+      <pre>Exception  → Same or Narrower
+Visibility → Same or Wider</pre>
+    </div>
+  </div>
+</body>
+</html>

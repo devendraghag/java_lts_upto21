@@ -1,0 +1,2 @@
+Student: Tester
+Rolling averages: [70.0, 80.0, 90.0]

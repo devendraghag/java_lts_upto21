@@ -1,0 +1,2 @@
+Skill frequency: {AWS=1, Communication=1, Excel=3, Java=3, Python=2, SQL=3, Spring=2}
+Skills mentioned at least 3 times: [Excel, Java, SQL]

@@ -1,0 +1,2 @@
+Unique skills: [AWS, Communication, Excel, Java, Python, SQL, Spring]
+Employees with Java: 3

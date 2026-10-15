@@ -1,0 +1,2 @@
+Paid revenue: {Asha=6700.0, Isha=13500.0, Ravi=21000.0}
+Customers: [Asha, Isha, Ravi]

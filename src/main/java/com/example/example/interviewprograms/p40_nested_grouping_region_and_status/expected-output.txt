@@ -1,0 +1,4 @@
+Nested order counts:
+East -> {PAID=2}
+South -> {CANCELLED=1, PAID=2}
+West -> {PAID=2, PENDING=1}

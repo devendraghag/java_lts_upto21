@@ -1,0 +1,2 @@
+Revenue by category: {Accessories=6200.0, Electronics=24000.0, Furniture=11000.0}
+Total paid revenue: 41200.0

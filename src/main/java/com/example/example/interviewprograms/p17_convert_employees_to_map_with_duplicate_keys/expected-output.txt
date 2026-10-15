@@ -1,0 +1,3 @@
+Finance -> Neha 85000.0
+HR -> Rahul 60000.0
+IT -> Vijay 90000.0

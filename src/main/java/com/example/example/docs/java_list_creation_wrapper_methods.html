@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java List Creation and Wrapper Methods</title>
+<style>
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --border:#dbe3ee;
+  --accent:#1d4ed8;
+  --accent-soft:#eff6ff;
+  --code:#0f172a;
+  --warn:#fff7ed;
+  --warn-border:#f59e0b;
+  --info:#ecfeff;
+  --info-border:#0891b2;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+header{
+  background:linear-gradient(135deg,#0f172a,#1e3a8a);
+  color:#fff;
+  padding:44px 22px;
+}
+.wrap,main,footer{max-width:1250px;margin:auto}
+h1{margin:0 0 8px;font-size:2.2rem}
+h2{margin-top:0;color:#0f172a}
+h3{color:#1e3a8a}
+main{padding:24px}
+.card,.toc,.summary{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:22px;
+  margin-bottom:20px;
+  box-shadow:0 2px 10px rgba(15,23,42,.04);
+}
+.toc ul{columns:2;margin:0;padding-left:20px}
+.toc a{color:var(--accent);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+code{
+  background:#eef2f7;
+  color:var(--code);
+  padding:2px 5px;
+  border-radius:5px;
+  font-family:Consolas,monospace;
+}
+pre{
+  background:#0f172a;
+  color:#e5e7eb;
+  padding:18px;
+  border-radius:10px;
+  overflow:auto;
+  font-size:.93rem;
+  line-height:1.45;
+}
+.badges{margin:12px 0}
+.badge{
+  display:inline-block;
+  padding:3px 8px;
+  margin:2px 5px 2px 0;
+  border-radius:999px;
+  background:var(--accent-soft);
+  color:#1d4ed8;
+  border:1px solid #bfdbfe;
+  font-size:.85rem;
+}
+.info{
+  background:var(--info);
+  border-left:4px solid var(--info-border);
+  padding:12px 14px;
+  border-radius:8px;
+  margin:12px 0;
+}
+.warn{
+  background:var(--warn);
+  border-left:4px solid var(--warn-border);
+  padding:12px 14px;
+  border-radius:8px;
+  margin:12px 0;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:14px;
+  background:#fff;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:10px;
+  text-align:left;
+  vertical-align:top;
+}
+th{
+  background:#eef4ff;
+  color:#1e3a8a;
+}
+.small{color:var(--muted);font-size:.92rem}
+.kv{
+  display:grid;
+  grid-template-columns:200px 1fr;
+  gap:7px 14px;
+}
+footer{padding:0 24px 30px;color:var(--muted);font-size:.9rem}
+@media(max-width:800px){
+  .toc ul{columns:1}
+  .kv{grid-template-columns:1fr}
+  h1{font-size:1.7rem}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Java List Creation and Wrapper Methods</h1>
+    <p>Detailed reference for 9 important List factory, wrapper, and utility methods in Java, including behavior, feature combinations, and complete example programs.</p>
+  </div>
+</header>
+
+<main>
+
+<section class="summary">
+  <h2>Quick Overview</h2>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Method</th><th>Main Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td><code>List.of(...)</code></td><td>Create an unmodifiable list directly.</td></tr>
+      <tr><td>2</td><td><code>List.copyOf(collection)</code></td><td>Create an unmodifiable snapshot/copy.</td></tr>
+      <tr><td>3</td><td><code>Arrays.asList(...)</code></td><td>Create a fixed-size list backed by an array.</td></tr>
+      <tr><td>4</td><td><code>Collections.unmodifiableList(list)</code></td><td>Create a read-only view of another list.</td></tr>
+      <tr><td>5</td><td><code>Collections.synchronizedList(list)</code></td><td>Create a synchronized thread-safe wrapper.</td></tr>
+      <tr><td>6</td><td><code>Collections.checkedList(list, type)</code></td><td>Add runtime type checking to a list.</td></tr>
+      <tr><td>7</td><td><code>Collections.emptyList()</code></td><td>Create/reuse an empty unmodifiable list.</td></tr>
+      <tr><td>8</td><td><code>Collections.singletonList(element)</code></td><td>Create a one-element unmodifiable list.</td></tr>
+      <tr><td>9</td><td><code>Collections.nCopies(n, element)</code></td><td>Create an unmodifiable list containing the same element N times.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="toc">
+  <h2>Contents</h2>
+  <ul>
+    <li><a href="#listof">1. List.of()</a></li>
+    <li><a href="#copyof">2. List.copyOf()</a></li>
+    <li><a href="#aslist">3. Arrays.asList()</a></li>
+    <li><a href="#unmodifiable">4. unmodifiableList()</a></li>
+    <li><a href="#synchronized">5. synchronizedList()</a></li>
+    <li><a href="#checked">6. checkedList()</a></li>
+    <li><a href="#empty">7. emptyList()</a></li>
+    <li><a href="#singleton">8. singletonList()</a></li>
+    <li><a href="#ncopies">9. nCopies()</a></li>
+    <li><a href="#comparison">Final Comparison</a></li>
+  </ul>
+</section>
+
+<section id="listof" class="card">
+<h2>1. <code>List.of(...)</code> — Create an Unmodifiable List Directly</h2>
+<p><code>List.of(...)</code> creates a list directly from the values you provide. It is ideal when the values are already known and you do not want callers to add, remove, or replace elements later.</p>
+
+<div class="badges">
+<span class="badge">Unmodifiable</span>
+<span class="badge">Fixed Size</span>
+<span class="badge">Ordered</span>
+<span class="badge">Indexed</span>
+<span class="badge">Duplicates Allowed</span>
+<span class="badge">Null Not Allowed</span>
+</div>
+
+<div class="kv">
+  <strong>add()</strong><span>Not allowed</span>
+  <strong>remove()</strong><span>Not allowed</span>
+  <strong>set()</strong><span>Not allowed</span>
+  <strong>null</strong><span>Not allowed</span>
+  <strong>Duplicates</strong><span>Allowed</span>
+</div>
+
+<div class="warn"><strong>Important:</strong> The list structure is unmodifiable, but if it stores mutable objects, those objects themselves may still be modified.</div>
+
+<pre><code>import java.util.List;
+
+public class ListOfExample {
+
+    public static void main(String[] args) {
+
+        List&lt;String&gt; technologies =
+                List.of(
+                        "Java",
+                        "Spring Boot",
+                        "Docker",
+                        "Java"
+                );
+
+        System.out.println("List: " + technologies);
+        System.out.println("Size: " + technologies.size());
+        System.out.println("First: " + technologies.get(0));
+        System.out.println("Contains Java: "
+                + technologies.contains("Java"));
+
+        System.out.println("\nIteration:");
+        for (String technology : technologies) {
+            System.out.println(technology);
+        }
+
+        System.out.println("\nUsing Stream:");
+        technologies.stream()
+                .filter(value -&gt; value.startsWith("J"))
+                .forEach(System.out::println);
+
+        // Not allowed:
+        // technologies.add("Kubernetes");
+        // technologies.remove("Java");
+        // technologies.set(0, "Python");
+        // technologies.clear();
+
+        // Null not allowed:
+        // List&lt;String&gt; invalid =
+        //         List.of("Java", null);
+
+        List&lt;String&gt; empty = List.of();
+        List&lt;String&gt; single = List.of("Java");
+
+        System.out.println("\nEmpty: " + empty);
+        System.out.println("Single: " + single);
+    }
+}</code></pre>
+</section>
+
+<section id="copyof" class="card">
+<h2>2. <code>List.copyOf(collection)</code> — Create an Unmodifiable Snapshot</h2>
+<p><code>List.copyOf()</code> takes the current elements from another collection and produces an unmodifiable list. Later structural changes to the original source are not reflected in the returned list.</p>
+
+<div class="badges">
+<span class="badge">Unmodifiable</span>
+<span class="badge">Snapshot</span>
+<span class="badge">Fixed Size</span>
+<span class="badge">Ordered</span>
+<span class="badge">Indexed</span>
+<span class="badge">Null Not Allowed</span>
+</div>
+
+<div class="info"><strong>Main idea:</strong> Use it when you want to expose a safe read-only snapshot rather than a live view of an existing mutable list.</div>
+
+<pre><code>import java.util.ArrayList;
+import java.util.List;
+
+public class ListCopyOfExample {
+
+    public static void main(String[] args) {
+
+        List&lt;String&gt; original = new ArrayList&lt;&gt;();
+
+        original.add("Java");
+        original.add("Spring");
+        original.add("Docker");
+
+        List&lt;String&gt; copy =
+                List.copyOf(original);
+
+        System.out.println("Original: " + original);
+        System.out.println("Copy    : " + copy);
+
+        original.add("Kubernetes");
+        original.remove("Spring");
+
+        System.out.println("\nAfter modifying original:");
+        System.out.println("Original: " + original);
+        System.out.println("Copy    : " + copy);
+
+        // Not allowed:
+        // copy.add("AWS");
+        // copy.remove("Java");
+        // copy.set(0, "Python");
+
+        List&lt;String&gt; withNull =
+                new ArrayList&lt;&gt;();
+
+        withNull.add("Java");
+        withNull.add(null);
+
+        try {
+            List.copyOf(withNull);
+        } catch (NullPointerException e) {
+            System.out.println(
+                    "\nList.copyOf() does not allow null");
+        }
+    }
+}</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Later source changes visible?</th></tr></thead>
+<tbody>
+<tr><td><code>List.copyOf(list)</code></td><td>No — snapshot</td></tr>
+<tr><td><code>Collections.unmodifiableList(list)</code></td><td>Yes — live view</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="aslist" class="card">
+<h2>3. <code>Arrays.asList(...)</code> — Fixed-Size Array-Backed List</h2>
+<p><code>Arrays.asList()</code> creates a List view backed by an array. You may replace existing elements with <code>set()</code>, but you cannot add or remove elements because the size is fixed.</p>
+
+<div class="badges">
+<span class="badge">Fixed Size</span>
+<span class="badge">Ordered</span>
+<span class="badge">Indexed</span>
+<span class="badge">set() Allowed</span>
+<span class="badge">Null Allowed</span>
+<span class="badge">Array Backed</span>
+</div>
+
+<div class="warn"><strong>Key distinction:</strong> Fixed-size does not mean immutable. Element replacement is allowed.</div>
+
+<pre><code>import java.util.Arrays;
+import java.util.List;
+
+public class ArraysAsListExample {
+
+    public static void main(String[] args) {
+
+        String[] technologies = {
+                "Java",
+                "Spring",
+                "Docker"
+        };
+
+        List&lt;String&gt; list =
+                Arrays.asList(technologies);
+
+        System.out.println("Array: "
+                + Arrays.toString(technologies));
+        System.out.println("List : " + list);
+
+        list.set(1, "Spring Boot");
+
+        System.out.println("\nAfter list.set():");
+        System.out.println("Array: "
+                + Arrays.toString(technologies));
+        System.out.println("List : " + list);
+
+        technologies[0] = "Python";
+
+        System.out.println("\nAfter array change:");
+        System.out.println("Array: "
+                + Arrays.toString(technologies));
+        System.out.println("List : " + list);
+
+        list.set(2, null);
+        System.out.println("\nNull allowed: " + list);
+
+        try {
+            list.add("Kubernetes");
+        } catch (UnsupportedOperationException e) {
+            System.out.println("add() not supported");
+        }
+
+        try {
+            list.remove("Python");
+        } catch (UnsupportedOperationException e) {
+            System.out.println("remove() not supported");
+        }
+    }
+}</code></pre>
+</section>
+
+<section id="unmodifiable" class="card">
+<h2>4. <code>Collections.unmodifiableList(list)</code> — Read-Only View</h2>
+<p>This method wraps an existing list so that callers cannot modify it through the wrapper reference. However, the original backing list may still be changed, and those changes are visible through the wrapper.</p>
+
+<div class="badges">
+<span class="badge">Unmodifiable View</span>
+<span class="badge">Backing List Shared</span>
+<span class="badge">Read Only Through Wrapper</span>
+</div>
+
+<div class="info"><strong>Think of it as:</strong> the wrapper blocks write operations, but it still looks at the same underlying list.</div>
+
+<pre><code>import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class UnmodifiableListExample {
+
+    public static void main(String[] args) {
+
+        List&lt;String&gt; original =
+                new ArrayList&lt;&gt;();
+
+        original.add("Java");
+        original.add("Spring");
+        original.add("Docker");
+
+        List&lt;String&gt; readOnly =
+                Collections.unmodifiableList(original);
+
+        System.out.println("Original : " + original);
+        System.out.println("ReadOnly : " + readOnly);
+
+        original.add("Kubernetes");
+
+        System.out.println(
+                "\nAfter original.add():");
+
+        System.out.println("Original : " + original);
+        System.out.println("ReadOnly : " + readOnly);
+
+        original.set(0, "Java 21");
+
+        System.out.println(
+                "\nAfter original.set():");
+        System.out.println("ReadOnly : " + readOnly);
+
+        try {
+            readOnly.add("AWS");
+        } catch (UnsupportedOperationException e) {
+            System.out.println(
+                    "\nreadOnly.add() not allowed");
+        }
+
+        try {
+            readOnly.set(0, "Python");
+        } catch (UnsupportedOperationException e) {
+            System.out.println(
+                    "readOnly.set() not allowed");
+        }
+    }
+}</code></pre>
+</section>
+
+<section id="synchronized" class="card">
+<h2>5. <code>Collections.synchronizedList(list)</code> — Thread-Safe Synchronized Wrapper</h2>
+<p>This method wraps an existing list and synchronizes its ordinary List operations. It is useful when multiple threads need to share a list and you specifically want the synchronized-wrapper approach.</p>
+
+<div class="badges">
+<span class="badge">Thread Safe</span>
+<span class="badge">Synchronized Wrapper</span>
+<span class="badge">Usually Modifiable</span>
+<span class="badge">Behavior Depends on Backing List</span>
+</div>
+
+<div class="warn"><strong>Iteration rule:</strong> When iterating, synchronize manually on the returned list to protect the entire traversal.</div>
+
+<pre><code>import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class SynchronizedListExample {
+
+    public static void main(String[] args)
+            throws InterruptedException {
+
+        List&lt;Integer&gt; numbers =
+                Collections.synchronizedList(
+                        new ArrayList&lt;&gt;()
+                );
+
+        Thread t1 = new Thread(() -&gt; {
+            for (int i = 1; i &lt;= 1000; i++) {
+                numbers.add(i);
+            }
+        });
+
+        Thread t2 = new Thread(() -&gt; {
+            for (int i = 1001; i &lt;= 2000; i++) {
+                numbers.add(i);
+            }
+        });
+
+        t1.start();
+        t2.start();
+
+        t1.join();
+        t2.join();
+
+        System.out.println(
+                "Total elements = "
+                        + numbers.size());
+
+        numbers.add(3000);
+        numbers.set(0, 9999);
+
+        System.out.println(
+                "First element = "
+                        + numbers.get(0));
+
+        synchronized (numbers) {
+            int count = 0;
+
+            for (Integer number : numbers) {
+
+                if (count == 10) {
+                    break;
+                }
+
+                System.out.println(number);
+                count++;
+            }
+        }
+    }
+}</code></pre>
+
+<div class="info">If the backing list is fixed-size, the synchronized wrapper remains fixed-size. The wrapper adds synchronization; it does not change the fundamental capabilities of the backing list.</div>
+</section>
+
+<section id="checked" class="card">
+<h2>6. <code>Collections.checkedList(list, type)</code> — Runtime Type-Safe Wrapper</h2>
+<p>Generics normally protect List types at compile time. A checked list adds runtime checking as well, which is useful when raw types, reflection, legacy APIs, or unsafe third-party code may attempt to insert the wrong type.</p>
+
+<div class="badges">
+<span class="badge">Runtime Type Check</span>
+<span class="badge">Wrapper</span>
+<span class="badge">Legacy API Protection</span>
+</div>
+
+<pre><code>import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class CheckedListExample {
+
+    public static void main(String[] args) {
+
+        List&lt;String&gt; normalList =
+                new ArrayList&lt;&gt;();
+
+        List&lt;String&gt; checkedList =
+                Collections.checkedList(
+                        normalList,
+                        String.class
+                );
+
+        checkedList.add("Java");
+        checkedList.add("Spring");
+
+        System.out.println(
+                "Checked List: " + checkedList);
+
+        try {
+            addWrongType(checkedList);
+        } catch (ClassCastException e) {
+
+            System.out.println(
+                    "\nWrong type rejected at runtime");
+
+            System.out.println(e.getMessage());
+        }
+
+        System.out.println(
+                "\nFinal List: " + checkedList);
+    }
+
+    @SuppressWarnings({"rawtypes", "unchecked"})
+    static void addWrongType(List rawList) {
+
+        rawList.add(100);
+    }
+}</code></pre>
+
+<div class="info">Without the checked wrapper, unsafe raw-type code may corrupt a logically typed collection. With <code>checkedList()</code>, the wrong insertion is rejected immediately.</div>
+</section>
+
+<section id="empty" class="card">
+<h2>7. <code>Collections.emptyList()</code> — Empty Unmodifiable List</h2>
+<p>Use <code>emptyList()</code> when you want an empty List result without returning <code>null</code>. It is especially useful for APIs and methods that may legitimately return no items.</p>
+
+<div class="badges">
+<span class="badge">Empty</span>
+<span class="badge">Unmodifiable</span>
+<span class="badge">Size 0</span>
+<span class="badge">Safe Return Value</span>
+</div>
+
+<pre><code>import java.util.Collections;
+import java.util.List;
+
+public class EmptyListExample {
+
+    public static void main(String[] args) {
+
+        List&lt;String&gt; result =
+                findTechnologies(false);
+
+        System.out.println("Result: " + result);
+        System.out.println(
+                "Size = " + result.size());
+        System.out.println(
+                "isEmpty = " + result.isEmpty());
+
+        for (String value : result) {
+            System.out.println(value);
+        }
+
+        if (result.isEmpty()) {
+            System.out.println(
+                    "No technologies found");
+        }
+
+        try {
+            result.add("Java");
+        } catch (UnsupportedOperationException e) {
+            System.out.println(
+                    "Cannot modify emptyList");
+        }
+    }
+
+    static List&lt;String&gt; findTechnologies(
+            boolean dataAvailable) {
+
+        if (!dataAvailable) {
+            return Collections.emptyList();
+        }
+
+        return List.of(
+                "Java",
+                "Spring"
+        );
+    }
+}</code></pre>
+</section>
+
+<section id="singleton" class="card">
+<h2>8. <code>Collections.singletonList(element)</code> — Exactly One Element</h2>
+<p>This method creates an unmodifiable List containing exactly one element. It is useful when an API expects a List, but you only have one value.</p>
+
+<div class="badges">
+<span class="badge">Exactly One Element</span>
+<span class="badge">Unmodifiable</span>
+<span class="badge">Fixed Size = 1</span>
+<span class="badge">Null Allowed</span>
+</div>
+
+<div class="info"><code>Collections.singletonList(null)</code> is allowed, while <code>List.of(null)</code> throws <code>NullPointerException</code>.</div>
+
+<pre><code>import java.util.Collections;
+import java.util.List;
+
+public class SingletonListExample {
+
+    public static void main(String[] args) {
+
+        List&lt;String&gt; language =
+                Collections.singletonList(
+                        "Java"
+                );
+
+        System.out.println(
+                "List: " + language);
+
+        System.out.println(
+                "Size: " + language.size());
+
+        System.out.println(
+                "First element: "
+                        + language.get(0));
+
+        System.out.println(
+                "Contains Java: "
+                        + language.contains("Java"));
+
+        List&lt;String&gt; nullList =
+                Collections.singletonList(null);
+
+        System.out.println(
+                "\nSingleton containing null:");
+        System.out.println(nullList);
+
+        try {
+            language.add("Spring");
+        } catch (UnsupportedOperationException e) {
+            System.out.println(
+                    "\nadd() not allowed");
+        }
+
+        try {
+            language.set(0, "Python");
+        } catch (UnsupportedOperationException e) {
+            System.out.println(
+                    "set() not allowed");
+        }
+    }
+}</code></pre>
+</section>
+
+<section id="ncopies" class="card">
+<h2>9. <code>Collections.nCopies(n, element)</code> — Same Element Repeated N Times</h2>
+<p><code>Collections.nCopies(n, element)</code> creates an unmodifiable List whose size is <code>n</code> and where every position contains the same supplied element.</p>
+
+<p>This is useful when you need repeated default values, placeholders, test data, initial display values, or a simple repeated sequence without manually calling <code>add()</code> many times.</p>
+
+<div class="badges">
+<span class="badge">Unmodifiable</span>
+<span class="badge">Fixed Size</span>
+<span class="badge">Ordered</span>
+<span class="badge">Indexed</span>
+<span class="badge">Duplicates Allowed</span>
+<span class="badge">Null Allowed</span>
+<span class="badge">Same Reference Repeated</span>
+</div>
+
+<div class="warn"><strong>Very important:</strong> If <code>element</code> is a mutable object, <code>nCopies()</code> does not clone it N times. Every position refers to the same object.</div>
+
+<pre><code>import java.util.Collections;
+import java.util.List;
+
+public class NCopiesExample {
+
+    public static void main(String[] args) {
+
+        List&lt;String&gt; technologies =
+                Collections.nCopies(
+                        5,
+                        "Java"
+                );
+
+        System.out.println(technologies);
+
+        System.out.println(
+                "Size = "
+                        + technologies.size());
+
+        System.out.println(
+                "Index 0 = "
+                        + technologies.get(0));
+
+        System.out.println(
+                "Index 4 = "
+                        + technologies.get(4));
+
+        System.out.println(
+                "Frequency of Java = "
+                        + Collections.frequency(
+                                technologies,
+                                "Java"
+                        )
+        );
+
+        try {
+            technologies.add("Spring");
+        } catch (UnsupportedOperationException e) {
+            System.out.println(
+                    "add() not allowed");
+        }
+
+        try {
+            technologies.set(0, "Python");
+        } catch (UnsupportedOperationException e) {
+            System.out.println(
+                    "set() not allowed");
+        }
+
+        List&lt;String&gt; nullValues =
+                Collections.nCopies(
+                        3,
+                        null
+                );
+
+        System.out.println(
+                "Null values: "
+                        + nullValues);
+    }
+}</code></pre>
+
+<h3>Mutable Object Example</h3>
+
+<pre><code>import java.util.Collections;
+import java.util.List;
+
+public class NCopiesObjectExample {
+
+    public static void main(String[] args) {
+
+        Employee employee =
+                new Employee("Devendra");
+
+        List&lt;Employee&gt; employees =
+                Collections.nCopies(
+                        3,
+                        employee
+                );
+
+        System.out.println(
+                "Before: " + employees);
+
+        employee.name =
+                "Java Developer";
+
+        System.out.println(
+                "After : " + employees);
+
+        System.out.println(
+                employees.get(0)
+                        == employees.get(1));
+
+        System.out.println(
+                employees.get(1)
+                        == employees.get(2));
+    }
+}
+
+class Employee {
+
+    String name;
+
+    Employee(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+}</code></pre>
+
+<p>Because every position references the same <code>Employee</code> object, changing that object appears at every position in the List.</p>
+</section>
+
+
+<section class="card" id="original-copy-behavior">
+<h2>Original vs Returned List — Modification / Addition Behavior</h2>
+
+<p>This table shows what happens when a method uses an existing source/original list or array, and whether changes are possible on the original and on the returned List.</p>
+
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Original / Source Exists?</th>
+<th>Original Add / Remove</th>
+<th>Original set / Update</th>
+<th>Returned List Add / Remove</th>
+<th>Returned List set / Update</th>
+<th>Original Change Visible in Returned List?</th>
+<th>Returned Change Visible in Original?</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><code>List.of(...)</code></td>
+<td>No backing source list</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>No</td>
+<td>No</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<td><code>List.copyOf(original)</code></td>
+<td>Yes</td>
+<td>Yes, if original is modifiable</td>
+<td>Yes, if original supports it</td>
+<td>No</td>
+<td>No</td>
+<td><strong>No</strong> for structural/source-list changes</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td><code>Arrays.asList(array)</code></td>
+<td>Yes — backing array</td>
+<td>Array length cannot grow/shrink</td>
+<td>Yes</td>
+<td>No</td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+</tr>
+
+<tr>
+<td><code>Collections.unmodifiableList(original)</code></td>
+<td>Yes</td>
+<td>Yes, if original is modifiable</td>
+<td>Yes, if original supports it</td>
+<td>No</td>
+<td>No</td>
+<td><strong>Yes</strong></td>
+<td>No, because returned view cannot modify</td>
+</tr>
+
+<tr>
+<td><code>Collections.synchronizedList(original)</code></td>
+<td>Yes</td>
+<td>Depends on backing list</td>
+<td>Depends on backing list</td>
+<td>Depends on backing list</td>
+<td>Depends on backing list</td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+</tr>
+
+<tr>
+<td><code>Collections.checkedList(original, type)</code></td>
+<td>Yes</td>
+<td>Depends on backing list</td>
+<td>Depends on backing list</td>
+<td>Depends on backing list and type check</td>
+<td>Depends on backing list and type check</td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+</tr>
+
+<tr>
+<td><code>Collections.emptyList()</code></td>
+<td>No backing source list</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>No</td>
+<td>No</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<td><code>Collections.singletonList(element)</code></td>
+<td>No backing source list</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>No</td>
+<td>No</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<td><code>Collections.nCopies(n, element)</code></td>
+<td>No backing source list</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>No</td>
+<td>No</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="info">
+<strong>Important:</strong> <code>List.copyOf()</code> creates an independent list structure, while
+<code>Collections.unmodifiableList()</code>, <code>Collections.synchronizedList()</code>, and
+<code>Collections.checkedList()</code> are wrappers around the original backing list.
+</div>
+
+<h3>Simple Visual Summary</h3>
+
+<pre><code>List.copyOf(original)
+
+original  ----------- independent -----------> copy
+
+original.add(...)
+        does NOT change copy
+
+
+Collections.unmodifiableList(original)
+
+original  -------------------------------> unmodifiable view
+   |                                             |
+   +---- original.add(...) ---------------------+
+                 change IS visible
+
+
+Collections.synchronizedList(original)
+
+original  <-------------------------------> synchronized wrapper
+
+Changes through either side affect the same backing list.
+
+
+Collections.checkedList(original, String.class)
+
+original  <-------------------------------> checked wrapper
+
+Changes through either side affect the same backing list,
+but the checked wrapper rejects wrong runtime element types.
+
+
+Arrays.asList(array)
+
+array  <-----------------------------------> fixed-size List view
+
+array[index] = value
+        changes List
+
+list.set(index, value)
+        changes array
+</code></pre>
+
+<h3>Operation Matrix</h3>
+
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returned <code>add()</code></th>
+<th>Returned <code>remove()</code></th>
+<th>Returned <code>set()</code></th>
+<th>Source Modification Reflected?</th>
+<th>Same Backing Data?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List.of()</code></td>
+<td>No</td><td>No</td><td>No</td><td>N/A</td><td>No</td>
+</tr>
+<tr>
+<td><code>List.copyOf()</code></td>
+<td>No</td><td>No</td><td>No</td><td>No</td><td>No</td>
+</tr>
+<tr>
+<td><code>Arrays.asList()</code></td>
+<td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes — array backed</td>
+</tr>
+<tr>
+<td><code>unmodifiableList()</code></td>
+<td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td>
+</tr>
+<tr>
+<td><code>synchronizedList()</code></td>
+<td>Usually Yes*</td><td>Usually Yes*</td><td>Usually Yes*</td><td>Yes</td><td>Yes</td>
+</tr>
+<tr>
+<td><code>checkedList()</code></td>
+<td>Usually Yes*</td><td>Usually Yes*</td><td>Usually Yes*</td><td>Yes</td><td>Yes</td>
+</tr>
+<tr>
+<td><code>emptyList()</code></td>
+<td>No</td><td>No</td><td>No</td><td>N/A</td><td>No</td>
+</tr>
+<tr>
+<td><code>singletonList()</code></td>
+<td>No</td><td>No</td><td>No</td><td>N/A</td><td>No</td>
+</tr>
+<tr>
+<td><code>nCopies()</code></td>
+<td>No</td><td>No</td><td>No</td><td>N/A</td><td>No backing list</td>
+</tr>
+</tbody>
+</table>
+
+<p class="small">
+* For <code>synchronizedList()</code> and <code>checkedList()</code>, operations depend on the backing list.
+For example, wrapping an <code>ArrayList</code> allows add/remove/set, while wrapping
+<code>Arrays.asList()</code> still gives a fixed-size list.
+</p>
+
+<div class="warn">
+<strong>Mutable object note:</strong> Even when a List structure is unmodifiable, objects stored inside it may still be mutable.
+For example, <code>List.copyOf(original)</code> does not deep-copy the elements.
+If both lists contain the same mutable object reference and that object changes, both lists can observe the object's changed state.
+</div>
+</section>
+
+<section id="comparison" class="card">
+<h2>Final Feature Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>List.of()</th>
+<th>copyOf()</th>
+<th>Arrays.asList()</th>
+<th>unmodifiableList()</th>
+<th>synchronizedList()</th>
+<th>checkedList()</th>
+<th>emptyList()</th>
+<th>singletonList()</th>
+<th>nCopies()</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Ordered</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Indexed</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Add / Remove</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Depends on backing list</td><td>Depends on backing list</td><td>No</td><td>No</td><td>No</td></tr>
+<tr><td>set()</td><td>No</td><td>No</td><td>Yes</td><td>No</td><td>Depends on backing list</td><td>Depends on backing list</td><td>No</td><td>No</td><td>No</td></tr>
+<tr><td>Fixed Size</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Depends</td><td>Depends</td><td>Depends</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Unmodifiable</td><td>Yes</td><td>Yes</td><td>No</td><td>Yes</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Null Allowed</td><td>No</td><td>No</td><td>Yes</td><td>Depends</td><td>Depends</td><td>Depends</td><td>N/A</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Duplicate Allowed</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Depends</td><td>Depends</td><td>Depends</td><td>N/A</td><td>N/A</td><td>Yes</td></tr>
+<tr><td>Independent Snapshot</td><td>N/A</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
+<tr><td>Backing Changes Visible</td><td>N/A</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
+<tr><td>Thread-Safe Wrapper</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Depends on backing list</td><td>Structurally immutable</td><td>Structurally immutable</td><td>Structurally immutable</td></tr>
+<tr><td>Runtime Type Check</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="summary">
+<h2>Easy Mental Model</h2>
+<pre><code>List.of()
+    -&gt; create read-only values directly
+
+List.copyOf()
+    -&gt; create a read-only snapshot
+
+Arrays.asList()
+    -&gt; fixed-size, array-backed list
+
+Collections.unmodifiableList()
+    -&gt; read-only view of another list
+
+Collections.synchronizedList()
+    -&gt; synchronized thread-safe wrapper
+
+Collections.checkedList()
+    -&gt; runtime type-safe wrapper
+
+Collections.emptyList()
+    -&gt; zero-element read-only list
+
+Collections.singletonList()
+    -&gt; one-element read-only list
+
+Collections.nCopies()
+    -&gt; N positions containing the same supplied element</code></pre>
+</section>
+
+</main>
+
+<footer>
+Java List Methods Reference — suitable for JDK 21 learning, revision, and interview preparation.
+</footer>
+</body>
+</html>

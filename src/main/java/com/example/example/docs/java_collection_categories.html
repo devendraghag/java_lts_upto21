@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Collection Categories Reference</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #dbe3ec;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --code: #111827;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: white;
+      padding: 42px 24px;
+    }
+    header .wrap, main, footer {
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1 { margin: 0 0 10px; font-size: 2.2rem; }
+    h2 { margin-top: 0; color: #0f172a; }
+    h3 { margin-bottom: 8px; color: #1e3a8a; }
+    p { margin: 8px 0 14px; }
+    main { padding: 24px; }
+    .toc, .category, .note {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, .04);
+    }
+    .toc ul {
+      columns: 3;
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+    .toc a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .toc a:hover { text-decoration: underline; }
+    .badge {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: .85rem;
+      margin: 2px 4px 2px 0;
+    }
+    code {
+      background: #eef2f7;
+      color: var(--code);
+      padding: 2px 5px;
+      border-radius: 5px;
+      font-family: Consolas, monospace;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 16px;
+      align-items: start;
+    }
+    .label {
+      font-weight: 700;
+      color: #111827;
+    }
+    .examples {
+      margin: 0;
+      padding-left: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      background: white;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px;
+      vertical-align: top;
+      text-align: left;
+    }
+    th {
+      background: #eef4ff;
+      color: #1e3a8a;
+    }
+    .warning {
+      background: #fff7ed;
+      border-left: 4px solid #f59e0b;
+      padding: 12px 14px;
+      border-radius: 8px;
+    }
+    .info {
+      background: #ecfeff;
+      border-left: 4px solid #0891b2;
+      padding: 12px 14px;
+      border-radius: 8px;
+    }
+    footer {
+      padding: 12px 24px 28px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    @media (max-width: 800px) {
+      .toc ul { columns: 1; }
+      .grid { grid-template-columns: 1fr; }
+      h1 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Java Collection Categories Reference</h1>
+    <p>A practical classification of the Java Collections Framework, including mutability, sizing, ordering, concurrency, access pattern, data structure, and specialized collection categories.</p>
+  </div>
+</header>
+
+<main>
+  <section class="note">
+    <h2>Important Note</h2>
+    <p><code>Collection</code> is the root interface for structures such as <code>List</code>, <code>Set</code>, and <code>Queue</code>. <code>Map</code> belongs to the Java Collections Framework, but <strong>Map does not extend Collection</strong>.</p>
+  </section>
+
+  <section class="toc">
+    <h2>Collection Categories</h2>
+    <ul>
+      <li><a href="#modifiable">Modifiable</a></li>
+      <li><a href="#unmodifiable">Unmodifiable</a></li>
+      <li><a href="#immutable">Immutable</a></li>
+      <li><a href="#resizable">Resizable</a></li>
+      <li><a href="#fixed">Fixed-Size</a></li>
+      <li><a href="#ordered">Ordered</a></li>
+      <li><a href="#unordered">Unordered</a></li>
+      <li><a href="#sorted">Sorted</a></li>
+      <li><a href="#indexed">Indexed</a></li>
+      <li><a href="#nonindexed">Non-Indexed</a></li>
+      <li><a href="#duplicates">Duplicate-Allowing</a></li>
+      <li><a href="#noduplicates">Duplicate-Not-Allowed</a></li>
+      <li><a href="#nullallow">Null-Allowing</a></li>
+      <li><a href="#nullnot">Null-Not-Allowed</a></li>
+      <li><a href="#threadsafe">Thread-Safe</a></li>
+      <li><a href="#nonthreadsafe">Non-Thread-Safe</a></li>
+      <li><a href="#synchronized">Synchronized</a></li>
+      <li><a href="#concurrent">Concurrent</a></li>
+      <li><a href="#blocking">Blocking</a></li>
+      <li><a href="#nonblocking">Non-Blocking</a></li>
+      <li><a href="#failfast">Fail-Fast</a></li>
+      <li><a href="#failsafe">Fail-Safe / Weakly Consistent</a></li>
+      <li><a href="#sequential">Sequential-Access</a></li>
+      <li><a href="#random">Random-Access</a></li>
+      <li><a href="#fifo">FIFO</a></li>
+      <li><a href="#lifo">LIFO</a></li>
+      <li><a href="#priority">Priority-Based</a></li>
+      <li><a href="#queue">Queue</a></li>
+      <li><a href="#deque">Deque</a></li>
+      <li><a href="#set">Set</a></li>
+      <li><a href="#list">List</a></li>
+      <li><a href="#map">Map</a></li>
+      <li><a href="#sortedset">Sorted Set</a></li>
+      <li><a href="#navigableset">Navigable Set</a></li>
+      <li><a href="#sortedmap">Sorted Map</a></li>
+      <li><a href="#navigablemap">Navigable Map</a></li>
+      <li><a href="#hash">Hash-Based</a></li>
+      <li><a href="#tree">Tree-Based</a></li>
+      <li><a href="#array">Array-Based</a></li>
+      <li><a href="#linked">Linked-Node-Based</a></li>
+      <li><a href="#cow">Copy-On-Write</a></li>
+      <li><a href="#enum">Enum-Based</a></li>
+      <li><a href="#identity">Identity-Based</a></li>
+      <li><a href="#weak">Weak-Reference</a></li>
+    </ul>
+  </section>
+
+  <section id="modifiable" class="category">
+    <h2>1. Modifiable Collection</h2>
+    <div class="grid">
+      <div>
+        <p><span class="label">Meaning:</span> Elements can be added, removed, replaced, or otherwise changed after creation.</p>
+      </div>
+      <div>
+        <span class="badge">ArrayList</span><span class="badge">LinkedList</span><span class="badge">HashSet</span><span class="badge">TreeSet</span><span class="badge">HashMap</span><span class="badge">ArrayDeque</span><span class="badge">ConcurrentHashMap</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="unmodifiable" class="category">
+    <h2>2. Unmodifiable Collection</h2>
+    <p><span class="label">Meaning:</span> The reference cannot be used to perform structural modifications such as <code>add()</code>, <code>remove()</code>, or <code>put()</code>.</p>
+    <p><span class="label">Examples:</span> <code>List.of()</code>, <code>Set.of()</code>, <code>Map.of()</code>, <code>Collections.unmodifiableList()</code>, <code>Collections.unmodifiableSet()</code>, <code>Collections.unmodifiableMap()</code>.</p>
+    <div class="warning"><strong>Important:</strong> An unmodifiable wrapper can still reflect changes made directly to its backing collection.</div>
+  </section>
+
+  <section id="immutable" class="category">
+    <h2>3. Immutable Collection</h2>
+    <p><span class="label">Meaning:</span> The collection cannot change after creation. Its structure is permanently fixed.</p>
+    <p><span class="label">Examples:</span> <code>List.of()</code>, <code>Set.of()</code>, <code>Map.of()</code>, <code>List.copyOf()</code>, <code>Set.copyOf()</code>, <code>Map.copyOf()</code>.</p>
+  </section>
+
+  <section id="resizable" class="category">
+    <h2>4. Resizable Collection</h2>
+    <p><span class="label">Meaning:</span> The number of elements can grow or shrink dynamically.</p>
+    <p><span class="label">Examples:</span> <code>ArrayList</code>, <code>LinkedList</code>, <code>HashSet</code>, <code>TreeSet</code>, <code>PriorityQueue</code>, <code>HashMap</code>.</p>
+  </section>
+
+  <section id="fixed" class="category">
+    <h2>5. Fixed-Size Collection</h2>
+    <p><span class="label">Meaning:</span> The number of elements or capacity is fixed.</p>
+    <p><span class="label">Examples:</span> <code>Arrays.asList()</code>, <code>List.of()</code>, <code>Set.of()</code>, <code>Map.of()</code>, <code>ArrayBlockingQueue</code>.</p>
+  </section>
+
+  <section id="ordered" class="category">
+    <h2>6. Ordered Collection</h2>
+    <p><span class="label">Meaning:</span> The collection provides a defined iteration order, such as insertion order, natural order, or enum declaration order.</p>
+    <p><span class="label">Examples:</span> <code>ArrayList</code>, <code>LinkedList</code>, <code>LinkedHashSet</code>, <code>TreeSet</code>, <code>LinkedHashMap</code>, <code>TreeMap</code>, <code>EnumSet</code>.</p>
+  </section>
+
+  <section id="unordered" class="category">
+    <h2>7. Unordered Collection</h2>
+    <p><span class="label">Meaning:</span> No stable iteration order should be relied upon.</p>
+    <p><span class="label">Examples:</span> <code>HashSet</code>, <code>HashMap</code>, <code>Hashtable</code>, <code>ConcurrentHashMap</code>.</p>
+  </section>
+
+  <section id="sorted" class="category">
+    <h2>8. Sorted Collection</h2>
+    <p><span class="label">Meaning:</span> Elements or keys are maintained according to natural ordering or a supplied <code>Comparator</code>.</p>
+    <p><span class="label">Examples:</span> <code>TreeSet</code>, <code>TreeMap</code>, <code>ConcurrentSkipListSet</code>, <code>ConcurrentSkipListMap</code>.</p>
+  </section>
+
+  <section id="indexed" class="category">
+    <h2>9. Indexed Collection</h2>
+    <p><span class="label">Meaning:</span> Elements can be accessed by numeric position using methods such as <code>get(index)</code>.</p>
+    <p><span class="label">Examples:</span> <code>ArrayList</code>, <code>LinkedList</code>, <code>Vector</code>, <code>Stack</code>, <code>CopyOnWriteArrayList</code>, <code>Arrays.asList()</code>.</p>
+  </section>
+
+  <section id="nonindexed" class="category">
+    <h2>10. Non-Indexed Collection</h2>
+    <p><span class="label">Meaning:</span> Elements are not retrieved by numeric index.</p>
+    <p><span class="label">Examples:</span> <code>HashSet</code>, <code>TreeSet</code>, <code>PriorityQueue</code>, <code>HashMap</code>.</p>
+  </section>
+
+  <section id="duplicates" class="category">
+    <h2>11. Duplicate-Allowing Collection</h2>
+    <p><span class="label">Meaning:</span> Multiple equal elements may exist in the same collection.</p>
+    <p><span class="label">Examples:</span> All major <code>List</code> implementations and most <code>Queue</code>/<code>Deque</code> implementations.</p>
+  </section>
+
+  <section id="noduplicates" class="category">
+    <h2>12. Duplicate-Not-Allowed Collection</h2>
+    <p><span class="label">Meaning:</span> Duplicate elements are rejected according to equality or ordering rules.</p>
+    <p><span class="label">Examples:</span> <code>HashSet</code>, <code>LinkedHashSet</code>, <code>TreeSet</code>, <code>EnumSet</code>, <code>CopyOnWriteArraySet</code>, <code>ConcurrentSkipListSet</code>.</p>
+    <p>For <code>Map</code>, duplicate keys are not allowed, although duplicate values are allowed.</p>
+  </section>
+
+  <section id="nullallow" class="category">
+    <h2>13. Null-Allowing Collection</h2>
+    <p><span class="label">Meaning:</span> One or more <code>null</code> elements, keys, or values may be stored.</p>
+    <p><span class="label">Examples:</span> <code>ArrayList</code>, <code>LinkedList</code>, <code>HashSet</code>, <code>LinkedHashSet</code>, <code>HashMap</code>, <code>LinkedHashMap</code>, <code>WeakHashMap</code>.</p>
+  </section>
+
+  <section id="nullnot" class="category">
+    <h2>14. Null-Not-Allowed Collection</h2>
+    <p><span class="label">Meaning:</span> Inserting <code>null</code> is prohibited.</p>
+    <p><span class="label">Examples:</span> <code>ArrayDeque</code>, <code>PriorityQueue</code>, <code>EnumSet</code>, <code>ConcurrentHashMap</code>, <code>ConcurrentSkipListSet</code>, <code>ConcurrentLinkedQueue</code>, <code>List.of()</code>, <code>Set.of()</code>, <code>Map.of()</code>.</p>
+  </section>
+
+  <section id="threadsafe" class="category">
+    <h2>15. Thread-Safe Collection</h2>
+    <p><span class="label">Meaning:</span> Designed so multiple threads can access the structure safely without external synchronization for ordinary supported operations.</p>
+    <p><span class="label">Examples:</span> <code>Vector</code>, <code>Stack</code>, <code>ConcurrentHashMap</code>, <code>CopyOnWriteArrayList</code>, <code>ConcurrentLinkedQueue</code>, blocking queues.</p>
+  </section>
+
+  <section id="nonthreadsafe" class="category">
+    <h2>16. Non-Thread-Safe Collection</h2>
+    <p><span class="label">Meaning:</span> Concurrent modification from multiple threads requires external coordination.</p>
+    <p><span class="label">Examples:</span> <code>ArrayList</code>, <code>LinkedList</code>, <code>HashSet</code>, <code>TreeSet</code>, <code>HashMap</code>, <code>TreeMap</code>, <code>ArrayDeque</code>.</p>
+  </section>
+
+  <section id="synchronized" class="category">
+    <h2>17. Synchronized Collection</h2>
+    <p><span class="label">Meaning:</span> Access is serialized using synchronization.</p>
+    <p><span class="label">Examples:</span> <code>Vector</code>, <code>Stack</code>, <code>Hashtable</code>, <code>Collections.synchronizedList()</code>, <code>Collections.synchronizedSet()</code>, <code>Collections.synchronizedMap()</code>.</p>
+  </section>
+
+  <section id="concurrent" class="category">
+    <h2>18. Concurrent Collection</h2>
+    <p><span class="label">Meaning:</span> Designed specifically for scalable access by multiple threads, usually with finer-grained coordination than legacy synchronized collections.</p>
+    <p><span class="label">Examples:</span> <code>ConcurrentHashMap</code>, <code>ConcurrentSkipListMap</code>, <code>ConcurrentLinkedQueue</code>, <code>CopyOnWriteArrayList</code>, <code>LinkedBlockingQueue</code>.</p>
+  </section>
+
+  <section id="blocking" class="category">
+    <h2>19. Blocking Collection</h2>
+    <p><span class="label">Meaning:</span> Operations can wait until data or capacity becomes available.</p>
+    <p><span class="label">Examples:</span> <code>ArrayBlockingQueue</code>, <code>LinkedBlockingQueue</code>, <code>LinkedBlockingDeque</code>, <code>PriorityBlockingQueue</code>, <code>DelayQueue</code>, <code>SynchronousQueue</code>, <code>LinkedTransferQueue</code>.</p>
+  </section>
+
+  <section id="nonblocking" class="category">
+    <h2>20. Non-Blocking Collection</h2>
+    <p><span class="label">Meaning:</span> Core operations generally do not wait for another thread to release a monitor or make data available.</p>
+    <p><span class="label">Examples:</span> <code>ConcurrentLinkedQueue</code>, <code>ConcurrentLinkedDeque</code>, and many ordinary operations of <code>ConcurrentHashMap</code>.</p>
+  </section>
+
+  <section id="failfast" class="category">
+    <h2>21. Fail-Fast Collection</h2>
+    <p><span class="label">Meaning:</span> Iterators detect incompatible structural modifications and may throw <code>ConcurrentModificationException</code>.</p>
+    <p><span class="label">Examples:</span> <code>ArrayList</code>, <code>LinkedList</code>, <code>HashSet</code>, <code>TreeSet</code>, <code>HashMap</code>, <code>TreeMap</code>, <code>ArrayDeque</code>.</p>
+    <div class="info">Fail-fast behavior is best-effort and should not be used as a thread-safety mechanism.</div>
+  </section>
+
+  <section id="failsafe" class="category">
+    <h2>22. Fail-Safe / Weakly Consistent / Snapshot Collection</h2>
+    <p><span class="label">Meaning:</span> Iteration does not behave like ordinary fail-fast iterators. Java documentation usually uses the more precise terms <em>snapshot</em> or <em>weakly consistent</em>.</p>
+    <p><span class="label">Snapshot:</span> <code>CopyOnWriteArrayList</code>, <code>CopyOnWriteArraySet</code>.</p>
+    <p><span class="label">Weakly consistent:</span> <code>ConcurrentHashMap</code>, <code>ConcurrentLinkedQueue</code>, <code>ConcurrentSkipListMap</code>.</p>
+  </section>
+
+  <section id="sequential" class="category">
+    <h2>23. Sequential-Access Collection</h2>
+    <p><span class="label">Meaning:</span> Efficient access typically follows links sequentially rather than jumping directly to an index.</p>
+    <p><span class="label">Primary example:</span> <code>LinkedList</code>.</p>
+  </section>
+
+  <section id="random" class="category">
+    <h2>24. Random-Access Collection</h2>
+    <p><span class="label">Meaning:</span> Indexed access is efficient and typically near constant time.</p>
+    <p><span class="label">Examples:</span> <code>ArrayList</code>, <code>Vector</code>, <code>Stack</code>, <code>CopyOnWriteArrayList</code>, <code>Arrays.asList()</code>.</p>
+  </section>
+
+  <section id="fifo" class="category">
+    <h2>25. FIFO Collection</h2>
+    <p><span class="label">Meaning:</span> First In, First Out. The earliest inserted element is normally processed first.</p>
+    <p><span class="label">Examples:</span> <code>ArrayDeque</code>, <code>LinkedList</code>, <code>ConcurrentLinkedQueue</code>, <code>ArrayBlockingQueue</code>, <code>LinkedBlockingQueue</code>.</p>
+  </section>
+
+  <section id="lifo" class="category">
+    <h2>26. LIFO Collection</h2>
+    <p><span class="label">Meaning:</span> Last In, First Out. The most recently inserted element is processed first.</p>
+    <p><span class="label">Examples:</span> <code>ArrayDeque</code>, <code>LinkedList</code>, <code>Stack</code>, <code>ConcurrentLinkedDeque</code>.</p>
+    <div class="info">For modern Java stack behavior, prefer <code>Deque</code> with <code>ArrayDeque</code> instead of legacy <code>Stack</code>.</div>
+  </section>
+
+  <section id="priority" class="category">
+    <h2>27. Priority-Based Collection</h2>
+    <p><span class="label">Meaning:</span> Elements are processed according to priority or ordering rather than insertion time.</p>
+    <p><span class="label">Examples:</span> <code>PriorityQueue</code>, <code>PriorityBlockingQueue</code>, <code>DelayQueue</code>.</p>
+  </section>
+
+  <section id="queue" class="category">
+    <h2>28. Queue Collection</h2>
+    <p><span class="label">Meaning:</span> Represents elements waiting to be processed, often using FIFO or priority semantics.</p>
+    <p><span class="label">Examples:</span> <code>PriorityQueue</code>, <code>ArrayDeque</code>, <code>LinkedList</code>, <code>ConcurrentLinkedQueue</code>, <code>ArrayBlockingQueue</code>, <code>LinkedBlockingQueue</code>.</p>
+  </section>
+
+  <section id="deque" class="category">
+    <h2>29. Deque Collection</h2>
+    <p><span class="label">Meaning:</span> Double-ended queue. Elements can be inserted and removed from both ends.</p>
+    <p><span class="label">Examples:</span> <code>ArrayDeque</code>, <code>LinkedList</code>, <code>ConcurrentLinkedDeque</code>, <code>LinkedBlockingDeque</code>.</p>
+  </section>
+
+  <section id="set" class="category">
+    <h2>30. Set Collection</h2>
+    <p><span class="label">Meaning:</span> Stores unique elements.</p>
+    <p><span class="label">Examples:</span> <code>HashSet</code>, <code>LinkedHashSet</code>, <code>TreeSet</code>, <code>EnumSet</code>, <code>CopyOnWriteArraySet</code>, <code>ConcurrentSkipListSet</code>.</p>
+  </section>
+
+  <section id="list" class="category">
+    <h2>31. List Collection</h2>
+    <p><span class="label">Meaning:</span> Ordered, positional sequence that usually allows duplicates.</p>
+    <p><span class="label">Examples:</span> <code>ArrayList</code>, <code>LinkedList</code>, <code>Vector</code>, <code>Stack</code>, <code>CopyOnWriteArrayList</code>.</p>
+  </section>
+
+  <section id="map" class="category">
+    <h2>32. Map Collection Framework Type</h2>
+    <p><span class="label">Meaning:</span> Stores key-value pairs with unique keys.</p>
+    <p><span class="label">Examples:</span> <code>HashMap</code>, <code>LinkedHashMap</code>, <code>TreeMap</code>, <code>Hashtable</code>, <code>WeakHashMap</code>, <code>IdentityHashMap</code>, <code>EnumMap</code>, <code>ConcurrentHashMap</code>, <code>ConcurrentSkipListMap</code>.</p>
+  </section>
+
+  <section id="sortedset" class="category">
+    <h2>33. Sorted Set Collection</h2>
+    <p><span class="label">Meaning:</span> A set that keeps its elements sorted.</p>
+    <p><span class="label">Examples:</span> <code>TreeSet</code>, <code>ConcurrentSkipListSet</code>.</p>
+  </section>
+
+  <section id="navigableset" class="category">
+    <h2>34. Navigable Set Collection</h2>
+    <p><span class="label">Meaning:</span> A sorted set with navigation operations such as <code>lower()</code>, <code>floor()</code>, <code>ceiling()</code>, and <code>higher()</code>.</p>
+    <p><span class="label">Examples:</span> <code>TreeSet</code>, <code>ConcurrentSkipListSet</code>.</p>
+  </section>
+
+  <section id="sortedmap" class="category">
+    <h2>35. Sorted Map Collection</h2>
+    <p><span class="label">Meaning:</span> A map whose keys are maintained in sorted order.</p>
+    <p><span class="label">Examples:</span> <code>TreeMap</code>, <code>ConcurrentSkipListMap</code>.</p>
+  </section>
+
+  <section id="navigablemap" class="category">
+    <h2>36. Navigable Map Collection</h2>
+    <p><span class="label">Meaning:</span> A sorted map with key-navigation operations such as <code>lowerKey()</code>, <code>floorKey()</code>, <code>ceilingKey()</code>, and <code>higherKey()</code>.</p>
+    <p><span class="label">Examples:</span> <code>TreeMap</code>, <code>ConcurrentSkipListMap</code>.</p>
+  </section>
+
+  <section id="hash" class="category">
+    <h2>37. Hash-Based Collection</h2>
+    <p><span class="label">Meaning:</span> Uses hash codes to place and locate entries efficiently.</p>
+    <p><span class="label">Examples:</span> <code>HashSet</code>, <code>LinkedHashSet</code>, <code>HashMap</code>, <code>LinkedHashMap</code>, <code>Hashtable</code>, <code>WeakHashMap</code>, <code>IdentityHashMap</code>, <code>ConcurrentHashMap</code>.</p>
+  </section>
+
+  <section id="tree" class="category">
+    <h2>38. Tree-Based Collection</h2>
+    <p><span class="label">Meaning:</span> Uses a tree structure, typically a Red-Black Tree, to maintain sorted order.</p>
+    <p><span class="label">Examples:</span> <code>TreeSet</code>, <code>TreeMap</code>.</p>
+    <div class="info"><code>ConcurrentSkipListSet</code> and <code>ConcurrentSkipListMap</code> are sorted, but they are skip-list based rather than tree-based.</div>
+  </section>
+
+  <section id="array" class="category">
+    <h2>39. Array-Based Collection</h2>
+    <p><span class="label">Meaning:</span> Internally relies mainly on arrays.</p>
+    <p><span class="label">Examples:</span> <code>ArrayList</code>, <code>Vector</code>, <code>Stack</code>, <code>ArrayDeque</code>, <code>PriorityQueue</code>, <code>ArrayBlockingQueue</code>, <code>CopyOnWriteArrayList</code>.</p>
+  </section>
+
+  <section id="linked" class="category">
+    <h2>40. Linked-Node-Based Collection</h2>
+    <p><span class="label">Meaning:</span> Uses linked nodes or linked ordering metadata.</p>
+    <p><span class="label">Examples:</span> <code>LinkedList</code>, <code>LinkedHashSet</code>, <code>LinkedHashMap</code>, <code>LinkedBlockingQueue</code>, <code>ConcurrentLinkedQueue</code>, <code>ConcurrentLinkedDeque</code>.</p>
+  </section>
+
+  <section id="cow" class="category">
+    <h2>41. Copy-On-Write Collection</h2>
+    <p><span class="label">Meaning:</span> Modification creates a fresh internal copy, making iteration stable and very safe for read-heavy workloads.</p>
+    <p><span class="label">Examples:</span> <code>CopyOnWriteArrayList</code>, <code>CopyOnWriteArraySet</code>.</p>
+  </section>
+
+  <section id="enum" class="category">
+    <h2>42. Enum-Based Collection</h2>
+    <p><span class="label">Meaning:</span> Optimized specifically for enum keys or enum elements.</p>
+    <p><span class="label">Examples:</span> <code>EnumSet</code>, <code>EnumMap</code>.</p>
+  </section>
+
+  <section id="identity" class="category">
+    <h2>43. Identity-Based Collection</h2>
+    <p><span class="label">Meaning:</span> Compares keys by object identity using <code>==</code> instead of normal <code>equals()</code>.</p>
+    <p><span class="label">Example:</span> <code>IdentityHashMap</code>.</p>
+  </section>
+
+  <section id="weak" class="category">
+    <h2>44. Weak-Reference Collection</h2>
+    <p><span class="label">Meaning:</span> Keys are held using weak references, allowing entries to disappear when keys are no longer strongly reachable elsewhere.</p>
+    <p><span class="label">Example:</span> <code>WeakHashMap</code>.</p>
+  </section>
+
+  <section class="category">
+    <h2>Quick Class-to-Category Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Class / Factory</th>
+          <th>Important Categories</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>ArrayList</code></td><td>Modifiable, Resizable, Ordered, Indexed, Duplicate-Allowing, Null-Allowing, Non-Thread-Safe, Fail-Fast, Random-Access, Array-Based</td></tr>
+        <tr><td><code>LinkedList</code></td><td>Modifiable, Resizable, Ordered, Indexed, Duplicate-Allowing, Null-Allowing, Sequential-Access, Queue, Deque, Linked-Node-Based</td></tr>
+        <tr><td><code>HashSet</code></td><td>Modifiable, Resizable, Unordered, Unique Elements, Null-Allowing, Hash-Based, Fail-Fast</td></tr>
+        <tr><td><code>LinkedHashSet</code></td><td>Modifiable, Resizable, Insertion-Ordered, Unique Elements, Null-Allowing, Hash-Based + Linked</td></tr>
+        <tr><td><code>TreeSet</code></td><td>Modifiable, Sorted, Navigable, Unique Elements, Tree-Based, Fail-Fast</td></tr>
+        <tr><td><code>ArrayDeque</code></td><td>Modifiable, Resizable, Queue, Deque, FIFO, LIFO, Null-Not-Allowed, Array-Based</td></tr>
+        <tr><td><code>PriorityQueue</code></td><td>Modifiable, Resizable, Priority-Based, Null-Not-Allowed, Array/Heap-Based</td></tr>
+        <tr><td><code>HashMap</code></td><td>Modifiable, Resizable, Unordered, Hash-Based, Null Key/Values Allowed, Fail-Fast</td></tr>
+        <tr><td><code>LinkedHashMap</code></td><td>Modifiable, Ordered, Hash-Based + Linked, Null-Allowing, Fail-Fast</td></tr>
+        <tr><td><code>TreeMap</code></td><td>Modifiable, Sorted, Navigable, Tree-Based, Fail-Fast</td></tr>
+        <tr><td><code>ConcurrentHashMap</code></td><td>Modifiable, Concurrent, Thread-Safe, Null-Not-Allowed, Weakly Consistent, Hash-Based</td></tr>
+        <tr><td><code>CopyOnWriteArrayList</code></td><td>Modifiable, Thread-Safe, Concurrent, Snapshot Iteration, Random-Access, Copy-On-Write</td></tr>
+        <tr><td><code>List.of()</code></td><td>Unmodifiable, Immutable, Fixed-Size, Ordered, Indexed, Null-Not-Allowed</td></tr>
+        <tr><td><code>Arrays.asList()</code></td><td>Fixed-Size, Ordered, Indexed, Null-Allowing, Element Replacement Allowed, Structural Changes Not Allowed</td></tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<footer>
+  Java Collection Categories Reference — suitable for JDK 21 learning and interview revision.
+</footer>
+</body>
+</html>

@@ -1,0 +1,2 @@
+Active: [Amit, Kiran, Priya, Rahul, Vijay]
+Empty join: []

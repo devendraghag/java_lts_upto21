@@ -1,0 +1,4 @@
+Counts: {Finance=2, HR=2, IT=3}
+Finance -> 2
+HR -> 2
+IT -> 3

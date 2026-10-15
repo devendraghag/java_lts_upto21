@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Java Collections, Method References & Streams Mastery — JDK 21</title>
+<style>
+:root{--bg:#0f172a;--panel:#111827;--panel2:#1f2937;--text:#e5e7eb;--muted:#94a3b8;--line:#334155;--accent:#38bdf8;--accent2:#22c55e;--warn:#f59e0b;--code:#020617}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}.container{width:min(1180px,94%);margin:0 auto}header{padding:48px 0 24px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#111827 0%,#0f172a 100%)}h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin:0 0 14px}h2{font-size:1.8rem;margin-top:0}h3{margin-bottom:8px}p{margin:8px 0 14px}.badge{display:inline-block;padding:5px 10px;border:1px solid var(--line);border-radius:999px;margin:4px 6px 4px 0;color:#cbd5e1;background:#111827}.hero-note{background:#0b1220;border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 18px;border-radius:10px;margin-top:24px}nav{position:sticky;top:0;z-index:10;background:rgba(15,23,42,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}nav .container{display:flex;gap:10px;overflow:auto;padding:10px 0}nav a{color:#cbd5e1;text-decoration:none;white-space:nowrap;padding:7px 10px;border-radius:8px}nav a:hover{background:var(--panel2);color:white}main{padding:28px 0 80px}.phase{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;margin:22px 0}.phase-number{color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}@media (max-width:850px){.grid{grid-template-columns:1fr}}.card{background:var(--panel2);border:1px solid var(--line);padding:16px;border-radius:12px}ul,ol{padding-left:22px}table{width:100%;border-collapse:collapse;margin:12px 0;overflow:hidden}th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}th{background:#0b1220}code{font-family:Consolas,Menlo,monospace;color:#bae6fd}pre{background:var(--code);border:1px solid #1e293b;border-radius:12px;padding:16px;overflow:auto;white-space:pre-wrap;word-break:break-word;color:#dbeafe}.prompt-wrap{position:relative}.copy-btn{position:absolute;top:10px;right:10px;border:1px solid var(--line);background:#172033;color:white;border-radius:8px;padding:6px 9px;cursor:pointer;font-size:.8rem}.copy-btn:hover{background:#23304a}.checkpoint{border-left:4px solid var(--accent2);padding:12px 14px;background:#0b1f17;border-radius:8px;margin-top:14px}.warning{border-left:4px solid var(--warn);padding:12px 14px;background:#221809;border-radius:8px;margin-top:14px}details{background:#0b1220;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:12px}summary{cursor:pointer;font-weight:700}.small{color:var(--muted);font-size:.94rem}footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted)}
+</style>
+</head>
+<body>
+<header><div class="container"><div class="phase-number">Practice-first roadmap</div><h1>Java Collections, Method References & Streams Mastery — JDK 21</h1><p>Use this page as a complete progression from Collections fundamentals to advanced Stream combinations, interview problems, object pipelines, JDK 9–21 additions, parallel streams, and collector internals.</p><div><span class="badge">JDK 21</span><span class="badge">Collections</span><span class="badge">Lambdas</span><span class="badge">Method References</span><span class="badge">Streams</span><span class="badge">Collectors</span><span class="badge">Interview Practice</span><span class="badge">Codex Prompts</span></div><div class="hero-note"><strong>How to use this roadmap:</strong> For every phase, first read the learning list, then run the Codex prompt to generate reference programs. Study 1–2 solved examples, close them, and solve the practice tasks yourself. Move forward only when you can explain why each operation is used.</div></div></header>
+<nav><div class="container"><a href="#phase0">Foundation</a><a href="#phase2">Collections</a><a href="#phase5">Streams</a><a href="#phase10">Collectors</a><a href="#phase13">flatMap</a><a href="#phase16">Interview</a><a href="#phase18">JDK 21</a><a href="#phase20">Mastery</a></div></nav>
+<main class="container">
+
+<section class="phase" id="phase0"><div class="phase-number">Phase 0</div><h2>Java Foundation for Functional Programming</h2><div class="grid"><div class="card"><h3>Learn</h3><ul><li>Lambda syntax</li><li>Functional interface concept</li><li><code>Predicate&lt;T&gt;</code></li><li><code>Function&lt;T,R&gt;</code></li><li><code>Consumer&lt;T&gt;</code></li><li><code>Supplier&lt;T&gt;</code></li><li><code>UnaryOperator&lt;T&gt;</code></li><li><code>BinaryOperator&lt;T&gt;</code></li><li><code>Comparator&lt;T&gt;</code></li></ul></div><div class="card"><h3>Practice</h3><ul><li>Convert anonymous classes to lambdas</li><li>Write custom predicates</li><li>Write functions for transformations</li><li>Write comparators with lambdas</li><li>Pass behavior as a method argument</li></ul></div></div><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create a JDK 21 Java practice module for functional programming basics.
+
+Cover:
+- Lambda expressions
+- Predicate&lt;T&gt;
+- Function&lt;T,R&gt;
+- Consumer&lt;T&gt;
+- Supplier&lt;T&gt;
+- UnaryOperator&lt;T&gt;
+- BinaryOperator&lt;T&gt;
+- Comparator&lt;T&gt;
+
+For each topic:
+1. Create one very simple runnable example.
+2. Create one realistic example using Integer, String, or Employee.
+3. Add comments explaining input type, output type, and purpose.
+4. Show expected output.
+5. Add 3 practice questions without solutions.
+6. Add 1 harder combination problem.
+
+Use plain Java only. JDK 21. Do not use frameworks.
+Organize code in clear packages and classes.
+Do not over-engineer.</pre></div></section>
+
+<section class="phase" id="phase1"><div class="phase-number">Phase 1</div><h2>Method References — Master All Forms</h2><table><tr><th>Type</th><th>Syntax</th><th>Example</th></tr><tr><td>Static method</td><td><code>ClassName::staticMethod</code></td><td><code>Integer::parseInt</code></td></tr><tr><td>Specific object instance method</td><td><code>object::method</code></td><td><code>System.out::println</code></td></tr><tr><td>Arbitrary object instance method</td><td><code>ClassName::method</code></td><td><code>String::toUpperCase</code></td></tr><tr><td>Constructor</td><td><code>ClassName::new</code></td><td><code>ArrayList::new</code></td></tr></table><h3>Must Practice With</h3><ul><li><code>forEach</code></li><li><code>map</code></li><li><code>filter</code> helper predicates</li><li><code>sorted</code></li><li><code>reduce</code></li><li><code>Optional</code></li><li><code>Comparator.comparing</code></li><li>Constructor references</li></ul><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create a JDK 21 Java practice module dedicated to method references.
+
+Cover all 4 forms:
+1. Static method reference
+2. Instance method of a specific object
+3. Instance method of an arbitrary object of a type
+4. Constructor reference
+
+For every form:
+- Show lambda version first.
+- Show equivalent method reference version.
+- Explain why the conversion works.
+- Show the functional interface type involved.
+- Add expected output.
+- Add 5 exercises where I must convert lambda to method reference.
+- Add 5 exercises where method reference should NOT be used because it reduces readability.
+
+Also use method references with:
+forEach, map, sorted, reduce, Optional, Comparator, Collectors.
+
+Keep examples short and runnable.</pre></div></section>
+
+<section class="phase" id="phase2"><div class="phase-number">Phase 2</div><h2>Collections Framework Structure</h2><pre>Iterable
+  └── Collection
+      ├── List
+      │   ├── ArrayList
+      │   ├── LinkedList
+      │   ├── Vector
+      │   └── Stack
+      ├── Set
+      │   ├── HashSet
+      │   ├── LinkedHashSet
+      │   └── SortedSet
+      │       └── TreeSet
+      └── Queue
+          ├── PriorityQueue
+          └── Deque
+              ├── ArrayDeque
+              └── LinkedList
+
+Map  (separate hierarchy)
+  ├── HashMap
+  ├── LinkedHashMap
+  ├── SortedMap
+  │   └── TreeMap
+  ├── Hashtable
+  └── ConcurrentHashMap</pre><div class="checkpoint"><strong>Checkpoint:</strong> You should be able to choose the right collection by order, duplicates, sorting, lookup needs, and thread-safety requirements.</div><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create a JDK 21 Java Collections Framework practice module.
+
+Cover:
+- Collection, List, Set, Queue, Deque, Map
+- ArrayList
+- LinkedList
+- Vector
+- Stack
+- HashSet
+- LinkedHashSet
+- TreeSet
+- PriorityQueue
+- ArrayDeque
+- HashMap
+- LinkedHashMap
+- TreeMap
+- Hashtable
+- ConcurrentHashMap
+
+For every class:
+1. Explain ordering behavior.
+2. Explain duplicate behavior.
+3. Explain null behavior.
+4. Explain typical lookup/insertion characteristics conceptually.
+5. Explain best use cases.
+6. Create one runnable program.
+7. Create one comparison exercise against a similar collection.
+
+Also create a final decision table:
+Requirement → best collection choice.
+
+Use JDK 21 and plain Java.</pre></div></section>
+
+<section class="phase" id="phase3"><div class="phase-number">Phase 3</div><h2>Collection Methods You Must Know</h2><div class="grid"><div class="card"><h3>Collection / List</h3><code>add, addAll, remove, removeAll, removeIf, retainAll, contains, containsAll, size, isEmpty, clear, toArray, iterator, spliterator, forEach</code><br><br><code>get, set, indexOf, lastIndexOf, subList, sort, replaceAll, listIterator</code></div><div class="card"><h3>Map</h3><code>put, putAll, putIfAbsent, get, getOrDefault, remove, replace, replaceAll, compute, computeIfAbsent, computeIfPresent, merge, containsKey, containsValue, keySet, values, entrySet, forEach</code></div><div class="card"><h3>Queue / Deque</h3><code>offer, add, poll, remove, peek, element, offerFirst, offerLast, pollFirst, pollLast, peekFirst, peekLast, push, pop</code></div><div class="card"><h3>Set / Sorted Collections</h3><code>add, contains, remove, first, last, lower, floor, ceiling, higher, headSet, tailSet, subSet</code></div></div><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create JDK 21 practice programs for important Collection, List, Set, Queue, Deque, and Map methods.
+
+Group methods logically.
+
+For List:
+add, addAll, remove, removeIf, get, set, contains, indexOf, subList, sort, replaceAll, listIterator.
+
+For Set:
+add, remove, contains, bulk operations, TreeSet navigation methods.
+
+For Queue/Deque:
+offer, poll, peek, add/remove/element, offerFirst/Last, pollFirst/Last, push/pop.
+
+For Map:
+put, putIfAbsent, get, getOrDefault, remove, replace, replaceAll, compute, computeIfAbsent, computeIfPresent, merge, keySet, values, entrySet.
+
+For each group:
+- create 2 solved runnable examples
+- create 5 practice tasks
+- include edge cases
+- show expected output
+- explain when one method is safer/preferred over another</pre></div></section>
+
+<section class="phase" id="phase4"><div class="phase-number">Phase 4</div><h2>Iteration Before Streams</h2><ul><li>Enhanced for loop</li><li><code>Iterator</code></li><li><code>ListIterator</code></li><li><code>forEach</code></li><li><code>Spliterator</code> basics</li><li><code>Map.entrySet()</code> iteration</li></ul><div class="warning">Understand normal iteration first. Streams should not become a replacement for every loop.</div><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create a JDK 21 Java practice module comparing collection iteration approaches.
+
+Cover:
+- enhanced for loop
+- Iterator
+- ListIterator
+- forEach
+- Spliterator basics
+- Map keySet, values, entrySet
+
+For each:
+- create runnable examples
+- show safe removal where applicable
+- compare readability and use cases
+- create exercises asking me to choose the best iteration approach
+
+End with 5 problems that I must solve once using loops and once using Streams later.</pre></div></section>
+
+<section class="phase" id="phase5"><div class="phase-number">Phase 5</div><h2>Stream Fundamentals</h2><h3>Learn</h3><ul><li>What a Stream is</li><li>Stream source</li><li>Intermediate operations</li><li>Terminal operations</li><li>Lazy evaluation</li><li>Single-use nature of streams</li><li>Internal vs external iteration</li><li>Stateless vs stateful operations</li><li>Short-circuiting</li></ul><pre>Source
+  ↓
+Intermediate Operation
+  ↓
+Intermediate Operation
+  ↓
+Terminal Operation</pre><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create a JDK 21 Stream fundamentals module.
+
+Teach through runnable programs:
+- Collection.stream()
+- intermediate vs terminal operations
+- lazy evaluation
+- stream reuse error
+- internal vs external iteration
+- stateless vs stateful operations
+- short-circuiting
+
+Use peek only for demonstration.
+
+For every concept:
+1. one minimal example
+2. one experiment where output proves the behavior
+3. one question asking me to predict output before running
+4. one practice task without solution</pre></div></section>
+
+<section class="phase" id="phase6"><div class="phase-number">Phase 6</div><h2>filter() — Selection Mastery</h2><div class="grid"><div class="card"><h3>Numbers</h3><ul><li>Even / odd</li><li>Positive / negative</li><li>Range filtering</li><li>Multiples</li></ul></div><div class="card"><h3>Strings</h3><ul><li>Prefix / suffix</li><li>Length</li><li>Contains</li><li>Case-insensitive matching</li></ul></div><div class="card"><h3>Objects</h3><ul><li>Age</li><li>Salary</li><li>Department</li><li>Active status</li><li>Skills</li></ul></div></div><div class="checkpoint"><strong>Target:</strong> 25 filter exercises before moving on.</div><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create 25 progressively difficult JDK 21 Stream filter() exercises.
+
+Use:
+- List&lt;Integer&gt;
+- List&lt;String&gt;
+- List&lt;Employee&gt;
+
+Structure:
+1-8 easy
+9-16 medium
+17-22 multiple-condition filters
+23-25 interview-style filters
+
+For the first 5:
+provide full solved programs with expected output.
+
+For the remaining 20:
+provide only requirement, input data, expected output, and hints.
+Do NOT give the final Stream expression unless I explicitly ask.
+
+Include Predicate and method-reference opportunities where sensible.</pre></div></section>
+
+<section class="phase" id="phase7"><div class="phase-number">Phase 7</div><h2>map() + Method References</h2><ul><li>String → uppercase</li><li>Integer → square</li><li>Employee → name</li><li>Employee → salary</li><li>Employee → DTO</li><li>Object → calculated value</li></ul><pre>Employee → map(Employee::getName) → String
+String   → map(String::toUpperCase) → String</pre><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create 20 JDK 21 Stream map() exercises.
+
+Use Integer, String, Employee, and EmployeeDTO.
+
+Focus on:
+- type transformations
+- chained map operations
+- getter method references
+- String method references
+- mapping objects to DTOs
+- mapping to calculated values
+
+For each solved example:
+show lambda version and method-reference version when possible.
+
+First 5 solved.
+Next 15 practice-only with expected output and hints.</pre></div></section>
+
+<section class="phase" id="phase8"><div class="phase-number">Phase 8</div><h2>Core Stream Combination Ladder</h2><pre>filter
+filter → map
+map → distinct
+filter → map → distinct
+sorted
+filter → sorted
+filter → sorted → map
+map → distinct → sorted
+filter → map → distinct → sorted
+sorted → limit
+sorted → skip → limit
+filter → sorted → limit → map</pre><h3>Also Learn</h3><ul><li><code>distinct()</code></li><li><code>sorted()</code></li><li><code>Comparator.comparing()</code></li><li><code>reversed()</code></li><li><code>thenComparing()</code></li><li><code>limit()</code></li><li><code>skip()</code></li></ul><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create a JDK 21 Stream combination practice module.
+
+Generate exercises in this exact progression:
+1. filter
+2. map
+3. filter → map
+4. distinct
+5. map → distinct
+6. sorted
+7. filter → sorted
+8. filter → sorted → map
+9. map → distinct → sorted
+10. sorted → limit
+11. sorted → skip → limit
+12. filter → sorted → limit → map
+
+Use Integer, String, and Employee datasets.
+
+For each pattern:
+- one solved example
+- two practice tasks
+- expected output
+- explanation of operation order
+
+Include Top-N, second-highest, third-highest, and pagination problems.</pre></div></section>
+
+<section class="phase" id="phase9"><div class="phase-number">Phase 9</div><h2>Terminal Operations + Optional</h2><div class="grid"><div class="card"><h3>Terminal Operations</h3><code>count, min, max, findFirst, findAny, anyMatch, allMatch, noneMatch, forEach</code></div><div class="card"><h3>Optional</h3><code>ifPresent, orElse, orElseGet, orElseThrow, map, flatMap, filter</code></div></div><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create a JDK 21 module for Stream terminal operations and Optional.
+
+Cover:
+count, min, max, findFirst, findAny, anyMatch, allMatch, noneMatch.
+
+Then cover Optional:
+ifPresent, orElse, orElseGet, orElseThrow, map, flatMap, filter.
+
+Use Employee search examples.
+
+Important:
+- avoid Optional.get() as the default approach
+- explain short-circuit behavior
+- compare findFirst vs findAny
+- show Optional with min/max/find
+
+Create 15 exercises, with only the first 5 solved.</pre></div></section>
+
+<section class="phase" id="phase10"><div class="phase-number">Phase 10</div><h2>Primitive Streams + Numeric Aggregation</h2><ul><li><code>IntStream</code>, <code>LongStream</code>, <code>DoubleStream</code></li><li><code>mapToInt</code>, <code>mapToLong</code>, <code>mapToDouble</code></li><li><code>boxed()</code></li><li><code>sum()</code>, <code>average()</code>, <code>min()</code>, <code>max()</code></li><li><code>range()</code>, <code>rangeClosed()</code></li><li>summary statistics</li></ul><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create JDK 21 primitive-stream practice.
+
+Cover:
+IntStream, LongStream, DoubleStream,
+mapToInt, mapToLong, mapToDouble,
+boxed, range, rangeClosed,
+sum, average, min, max,
+IntSummaryStatistics, LongSummaryStatistics, DoubleSummaryStatistics.
+
+Create examples for:
+- total salary
+- average salary
+- average age
+- first N numbers
+- first N even numbers
+- numeric statistics
+
+Add 12 practice exercises and expected outputs.</pre></div></section>
+
+<section class="phase" id="phase11"><div class="phase-number">Phase 11</div><h2>reduce() — Reduction Thinking</h2><ul><li>Identity</li><li>Accumulator</li><li>Combiner</li><li>Associativity</li><li>One-argument, two-argument, and three-argument overloads</li></ul><h3>Practice</h3><ul><li>Sum</li><li>Product</li><li>Maximum / minimum</li><li>Longest string</li><li>Concatenation</li><li>Total salary</li></ul><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create 15 JDK 21 reduce() practice programs.
+
+Teach:
+- identity
+- accumulator
+- combiner
+- associativity
+- all reduce overloads
+
+Use numbers, strings, and Employee.
+
+For every solved example:
+show the intermediate reasoning of the reduction.
+
+Include exercises where reduce is appropriate and exercises where a specialized method such as sum(), max(), or collect() would be better.
+
+First 5 solved, remaining 10 practice-only.</pre></div></section>
+
+<section class="phase" id="phase12"><div class="phase-number">Phase 12</div><h2>Collectors — Basic to groupingBy()</h2><h3>Basic</h3><code>toList, toSet, toCollection, joining, toMap</code><h3>Aggregation</h3><code>counting, summingInt, summingLong, summingDouble, averagingInt, averagingLong, averagingDouble, summarizingInt, summarizingLong, summarizingDouble</code><h3>Grouping</h3><code>groupingBy, partitioningBy</code><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create a JDK 21 Collectors practice module.
+
+Cover:
+toList, toSet, toCollection, joining,
+toMap with duplicate-key merge function,
+counting,
+summingInt/Long/Double,
+averagingInt/Long/Double,
+summarizingInt/Long/Double,
+groupingBy,
+partitioningBy.
+
+Progress groupingBy exercises in this order:
+1. department → employees
+2. department → count
+3. department → names
+4. department → total salary
+5. department → average salary
+6. department → max salary
+7. department → highest-paid employee
+8. department → minimum salary
+
+Create at least 30 exercises.
+Only first 8 solved.
+Remaining exercises must include input, expected output, and hints.</pre></div></section>
+
+<section class="phase" id="phase13"><div class="phase-number">Phase 13</div><h2>flatMap() — Nested Data Mastery</h2><pre>map:
+Employee → List&lt;String&gt;
+Result: Stream&lt;List&lt;String&gt;&gt;
+
+flatMap:
+Employee → Skills
+Result: Stream&lt;String&gt;</pre><h3>Practice Structures</h3><ul><li><code>List&lt;List&lt;Integer&gt;&gt;</code></li><li><code>List&lt;List&lt;String&gt;&gt;</code></li><li>Employee → skills</li><li>Customer → orders</li><li>Order → items</li></ul><h3>Combination Ladder</h3><pre>flatMap
+flatMap → distinct
+flatMap → filter
+flatMap → distinct → sorted
+flatMap → groupingBy → counting
+filter → flatMap → distinct → sorted</pre><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create 25 JDK 21 flatMap() exercises.
+
+Use:
+- List&lt;List&lt;Integer&gt;&gt;
+- List&lt;List&lt;String&gt;&gt;
+- Employee with List&lt;String&gt; skills
+- Customer with List&lt;Order&gt;
+- Order with List&lt;Item&gt;
+
+Progress:
+1. flatten
+2. flatten + filter
+3. flatten + distinct
+4. flatten + sorted
+5. flatten + groupingBy
+6. flatten + groupingBy + counting
+7. multi-step real-world pipelines
+
+Explain map vs flatMap clearly.
+
+First 6 solved, remaining exercises practice-only.</pre></div></section>
+
+<section class="phase" id="phase14"><div class="phase-number">Phase 14</div><h2>Advanced Downstream Collectors</h2><ul><li><code>mapping()</code></li><li><code>filtering()</code></li><li><code>flatMapping()</code></li><li><code>maxBy()</code></li><li><code>minBy()</code></li><li><code>reducing()</code></li><li><code>collectingAndThen()</code></li><li><code>teeing()</code></li></ul><h3>Multi-level Grouping</h3><pre>department → gender → employees
+department → gender → count
+department → designation → average salary
+department → active/inactive → employees</pre><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create an advanced JDK 21 Collectors module.
+
+Cover:
+mapping, filtering, flatMapping,
+maxBy, minBy,
+reducing,
+collectingAndThen,
+teeing,
+nested groupingBy.
+
+Use a rich Employee model.
+
+Required exercises:
+- department → employee names
+- department → employees with salary > threshold
+- department → unique skills
+- department → highest-paid employee
+- department → gender → count
+- department → designation → average salary
+- minimum + maximum using teeing
+- sum + count using teeing
+
+Create 20 exercises.
+Keep at least half unsolved for practice.</pre></div></section>
+
+<section class="phase" id="phase15"><div class="phase-number">Phase 15</div><h2>Map + Stream Combinations</h2><ul><li><code>entrySet().stream()</code></li><li>Sort Map by key</li><li>Sort Map by value</li><li>Filter Map by key / value</li><li>Map → List</li><li>List → Map</li><li>Map → another Map</li><li>Frequency Map → top N</li></ul><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create JDK 21 Map + Stream practice programs.
+
+Cover:
+- entrySet().stream()
+- sorting by key
+- sorting by value
+- filtering by key
+- filtering by value
+- converting Map to List
+- converting List to Map
+- transforming Map to another Map
+- frequency maps
+- top-N entries by value
+
+Create 15 exercises.
+Use HashMap, LinkedHashMap, and TreeMap where appropriate.
+Explain when encounter order matters.</pre></div></section>
+
+<section class="phase" id="phase16"><div class="phase-number">Phase 16</div><h2>Interview Problems — Strings & Numbers</h2><div class="grid"><div class="card"><h3>Strings</h3><ul><li>Character frequency</li><li>Word frequency</li><li>Duplicate characters</li><li>First repeated character</li><li>First non-repeated character</li><li>Anagram</li><li>Palindrome</li><li>Longest / shortest word</li><li>Group words by length</li><li>Group anagrams</li></ul></div><div class="card"><h3>Numbers</h3><ul><li>Odd / even partition</li><li>Duplicate numbers</li><li>Frequency</li><li>Top N / bottom N</li><li>Second-highest</li><li>Sum / average</li><li>Squares</li><li>Prime filtering</li><li>Fibonacci</li></ul></div></div><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create a JDK 21 Java Stream interview-practice module for strings and numbers.
+
+Include at least 30 problems:
+- frequency
+- duplicates
+- first repeated/non-repeated character
+- anagram
+- palindrome
+- word statistics
+- group-by problems
+- odd/even partition
+- second highest
+- top N / bottom N
+- sum / average
+- Fibonacci
+- merge arrays
+- merge + sort + distinct
+
+For every problem:
+- input
+- expected output
+- difficulty
+- Stream concepts needed
+- hint
+
+Do NOT provide solutions for the first attempt.
+Put solutions in separate reference classes so I can avoid opening them until needed.</pre></div></section>
+
+<section class="phase" id="phase17"><div class="phase-number">Phase 17</div><h2>Employee Real-World Mastery Set</h2><pre>class Employee {
+    int id;
+    String name;
+    int age;
+    String gender;
+    String department;
+    String designation;
+    double salary;
+    boolean active;
+    List&lt;String&gt; skills;
+}</pre><details open><summary>Core Problems</summary><ol><li>Employees older than 30</li><li>Active employees</li><li>Names of IT employees</li><li>Unique departments</li><li>Employees sorted by salary</li><li>Top 3 salaries</li><li>Second-highest salary</li><li>Highest-paid employee</li><li>Lowest-paid employee</li><li>Average company salary</li><li>Employee count by department</li><li>Employees grouped by department</li><li>Names grouped by department</li><li>Total salary by department</li><li>Average salary by department</li><li>Highest salary by department</li><li>Highest-paid employee by department</li><li>Employees grouped by gender</li><li>Department → gender → employee count</li><li>Active / inactive partition</li><li>All skills</li><li>Unique skills</li><li>Skill frequency</li><li>Most common skill</li><li>Top 3 skills</li><li>Employees knowing Java</li><li>Employees knowing Java + Spring</li><li>Highest-paid Java developer</li><li>Employees with at least 3 skills</li><li>Employees earning above department average</li></ol></details><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create a JDK 21 Employee Stream mastery project.
+
+Employee fields:
+id, name, age, gender, department, designation, salary, active, List&lt;String&gt; skills.
+
+Create at least 50 exercises from beginner to advanced.
+
+Organize as:
+Level 1: filter/map/sort
+Level 2: min/max/count/find/match
+Level 3: toMap/groupingBy/partitioningBy
+Level 4: flatMap/downstream collectors/nested grouping
+Level 5: complex interview pipelines
+
+Rules:
+- Keep datasets reusable.
+- Include expected outputs.
+- First 10 solved.
+- Next 40 practice-only.
+- Put solutions in separate reference package.
+- Add unit-test-style expected-result checks where useful.
+- Avoid frameworks.</pre></div></section>
+
+<section class="phase" id="phase18"><div class="phase-number">Phase 18</div><h2>JDK 9–21 Stream Additions</h2><ul><li><code>takeWhile()</code></li><li><code>dropWhile()</code></li><li><code>Stream.ofNullable()</code></li><li><code>Stream.iterate(seed, predicate, next)</code></li><li><code>Collectors.filtering()</code></li><li><code>Collectors.flatMapping()</code></li><li><code>toUnmodifiableList()</code></li><li><code>toUnmodifiableSet()</code></li><li><code>toUnmodifiableMap()</code></li><li><code>Collectors.teeing()</code></li><li><code>Stream.toList()</code></li><li><code>mapMulti()</code></li><li><code>mapMultiToInt()</code></li><li><code>mapMultiToLong()</code></li><li><code>mapMultiToDouble()</code></li></ul><div class="checkpoint">Master the comparisons: <strong>filter vs takeWhile/dropWhile</strong>, <strong>map vs flatMap vs mapMulti</strong>, and <strong>Stream.toList vs Collectors.toList</strong>.</div><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create a JDK 21 practice module for Stream and Collector additions after Java 8.
+
+Cover:
+takeWhile,
+dropWhile,
+Stream.ofNullable,
+3-argument Stream.iterate,
+Collectors.filtering,
+Collectors.flatMapping,
+toUnmodifiableList,
+toUnmodifiableSet,
+toUnmodifiableMap,
+Collectors.teeing,
+Stream.toList,
+mapMulti,
+mapMultiToInt,
+mapMultiToLong,
+mapMultiToDouble.
+
+For every feature:
+- explain what problem it solves
+- compare with older alternatives
+- create one solved example
+- create two practice exercises
+
+Include explicit comparison programs:
+filter vs takeWhile vs dropWhile
+map vs flatMap vs mapMulti
+Stream.toList vs Collectors.toList</pre></div></section>
+
+<section class="phase" id="phase19"><div class="phase-number">Phase 19</div><h2>Laziness, peek(), Side Effects & Performance Thinking</h2><ul><li>Lazy evaluation</li><li><code>peek()</code> for observation/debugging</li><li>Side effects</li><li>Non-interference</li><li>Stateful vs stateless operations</li><li>Short-circuiting</li><li>Encounter order</li><li>Avoiding unnecessary stream complexity</li></ul><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create JDK 21 Stream-behavior experiments.
+
+I want programs that prove:
+- lazy evaluation
+- short-circuiting
+- why peek should not be used for business mutation
+- problems caused by side effects
+- stateful vs stateless operations
+- encounter order
+- stream pipeline optimization effects
+
+For each experiment:
+1. ask me to predict output first
+2. then provide reference output
+3. explain why it happened
+
+Include deliberately bad examples and corrected versions.</pre></div></section>
+
+<section class="phase" id="phase20"><div class="phase-number">Phase 20</div><h2>Parallel Streams + Collector Internals</h2><div class="grid"><div class="card"><h3>Parallel Streams</h3><ul><li><code>parallelStream()</code></li><li><code>parallel()</code></li><li><code>sequential()</code></li><li><code>unordered()</code></li><li><code>forEachOrdered()</code></li><li>ForkJoinPool concept</li><li>Associativity</li><li>Thread safety</li><li>Shared mutable state</li></ul></div><div class="card"><h3>Collector Internals</h3><ul><li><code>Collector&lt;T,A,R&gt;</code></li><li>Supplier</li><li>Accumulator</li><li>Combiner</li><li>Finisher</li><li>Characteristics</li><li>Custom Collector</li></ul></div></div><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create an advanced JDK 21 module for parallel streams and Collector internals.
+
+Parallel Streams:
+- parallelStream
+- parallel
+- sequential
+- unordered
+- forEach vs forEachOrdered
+- associativity
+- shared mutable state
+- thread safety
+- cases where parallel is slower
+- cases where parallel may help
+
+Collector Internals:
+- Collector&lt;T,A,R&gt;
+- supplier
+- accumulator
+- combiner
+- finisher
+- characteristics
+
+Create:
+- 8 experiments for parallel behavior
+- 3 reduction experiments
+- 2 custom collectors
+- 5 "is this safe in parallel?" exercises
+
+Do not claim parallel streams are always faster.
+Explain tradeoffs.</pre></div></section>
+
+<section class="phase"><div class="phase-number">Final Mastery Ladder</div><h2>Practice These Combinations Until They Feel Natural</h2><pre>01. filter
+02. map
+03. filter → map
+04. filter → filter → map
+05. distinct
+06. map → distinct
+07. filter → map → distinct
+08. sorted
+09. filter → sorted
+10. filter → sorted → map
+11. map → distinct → sorted
+12. filter → map → distinct → sorted
+13. sorted → limit
+14. sorted → skip
+15. sorted → skip → limit
+16. filter → sorted → limit
+17. filter → sorted → limit → map
+18. filter → count
+19. filter → min
+20. filter → max
+21. filter → findFirst
+22. filter → findAny
+23. anyMatch
+24. allMatch
+25. noneMatch
+26. filter → anyMatch
+27. mapToInt → sum
+28. mapToDouble → average
+29. filter → mapToDouble → average
+30. summaryStatistics
+31. reduce
+32. filter → reduce
+33. filter → collect
+34. map → joining
+35. filter → map → joining
+36. toMap
+37. toMap → duplicate merge
+38. groupingBy
+39. groupingBy → counting
+40. groupingBy → mapping
+41. groupingBy → summingDouble
+42. groupingBy → averagingDouble
+43. groupingBy → maxBy
+44. groupingBy → minBy
+45. groupingBy → filtering
+46. groupingBy → groupingBy
+47. partitioningBy
+48. partitioningBy → counting
+49. flatMap
+50. flatMap → distinct
+51. flatMap → filter
+52. flatMap → distinct → sorted
+53. flatMap → groupingBy → counting
+54. filter → flatMap → distinct → sorted
+55. groupingBy → flatMapping → toSet
+56. groupingBy → filtering → mapping
+57. entrySet → stream → sorted
+58. groupingBy → counting → entrySet → stream → sorted
+59. takeWhile
+60. dropWhile
+61. ofNullable
+62. mapMulti
+63. collectingAndThen
+64. teeing
+65. parallelStream → filter → map → reduce
+66. custom Collector</pre></section>
+
+<section class="phase"><div class="phase-number">Final Codex Master Prompt</div><h2>Generate the Complete Practice Repository</h2><div class="prompt-wrap"><button class="copy-btn">Copy prompt</button><pre>Create a complete JDK 21 Java mastery repository focused on:
+
+1. Java Collections Framework
+2. Collection interfaces and implementation classes
+3. Important Collection/List/Set/Queue/Deque/Map methods
+4. Iterators and iteration techniques
+5. Lambda expressions
+6. Functional interfaces
+7. Method references
+8. Java Streams
+9. Stream combinations
+10. Primitive streams
+11. Optional
+12. reduce
+13. Collectors
+14. toMap
+15. groupingBy
+16. partitioningBy
+17. flatMap
+18. advanced downstream collectors
+19. Map + Stream combinations
+20. String and number interview problems
+21. Employee real-world problems
+22. JDK 9-21 Stream additions
+23. mapMulti
+24. teeing
+25. laziness and side effects
+26. parallel streams
+27. Collector internals
+28. custom collectors
+
+Repository requirements:
+- JDK 21 only
+- Plain Java, no Spring
+- Maven or Gradle is optional; keep setup simple
+- Organize packages by phase
+- Use reusable datasets
+- Use a rich Employee model
+- Use nested objects such as Customer → Orders → Items
+- Keep solved reference examples separate from practice exercises
+- Practice classes must not contain final solutions
+- Include expected outputs for practice problems
+- Include hints, difficulty, and concepts required
+- Add README files per phase
+- Add one overall README showing progression
+- Prefer many small runnable classes over one giant class
+- Use method references where they improve readability
+- Do not force method references where lambdas are clearer
+- Avoid unnecessary frameworks and dependencies
+- Do not use parallel streams until the advanced phase
+- Do not use custom collectors until the final phase
+
+Difficulty progression:
+Beginner → Intermediate → Strong → Advanced → Expert
+
+Exercise strategy:
+- solved example
+- similar practice problem
+- harder variation
+- combination problem
+- interview problem
+
+Create enough practice material so that completing the repository would require several hundred exercises, with strong emphasis on:
+filter + map,
+Comparator,
+toMap,
+groupingBy,
+flatMap,
+downstream collectors,
+nested grouping,
+Map + Stream,
+Employee problems,
+method references,
+and JDK 9-21 features.
+
+Do not generate every solution inline.
+Place solutions in separate reference packages so I can practice without seeing them.</pre></div><div class="checkpoint"><strong>Mastery test:</strong> You should be able to read a requirement and mentally translate it into a pipeline before writing code.</div><pre>Requirement:
+Find the top 3 most common skills among active IT employees earning more than 80,000.
+
+Mental pipeline:
+employees
+  ↓ filter active
+  ↓ filter department == IT
+  ↓ filter salary > 80000
+  ↓ flatMap skills
+  ↓ groupingBy skill + counting
+  ↓ entrySet().stream()
+  ↓ sorted by count descending
+  ↓ limit 3
+  ↓ map skill
+  ↓ toList</pre></section>
+
+</main>
+<footer><div class="container">Java Collections + Method References + Streams Mastery Roadmap — JDK 21</div></footer>
+<script>document.querySelectorAll('.copy-btn').forEach(btn=>{btn.addEventListener('click',async()=>{const pre=btn.parentElement.querySelector('pre');const t=pre.innerText;try{await navigator.clipboard.writeText(t);const old=btn.textContent;btn.textContent='Copied';setTimeout(()=>btn.textContent=old,1200)}catch(e){btn.textContent='Copy failed';setTimeout(()=>btn.textContent='Copy prompt',1200)}})});</script>
+</body>
+</html>

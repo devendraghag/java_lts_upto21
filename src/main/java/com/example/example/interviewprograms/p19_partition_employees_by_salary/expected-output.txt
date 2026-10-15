@@ -1,0 +1,3 @@
+High salaries: [Rahul, Priya, Vijay, Neha, Kiran]
+Other salaries: [Amit, Sneha]
+Group keys: [false, true]

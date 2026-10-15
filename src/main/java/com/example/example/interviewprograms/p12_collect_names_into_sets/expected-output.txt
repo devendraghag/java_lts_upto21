@@ -1,0 +1,3 @@
+Unique name count: 7
+Alphabetical names: [Amit, Kiran, Neha, Priya, Rahul, Sneha, Vijay]
+Contains Amit: true

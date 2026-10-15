@@ -1,0 +1,2 @@
+Paid line items: [Keyboard, Mouse, Monitor, Cable, Chair, Monitor, Keyboard, Lamp]
+Paid line item rows: 8

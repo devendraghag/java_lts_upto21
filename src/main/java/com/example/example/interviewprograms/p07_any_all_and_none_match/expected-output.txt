@@ -1,0 +1,4 @@
+Any above 80k: true
+All positive: true
+None negative: true
+Any inactive: true

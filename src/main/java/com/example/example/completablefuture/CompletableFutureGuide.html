@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CompletableFuture | Easy Java Guide</title>
+  <style>
+    :root{--ink:#172033;--paper:#f3f6fb;--line:#d9e1ed;--blue:#2457c5;--soft:#eaf0ff;--gold:#8a4b08;font-family:Arial,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);line-height:1.65}
+    header{padding:42px max(22px,calc((100vw - 980px)/2));color:white;background:#14264b}header p{max-width:780px;color:#d9e5ff}
+    h1{font-size:clamp(2rem,5vw,3.2rem);margin:8px 0}main{max-width:980px;margin:26px auto 60px;padding:0 18px}
+    .panel,.example{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;margin:17px 0}
+    .tag{display:inline-block;padding:3px 10px;border-radius:99px;color:var(--blue);background:var(--soft);font-size:.84rem;font-weight:bold}
+    .analogy{background:#fff8e8;border-left:5px solid #e3a435;padding:14px 17px;border-radius:8px}
+    .flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:18px 0}
+    .box{flex:1 1 140px;display:grid;place-items:center;min-height:66px;padding:12px;text-align:center;background:var(--soft);border:1px solid #bfd0f5;border-radius:10px;font-weight:bold}
+    .arrow{align-self:center;color:var(--blue);font-size:1.35rem;font-weight:bold}
+    code{font-family:Consolas,monospace;background:#edf1f7;padding:2px 5px;border-radius:4px}a{color:var(--blue)}
+    pre{overflow-x:auto;background:#edf1f7;padding:16px;border-radius:10px;line-height:1.5}pre code{background:transparent;padding:0}
+    .comparison{width:100%;border-collapse:collapse;background:#fff;margin:16px 0}.comparison th,.comparison td{border:1px solid var(--line);padding:11px;text-align:left;vertical-align:top}.comparison th{background:#edf2fa}
+    .note{background:#fff8e8;border-left:5px solid #e3a435;padding:13px 16px;border-radius:8px}
+    footer{color:#536176;border-top:1px solid var(--line);padding-top:14px}
+    @media(max-width:600px){.panel,.example{padding:16px}.arrow{transform:rotate(90deg)}}
+  </style>
+</head>
+<body>
+  <header>
+    <span class="tag">Java · Async programming</span>
+    <h1>CompletableFuture</h1>
+    <p>A CompletableFuture is a result that may arrive later. You can start work, attach the next step, and combine results without writing every thread by hand.</p>
+  </header>
+  <main>
+    <section class="panel">
+      <h2>Easy analogy: a restaurant order ticket</h2>
+      <p>You place an order and get a ticket. The kitchen prepares the food while you do other things. When the food is ready, the next step can serve it, package it, or combine it with another order.</p>
+      <p>A <code>CompletableFuture&lt;T&gt;</code> is like that ticket: it represents a value of type <code>T</code> that may not be ready yet. A chain of future steps describes what should happen when earlier work finishes.</p>
+      <div class="flow" aria-label="Basic CompletableFuture flow">
+        <div class="box">Start a task</div><div class="arrow">&rarr;</div>
+        <div class="box">Future holds its pending result</div><div class="arrow">&rarr;</div>
+        <div class="box">Next step uses the result</div><div class="arrow">&rarr;</div>
+        <div class="box">join() waits when result is needed</div>
+      </div>
+      <p><code>supplyAsync()</code> starts a task that returns a value. <code>runAsync()</code> starts a task that returns no value. <code>join()</code> waits for completion and returns the result.</p>
+      <p>By default, async methods without an executor use the JDK's common pool. An example later shows how to pass your own executor. See the <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html">Java 21 CompletableFuture API</a>.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Easy notes: Future and CompletableFuture</h2>
+      <h3>1. What is a Future?</h3>
+      <p>A <code>Future</code> is a promise that a task will give you an answer later. You can ask for the answer with <code>get()</code>. If the task is still working, <code>get()</code> makes your current thread wait.</p>
+      <div class="analogy"><strong>Think of a parcel receipt:</strong> the receipt tells you a parcel is coming. You can check back later, but the old Future does not automatically deliver the next action when the parcel arrives.</div>
+
+      <h3>2. What did Java 8 add?</h3>
+      <p>Java 8 added <code>CompletableFuture</code>. It can hold a future answer like <code>Future</code>, and it lets you say what should happen after that answer arrives. You can connect steps without calling <code>get()</code> between every step.</p>
+      <div class="flow" aria-label="CompletableFuture step flow">
+        <div class="box">Start work</div><div class="arrow">&rarr;</div>
+        <div class="box">When answer arrives, change it</div><div class="arrow">&rarr;</div>
+        <div class="box">Use or print the answer</div>
+      </div>
+
+      <h3>3. Useful method names in plain English</h3>
+      <ul>
+        <li><code>supplyAsync()</code>: run work that gives back a value.</li>
+        <li><code>runAsync()</code>: run work that does not give back a value.</li>
+        <li><code>thenApply()</code>: take the answer and change it.</li>
+        <li><code>thenAccept()</code>: take the answer and do something with it, such as print it.</li>
+        <li><code>thenCompose()</code>: use one answer to start another future task.</li>
+        <li><code>thenCombine()</code>: join the answers from two separate tasks.</li>
+        <li><code>exceptionally()</code>: provide a backup answer if a task fails.</li>
+      </ul>
+
+      <h3>4. Small example</h3>
+      <pre><code>CompletableFuture.supplyAsync(() -&gt; "Mira")
+    .thenApply(String::toUpperCase)       // Change Mira to MIRA
+    .thenAccept(System.out::println);     // Print MIRA</code></pre>
+      <p>The first step produces <code>"Mira"</code>. The next step changes it to uppercase. The last step prints it. Each step is attached to the previous one.</p>
+
+      <h3>5. Quick comparison</h3>
+      <table class="comparison">
+        <thead><tr><th>Future</th><th>CompletableFuture</th></tr></thead>
+        <tbody>
+          <tr><td>Usually call <code>get()</code> and wait for the answer.</td><td>Attach the next action with methods such as <code>thenApply()</code>.</td></tr>
+          <tr><td>Does not have built-in steps for combining results or fallback answers.</td><td>Can connect tasks, combine results, and handle failures.</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Remember:</strong> <code>CompletableFuture</code> can still wait if you call <code>get()</code> or <code>join()</code>. Its benefit is that you can connect the work first and wait only when you truly need the final answer.</p>
+      <p>In Java 8, <code>CompletableFuture</code> implements both <code>Future</code> and <code>CompletionStage</code>. Read the official <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html">Future API</a> and <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html">CompletableFuture API</a>.</p>
+    </section>
+
+    <section>
+      <h2>Programs from easy to difficult</h2>
+      <article class="example">
+        <span class="tag">01 · Already complete</span><h3>Start with a result you already have</h3>
+        <p><code>completedFuture("Ready")</code> makes a future that already contains its answer. Calling <code>join()</code> returns immediately.</p>
+        <div class="flow"><div class="box">Create future with “Ready”</div><div class="arrow">&rarr;</div><div class="box">join() reads value</div></div>
+        <p>Program: <a href="CompletableFuture01AlreadyCompletedDemo.java">CompletableFuture01AlreadyCompletedDemo.java</a></p>
+      </article>
+      <article class="example">
+        <span class="tag">02 · supplyAsync</span><h3>Run work and return a value</h3>
+        <p>The supplier runs asynchronously and completes the future with its result. The main thread can do other work before it calls <code>join()</code>.</p>
+        <div class="flow"><div class="box">supplyAsync starts supplier</div><div class="arrow">&rarr;</div><div class="box">Supplier returns text</div><div class="arrow">&rarr;</div><div class="box">join() gets text</div></div>
+        <p>Program: <a href="CompletableFuture02SupplyAsyncDemo.java">CompletableFuture02SupplyAsyncDemo.java</a></p>
+      </article>
+      <article class="example">
+        <span class="tag">03 · runAsync</span><h3>Run work with no result</h3>
+        <p>Use <code>runAsync()</code> for an action such as saving or writing a log. Its result type is <code>Void</code>; joining waits until the action is done.</p>
+        <div class="flow"><div class="box">runAsync starts save</div><div class="arrow">&rarr;</div><div class="box">Save finishes</div><div class="arrow">&rarr;</div><div class="box">join() returns</div></div>
+        <p>Program: <a href="CompletableFuture03RunAsyncDemo.java">CompletableFuture03RunAsyncDemo.java</a></p>
+      </article>
+      <article class="example">
+        <span class="tag">04 · thenApply and thenAccept</span><h3>Transform a result, then use it</h3>
+        <p><code>thenApply()</code> changes one value into another. <code>thenAccept()</code> receives a value for an action and returns no new value.</p>
+        <div class="flow"><div class="box">“java”</div><div class="arrow">&rarr;</div><div class="box">thenApply: uppercase</div><div class="arrow">&rarr;</div><div class="box">thenAccept: print it</div></div>
+        <p>Program: <a href="CompletableFuture04ThenApplyAndAcceptDemo.java">CompletableFuture04ThenApplyAndAcceptDemo.java</a></p>
+      </article>
+      <article class="example">
+        <span class="tag">05 · thenCompose</span><h3>Start a dependent asynchronous task</h3>
+        <p>The second task needs the first task's answer. First find a user ID, then use that ID to load a profile. <code>thenCompose()</code> connects the futures without nesting a future inside another future.</p>
+        <div class="analogy"><strong>Analogy:</strong> get a claim number first; then use that number to look up the claim.</div>
+        <div class="flow"><div class="box">Find user ID</div><div class="arrow">&rarr;</div><div class="box">thenCompose starts profile lookup</div><div class="arrow">&rarr;</div><div class="box">Profile result</div></div>
+        <p>Program: <a href="CompletableFuture05ThenComposeDemo.java">CompletableFuture05ThenComposeDemo.java</a></p>
+      </article>
+      <article class="example">
+        <span class="tag">06 · thenCombine</span><h3>Wait for two independent answers</h3>
+        <p>Price and shipping can be calculated separately. <code>thenCombine()</code> waits for both normal results, then combines them into a receipt.</p>
+        <div class="flow"><div class="box">Price task</div><div class="arrow">&rarr;</div><div class="box">Both results ready</div><div class="arrow">&rarr;</div><div class="box">Add total</div></div>
+        <p>Program: <a href="CompletableFuture06ThenCombineDemo.java">CompletableFuture06ThenCombineDemo.java</a></p>
+      </article>
+      <article class="example">
+        <span class="tag">07 · exceptionally</span><h3>Recover when a task fails</h3>
+        <p>If the supplier throws an exception, <code>exceptionally()</code> can provide a fallback value. Later stages then receive that fallback.</p>
+        <div class="flow"><div class="box">Task fails</div><div class="arrow">&rarr;</div><div class="box">exceptionally handles failure</div><div class="arrow">&rarr;</div><div class="box">Fallback result</div></div>
+        <p>Program: <a href="CompletableFuture07ExceptionRecoveryDemo.java">CompletableFuture07ExceptionRecoveryDemo.java</a></p>
+      </article>
+      <article class="example">
+        <span class="tag">08 · allOf</span><h3>Wait for several tasks</h3>
+        <p><code>allOf()</code> completes when every supplied future completes. It does not collect their values, so the example reads each future after the group is finished.</p>
+        <div class="flow"><div class="box">Profile task</div><div class="box">Orders task</div><div class="box">Settings task</div><div class="arrow">&rarr;</div><div class="box">allOf waits; then collect results</div></div>
+        <p>Program: <a href="CompletableFuture08AllOfDemo.java">CompletableFuture08AllOfDemo.java</a></p>
+      </article>
+      <article class="example">
+        <span class="tag">09 · Custom executor</span><h3>Choose where the task runs</h3>
+        <p>Passing an executor to <code>supplyAsync()</code> lets the application choose the worker pool instead of using the default executor.</p>
+        <div class="flow"><div class="box">Create executor</div><div class="arrow">&rarr;</div><div class="box">Submit async task to it</div><div class="arrow">&rarr;</div><div class="box">Close executor after work</div></div>
+        <p>Program: <a href="CompletableFuture09CustomExecutorDemo.java">CompletableFuture09CustomExecutorDemo.java</a></p>
+      </article>
+      <article class="example">
+        <span class="tag">10 · Timeout fallback</span><h3>Return a backup if work is too slow</h3>
+        <p><code>completeOnTimeout()</code> supplies a fallback if the future is not complete by the deadline. It completes the future with the fallback; it does not automatically stop the underlying computation.</p>
+        <div class="flow"><div class="box">Start slow lookup</div><div class="arrow">&rarr;</div><div class="box">Deadline arrives first</div><div class="arrow">&rarr;</div><div class="box">Future returns fallback</div></div>
+        <p>Program: <a href="CompletableFuture10TimeoutFallbackDemo.java">CompletableFuture10TimeoutFallbackDemo.java</a></p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Three useful differences</h2>
+      <ul>
+        <li><code>thenApply</code> changes a value; <code>thenCompose</code> starts another future-producing step.</li>
+        <li><code>thenCombine</code> joins two results; <code>allOf</code> waits for many futures but does not gather their values by itself.</li>
+        <li>Async methods without an explicit executor use the default async executor. Give the method an executor when you need to control the worker pool.</li>
+      </ul>
+      <p class="note"><strong>Tip:</strong> keep work asynchronous while composing stages. Call <code>join()</code> at the edge of the program when you truly need the result, because it blocks the calling thread until completion.</p>
+    </section>
+    <footer><p>Reference: <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html">Oracle Java 21 CompletableFuture API</a>.</p></footer>
+  </main>
+</body>
+</html>

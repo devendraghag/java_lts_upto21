@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Java Collections, Method References & Streams Mastery Order — JDK 21</title>
+<style>
+:root{
+  --bg:#0f172a;
+  --panel:#111827;
+  --panel2:#1f2937;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --line:#334155;
+  --accent:#38bdf8;
+  --accent2:#22c55e;
+  --warn:#f59e0b;
+  --code:#020617;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+.container{width:min(1180px,94%);margin:0 auto}
+header{
+  padding:48px 0 24px;
+  border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,#111827 0%,#0f172a 100%);
+}
+h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin:0 0 14px}
+h2{font-size:1.8rem;margin-top:0}
+h3{margin-bottom:8px}
+p{margin:8px 0 14px}
+.badge{
+  display:inline-block;
+  padding:5px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  margin:4px 6px 4px 0;
+  color:#cbd5e1;
+  background:#111827;
+}
+.hero-note{
+  background:#0b1220;
+  border:1px solid var(--line);
+  border-left:4px solid var(--accent);
+  padding:16px 18px;
+  border-radius:10px;
+  margin-top:24px;
+}
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(15,23,42,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+nav .container{
+  display:flex;
+  gap:10px;
+  overflow:auto;
+  padding:10px 0;
+}
+nav a{
+  color:#cbd5e1;
+  text-decoration:none;
+  white-space:nowrap;
+  padding:7px 10px;
+  border-radius:8px;
+}
+nav a:hover{background:var(--panel2);color:white}
+main{padding:28px 0 80px}
+.phase{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:24px;
+  margin:22px 0;
+}
+.phase-number{
+  color:var(--accent);
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:.85rem;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+@media (max-width:850px){.grid{grid-template-columns:1fr}}
+.card{
+  background:var(--panel2);
+  border:1px solid var(--line);
+  padding:16px;
+  border-radius:12px;
+}
+ul,ol{padding-left:22px}
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin:12px 0;
+}
+th,td{
+  border:1px solid var(--line);
+  padding:10px;
+  text-align:left;
+  vertical-align:top;
+}
+th{background:#0b1220}
+code{
+  font-family:Consolas,Menlo,monospace;
+  color:#bae6fd;
+}
+pre{
+  background:var(--code);
+  border:1px solid #1e293b;
+  border-radius:12px;
+  padding:16px;
+  overflow:auto;
+  white-space:pre-wrap;
+  word-break:break-word;
+  color:#dbeafe;
+}
+.checkpoint{
+  border-left:4px solid var(--accent2);
+  padding:12px 14px;
+  background:#0b1f17;
+  border-radius:8px;
+  margin-top:14px;
+}
+.warning{
+  border-left:4px solid var(--warn);
+  padding:12px 14px;
+  background:#221809;
+  border-radius:8px;
+  margin-top:14px;
+}
+.small{color:var(--muted);font-size:.94rem}
+footer{
+  border-top:1px solid var(--line);
+  padding:30px 0;
+  color:var(--muted);
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="phase-number">Final Learning Order</div>
+    <h1>Java Collections, Method References & Streams Mastery — JDK 21</h1>
+    <p>This roadmap is ordered exactly how you should learn and practice the topics—from Java collection basics to advanced Stream pipelines and collector internals.</p>
+
+    <div>
+      <span class="badge">JDK 21</span>
+      <span class="badge">Collections</span>
+      <span class="badge">Collection Methods</span>
+      <span class="badge">Lambdas</span>
+      <span class="badge">Method References</span>
+      <span class="badge">Streams</span>
+      <span class="badge">Collectors</span>
+      <span class="badge">Interview Practice</span>
+    </div>
+
+    <div class="hero-note">
+      <strong>Rule:</strong> Do not jump directly into advanced Streams. First become comfortable with Collections and their methods, then lambdas and method references, then Stream basics, then operation combinations, and only after that move into grouping, flatMap, advanced collectors, JDK 9–21 features, and parallel streams.
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="container">
+    <a href="#order">Order</a>
+    <a href="#phase1">Collections</a>
+    <a href="#phase5">Lambdas</a>
+    <a href="#phase7">Streams</a>
+    <a href="#phase12">Collectors</a>
+    <a href="#phase15">flatMap</a>
+    <a href="#phase18">Interview</a>
+    <a href="#phase21">JDK 21</a>
+    <a href="#phase24">Advanced</a>
+  </div>
+</nav>
+
+<main class="container">
+
+<section class="phase" id="order">
+  <div class="phase-number">Recommended Order</div>
+  <h2>Learn in This Exact Sequence</h2>
+  <pre>
+1. Collections Framework structure
+2. Collection implementation classes
+3. Important Collection/List/Set/Queue/Deque/Map methods
+4. Iteration techniques
+5. Lambda expressions
+6. Functional interfaces
+7. Method references
+8. Stream fundamentals
+9. filter()
+10. map()
+11. filter + map combinations
+12. distinct()
+13. sorted() + Comparator
+14. limit() + skip()
+15. count(), min(), max()
+16. anyMatch(), allMatch(), noneMatch()
+17. findFirst(), findAny(), Optional
+18. Primitive Streams
+19. Stream creation
+20. Basic Collectors
+21. reduce()
+22. toMap()
+23. groupingBy()
+24. Frequency problems
+25. partitioningBy()
+26. Numeric / summary collectors
+27. flatMap()
+28. Advanced downstream collectors
+29. Multi-level grouping
+30. Map + Stream combinations
+31. String / number interview problems
+32. Employee real-world problems
+33. JDK 9 Stream additions
+34. Modern Collectors up to JDK 21
+35. mapMulti()
+36. Laziness / peek / side effects
+37. Parallel Streams
+38. Collector internals
+39. Custom Collector
+  </pre>
+</section>
+
+<section class="phase" id="phase1">
+  <div class="phase-number">Phase 1</div>
+  <h2>Collections Framework Structure</h2>
+
+  <pre>
+Iterable
+  └── Collection
+      ├── List
+      │   ├── ArrayList
+      │   ├── LinkedList
+      │   ├── Vector
+      │   └── Stack
+      │
+      ├── Set
+      │   ├── HashSet
+      │   ├── LinkedHashSet
+      │   └── TreeSet
+      │
+      └── Queue
+          ├── PriorityQueue
+          └── Deque
+              ├── ArrayDeque
+              └── LinkedList
+
+Map
+  ├── HashMap
+  ├── LinkedHashMap
+  ├── TreeMap
+  ├── Hashtable
+  └── ConcurrentHashMap
+  </pre>
+
+  <h3>Understand for Every Collection</h3>
+  <ul>
+    <li><strong>Ordering</strong> — Does the collection preserve insertion order, sorted order, or no guaranteed order?</li>
+    <li><strong>Duplicates</strong> — Are duplicate elements or duplicate keys allowed?</li>
+    <li><strong>Null support</strong> — Does it allow null elements, null keys, or null values?</li>
+    <li><strong>Sorting behavior</strong> — Is sorting automatic, natural-order based, Comparator-based, or manual?</li>
+    <li><strong>Typical use case</strong> — When should this collection be preferred over similar alternatives?</li>
+    <li><strong>Thread-safety basics</strong> — Is it thread-safe by default, synchronized, concurrent, or intended for single-threaded use?</li>
+  </ul>
+</section>
+
+<section class="phase" id="phase2">
+  <div class="phase-number">Phase 2</div>
+  <h2>Collection Classes — Practice Them Individually</h2>
+
+  <table>
+    <tr><th>Family</th><th>Classes</th></tr>
+    <tr><td>List</td><td>ArrayList, LinkedList, Vector, Stack</td></tr>
+    <tr><td>Set</td><td>HashSet, LinkedHashSet, TreeSet</td></tr>
+    <tr><td>Queue / Deque</td><td>PriorityQueue, ArrayDeque, LinkedList</td></tr>
+    <tr><td>Map</td><td>HashMap, LinkedHashMap, TreeMap, Hashtable, ConcurrentHashMap</td></tr>
+  </table>
+
+  <div class="checkpoint">
+    <strong>Move on only when:</strong> you can explain when to choose ArrayList vs LinkedList, HashSet vs TreeSet, HashMap vs TreeMap, and Queue vs Deque.
+  </div>
+</section>
+
+<section class="phase" id="phase3">
+  <div class="phase-number">Phase 3</div>
+  <h2>Important Collection Methods</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Collection / List</h3>
+      <code>add, addAll, remove, removeIf, removeAll, retainAll, contains, containsAll, size, isEmpty, clear, get, set, indexOf, lastIndexOf, subList, sort, replaceAll, iterator, listIterator, spliterator, forEach</code>
+    </div>
+
+    <div class="card">
+      <h3>Map</h3>
+      <code>put, putAll, putIfAbsent, get, getOrDefault, remove, replace, replaceAll, compute, computeIfAbsent, computeIfPresent, merge, containsKey, containsValue, keySet, values, entrySet, forEach</code>
+    </div>
+
+    <div class="card">
+      <h3>Queue / Deque</h3>
+      <code>offer, add, poll, remove, peek, element, offerFirst, offerLast, pollFirst, pollLast, peekFirst, peekLast, push, pop</code>
+    </div>
+
+    <div class="card">
+      <h3>TreeSet / NavigableSet</h3>
+      <code>first, last, lower, floor, ceiling, higher, headSet, tailSet, subSet</code>
+    </div>
+  </div>
+</section>
+
+<section class="phase" id="phase4">
+  <div class="phase-number">Phase 4</div>
+  <h2>Iteration Before Streams</h2>
+
+  <ul>
+    <li>Enhanced for loop</li>
+    <li>Iterator</li>
+    <li>ListIterator</li>
+    <li>forEach()</li>
+    <li>Map keySet(), values(), entrySet()</li>
+    <li>Spliterator basics</li>
+  </ul>
+
+  <div class="warning">
+    Learn normal iteration first so you know when a loop is clearer than a Stream.
+  </div>
+</section>
+
+<section class="phase" id="phase5">
+  <div class="phase-number">Phase 5</div>
+  <h2>Lambda Expressions + Functional Interfaces</h2>
+
+  <h3>Core Functional Interfaces</h3>
+  <table>
+    <tr><th>Functional Interface</th><th>Shape</th><th>Main Method</th></tr>
+    <tr><td>Predicate&lt;T&gt;</td><td>T → boolean</td><td>test(T)</td></tr>
+    <tr><td>BiPredicate&lt;T,U&gt;</td><td>(T, U) → boolean</td><td>test(T,U)</td></tr>
+    <tr><td>Function&lt;T,R&gt;</td><td>T → R</td><td>apply(T)</td></tr>
+    <tr><td>BiFunction&lt;T,U,R&gt;</td><td>(T, U) → R</td><td>apply(T,U)</td></tr>
+    <tr><td>UnaryOperator&lt;T&gt;</td><td>T → T</td><td>apply(T)</td></tr>
+    <tr><td>BinaryOperator&lt;T&gt;</td><td>(T, T) → T</td><td>apply(T,T)</td></tr>
+    <tr><td>Consumer&lt;T&gt;</td><td>T → void</td><td>accept(T)</td></tr>
+    <tr><td>BiConsumer&lt;T,U&gt;</td><td>(T, U) → void</td><td>accept(T,U)</td></tr>
+    <tr><td>Supplier&lt;T&gt;</td><td>() → T</td><td>get()</td></tr>
+  </table>
+
+  <h3>Predicate Specializations</h3>
+  <table>
+    <tr><th>Functional Interface</th><th>Shape</th><th>Main Method</th></tr>
+    <tr><td>IntPredicate</td><td>int → boolean</td><td>test(int)</td></tr>
+    <tr><td>LongPredicate</td><td>long → boolean</td><td>test(long)</td></tr>
+    <tr><td>DoublePredicate</td><td>double → boolean</td><td>test(double)</td></tr>
+  </table>
+
+  <h3>Consumer Specializations</h3>
+  <table>
+    <tr><th>Functional Interface</th><th>Shape</th><th>Main Method</th></tr>
+    <tr><td>IntConsumer</td><td>int → void</td><td>accept(int)</td></tr>
+    <tr><td>LongConsumer</td><td>long → void</td><td>accept(long)</td></tr>
+    <tr><td>DoubleConsumer</td><td>double → void</td><td>accept(double)</td></tr>
+    <tr><td>ObjIntConsumer&lt;T&gt;</td><td>(T, int) → void</td><td>accept(T,int)</td></tr>
+    <tr><td>ObjLongConsumer&lt;T&gt;</td><td>(T, long) → void</td><td>accept(T,long)</td></tr>
+    <tr><td>ObjDoubleConsumer&lt;T&gt;</td><td>(T, double) → void</td><td>accept(T,double)</td></tr>
+  </table>
+
+  <h3>Supplier Specializations</h3>
+  <table>
+    <tr><th>Functional Interface</th><th>Shape</th><th>Main Method</th></tr>
+    <tr><td>IntSupplier</td><td>() → int</td><td>getAsInt()</td></tr>
+    <tr><td>LongSupplier</td><td>() → long</td><td>getAsLong()</td></tr>
+    <tr><td>DoubleSupplier</td><td>() → double</td><td>getAsDouble()</td></tr>
+    <tr><td>BooleanSupplier</td><td>() → boolean</td><td>getAsBoolean()</td></tr>
+  </table>
+
+  <h3>Primitive Input → Object Output Functions</h3>
+  <table>
+    <tr><th>Functional Interface</th><th>Shape</th><th>Main Method</th></tr>
+    <tr><td>IntFunction&lt;R&gt;</td><td>int → R</td><td>apply(int)</td></tr>
+    <tr><td>LongFunction&lt;R&gt;</td><td>long → R</td><td>apply(long)</td></tr>
+    <tr><td>DoubleFunction&lt;R&gt;</td><td>double → R</td><td>apply(double)</td></tr>
+  </table>
+
+  <h3>Object Input → Primitive Output Functions</h3>
+  <table>
+    <tr><th>Functional Interface</th><th>Shape</th><th>Main Method</th></tr>
+    <tr><td>ToIntFunction&lt;T&gt;</td><td>T → int</td><td>applyAsInt(T)</td></tr>
+    <tr><td>ToLongFunction&lt;T&gt;</td><td>T → long</td><td>applyAsLong(T)</td></tr>
+    <tr><td>ToDoubleFunction&lt;T&gt;</td><td>T → double</td><td>applyAsDouble(T)</td></tr>
+  </table>
+
+  <h3>Two Object Inputs → Primitive Output Functions</h3>
+  <table>
+    <tr><th>Functional Interface</th><th>Shape</th><th>Main Method</th></tr>
+    <tr><td>ToIntBiFunction&lt;T,U&gt;</td><td>(T,U) → int</td><td>applyAsInt(T,U)</td></tr>
+    <tr><td>ToLongBiFunction&lt;T,U&gt;</td><td>(T,U) → long</td><td>applyAsLong(T,U)</td></tr>
+    <tr><td>ToDoubleBiFunction&lt;T,U&gt;</td><td>(T,U) → double</td><td>applyAsDouble(T,U)</td></tr>
+  </table>
+
+  <h3>Primitive → Primitive Conversion Functions</h3>
+  <table>
+    <tr><th>Functional Interface</th><th>Shape</th><th>Main Method</th></tr>
+    <tr><td>IntToLongFunction</td><td>int → long</td><td>applyAsLong(int)</td></tr>
+    <tr><td>IntToDoubleFunction</td><td>int → double</td><td>applyAsDouble(int)</td></tr>
+    <tr><td>LongToIntFunction</td><td>long → int</td><td>applyAsInt(long)</td></tr>
+    <tr><td>LongToDoubleFunction</td><td>long → double</td><td>applyAsDouble(long)</td></tr>
+    <tr><td>DoubleToIntFunction</td><td>double → int</td><td>applyAsInt(double)</td></tr>
+    <tr><td>DoubleToLongFunction</td><td>double → long</td><td>applyAsLong(double)</td></tr>
+  </table>
+
+  <h3>Primitive Unary Operators</h3>
+  <table>
+    <tr><th>Functional Interface</th><th>Shape</th><th>Main Method</th></tr>
+    <tr><td>IntUnaryOperator</td><td>int → int</td><td>applyAsInt(int)</td></tr>
+    <tr><td>LongUnaryOperator</td><td>long → long</td><td>applyAsLong(long)</td></tr>
+    <tr><td>DoubleUnaryOperator</td><td>double → double</td><td>applyAsDouble(double)</td></tr>
+  </table>
+
+  <h3>Primitive Binary Operators</h3>
+  <table>
+    <tr><th>Functional Interface</th><th>Shape</th><th>Main Method</th></tr>
+    <tr><td>IntBinaryOperator</td><td>(int,int) → int</td><td>applyAsInt(int,int)</td></tr>
+    <tr><td>LongBinaryOperator</td><td>(long,long) → long</td><td>applyAsLong(long,long)</td></tr>
+    <tr><td>DoubleBinaryOperator</td><td>(double,double) → double</td><td>applyAsDouble(double,double)</td></tr>
+  </table>
+
+  <h3>Memory Map</h3>
+  <pre>
+Predicate&lt;T&gt;       T → boolean
+Function&lt;T,R&gt;      T → R
+Consumer&lt;T&gt;        T → void
+Supplier&lt;T&gt;        () → T
+UnaryOperator&lt;T&gt;   T → T
+BinaryOperator&lt;T&gt;  (T,T) → T
+
+BiPredicate&lt;T,U&gt;   (T,U) → boolean
+BiFunction&lt;T,U,R&gt;  (T,U) → R
+BiConsumer&lt;T,U&gt;    (T,U) → void
+  </pre>
+
+  <h3>Lambda Examples</h3>
+  <pre>
+n -> n > 10
+s -> s.toUpperCase()
+e -> e.getSalary() > 50000
+  </pre>
+
+  <div class="checkpoint">
+    <strong>Master these first:</strong>
+    Predicate, Function, Consumer, Supplier, BiPredicate, BiFunction,
+    BiConsumer, UnaryOperator, and BinaryOperator.
+    Once these are clear, the primitive-specialized interfaces become much easier.
+  </div>
+</section>
+
+<section class="phase" id="phase6">
+  <div class="phase-number">Phase 6</div>
+  <h2>Method References</h2>
+
+  <table>
+    <tr><th>Type</th><th>Syntax</th><th>Example</th></tr>
+    <tr><td>Static method</td><td>ClassName::staticMethod</td><td>Integer::parseInt</td></tr>
+    <tr><td>Specific object</td><td>object::method</td><td>System.out::println</td></tr>
+    <tr><td>Arbitrary object</td><td>ClassName::method</td><td>String::toUpperCase</td></tr>
+    <tr><td>Constructor</td><td>ClassName::new</td><td>ArrayList::new</td></tr>
+  </table>
+
+  <h3>Practice With</h3>
+  <ul>
+    <li>forEach</li>
+    <li>map</li>
+    <li>sorted</li>
+    <li>reduce</li>
+    <li>Optional</li>
+    <li>Comparator.comparing</li>
+  </ul>
+</section>
+
+
+<section class="phase" id="comparable-comparator-qa">
+  <div class="phase-number">Comparable &amp; Comparator Q&amp;A</div>
+  <h2>Natural Ordering, Custom Ordering &amp; Internal Calls</h2>
+
+  <h3>Q1. When does Java internally call Comparable.compareTo()?</h3>
+  <p><strong>Answer:</strong> Java internally calls <code>compareTo()</code> when an API needs <strong>natural ordering</strong> and no <code>Comparator</code> is supplied.</p>
+
+  <pre>
+No Comparator
+    ↓
+Natural ordering
+    ↓
+Comparable.compareTo()
+  </pre>
+
+  <p>Common examples:</p>
+  <ul>
+    <li>TreeSet without Comparator</li>
+    <li>TreeMap without Comparator</li>
+    <li>Collections.sort(list)</li>
+    <li>List.sort(null)</li>
+    <li>Stream.sorted()</li>
+    <li>Arrays.sort(objectArray)</li>
+    <li>PriorityQueue without Comparator</li>
+  </ul>
+
+  <h3>Q2. Is compareTo() used only by TreeSet?</h3>
+  <p><strong>Answer:</strong> No. Any Java API that needs natural ordering can use <code>Comparable.compareTo()</code>.</p>
+
+  <h3>Q3. When does TreeSet call compareTo()?</h3>
+  <p><strong>Answer:</strong> When you create a <code>TreeSet</code> without passing a <code>Comparator</code> and the element type implements <code>Comparable</code>.</p>
+
+  <pre>
+TreeSet&lt;Employee&gt; employees = new TreeSet&lt;&gt;();
+
+Employee implements Comparable&lt;Employee&gt;
+        ↓
+TreeSet internally compares elements
+        ↓
+Employee.compareTo(other)
+  </pre>
+
+  <h3>Q4. What happens if compareTo() returns 0 inside TreeSet?</h3>
+  <p><strong>Answer:</strong> The two elements are treated as equal for ordering, so the second element is not added.</p>
+
+  <pre>
+compareTo() == 0
+        ↓
+TreeSet treats elements as duplicates
+  </pre>
+
+  <p>Example:</p>
+
+  <pre>
+record Employee(String name, int salary)
+        implements Comparable&lt;Employee&gt; {
+
+    @Override
+    public int compareTo(Employee other) {
+        return Integer.compare(salary, other.salary);
+    }
+}
+  </pre>
+
+  <p>If Ada and Grace both have salary <code>100</code>, salary-only comparison returns <code>0</code>, so only one remains in the <code>TreeSet</code>.</p>
+
+  <h3>Q5. When does Stream.sorted() call compareTo()?</h3>
+  <p><strong>Answer:</strong> When you call the no-argument form <code>stream.sorted()</code> and the stream elements have a natural order through <code>Comparable</code>.</p>
+
+  <pre>
+Stream&lt;Version&gt;
+    ↓
+sorted()
+    ↓
+Version implements Comparable&lt;Version&gt;
+    ↓
+Version.compareTo(other)
+  </pre>
+
+  <h3>Q6. What is the difference between sorted() and sorted(comparator)?</h3>
+
+  <pre>
+stream.sorted()
+→ natural order
+→ Comparable.compareTo()
+
+stream.sorted(comparator)
+→ custom order
+→ Comparator.compare()
+  </pre>
+
+  <h3>Q7. What does List.sort(null) mean?</h3>
+  <p><strong>Answer:</strong> Passing <code>null</code> means: use the elements' natural ordering.</p>
+
+  <pre>
+list.sort(null)
+    ↓
+natural ordering
+    ↓
+Comparable.compareTo()
+  </pre>
+
+  <h3>Q8. When does Comparator.compare() get used?</h3>
+  <p><strong>Answer:</strong> When you explicitly provide a <code>Comparator</code>.</p>
+
+  <pre>
+students.sort(
+    Comparator.comparing(Student::name)
+);
+
+students.stream()
+        .sorted(Comparator.comparing(Student::name))
+        .toList();
+  </pre>
+
+  <p>Then Java uses the comparator's comparison logic instead of the natural ordering.</p>
+
+  <h3>Q9. What is the main difference between Comparable and Comparator?</h3>
+
+  <table>
+    <tr>
+      <th>Comparable</th>
+      <th>Comparator</th>
+    </tr>
+    <tr>
+      <td>Defines natural/default ordering</td>
+      <td>Defines custom/external ordering</td>
+    </tr>
+    <tr>
+      <td><code>compareTo()</code></td>
+      <td><code>compare()</code></td>
+    </tr>
+    <tr>
+      <td>Usually implemented by the class itself</td>
+      <td>Usually defined outside the class or with lambda/method reference</td>
+    </tr>
+    <tr>
+      <td>Normally one natural order</td>
+      <td>Can define many different orderings</td>
+    </tr>
+  </table>
+
+  <h3>Q10. What is the easiest rule to remember?</h3>
+
+  <pre>
+Java needs ordering
+        ↓
+
+Was a Comparator supplied?
+
+YES
+→ Comparator.compare()
+
+NO
+→ natural ordering
+→ Comparable.compareTo()
+  </pre>
+
+  <div class="checkpoint">
+    <strong>Core memory rule:</strong>
+    <code>sorted()</code>, <code>List.sort(null)</code>, natural-order <code>TreeSet</code>,
+    natural-order <code>TreeMap</code>, <code>Collections.sort()</code>, object-array
+    <code>Arrays.sort()</code>, and natural-order <code>PriorityQueue</code> rely on
+    <code>Comparable.compareTo()</code>. If you explicitly supply a <code>Comparator</code>, Java uses that comparison rule instead.
+  </div>
+</section>
+
+
+<section class="phase" id="important-comparator-methods">
+  <div class="phase-number">Important Comparator Methods</div>
+  <h2>Comparator Methods — Purpose, Explanation & Examples</h2>
+
+  <table>
+    <tr>
+      <th>Method</th>
+      <th>Purpose</th>
+      <th>Explanation</th>
+    </tr>
+    <tr>
+      <td><code>compare(a, b)</code></td>
+      <td>Compare two objects</td>
+      <td>Returns negative, zero, or positive depending on ordering.</td>
+    </tr>
+    <tr>
+      <td><code>naturalOrder()</code></td>
+      <td>Natural ascending order</td>
+      <td>Uses the object's <code>Comparable.compareTo()</code>.</td>
+    </tr>
+    <tr>
+      <td><code>reverseOrder()</code></td>
+      <td>Natural descending order</td>
+      <td>Reverse of the object's natural ordering.</td>
+    </tr>
+    <tr>
+      <td><code>comparing(...)</code></td>
+      <td>Compare by object field/key</td>
+      <td>Extracts a key from each object and compares the extracted keys.</td>
+    </tr>
+    <tr>
+      <td><code>comparingInt(...)</code></td>
+      <td>Compare by <code>int</code> field</td>
+      <td>Primitive-specialized comparison that avoids boxing <code>int</code> to <code>Integer</code>.</td>
+    </tr>
+    <tr>
+      <td><code>comparingLong(...)</code></td>
+      <td>Compare by <code>long</code> field</td>
+      <td>Primitive-specialized comparison for long values.</td>
+    </tr>
+    <tr>
+      <td><code>comparingDouble(...)</code></td>
+      <td>Compare by <code>double</code> field</td>
+      <td>Primitive-specialized comparison for double values.</td>
+    </tr>
+    <tr>
+      <td><code>thenComparing(...)</code></td>
+      <td>Secondary comparison</td>
+      <td>Used when the previous comparison returns <code>0</code>.</td>
+    </tr>
+    <tr>
+      <td><code>thenComparingInt(...)</code></td>
+      <td><code>int</code> tie-breaker</td>
+      <td>Secondary comparison using an int field.</td>
+    </tr>
+    <tr>
+      <td><code>thenComparingLong(...)</code></td>
+      <td><code>long</code> tie-breaker</td>
+      <td>Secondary comparison using a long field.</td>
+    </tr>
+    <tr>
+      <td><code>thenComparingDouble(...)</code></td>
+      <td><code>double</code> tie-breaker</td>
+      <td>Secondary comparison using a double field.</td>
+    </tr>
+    <tr>
+      <td><code>reversed()</code></td>
+      <td>Reverse existing comparator</td>
+      <td>Converts ascending order to descending or vice versa.</td>
+    </tr>
+    <tr>
+      <td><code>nullsFirst(...)</code></td>
+      <td>Put null values first</td>
+      <td>Wraps another comparator and safely handles null by placing null before non-null values.</td>
+    </tr>
+    <tr>
+      <td><code>nullsLast(...)</code></td>
+      <td>Put null values last</td>
+      <td>Wraps another comparator and safely handles null by placing null after non-null values.</td>
+    </tr>
+  </table>
+
+  <h3>1. compare(a, b)</h3>
+  <p>The core comparison method of <code>Comparator</code>.</p>
+
+  <pre>
+Comparator&lt;Integer&gt; comparator = Integer::compare;
+
+int result = comparator.compare(10, 20);
+  </pre>
+
+  <pre>
+result &lt; 0  → first comes before second
+result == 0 → equal in ordering
+result &gt; 0  → first comes after second
+  </pre>
+
+  <h3>2. Comparator.naturalOrder()</h3>
+  <p>Uses the natural ordering defined by <code>Comparable.compareTo()</code>.</p>
+
+  <pre>
+Comparator&lt;String&gt; comparator =
+        Comparator.naturalOrder();
+  </pre>
+
+  <pre>
+naturalOrder()
+→ Comparable.compareTo()
+  </pre>
+
+  <h3>3. Comparator.reverseOrder()</h3>
+  <p>Uses reverse natural ordering.</p>
+
+  <pre>
+Comparator&lt;Integer&gt; comparator =
+        Comparator.reverseOrder();
+  </pre>
+
+  <pre>
+Natural: 1, 2, 3
+Reverse: 3, 2, 1
+  </pre>
+
+  <h3>4. Comparator.comparing(...)</h3>
+  <p>Creates a Comparator by extracting an object field/key.</p>
+
+  <pre>
+Comparator&lt;Student&gt; byName =
+        Comparator.comparing(Student::name);
+  </pre>
+
+  <pre>
+Student
+   ↓
+extract name
+   ↓
+compare String values
+  </pre>
+
+  <h3>5. Comparator.comparingInt(...)</h3>
+  <p>Use when the comparison key is primitive <code>int</code>.</p>
+
+  <pre>
+Comparator&lt;Student&gt; byId =
+        Comparator.comparingInt(Student::id);
+  </pre>
+
+  <pre>
+Student → int
+  </pre>
+
+  <h3>6. Comparator.comparingLong(...)</h3>
+  <p>Use when the comparison key is primitive <code>long</code>.</p>
+
+  <pre>
+Comparator&lt;Employee&gt; byEmployeeNumber =
+        Comparator.comparingLong(Employee::employeeNumber);
+  </pre>
+
+  <h3>7. Comparator.comparingDouble(...)</h3>
+  <p>Use when the comparison key is primitive <code>double</code>.</p>
+
+  <pre>
+Comparator&lt;Employee&gt; bySalary =
+        Comparator.comparingDouble(Employee::salary);
+  </pre>
+
+  <h3>8. thenComparing(...)</h3>
+  <p>Used as a tie-breaker when the first comparison is equal.</p>
+
+  <pre>
+Comparator&lt;Student&gt; comparator =
+        Comparator.comparing(Student::name)
+                  .thenComparing(Student::city);
+  </pre>
+
+  <pre>
+First compare name
+
+If name is equal
+    ↓
+compare city
+  </pre>
+
+  <h3>9. thenComparingInt(...)</h3>
+
+  <pre>
+Comparator&lt;Student&gt; comparator =
+        Comparator.comparing(Student::name)
+                  .thenComparingInt(Student::id);
+  </pre>
+
+  <p>Meaning: sort by name first, then by id if names are equal.</p>
+
+  <h3>10. thenComparingLong(...)</h3>
+
+  <pre>
+Comparator&lt;Employee&gt; comparator =
+        Comparator.comparing(Employee::department)
+                  .thenComparingLong(Employee::employeeNumber);
+  </pre>
+
+  <h3>11. thenComparingDouble(...)</h3>
+
+  <pre>
+Comparator&lt;Employee&gt; comparator =
+        Comparator.comparing(Employee::department)
+                  .thenComparingDouble(Employee::salary);
+  </pre>
+
+  <h3>12. reversed()</h3>
+  <p>Reverses an already-created comparator.</p>
+
+  <pre>
+Comparator&lt;Employee&gt; bySalaryDesc =
+        Comparator.comparingDouble(Employee::salary)
+                  .reversed();
+  </pre>
+
+  <pre>
+ascending
+   ↓ reversed()
+descending
+  </pre>
+
+  <h3>13. nullsFirst(...)</h3>
+  <p>Safely handles null and places null values first.</p>
+
+  <pre>
+Comparator&lt;String&gt; comparator =
+        Comparator.nullsFirst(
+                Comparator.naturalOrder()
+        );
+  </pre>
+
+  <pre>
+Input:
+Zuri
+null
+Ada
+
+Sorted:
+null
+Ada
+Zuri
+  </pre>
+
+  <h3>14. nullsLast(...)</h3>
+  <p>Safely handles null and places null values last.</p>
+
+  <pre>
+Comparator&lt;String&gt; comparator =
+        Comparator.nullsLast(
+                Comparator.naturalOrder()
+        );
+  </pre>
+
+  <pre>
+Sorted:
+Ada
+Zuri
+null
+  </pre>
+
+  <h3>Important Combined Example</h3>
+
+  <pre>
+Comparator&lt;Employee&gt; comparator =
+        Comparator.comparing(Employee::department)
+                  .thenComparingDouble(Employee::salary)
+                  .thenComparing(Employee::name);
+  </pre>
+
+  <pre>
+1. Compare department
+2. If equal, compare salary
+3. If equal, compare name
+  </pre>
+
+  <h3>Department Ascending + Salary Descending</h3>
+
+  <pre>
+Comparator&lt;Employee&gt; comparator =
+        Comparator.comparing(Employee::department)
+                  .thenComparing(
+                      Comparator.comparingDouble(Employee::salary)
+                                .reversed()
+                  );
+  </pre>
+
+  <pre>
+department → ascending
+salary     → descending within department
+  </pre>
+
+  <h3>Memory Map</h3>
+
+  <pre>
+compare()
+→ directly compare two objects
+
+naturalOrder()
+→ natural ascending
+→ Comparable.compareTo()
+
+reverseOrder()
+→ natural descending
+
+comparing()
+→ compare by object field
+
+comparingInt()
+→ compare by int field
+
+comparingLong()
+→ compare by long field
+
+comparingDouble()
+→ compare by double field
+
+thenComparing()
+→ secondary comparison / tie-breaker
+
+thenComparingInt()
+→ int tie-breaker
+
+thenComparingLong()
+→ long tie-breaker
+
+thenComparingDouble()
+→ double tie-breaker
+
+reversed()
+→ reverse current comparator
+
+nullsFirst()
+→ null first
+
+nullsLast()
+→ null last
+  </pre>
+
+  <div class="checkpoint">
+    <strong>Most important pattern to master:</strong>
+    <code>Comparator.comparing(...).thenComparing(...).reversed()</code>.
+    These comparators are commonly passed to <code>List.sort()</code>,
+    <code>Collections.sort()</code>, <code>Stream.sorted()</code>,
+    <code>TreeSet</code>, <code>TreeMap</code>, and <code>PriorityQueue</code>.
+  </div>
+</section>
+
+<section class="phase" id="phase7">
+  <div class="phase-number">Phase 7</div>
+  <h2>Stream Fundamentals</h2>
+
+  <ul>
+    <li>What a Stream is</li>
+    <li>Source → pipeline → terminal operation</li>
+    <li>Intermediate operations</li>
+    <li>Terminal operations</li>
+    <li>Lazy evaluation</li>
+    <li>Streams are single-use</li>
+    <li>Internal iteration</li>
+    <li>Stateless vs stateful operations</li>
+    <li>Short-circuiting</li>
+  </ul>
+
+  <pre>
+Collection
+   ↓
+stream()
+   ↓
+intermediate operations
+   ↓
+terminal operation
+  </pre>
+</section>
+
+<section class="phase" id="phase8">
+  <div class="phase-number">Phase 8</div>
+  <h2>filter() — Learn First</h2>
+
+  <h3>Numbers</h3>
+  <ul>
+    <li>Even / odd</li>
+    <li>Positive / negative</li>
+    <li>Ranges</li>
+    <li>Multiples</li>
+  </ul>
+
+  <h3>Strings</h3>
+  <ul>
+    <li>Starts with / ends with</li>
+    <li>Length</li>
+    <li>Contains</li>
+    <li>Case-insensitive checks</li>
+  </ul>
+
+  <h3>Employees</h3>
+  <ul>
+    <li>Age</li>
+    <li>Salary</li>
+    <li>Department</li>
+    <li>Active status</li>
+    <li>Skills</li>
+  </ul>
+
+  <div class="checkpoint"><strong>Target:</strong> 20–25 filter problems.</div>
+</section>
+
+<section class="phase" id="phase9">
+  <div class="phase-number">Phase 9</div>
+  <h2>map() — Transformation</h2>
+
+  <ul>
+    <li>String → uppercase</li>
+    <li>Integer → square</li>
+    <li>Employee → name</li>
+    <li>Employee → salary</li>
+    <li>Employee → DTO</li>
+  </ul>
+
+  <pre>
+Employee → map(Employee::getName) → String
+  </pre>
+</section>
+
+<section class="phase" id="phase10">
+  <div class="phase-number">Phase 10</div>
+  <h2>Core Stream Combinations</h2>
+
+  <pre>
+filter
+filter → map
+filter → filter → map
+map → distinct
+filter → map → distinct
+sorted
+filter → sorted
+filter → sorted → map
+map → distinct → sorted
+filter → map → distinct → sorted
+sorted → limit
+sorted → skip → limit
+filter → sorted → limit → map
+  </pre>
+
+  <h3>Learn Here</h3>
+  <ul>
+    <li>distinct()</li>
+    <li>sorted()</li>
+    <li>Comparator.comparing()</li>
+    <li>reversed()</li>
+    <li>thenComparing()</li>
+    <li>limit()</li>
+    <li>skip()</li>
+  </ul>
+</section>
+
+<section class="phase" id="phase11">
+  <div class="phase-number">Phase 11</div>
+  <h2>Terminal Operations + Optional</h2>
+
+  <h3>Terminal Operations</h3>
+  <code>count, min, max, findFirst, findAny, anyMatch, allMatch, noneMatch, forEach</code>
+
+  <h3>Optional</h3>
+  <code>ifPresent, orElse, orElseGet, orElseThrow, map, flatMap, filter</code>
+</section>
+
+<section class="phase" id="phase12">
+  <div class="phase-number">Phase 12</div>
+  <h2>Primitive Streams</h2>
+
+  <ul>
+    <li>IntStream</li>
+    <li>LongStream</li>
+    <li>DoubleStream</li>
+    <li>mapToInt()</li>
+    <li>mapToLong()</li>
+    <li>mapToDouble()</li>
+    <li>boxed()</li>
+    <li>range()</li>
+    <li>rangeClosed()</li>
+    <li>sum()</li>
+    <li>average()</li>
+    <li>min()</li>
+    <li>max()</li>
+  </ul>
+</section>
+
+<section class="phase" id="phase13">
+  <div class="phase-number">Phase 13</div>
+  <h2>Stream Creation</h2>
+
+  <ul>
+    <li>Collection.stream()</li>
+    <li>Stream.of()</li>
+    <li>Stream.empty()</li>
+    <li>Arrays.stream()</li>
+    <li>Stream.builder()</li>
+    <li>Stream.iterate()</li>
+    <li>Stream.generate()</li>
+    <li>Stream.concat()</li>
+    <li>IntStream.range()</li>
+    <li>IntStream.rangeClosed()</li>
+  </ul>
+</section>
+
+<section class="phase" id="phase14">
+  <div class="phase-number">Phase 14</div>
+  <h2>Basic Collectors + reduce()</h2>
+
+  <h3>Collectors</h3>
+  <ul>
+    <li>collect()</li>
+    <li>Collectors.toList()</li>
+    <li>Collectors.toSet()</li>
+    <li>Collectors.toCollection()</li>
+    <li>Collectors.joining()</li>
+    <li>Stream.toList()</li>
+  </ul>
+
+  <h3>reduce()</h3>
+  <ul>
+    <li>Identity</li>
+    <li>Accumulator</li>
+    <li>Combiner</li>
+    <li>Associativity</li>
+  </ul>
+</section>
+
+<section class="phase" id="phase15">
+  <div class="phase-number">Phase 15</div>
+  <h2>toMap()</h2>
+
+  <ul>
+    <li>ID → Employee</li>
+    <li>ID → Employee Name</li>
+    <li>Name → Salary</li>
+    <li>Word → Length</li>
+    <li>Duplicate key handling</li>
+    <li>Merge function</li>
+  </ul>
+</section>
+
+<section class="phase" id="phase16">
+  <div class="phase-number">Phase 16</div>
+  <h2>groupingBy()</h2>
+
+  <ol>
+    <li>Department → Employees</li>
+    <li>Department → Count</li>
+    <li>Department → Employee Names</li>
+    <li>Department → Total Salary</li>
+    <li>Department → Average Salary</li>
+    <li>Department → Maximum Salary</li>
+    <li>Department → Highest-paid Employee</li>
+    <li>Department → Minimum Salary</li>
+  </ol>
+
+  <div class="checkpoint"><strong>Target:</strong> At least 30–40 groupingBy problems.</div>
+</section>
+
+<section class="phase" id="phase17">
+  <div class="phase-number">Phase 17</div>
+  <h2>Frequency + partitioningBy() + Summary Collectors</h2>
+
+  <h3>Frequency Problems</h3>
+  <ul>
+    <li>Character frequency</li>
+    <li>Word frequency</li>
+    <li>Integer frequency</li>
+    <li>Duplicate characters</li>
+    <li>First repeated character</li>
+    <li>First non-repeated character</li>
+  </ul>
+
+  <h3>partitioningBy()</h3>
+  <ul>
+    <li>Odd / even</li>
+    <li>Active / inactive</li>
+    <li>Salary threshold</li>
+  </ul>
+
+  <h3>Summary Collectors</h3>
+  <code>counting, summingInt, summingLong, summingDouble, averagingInt, averagingLong, averagingDouble, summarizingInt, summarizingLong, summarizingDouble</code>
+</section>
+
+<section class="phase" id="phase18">
+  <div class="phase-number">Phase 18</div>
+  <h2>flatMap()</h2>
+
+  <pre>
+map:
+Employee → List&lt;String&gt;
+Result: Stream&lt;List&lt;String&gt;&gt;
+
+flatMap:
+Employee → skills
+Result: Stream&lt;String&gt;
+  </pre>
+
+  <h3>Practice With</h3>
+  <ul>
+    <li>List&lt;List&lt;Integer&gt;&gt;</li>
+    <li>List&lt;List&lt;String&gt;&gt;</li>
+    <li>Employee → Skills</li>
+    <li>Customer → Orders</li>
+    <li>Order → Items</li>
+  </ul>
+
+  <h3>Combination Order</h3>
+  <pre>
+flatMap
+flatMap → distinct
+flatMap → filter
+flatMap → distinct → sorted
+flatMap → groupingBy → counting
+filter → flatMap → distinct → sorted
+  </pre>
+</section>
+
+<section class="phase" id="phase19">
+  <div class="phase-number">Phase 19</div>
+  <h2>Advanced Downstream Collectors</h2>
+
+  <ul>
+    <li>mapping()</li>
+    <li>filtering()</li>
+    <li>flatMapping()</li>
+    <li>maxBy()</li>
+    <li>minBy()</li>
+    <li>reducing()</li>
+    <li>collectingAndThen()</li>
+    <li>teeing()</li>
+  </ul>
+</section>
+
+<section class="phase" id="phase20">
+  <div class="phase-number">Phase 20</div>
+  <h2>Multi-Level Grouping + Map Streams</h2>
+
+  <h3>Nested Grouping</h3>
+  <pre>
+department → gender → employees
+department → gender → count
+department → designation → average salary
+department → active/inactive → employees
+  </pre>
+
+  <h3>Map + Streams</h3>
+  <ul>
+    <li>entrySet().stream()</li>
+    <li>Sort Map by key</li>
+    <li>Sort Map by value</li>
+    <li>Filter Map by key / value</li>
+    <li>Map → List</li>
+    <li>List → Map</li>
+    <li>Map → another Map</li>
+    <li>Frequency Map → Top N</li>
+  </ul>
+</section>
+
+<section class="phase" id="phase21">
+  <div class="phase-number">Phase 21</div>
+  <h2>String + Number Interview Problems</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Strings</h3>
+      <ul>
+        <li>Anagram</li>
+        <li>Palindrome</li>
+        <li>Character frequency</li>
+        <li>Duplicate characters</li>
+        <li>First repeated / non-repeated</li>
+        <li>Word frequency</li>
+        <li>Longest / shortest word</li>
+        <li>Group words by length</li>
+        <li>Group anagrams</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Numbers</h3>
+      <ul>
+        <li>Odd / even</li>
+        <li>Duplicate numbers</li>
+        <li>Frequency</li>
+        <li>Top N / bottom N</li>
+        <li>Second-highest</li>
+        <li>Sum / average</li>
+        <li>Squares</li>
+        <li>Fibonacci</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="phase" id="phase22">
+  <div class="phase-number">Phase 22</div>
+  <h2>Employee Real-World Mastery</h2>
+
+  <pre>
+class Employee {
+    int id;
+    String name;
+    int age;
+    String gender;
+    String department;
+    String designation;
+    double salary;
+    boolean active;
+    List&lt;String&gt; skills;
+}
+  </pre>
+
+  <ol>
+    <li>Employees older than 30</li>
+    <li>Active employees</li>
+    <li>Names of IT employees</li>
+    <li>Unique departments</li>
+    <li>Employees sorted by salary</li>
+    <li>Top 3 salaries</li>
+    <li>Second-highest salary</li>
+    <li>Highest-paid employee</li>
+    <li>Lowest-paid employee</li>
+    <li>Average company salary</li>
+    <li>Employee count by department</li>
+    <li>Employees grouped by department</li>
+    <li>Names grouped by department</li>
+    <li>Total salary by department</li>
+    <li>Average salary by department</li>
+    <li>Highest-paid employee by department</li>
+    <li>Employees grouped by gender</li>
+    <li>Department → Gender → Count</li>
+    <li>Active / inactive partition</li>
+    <li>All skills</li>
+    <li>Unique skills</li>
+    <li>Skill frequency</li>
+    <li>Most common skill</li>
+    <li>Top 3 skills</li>
+    <li>Employees knowing Java</li>
+    <li>Employees knowing Java + Spring</li>
+    <li>Highest-paid Java developer</li>
+    <li>Employees with at least 3 skills</li>
+    <li>Employees earning above department average</li>
+  </ol>
+</section>
+
+<section class="phase" id="phase23">
+  <div class="phase-number">Phase 23</div>
+  <h2>JDK 9–21 Stream Additions</h2>
+
+  <ul>
+    <li>takeWhile()</li>
+    <li>dropWhile()</li>
+    <li>Stream.ofNullable()</li>
+    <li>Stream.iterate(seed, predicate, next)</li>
+    <li>Collectors.filtering()</li>
+    <li>Collectors.flatMapping()</li>
+    <li>toUnmodifiableList()</li>
+    <li>toUnmodifiableSet()</li>
+    <li>toUnmodifiableMap()</li>
+    <li>Collectors.teeing()</li>
+    <li>Stream.toList()</li>
+    <li>mapMulti()</li>
+    <li>mapMultiToInt()</li>
+    <li>mapMultiToLong()</li>
+    <li>mapMultiToDouble()</li>
+  </ul>
+
+  <div class="checkpoint">
+    Learn these comparisons well:
+    <strong>filter vs takeWhile/dropWhile</strong>,
+    <strong>map vs flatMap vs mapMulti</strong>,
+    <strong>Stream.toList vs Collectors.toList</strong>.
+  </div>
+</section>
+
+<section class="phase" id="phase24">
+  <div class="phase-number">Phase 24</div>
+  <h2>Laziness, peek(), Side Effects & Stream Behaviour</h2>
+
+  <ul>
+    <li>Lazy evaluation</li>
+    <li>peek() for observation/debugging</li>
+    <li>Short-circuiting</li>
+    <li>Stateful vs stateless operations</li>
+    <li>Side effects</li>
+    <li>Non-interference</li>
+    <li>Encounter order</li>
+  </ul>
+</section>
+
+<section class="phase" id="phase25">
+  <div class="phase-number">Phase 25</div>
+  <h2>Parallel Streams</h2>
+
+  <ul>
+    <li>parallelStream()</li>
+    <li>parallel()</li>
+    <li>sequential()</li>
+    <li>unordered()</li>
+    <li>forEachOrdered()</li>
+    <li>isParallel()</li>
+    <li>Associativity</li>
+    <li>Shared mutable state</li>
+    <li>Thread safety</li>
+    <li>Combiner</li>
+    <li>ForkJoinPool concept</li>
+  </ul>
+
+  <div class="warning">
+    Do not assume parallel streams are automatically faster.
+  </div>
+</section>
+
+<section class="phase" id="phase26">
+  <div class="phase-number">Phase 26</div>
+  <h2>Collector Internals + Custom Collector</h2>
+
+  <ul>
+    <li>Collector&lt;T,A,R&gt;</li>
+    <li>Supplier</li>
+    <li>Accumulator</li>
+    <li>Combiner</li>
+    <li>Finisher</li>
+    <li>Characteristics</li>
+    <li>Build at least one custom Collector</li>
+  </ul>
+</section>
+
+<section class="phase">
+  <div class="phase-number">Final Practice Ladder</div>
+  <h2>These Combinations Should Become Automatic</h2>
+
+  <pre>
+filter
+map
+filter → map
+filter → filter → map
+distinct
+map → distinct
+filter → map → distinct
+sorted
+filter → sorted
+filter → sorted → map
+map → distinct → sorted
+filter → map → distinct → sorted
+sorted → limit
+sorted → skip → limit
+filter → sorted → limit → map
+filter → count
+filter → min
+filter → max
+filter → findFirst
+filter → findAny
+anyMatch
+allMatch
+noneMatch
+filter → anyMatch
+mapToInt → sum
+mapToDouble → average
+filter → mapToDouble → average
+summaryStatistics
+reduce
+filter → reduce
+filter → collect
+map → joining
+filter → map → joining
+toMap
+toMap → duplicate merge
+groupingBy
+groupingBy → counting
+groupingBy → mapping
+groupingBy → summingDouble
+groupingBy → averagingDouble
+groupingBy → maxBy
+groupingBy → minBy
+groupingBy → filtering
+groupingBy → groupingBy
+partitioningBy
+partitioningBy → counting
+flatMap
+flatMap → distinct
+flatMap → filter
+flatMap → distinct → sorted
+flatMap → groupingBy → counting
+filter → flatMap → distinct → sorted
+groupingBy → flatMapping → toSet
+groupingBy → filtering → mapping
+entrySet → stream → sorted
+groupingBy → counting → entrySet → stream → sorted
+takeWhile
+dropWhile
+ofNullable
+mapMulti
+collectingAndThen
+teeing
+parallelStream → filter → map → reduce
+custom Collector
+  </pre>
+</section>
+
+<section class="phase">
+  <div class="phase-number">Mastery Test</div>
+  <h2>Your Brain Should Translate Requirements Into Pipelines</h2>
+
+  <p>Example requirement:</p>
+  <p><strong>Find the top 3 most common skills among active IT employees earning more than 80,000.</strong></p>
+
+  <pre>
+employees
+  ↓ filter active
+  ↓ filter department == IT
+  ↓ filter salary > 80000
+  ↓ flatMap skills
+  ↓ groupingBy skill + counting
+  ↓ entrySet().stream()
+  ↓ sorted by count descending
+  ↓ limit 3
+  ↓ map skill
+  ↓ toList
+  </pre>
+
+  <div class="checkpoint">
+    If you can mentally identify this pipeline before writing code, you have reached a strong practical Stream level.
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    Java Collections + Method References + Streams Mastery Order — JDK 21
+  </div>
+</footer>
+
+</body>
+</html>

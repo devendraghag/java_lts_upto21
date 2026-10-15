@@ -1,0 +1,6 @@
+Active employee DTOs:
+Amit / IT
+Rahul / HR
+Priya / IT
+Vijay / IT
+Kiran / Finance

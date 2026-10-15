@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fcaf5a4a-e73c-4c82-a4cd-04b6f1822d6d" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3K8uGzzc0bWV6W7tyY4bRH2g1vL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AbstractClassBasicsDemo.executor": "Run",
+    "Application.AbstractClassImplementsInterfaceDemo.executor": "Run",
+    "Application.ArbitraryObjectComparator.executor": "Run",
+    "Application.ArrayBlockingQueueDemo.executor": "Run",
+    "Application.Collectors02ToSet.executor": "Run",
+    "Application.Collectors03ToCollectionTreeSet.executor": "Run",
+    "Application.Collectors07SummingInt.executor": "Run",
+    "Application.Collectors21CollectingAndThen.executor": "Run",
+    "Application.Collectors22Teeing.executor": "Run",
+    "Application.Comparable01BuiltInOrder.executor": "Run",
+    "Application.Comparable03NaturalMultiField.executor": "Run",
+    "Application.Comparable03StringNaturalOrder.executor": "Run",
+    "Application.Comparable17CompareToBooleanExpressions.executor": "Run",
+    "Application.Comparable21LocaleNaturalComparable.executor": "Run",
+    "Application.Comparable25SortedLimitSkip.executor": "Run",
+    "Application.Comparable28StreamsMinMax.executor": "Run",
+    "Application.CompletableFuture01AlreadyCompletedDemo.executor": "Run",
+    "Application.CompletableFuture10TimeoutFallbackDemo.executor": "Run",
+    "Application.Constructor10StreamMapToStudent.executor": "Run",
+    "Application.DelayQueueDemo.executor": "Run",
+    "Application.MethodReferencePractice.executor": "Run",
+    "Application.OptionalCreationAndPresenceDemo.executor": "Run",
+    "Application.Pair01BuiltInComparable.executor": "Run",
+    "Application.Pair03VersionComparable.executor": "Run",
+    "Application.Pair09TreeSetNaturalTie.executor": "Run",
+    "Application.Singleton01EagerInitialization.executor": "Run",
+    "Application.Singleton02StaticBlockInitialization.executor": "Run",
+    "Application.Spliterator04TrySplit.executor": "Run",
+    "Application.UnorderedAndModeDemo.executor": "Run",
+    "Application.WrapperComparisonDemo.executor": "Run",
+    "Application.interviewprogram01.executor": "Run",
+    "Maven.java_programs_jdk [clean].executor": "Run",
+    "Maven.java_programs_jdk [compile].executor": "Run",
+    "Maven.java_programs_jdk [install].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "Rebasing main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Devendra Ghag Interview Preparation/01_Java/java_programs_jdk",
+    "node.js.detected.package.jshint": "true",
+    "node.js.selected.package.jshint": "",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.completion.inline"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java_programs_jdk\src\main\java\com\example" />
+      <recent name="D:\java_programs_jdk\src\main\java\com\example\terminaloperations" />
+      <recent name="D:\java_programs_jdk\src\main\java\com\example\intermediateoperations" />
+      <recent name="D:\java_programs_jdk\src\main\java\com\example\exceptionhandling" />
+      <recent name="D:\java_programs_jdk\src\main\java\com\example\coupling" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Devendra Ghag Interview Preparation\01_Java\java_programs_jdk\src\main\java\com\example\docs" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.OptionalCreationAndPresenceDemo">
+    <configuration name="Collectors03ToCollectionTreeSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.collectors.Collectors03ToCollectionTreeSet" />
+      <module name="java_programs_jdk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.collectors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompletableFuture10TimeoutFallbackDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.completablefuture.CompletableFuture10TimeoutFallbackDemo" />
+      <module name="java_programs_jdk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.completablefuture.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Constructor10StreamMapToStudent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.methodreferences.constructorreference.Constructor10StreamMapToStudent" />
+      <module name="java_programs_jdk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.methodreferences.constructorreference.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OptionalCreationAndPresenceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.optionalclass.OptionalCreationAndPresenceDemo" />
+      <module name="java_programs_jdk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.optionalclass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="interviewprogram01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.interviewprograms.interviewprogram01" />
+      <module name="java_programs_jdk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.interviewprograms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.OptionalCreationAndPresenceDemo" />
+        <item itemvalue="Application.Constructor10StreamMapToStudent" />
+        <item itemvalue="Application.Collectors03ToCollectionTreeSet" />
+        <item itemvalue="Application.interviewprogram01" />
+        <item itemvalue="Application.CompletableFuture10TimeoutFallbackDemo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fcaf5a4a-e73c-4c82-a4cd-04b6f1822d6d" name="Changes" comment="" />
+      <created>1790951428333</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1790951428333</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/methodreferences/constructorreference/Constructor10StreamMapToStudent.java</url>
+          <line>7</line>
+          <properties class="com.example.methodreferences.constructorreference.Constructor10StreamMapToStudent.Student">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

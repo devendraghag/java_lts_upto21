@@ -1,0 +1,2 @@
+Second distinct salary: 85000.0
+Second with tie: 70000.0

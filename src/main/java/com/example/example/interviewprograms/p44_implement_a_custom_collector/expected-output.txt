@@ -1,0 +1,2 @@
+Active uppercase names: [AMIT, KIRAN, PRIYA, RAHUL, VIJAY]
+Total unique names: 5

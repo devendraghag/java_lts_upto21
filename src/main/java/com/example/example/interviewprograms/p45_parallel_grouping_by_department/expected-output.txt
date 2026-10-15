@@ -1,0 +1,2 @@
+Parallel department counts: {Finance=2, HR=2, IT=3}
+Parallel total: 7

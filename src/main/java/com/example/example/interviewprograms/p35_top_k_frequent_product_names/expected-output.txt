@@ -1,0 +1,1 @@
+Top product-name frequencies: [Keyboard=2, Monitor=2, Cable=1]

@@ -1,0 +1,3 @@
+Reduce with identity: 450000.0
+Reduce Optional: 450000.0
+MapToDouble sum: 450000.0

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Concurrency Terms - Simple Guide</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+    .hero {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      margin-bottom: 24px;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #111827;
+    }
+    h2 {
+      margin-top: 0;
+      color: #111827;
+    }
+    .lead {
+      font-size: 1.08rem;
+      color: #4b5563;
+    }
+    .note {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border-left: 5px solid #2563eb;
+      background: #eff6ff;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 22px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    th, td {
+      border: 1px solid #d1d5db;
+      padding: 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #111827;
+      color: white;
+    }
+    tr:nth-child(even) td {
+      background: #f9fafb;
+    }
+    code {
+      background: #eef2f7;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-family: Consolas, monospace;
+    }
+    pre {
+      background: #111827;
+      color: #f9fafb;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      font-size: 0.95rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    .example {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 18px;
+      background: #fcfcfd;
+    }
+    .example h3 {
+      margin-top: 0;
+      color: #1d4ed8;
+    }
+    .footer {
+      text-align: center;
+      color: #6b7280;
+      margin-top: 30px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <h1>Java Concurrency Terms — Simple Guide</h1>
+      <p class="lead">
+        These Java terms are related, but they do not mean the same thing.
+        The easiest way to understand them is to treat each one as a separate question.
+      </p>
+
+      <div class="note">
+        Main idea: Concurrent, thread-safe, synchronized, fail-fast, and immutable are different properties.
+        One does not automatically mean the other.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>1. Simple Meaning of Each Term</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Term</th>
+            <th>Simple Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Concurrent</strong></td>
+            <td>Can many threads work at the same time?</td>
+          </tr>
+          <tr>
+            <td><strong>Thread-safe</strong></td>
+            <td>Is it safe when many threads use it?</td>
+          </tr>
+          <tr>
+            <td><strong><code>synchronized</code></strong></td>
+            <td>Are we using a lock to control access?</td>
+          </tr>
+          <tr>
+            <td><strong>Fail-fast</strong></td>
+            <td>What happens if a collection changes while we are looping through it?</td>
+          </tr>
+          <tr>
+            <td><strong>Immutable</strong></td>
+            <td>Can the object change after it is created?</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>2. Best Way to Check Any Java Class</h2>
+
+      <pre>Class X
+ ├─ Is it Mutable or Immutable?
+ ├─ Is it Thread-safe or Not thread-safe?
+ ├─ Is it good for concurrent use?
+ ├─ Does it use synchronized, Lock, CAS, etc.?
+ └─ If it is a collection, what type of iterator does it have?
+      ├─ Fail-fast
+      ├─ Weakly consistent
+      └─ Snapshot</pre>
+    </section>
+
+    <section class="card">
+      <h2>3. Examples</h2>
+
+      <div class="grid">
+        <div class="example">
+          <h3>ConcurrentHashMap</h3>
+          <pre>ConcurrentHashMap
+ ├─ Mutable
+ ├─ Thread-safe
+ ├─ Good for concurrent use
+ ├─ Uses CAS, volatile,
+ │  and internal locking
+ └─ Weakly consistent iterator</pre>
+        </div>
+
+        <div class="example">
+          <h3>ArrayList</h3>
+          <pre>ArrayList
+ ├─ Mutable
+ ├─ Not thread-safe
+ ├─ Not good for direct
+ │  concurrent use
+ ├─ No built-in synchronization
+ └─ Fail-fast iterator</pre>
+        </div>
+
+        <div class="example">
+          <h3>String</h3>
+          <pre>String
+ ├─ Immutable
+ ├─ Safe to share between threads
+ ├─ Not called a concurrent class
+ └─ No synchronization is normally
+    needed because its value
+    cannot change</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>4. Important Relationships</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Statement</th>
+            <th>Correct?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Thread-safe means fail-fast</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Immutable means concurrent class</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Concurrent means always synchronized</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Fail-fast means thread-safe</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Thread-safe can be achieved using synchronization, locks, atomics, concurrent collections, or immutability</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>5. Easy Rule to Remember</h2>
+
+      <pre>Thread-safe   = Is it safe with many threads?
+
+Concurrent    = Is it designed for many threads
+                working at the same time?
+
+synchronized  = One locking technique used
+                to control shared data.
+
+Fail-fast     = Iterator behavior when a
+                collection changes unexpectedly.
+
+Immutable     = Object state cannot change
+                after creation.</pre>
+
+      <div class="note">
+        Think of them as separate labels of a class, not as one fixed chain.
+      </div>
+    </section>
+
+
+    <section class="card">
+      <h2>6. Different Properties Can Exist Together</h2>
+
+      <p>
+        Saying that <strong>concurrent, thread-safe, synchronized, fail-fast, and immutable are different properties</strong>
+        does not mean they cannot exist together.
+      </p>
+
+      <p>
+        It means each property answers a different question, and one property does not automatically guarantee another.
+      </p>
+
+      <pre>ConcurrentHashMap
+ ├─ Mutable
+ ├─ Thread-safe
+ ├─ Good for concurrent use
+ ├─ Uses CAS, volatile, and internal locking
+ └─ Weakly consistent iterator</pre>
+
+      <p>Each line above describes a different characteristic:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>What it means for ConcurrentHashMap</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Mutable</strong></td>
+            <td>Its data can change after the map is created.</td>
+          </tr>
+          <tr>
+            <td><strong>Thread-safe</strong></td>
+            <td>Many threads can use it safely.</td>
+          </tr>
+          <tr>
+            <td><strong>Concurrent-friendly</strong></td>
+            <td>It is specially designed for multiple threads to access it efficiently.</td>
+          </tr>
+          <tr>
+            <td><strong>CAS / volatile / locking</strong></td>
+            <td>These are some internal techniques used to provide safe concurrent access.</td>
+          </tr>
+          <tr>
+            <td><strong>Weakly consistent iterator</strong></td>
+            <td>Its iterator can continue while the map is changing and may see some updates.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note">
+        Different properties do not mean mutually exclusive properties.
+        A single class can have several properties at the same time.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>7. It Depends on the Class Implementation and Guarantees</h2>
+
+      <p>
+        Yes. We describe a Java class based on <strong>how it is designed, implemented, and what guarantees its API provides</strong>.
+      </p>
+
+      <p>For example:</p>
+
+      <pre>ConcurrentHashMap
+ ├─ Thread-safe
+ └─ Good for concurrent use</pre>
+
+      <p>These two statements mean different things:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Label</th>
+            <th>Simple meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Thread-safe</strong></td>
+            <td>The class behaves correctly when multiple threads use it.</td>
+          </tr>
+          <tr>
+            <td><strong>Good for concurrent use</strong></td>
+            <td>The class is designed so multiple threads can work with it efficiently.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Compare a few classes:</p>
+
+      <pre>HashMap
+ ├─ Not thread-safe
+ └─ Not good for direct concurrent use
+
+
+Collections.synchronizedMap(...)
+ ├─ Thread-safe for individual operations
+ └─ Concurrent access is more limited because
+    access is heavily synchronized
+
+
+ConcurrentHashMap
+ ├─ Thread-safe
+ └─ Designed for efficient concurrent access</pre>
+
+      <div class="note">
+        Best rule: for every Java class, check its documented guarantees and design,
+        then describe whether it is mutable, immutable, thread-safe, concurrent-friendly,
+        synchronized, fail-fast, weakly consistent, snapshot-based, etc.
+      </div>
+    </section>
+
+
+    <section class="card">
+      <h2>8. Simple Mental Model</h2>
+
+      <p>
+        The easiest way to understand these terms is to think in <strong>4 separate boxes</strong>.
+      </p>
+
+      <pre>1. DATA
+   Mutable or Immutable?
+
+2. THREAD SAFETY
+   Safe for many threads or not?
+
+3. IMPLEMENTATION
+   How is safety achieved?
+   synchronized / Lock / CAS / volatile /
+   copy-on-write / etc.
+
+4. ITERATION
+   If it is a collection, what happens during iteration?
+   fail-fast / weakly consistent / snapshot</pre>
+
+      <div class="note">
+        Do not think of these terms as one chain. Think of them as separate questions about the same class.
+      </div>
+
+      <h3>Example: ConcurrentHashMap</h3>
+      <pre>1. DATA
+   Mutable
+
+2. THREAD SAFETY
+   Thread-safe
+   Good for concurrent use
+
+3. IMPLEMENTATION
+   Uses CAS, volatile, and internal locking techniques
+
+4. ITERATION
+   Weakly consistent</pre>
+
+      <h3>Example: ArrayList</h3>
+      <pre>1. DATA
+   Mutable
+
+2. THREAD SAFETY
+   Not thread-safe
+
+3. IMPLEMENTATION
+   No built-in concurrency protection
+
+4. ITERATION
+   Fail-fast</pre>
+
+      <h3>Example: String</h3>
+      <pre>1. DATA
+   Immutable
+
+2. THREAD SAFETY
+   Safe to share between threads
+
+3. IMPLEMENTATION
+   No mutation, so no lock is needed for changing state
+
+4. ITERATION
+   Not applicable</pre>
+
+      <h3>Wrong Way to Think</h3>
+      <pre>Concurrent
+   ↓
+Thread-safe
+   ↓
+Synchronized
+   ↓
+Fail-fast</pre>
+
+      <p>This is wrong because these terms are not automatic steps.</p>
+
+      <h3>Correct Way to Think</h3>
+      <pre>One Class
+   |
+   +-- Is it mutable?
+   |
+   +-- Is it thread-safe?
+   |
+   +-- Is it designed for concurrent use?
+   |
+   +-- How does it achieve safety?
+   |
+   +-- How does iteration behave?</pre>
+
+      <h3>Class Profile Card</h3>
+      <pre>Class Name: ConcurrentHashMap
+
+State:        Mutable
+Thread-safe:  Yes
+Concurrent:   Yes
+Technique:    CAS + volatile + internal locking
+Iterator:     Weakly consistent</pre>
+
+      <div class="note">
+        Best memory trick: treat every Java class like it has a small profile card with separate properties.
+      </div>
+    </section>
+
+    <div class="footer">
+      Java Concurrency Quick Reference
+    </div>
+  </div>
+</body>
+</html>

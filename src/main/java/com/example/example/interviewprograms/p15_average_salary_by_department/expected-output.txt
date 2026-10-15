@@ -1,0 +1,4 @@
+Average salaries:
+Finance: 70000.00
+HR: 52500.00
+IT: 68333.33

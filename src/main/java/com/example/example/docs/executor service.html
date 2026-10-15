@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executor Service</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      background: #f7f8fa;
+      color: #1f2937;
+    }
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+    h1, h2, h3 {
+      color: #111827;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+    h2 {
+      margin-top: 42px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+    h3 {
+      margin-top: 28px;
+    }
+    .subtitle {
+      color: #4b5563;
+      margin-bottom: 28px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 18px 0;
+    }
+    code {
+      font-family: Consolas, Monaco, monospace;
+      background: #eef2f7;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+    pre {
+      background: #111827;
+      color: #f9fafb;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      line-height: 1.5;
+    }
+    pre code {
+      background: transparent;
+      padding: 0;
+      color: inherit;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      background: white;
+    }
+    th, td {
+      border: 1px solid #d1d5db;
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f3f4f6;
+    }
+    .flow {
+      background: #fff7ed;
+      border-left: 4px solid #f59e0b;
+      padding: 14px 16px;
+      margin: 18px 0;
+      white-space: pre-wrap;
+      font-family: Consolas, Monaco, monospace;
+    }
+    .note {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 14px 16px;
+      margin: 18px 0;
+    }
+    .summary {
+      background: #ecfdf5;
+      border-left: 4px solid #10b981;
+      padding: 16px;
+      margin-top: 28px;
+    }
+    ul {
+      padding-left: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Executor Service</h1>
+    <div class="subtitle">Java Concurrency Notes — ExecutorService, Executors, submit(), Future, and FutureTask</div>
+
+    <div class="flow">Executors
+    ↓ creates
+ExecutorService
+    ↓ submit(task)
+Task goes to queue
+    ↓
+Available worker thread executes task
+    ↓
+Result becomes available
+    ↓
+Future / FutureTask
+    ↓
+get()
+    ↓
+Actual result</div>
+
+    <h2>1. ExecutorService</h2>
+    <p><code>ExecutorService</code> is an interface used to manage and execute tasks using one or more worker threads.</p>
+
+    <div class="card">
+      <strong>Main idea:</strong>
+      <p>Instead of manually creating a new <code>Thread</code> for every task, an <code>ExecutorService</code> manages a pool of reusable threads.</p>
+    </div>
+
+    <pre><code>ExecutorService executor = Executors.newFixedThreadPool(3);
+
+executor.submit(() -> {
+    System.out.println("Task running");
+});</code></pre>
+
+    <h3>Important ExecutorService methods</h3>
+    <table>
+      <tr><th>Method</th><th>Purpose</th></tr>
+      <tr><td><code>execute(Runnable)</code></td><td>Executes a task. Does not return a result.</td></tr>
+      <tr><td><code>submit(Runnable)</code></td><td>Executes a Runnable and returns a <code>Future&lt;?&gt;</code>.</td></tr>
+      <tr><td><code>submit(Callable&lt;T&gt;)</code></td><td>Executes a Callable and returns <code>Future&lt;T&gt;</code>.</td></tr>
+      <tr><td><code>submit(Runnable, T result)</code></td><td>Executes a Runnable and returns the specified result through a Future.</td></tr>
+      <tr><td><code>invokeAll()</code></td><td>Executes multiple tasks and waits for all of them.</td></tr>
+      <tr><td><code>invokeAny()</code></td><td>Executes multiple tasks and returns one successful result.</td></tr>
+      <tr><td><code>shutdown()</code></td><td>Stops accepting new tasks and lets existing tasks finish.</td></tr>
+      <tr><td><code>shutdownNow()</code></td><td>Attempts to stop running tasks and returns queued tasks that never started.</td></tr>
+      <tr><td><code>isShutdown()</code></td><td>Checks whether shutdown has been requested.</td></tr>
+      <tr><td><code>isTerminated()</code></td><td>Checks whether all tasks have completed after shutdown.</td></tr>
+      <tr><td><code>awaitTermination()</code></td><td>Waits for executor termination for a specified period.</td></tr>
+    </table>
+
+    <h2>2. Executors</h2>
+    <p><code>Executors</code> is a utility/factory class used to create different kinds of executor services.</p>
+
+    <div class="flow">Executors
+    ↓
+creates
+    ↓
+ExecutorService</div>
+
+    <h3>Common factory methods</h3>
+    <table>
+      <tr><th>Method</th><th>Meaning</th></tr>
+      <tr><td><code>newFixedThreadPool(n)</code></td><td>Creates a pool with a fixed number of worker threads.</td></tr>
+      <tr><td><code>newSingleThreadExecutor()</code></td><td>Creates one worker thread; tasks run sequentially.</td></tr>
+      <tr><td><code>newCachedThreadPool()</code></td><td>Creates/reuses threads dynamically as needed.</td></tr>
+      <tr><td><code>newScheduledThreadPool(n)</code></td><td>Supports delayed and periodic tasks.</td></tr>
+      <tr><td><code>newSingleThreadScheduledExecutor()</code></td><td>Single-threaded scheduled executor.</td></tr>
+      <tr><td><code>newWorkStealingPool()</code></td><td>Creates a work-stealing pool.</td></tr>
+    </table>
+
+    <h3>newFixedThreadPool()</h3>
+    <pre><code>ExecutorService executor =
+        Executors.newFixedThreadPool(3);</code></pre>
+
+    <div class="flow">Thread 1 → Task 1
+Thread 2 → Task 2
+Thread 3 → Task 3
+
+Task 4, Task 5, ... wait in queue.
+
+When one thread becomes available,
+that thread picks the next waiting task.</div>
+
+    <h3>newSingleThreadExecutor()</h3>
+    <pre><code>ExecutorService executor =
+        Executors.newSingleThreadExecutor();</code></pre>
+
+    <div class="flow">Task 1
+  ↓
+Task 2
+  ↓
+Task 3</div>
+
+    <h3>newCachedThreadPool()</h3>
+    <pre><code>ExecutorService executor =
+        Executors.newCachedThreadPool();</code></pre>
+
+    <p>Threads are created when necessary and reused when possible. It can create many threads, so it should be used carefully.</p>
+
+    <h3>newScheduledThreadPool()</h3>
+    <pre><code>ScheduledExecutorService executor =
+        Executors.newScheduledThreadPool(2);
+
+executor.schedule(
+    () -> System.out.println("Hello"),
+    5,
+    TimeUnit.SECONDS
+);</code></pre>
+
+    <h2>3. submit()</h2>
+    <p><code>submit()</code> is an <code>ExecutorService</code> method that sends a task to the executor for execution.</p>
+
+    <h3>submit(Runnable)</h3>
+    <pre><code>Future&lt;?&gt; future = executor.submit(() -> {
+    System.out.println("Task running");
+});</code></pre>
+
+    <p>A <code>Runnable</code> does not return a value. Therefore, <code>future.get()</code> normally returns <code>null</code>.</p>
+
+    <h3>submit(Callable&lt;T&gt;)</h3>
+    <pre><code>Future&lt;Integer&gt; future =
+        executor.submit(() -> {
+            return 10 + 20;
+        });
+
+Integer result = future.get();</code></pre>
+
+    <div class="flow">Callable&lt;Integer&gt;
+      ↓
+submit()
+      ↓
+Future&lt;Integer&gt;
+      ↓
+get()
+      ↓
+30</div>
+
+    <h3>submit(Runnable, result)</h3>
+    <pre><code>Future&lt;String&gt; future =
+        executor.submit(
+            () -> System.out.println("Task running"),
+            "SUCCESS"
+        );
+
+System.out.println(future.get());</code></pre>
+
+    <p>The Runnable itself returns nothing. The value <code>"SUCCESS"</code> is the result provided to <code>submit()</code>.</p>
+
+    <h3>execute() vs submit()</h3>
+    <table>
+      <tr><th>Feature</th><th>execute()</th><th>submit()</th></tr>
+      <tr><td>Main interface</td><td>Executor</td><td>ExecutorService</td></tr>
+      <tr><td>Accepts Runnable</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Accepts Callable</td><td>No</td><td>Yes</td></tr>
+      <tr><td>Returns Future</td><td>No</td><td>Yes</td></tr>
+      <tr><td>Can retrieve result</td><td>No</td><td>Yes</td></tr>
+      <tr><td>Can cancel through Future</td><td>No</td><td>Yes</td></tr>
+    </table>
+
+    <h2>4. Future</h2>
+    <p><code>Future&lt;T&gt;</code> represents a result that may become available later.</p>
+
+    <div class="note">
+      <strong>Important correction:</strong> Future does not pick a thread and does not execute the task. The <code>ExecutorService</code> and its worker threads do that. Future only represents and gives access to the task's eventual result.
+    </div>
+
+    <pre><code>Future&lt;Integer&gt; future = executor.submit(() -> {
+    return 10 + 20;
+});</code></pre>
+
+    <div class="flow">submit(task)
+    ↓
+ExecutorService queues task
+    ↓
+Worker thread becomes available
+    ↓
+Worker thread executes task
+    ↓
+Result = 30
+    ↓
+Future represents that result
+    ↓
+future.get()
+    ↓
+30</div>
+
+    <p>Simple meaning:</p>
+    <div class="card"><strong>Future = "The result may not be ready now, but you can get it later."</strong></div>
+
+    <h3>Important Future methods</h3>
+    <table>
+      <tr><th>Method</th><th>Purpose</th></tr>
+      <tr><td><code>get()</code></td><td>Waits if needed and returns the result.</td></tr>
+      <tr><td><code>get(timeout, unit)</code></td><td>Waits only for the specified amount of time.</td></tr>
+      <tr><td><code>isDone()</code></td><td>Checks whether the task is finished, failed, or cancelled.</td></tr>
+      <tr><td><code>cancel(boolean)</code></td><td>Attempts to cancel the task.</td></tr>
+      <tr><td><code>isCancelled()</code></td><td>Checks whether the task was cancelled.</td></tr>
+    </table>
+
+    <h3>future.get()</h3>
+    <pre><code>Future&lt;Integer&gt; future =
+        executor.submit(() -> {
+            Thread.sleep(5000);
+            return 100;
+        });
+
+System.out.println("Before get");
+
+Integer result = future.get();
+
+System.out.println(result);</code></pre>
+
+    <p><code>get()</code> is blocking. If the task is not finished, the calling thread waits.</p>
+
+    <h3>get(timeout, unit)</h3>
+    <pre><code>future.get(3, TimeUnit.SECONDS);</code></pre>
+
+    <p>If the task does not complete within the timeout, a <code>TimeoutException</code> occurs.</p>
+
+    <h3>cancel()</h3>
+    <pre><code>future.cancel(true);</code></pre>
+
+    <p><code>true</code> means the executor may interrupt the running thread if the task is already executing.</p>
+
+    <h2>5. Runnable vs Callable</h2>
+    <table>
+      <tr><th>Feature</th><th>Runnable</th><th>Callable</th></tr>
+      <tr><td>Main method</td><td><code>run()</code></td><td><code>call()</code></td></tr>
+      <tr><td>Returns value</td><td>No</td><td>Yes</td></tr>
+      <tr><td>Checked exceptions</td><td>Cannot normally declare them</td><td>Can throw them</td></tr>
+      <tr><td>Used with execute()</td><td>Yes</td><td>No</td></tr>
+      <tr><td>Used with submit()</td><td>Yes</td><td>Yes</td></tr>
+    </table>
+
+    <pre><code>Runnable runnable = () -> {
+    System.out.println("Working");
+};
+
+Callable&lt;Integer&gt; callable = () -> {
+    return 100;
+};</code></pre>
+
+    <h2>6. FutureTask</h2>
+    <p><code>FutureTask&lt;V&gt;</code> is a concrete class that implements both <code>Runnable</code> and <code>Future&lt;V&gt;</code>.</p>
+
+    <div class="card"><strong>FutureTask = Runnable + Future</strong></div>
+
+    <pre><code>FutureTask&lt;Integer&gt; futureTask =
+        new FutureTask&lt;&gt;(() -> {
+            return 10 + 20;
+        });</code></pre>
+
+    <p>At this point the task exists, but it has not necessarily started.</p>
+
+    <pre><code>Thread thread = new Thread(futureTask);
+thread.start();
+
+Integer result = futureTask.get();</code></pre>
+
+    <div class="flow">FutureTask created
+      ↓
+Thread runs FutureTask
+      ↓
+Callable executes
+      ↓
+Result stored inside FutureTask
+      ↓
+futureTask.get()
+      ↓
+Result returned</div>
+
+    <h3>FutureTask constructors</h3>
+
+    <h4>FutureTask(Callable&lt;V&gt;)</h4>
+    <pre><code>FutureTask&lt;Integer&gt; task =
+        new FutureTask&lt;&gt;(() -> {
+            return 50;
+        });
+
+new Thread(task).start();
+
+Integer result = task.get();</code></pre>
+
+    <h4>FutureTask(Runnable, V result)</h4>
+    <pre><code>FutureTask&lt;String&gt; task =
+        new FutureTask&lt;&gt;(
+            () -> System.out.println("Running"),
+            "SUCCESS"
+        );
+
+new Thread(task).start();
+
+String result = task.get();</code></pre>
+
+    <h3>Important FutureTask methods</h3>
+    <table>
+      <tr><th>Method</th><th>Meaning</th></tr>
+      <tr><td><code>run()</code></td><td>Executes the task.</td></tr>
+      <tr><td><code>get()</code></td><td>Gets the result and waits if necessary.</td></tr>
+      <tr><td><code>get(timeout, unit)</code></td><td>Waits only for the specified time.</td></tr>
+      <tr><td><code>cancel(boolean)</code></td><td>Attempts to cancel the task.</td></tr>
+      <tr><td><code>isDone()</code></td><td>Checks whether execution is finished, failed, or cancelled.</td></tr>
+      <tr><td><code>isCancelled()</code></td><td>Checks whether cancellation succeeded.</td></tr>
+      <tr><td><code>done()</code></td><td>Protected callback called when the task reaches a completed state.</td></tr>
+      <tr><td><code>runAndReset()</code></td><td>Protected advanced method that runs and resets the task.</td></tr>
+      <tr><td><code>set(V)</code></td><td>Protected method to manually set the result.</td></tr>
+      <tr><td><code>setException(Throwable)</code></td><td>Protected method to mark the task as failed.</td></tr>
+    </table>
+
+    <h3>run()</h3>
+    <pre><code>FutureTask&lt;Integer&gt; task =
+        new FutureTask&lt;&gt;(() -> 100);
+
+task.run();</code></pre>
+
+    <div class="note">
+      Calling <code>task.run()</code> directly does not create a new thread. It runs in the current thread.
+      To run it in another thread, use <code>new Thread(task).start()</code>.
+    </div>
+
+    <h3>get()</h3>
+    <pre><code>FutureTask&lt;Integer&gt; task =
+        new FutureTask&lt;&gt;(() -> {
+            Thread.sleep(3000);
+            return 100;
+        });
+
+new Thread(task).start();
+
+Integer result = task.get();</code></pre>
+
+    <p>If the task is still running, <code>get()</code> waits until the task completes.</p>
+
+    <h3>isDone()</h3>
+    <pre><code>if (task.isDone()) {
+    System.out.println("Finished");
+}</code></pre>
+
+    <p><code>isDone()</code> can also be true if the task failed or was cancelled.</p>
+
+    <h3>cancel()</h3>
+    <pre><code>boolean cancelled = task.cancel(true);</code></pre>
+
+    <p><code>cancel(true)</code> allows interruption of a running task. <code>cancel(false)</code> does not interrupt a running task.</p>
+
+    <h3>done()</h3>
+    <pre><code>FutureTask&lt;Integer&gt; task =
+        new FutureTask&lt;&gt;(() -> 100) {
+            @Override
+            protected void done() {
+                System.out.println("Task completed");
+            }
+        };
+
+new Thread(task).start();</code></pre>
+
+    <h2>7. Future vs FutureTask</h2>
+    <table>
+      <tr><th>Feature</th><th>Future</th><th>FutureTask</th></tr>
+      <tr><td>Type</td><td>Interface</td><td>Concrete class</td></tr>
+      <tr><td>Can instantiate directly</td><td>No</td><td>Yes</td></tr>
+      <tr><td>Represents a result</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Can be executed</td><td>No</td><td>Yes</td></tr>
+      <tr><td>Implements Runnable</td><td>No</td><td>Yes</td></tr>
+      <tr><td>Has get()</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Has cancel()</td><td>Yes</td><td>Yes</td></tr>
+    </table>
+
+    <div class="flow">Future
+  = represents a result
+
+FutureTask
+  = executable task + future result</div>
+
+    <h2>8. FutureTask with ExecutorService</h2>
+    <pre><code>ExecutorService executor =
+        Executors.newFixedThreadPool(2);
+
+FutureTask&lt;Integer&gt; task =
+        new FutureTask&lt;&gt;(() -> {
+            return 10 + 20;
+        });
+
+executor.execute(task);
+
+Integer result = task.get();
+
+System.out.println(result);
+
+executor.shutdown();</code></pre>
+
+    <p><code>executor.execute(task)</code> works because <code>FutureTask</code> implements <code>Runnable</code>.</p>
+    <p><code>task.get()</code> works because <code>FutureTask</code> implements <code>Future</code>.</p>
+
+    <h2>9. invokeAll()</h2>
+    <pre><code>List&lt;Callable&lt;Integer&gt;&gt; tasks = List.of(
+    () -> 10,
+    () -> 20,
+    () -> 30
+);
+
+List&lt;Future&lt;Integer&gt;&gt; futures =
+    executor.invokeAll(tasks);
+
+for (Future&lt;Integer&gt; future : futures) {
+    System.out.println(future.get());
+}</code></pre>
+
+    <p><code>invokeAll()</code> waits for all supplied tasks to complete, unless a timeout overload is used.</p>
+
+    <h2>10. invokeAny()</h2>
+    <pre><code>Integer result = executor.invokeAny(tasks);</code></pre>
+
+    <p>It returns one successfully completed result. You should not depend on which task provides the result.</p>
+
+    <h2>11. Shutdown</h2>
+    <h3>shutdown()</h3>
+    <pre><code>executor.shutdown();</code></pre>
+
+    <div class="flow">No new tasks accepted
+       ↓
+Already submitted tasks continue
+       ↓
+Tasks finish
+       ↓
+Threads terminate</div>
+
+    <h3>shutdownNow()</h3>
+    <pre><code>executor.shutdownNow();</code></pre>
+
+    <p>It attempts to interrupt running tasks and returns tasks still waiting in the queue. Interruption is cooperative, so a task may continue if it ignores interrupts.</p>
+
+    <h2>12. Complete Example</h2>
+    <pre><code>import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
+public class ExecutorExample {
+
+    public static void main(String[] args) throws Exception {
+
+        ExecutorService executor =
+                Executors.newFixedThreadPool(3);
+
+        Future&lt;Integer&gt; future1 =
+                executor.submit(() -> {
+                    System.out.println(
+                        Thread.currentThread().getName()
+                    );
+                    return 10 + 20;
+                });
+
+        Future&lt;String&gt; future2 =
+                executor.submit(() -> {
+                    return "Hello";
+                });
+
+        Integer result1 = future1.get();
+        String result2 = future2.get();
+
+        System.out.println(result1);
+        System.out.println(result2);
+
+        executor.shutdown();
+    }
+}</code></pre>
+
+    <h2>13. Easy Way to Remember</h2>
+    <div class="summary">
+      <p><strong>Executors</strong> = factory used to create executor services.</p>
+      <p><strong>ExecutorService</strong> = manages worker threads and task execution.</p>
+      <p><strong>submit()</strong> = submits a task to the executor.</p>
+      <p><strong>Future</strong> = represents a result that may be available later.</p>
+      <p><strong>future.get()</strong> = waits if needed and retrieves the result.</p>
+      <p><strong>FutureTask</strong> = an executable task that also represents its future result.</p>
+    </div>
+
+    <div class="flow">Executors
+    ↓
+ExecutorService
+    ↓
+submit() / execute()
+    ↓
+Task queue
+    ↓
+Available worker thread
+    ↓
+Task executes
+    ↓
+Future / FutureTask
+    ↓
+get()
+    ↓
+Result</div>
+
+  </div>
+</body>
+</html>

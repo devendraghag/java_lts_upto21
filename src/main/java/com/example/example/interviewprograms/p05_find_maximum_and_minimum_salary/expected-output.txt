@@ -1,0 +1,5 @@
+Highest: Vijay - 90000.0
+Lowest: Amit - 40000.0
+Highest salary: 90000.0
+Lowest salary: 40000.0
+Empty list result: Not found

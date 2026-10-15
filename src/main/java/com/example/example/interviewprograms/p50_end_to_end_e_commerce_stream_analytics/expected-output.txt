@@ -1,0 +1,7 @@
+PAID orders: 6
+Revenue: 41200.0
+Revenue by category: {Accessories=6200.0, Electronics=24000.0, Furniture=11000.0}
+Revenue by customer: {Asha=6700.0, Isha=13500.0, Ravi=21000.0}
+Best category: Electronics
+Units by product: {Cable=3, Chair=2, Keyboard=3, Lamp=2, Monitor=2, Mouse=1}
+Low-stock alerts: [Chair, Laptop, Monitor]

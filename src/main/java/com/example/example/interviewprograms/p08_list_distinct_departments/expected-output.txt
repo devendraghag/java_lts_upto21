@@ -1,0 +1,2 @@
+Departments: [Finance, HR, IT]
+Unique departments: 3

@@ -1,0 +1,2 @@
+Merged: {P1=7, P2=5, P3=3, P4=6}
+P2 after increment: 7

@@ -1,0 +1,2 @@
+Counts: {Accessories=3, Electronics=2, Furniture=3}
+Out of stock products: 1

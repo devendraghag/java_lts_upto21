@@ -1,0 +1,17 @@
+Ascending:
+Amit - 40000.0
+Sneha - 45000.0
+Kiran - 55000.0
+Rahul - 60000.0
+Priya - 75000.0
+Neha - 85000.0
+Vijay - 90000.0
+Descending:
+Vijay - 90000.0
+Neha - 85000.0
+Priya - 75000.0
+Rahul - 60000.0
+Kiran - 55000.0
+Sneha - 45000.0
+Amit - 40000.0
+Sorted names: [Amit, Sneha, Kiran, Rahul, Priya, Neha, Vijay]

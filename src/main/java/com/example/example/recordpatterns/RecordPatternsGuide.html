@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A practical guide to Java records and JDK 21 record patterns, with examples and interview questions.">
+  <title>Java Records and Record Patterns | JDK 21 Guide</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #182433;
+      --muted: #526174;
+      --paper: #f4f7fb;
+      --surface: #ffffff;
+      --line: #d9e1ec;
+      --accent: #155eef;
+      --accent-soft: #eaf1ff;
+      --code: #101828;
+      --code-ink: #e6edf7;
+      --green: #087443;
+      --amber: #8a4b08;
+      --shadow: 0 12px 34px rgba(24, 36, 51, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.68 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; }
+    code { font-size: .92em; }
+    .hero {
+      padding: 3.5rem max(1.25rem, calc((100% - 1120px) / 2));
+      color: #fff;
+      background: radial-gradient(circle at 82% 8%, #467cff 0, transparent 31%), linear-gradient(125deg, #102a56, #153e83 65%, #155eef);
+    }
+    .hero .eyebrow { margin: 0 0 .55rem; color: #c8d8ff; font-size: .82rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { max-width: 850px; margin: 0; font-size: clamp(2.25rem, 6vw, 4rem); line-height: 1.08; letter-spacing: -.04em; }
+    .hero p { max-width: 760px; margin: 1rem 0 0; color: #e3ebff; font-size: 1.12rem; }
+    .hero .badge { display: inline-block; margin-top: 1.35rem; padding: .3rem .7rem; border: 1px solid #91b4ff; border-radius: 999px; color: #fff; font-size: .85rem; }
+    .layout { display: grid; grid-template-columns: 245px minmax(0, 1fr); gap: 2rem; max-width: 1280px; margin: 2rem auto; padding: 0 1.25rem; align-items: start; }
+    nav {
+      position: sticky;
+      top: 1rem;
+      max-height: calc(100vh - 2rem);
+      overflow: auto;
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    nav strong { display: block; margin: 0 0 .5rem; }
+    nav a { display: block; padding: .3rem .35rem; color: var(--muted); font-size: .91rem; text-decoration: none; }
+    nav a:hover, nav a:focus { color: var(--accent); background: var(--accent-soft); border-radius: 6px; }
+    main { min-width: 0; }
+    section, article.card {
+      margin: 0 0 1.3rem;
+      padding: clamp(1.1rem, 3vw, 2rem);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      scroll-margin-top: 1rem;
+    }
+    h2 { margin: 0 0 .8rem; font-size: clamp(1.45rem, 3vw, 2rem); line-height: 1.2; letter-spacing: -.025em; }
+    h3 { margin: 1.5rem 0 .45rem; font-size: 1.15rem; }
+    p { margin: .55rem 0 1rem; }
+    .lead { color: var(--muted); font-size: 1.08rem; }
+    .callout { margin: 1rem 0; padding: .9rem 1rem; border-left: 4px solid var(--accent); border-radius: 8px; background: var(--accent-soft); }
+    .callout.good { border-left-color: var(--green); background: #eaf8f0; }
+    .callout.caution { border-left-color: #c56a12; background: #fff6e9; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .tile { padding: 1rem; border: 1px solid var(--line); border-radius: 12px; background: #fbfcfe; }
+    .tile h3 { margin-top: 0; }
+    pre {
+      max-width: 100%;
+      overflow: auto;
+      margin: .85rem 0 1rem;
+      padding: 1rem 1.1rem;
+      border: 1px solid #26354c;
+      border-radius: 11px;
+      background: var(--code);
+      color: var(--code-ink);
+      font-size: .9rem;
+      line-height: 1.55;
+      tab-size: 4;
+    }
+    pre code { font-size: inherit; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; margin: .8rem 0; }
+    th, td { padding: .7rem .75rem; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: #f0f4fa; }
+    .tag { display: inline-block; padding: .12rem .48rem; border-radius: 999px; background: #edf2fa; color: #344054; font-size: .78rem; font-weight: 700; }
+    .qa { padding: 1rem 0; border-top: 1px solid var(--line); }
+    .qa:first-of-type { border-top: 0; }
+    .qa h3 { margin: 0 0 .35rem; }
+    .qa p { margin: .2rem 0; color: #344054; }
+    .links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem 1rem; padding-left: 1.2rem; }
+    .links li { padding: .15rem 0; }
+    footer { max-width: 1280px; margin: 0 auto; padding: 0 1.25rem 2.5rem; color: var(--muted); font-size: .9rem; }
+    @media (max-width: 850px) {
+      .layout { grid-template-columns: 1fr; }
+      nav { position: static; max-height: none; }
+      nav div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+      .grid, .links { grid-template-columns: 1fr; }
+      .hero { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+      body { font-size: 15px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .layout { display: block; max-width: none; margin: 0; }
+      nav { display: none; }
+      section, article.card { box-shadow: none; break-inside: avoid; }
+      .hero { padding: 1rem; background: #fff; color: #000; }
+      .hero p, .hero .eyebrow { color: #333; }
+      pre { white-space: pre-wrap; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Java 21 · Language features</p>
+    <h1>Records and Record Patterns</h1>
+    <p>A practical guide to concise data carriers, deconstruction patterns, nested matching, guarded cases, and the questions that commonly come up in Java interviews.</p>
+    <span class="badge">Record patterns finalized in JDK 21</span>
+  </header>
+
+  <div class="layout">
+    <nav aria-label="Table of contents">
+      <strong>On this page</strong>
+      <div>
+        <a href="#overview">1. Overview</a>
+        <a href="#records">2. Records</a>
+        <a href="#record-access">Record access modifiers</a>
+        <a href="#constructors">3. Constructors and validation</a>
+        <a href="#record-patterns">4. Record patterns</a>
+        <a href="#instanceof">5. instanceof patterns</a>
+        <a href="#switch">6. switch patterns</a>
+        <a href="#nested">7. Nested patterns</a>
+        <a href="#guards">8. Guards and null</a>
+        <a href="#sealed">9. Sealed types</a>
+        <a href="#pitfalls">10. Common pitfalls</a>
+        <a href="#interview">11. Interview questions</a>
+        <a href="#examples">12. Example programs</a>
+      </div>
+    </nav>
+
+    <main>
+      <section id="overview">
+        <h2>1. Overview</h2>
+        <p class="lead">A <strong>record</strong> is a compact way to declare a class whose main purpose is to carry a fixed set of data. A <strong>record pattern</strong> lets code test a record’s type and unpack its components in one pattern.</p>
+        <div class="grid">
+          <article class="tile">
+            <h3>Record declaration</h3>
+            <pre><code>record Point(int x, int y) { }</code></pre>
+            <p>Declares a record with two components, accessors, a canonical constructor, and value-based <code>equals</code>, <code>hashCode</code>, and <code>toString</code>.</p>
+          </article>
+          <article class="tile">
+            <h3>Record pattern</h3>
+            <pre><code>if (value instanceof Point(int x, int y)) {
+    System.out.println(x + y);
+}</code></pre>
+            <p>Checks that <code>value</code> is a <code>Point</code> and binds its components to local variables.</p>
+          </article>
+        </div>
+        <div class="callout good"><strong>Keep the terms separate:</strong> records are a kind of class declaration. Record patterns are a language feature for matching and deconstructing instances of record classes.</div>
+      </section>
+
+      <section id="records">
+        <h2>2. What a record provides</h2>
+        <p>This declaration:</p>
+        <pre><code>record Person(String name, int age) { }</code></pre>
+        <p>is roughly equivalent to a final class with private final fields, a constructor, accessors named after the components, and value-based implementations of <code>equals</code>, <code>hashCode</code>, and <code>toString</code>.</p>
+        <pre><code>Person person = new Person("Asha", 28);
+
+System.out.println(person.name()); // Asha
+System.out.println(person.age());  // 28
+System.out.println(person);        // Person[name=Asha, age=28]</code></pre>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Record component</th><th>Generated member</th><th>Example</th></tr></thead>
+            <tbody>
+              <tr><td><code>String name</code></td><td>Private final field and public accessor</td><td><code>person.name()</code></td></tr>
+              <tr><td>All components</td><td>Canonical constructor</td><td><code>new Person("Asha", 28)</code></td></tr>
+              <tr><td>All components</td><td>Value-based equality and hash code</td><td><code>person.equals(other)</code></td></tr>
+              <tr><td>All components</td><td>Readable string representation</td><td><code>Person[name=Asha, age=28]</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout"><strong>Accessor naming:</strong> record accessors use the component name, such as <code>name()</code>, not the JavaBean form <code>getName()</code>.</div>
+
+        <div id="record-access">
+          <h3>Record access modifiers</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Declaration</th><th>Allowed access</th></tr></thead>
+              <tbody>
+                <tr><td>Top-level record</td><td><code>public</code> or package-private (no modifier)</td></tr>
+                <tr><td>Member record nested in a class</td><td><code>public</code>, <code>protected</code>, <code>private</code>, or package-private</td></tr>
+                <tr><td>Local record inside a method or block</td><td>No access modifier</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <pre><code>public record User(String name) { } // public top-level record
+record InternalUser(String name) { } // package-private top-level record
+
+class Container {
+    private record Credentials(String username) { }
+    protected record Result(int code) { }
+}</code></pre>
+          <ul>
+            <li>Every record is implicitly <code>final</code>; writing <code>final</code> explicitly is allowed but redundant.</li>
+            <li><code>abstract</code>, <code>sealed</code>, and <code>non-sealed</code> are not allowed on a record.</li>
+            <li>Record components do not take access modifiers. Their generated fields are <code>private final</code>, and their accessors are <code>public</code>.</li>
+            <li>A canonical constructor must be at least as accessible as its record. A <code>public</code> record requires a <code>public</code> canonical constructor.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="constructors">
+        <h2>3. Constructors, validation, and immutability</h2>
+        <h3>Compact constructor</h3>
+        <p>Use a compact canonical constructor when validating or normalizing components. Java assigns the constructor parameters to the fields after the compact constructor body completes.</p>
+        <pre><code>record Person(String name, int age) {
+    public Person {
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("name is required");
+        }
+        if (age &lt; 0) {
+            throw new IllegalArgumentException("age cannot be negative");
+        }
+        name = name.trim();
+    }
+}</code></pre>
+        <h3>Explicit canonical constructor</h3>
+        <p>You can also write the full canonical constructor when you need explicit assignments:</p>
+        <pre><code>record Point(int x, int y) {
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+}</code></pre>
+        <div class="callout caution"><strong>Records are shallowly immutable.</strong> Their component fields cannot be reassigned after construction, but a component can refer to a mutable object. For example, a record holding a <code>List</code> does not automatically make that list immutable. Copy mutable inputs when the API requires defensive ownership.</div>
+        <h3>Useful rules</h3>
+        <ul>
+          <li>A record is implicitly final and extends <code>java.lang.Record</code>.</li>
+          <li>A record cannot extend another class, but it can implement interfaces.</li>
+          <li>Instance state is described by the record header; additional instance fields are not allowed.</li>
+          <li>Records can declare static fields, static methods, instance methods, and constructors.</li>
+          <li>There are no generated setters.</li>
+        </ul>
+      </section>
+
+      <section id="record-patterns">
+        <h2>4. Record patterns in JDK 21</h2>
+        <p>Record patterns are finalized in Java 21. A record pattern names a record type and provides a nested pattern for each component.</p>
+        <pre><code>record Point(int x, int y) { }
+
+Object value = new Point(3, 4);
+
+if (value instanceof Point(int x, int y)) {
+    System.out.println("x=" + x + ", y=" + y);
+}</code></pre>
+        <p>The pattern succeeds only when the value has a compatible record type and its component patterns match. On success, <code>x</code> and <code>y</code> are in scope inside the matching branch.</p>
+        <div class="callout"><strong>Before record patterns:</strong> code often checked the type, cast the value, and called each accessor separately. A record pattern combines the type test and component extraction.</div>
+      </section>
+
+      <section id="instanceof">
+        <h2>5. Record patterns with instanceof</h2>
+        <p>Use <code>instanceof</code> when one branch handles a matching record and other values can follow normal control flow.</p>
+        <pre><code>record Point(int x, int y) { }
+
+static int manhattanDistance(Object value) {
+    if (value instanceof Point(int x, int y)) {
+        return Math.abs(x) + Math.abs(y);
+    }
+    return -1;
+}</code></pre>
+        <p>Component types come from the record declaration. You may write their types explicitly or use <code>var</code> to infer them:</p>
+        <pre><code>if (value instanceof Point(var x, var y)) {
+    System.out.println(x + y);
+}</code></pre>
+        <p>Use explicit types when they make the code easier to read. Use <code>var</code> when the component types are obvious or the pattern is nested and explicit type names would add noise.</p>
+      </section>
+
+      <section id="switch">
+        <h2>6. Record patterns in switch</h2>
+        <p>A switch can select behavior based on a record’s type and its component values.</p>
+        <pre><code>record Point(int x, int y) { }
+
+static String describe(Object value) {
+    return switch (value) {
+        case Point(int x, int y) -&gt; "Point at (" + x + ", " + y + ")";
+        default -&gt; "Not a point";
+    };
+}</code></pre>
+        <p>Record patterns can appear alongside other supported case patterns, including type patterns and constants. The compiler checks that pattern variables are available only where they are definitely matched.</p>
+      </section>
+
+      <section id="nested">
+        <h2>7. Nested record patterns</h2>
+        <p>If a record component is itself a record, nest another record pattern to unpack it in the same match.</p>
+        <pre><code>record Point(int x, int y) { }
+record Rectangle(Point upperLeft, Point lowerRight) { }
+
+static String describe(Object value) {
+    return switch (value) {
+        case Rectangle(
+                Point(int left, int top),
+                Point(int right, int bottom)) -&gt;
+                "Corners: (" + left + ", " + top + ") and ("
+                        + right + ", " + bottom + ")";
+        default -&gt; "Not a rectangle";
+    };
+}</code></pre>
+        <p>This is useful when the shape of the data matters to the decision being made. Avoid deeply nested patterns when naming intermediate values would make the code clearer.</p>
+      </section>
+
+      <section id="guards">
+        <h2>8. Guards and null handling</h2>
+        <h3>Guarded patterns</h3>
+        <p>Add a <code>when</code> guard when the record type and component patterns match, but the branch should apply only if an extra condition is true.</p>
+        <pre><code>return switch (value) {
+    case Point(int x, int y) when x == y -&gt; "On the diagonal";
+    case Point(int x, int y) when x &gt; y  -&gt; "Below the diagonal";
+    case Point(int x, int y)              -&gt; "Above the diagonal";
+    default                               -&gt; "Not a point";
+};</code></pre>
+        <p>Case labels are considered in order. Put more specific guarded cases before the unguarded case for the same record pattern.</p>
+        <h3>Null is explicit in switch</h3>
+        <p>A record pattern does not match <code>null</code>. An <code>instanceof</code> test against null is false. A switch whose selector is null throws <code>NullPointerException</code> unless the switch has a <code>case null</code> label.</p>
+        <pre><code>String result = switch (value) {
+    case null -&gt; "No value";
+    case Point(int x, int y) -&gt; "Point: " + x + ", " + y;
+    default -&gt; "Other value";
+};</code></pre>
+      </section>
+
+      <section id="sealed">
+        <h2>9. Record patterns with sealed hierarchies</h2>
+        <p>Records work naturally as implementations of sealed interfaces. When a switch covers every permitted subtype, it can be exhaustive without a <code>default</code> branch.</p>
+        <pre><code>sealed interface Shape permits Circle, Rectangle { }
+record Circle(double radius) implements Shape { }
+record Rectangle(double width, double height) implements Shape { }
+
+static double area(Shape shape) {
+    return switch (shape) {
+        case Circle(double radius) -&gt; Math.PI * radius * radius;
+        case Rectangle(double width, double height) -&gt; width * height;
+    };
+}</code></pre>
+        <p>If a permitted subtype is added later, the compiler can identify switches that need another case.</p>
+      </section>
+
+      <section id="pitfalls">
+        <h2>10. Common pitfalls</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Misunderstanding</th><th>Correct behavior</th></tr></thead>
+            <tbody>
+              <tr><td>“A record is automatically deeply immutable.”</td><td>Only component fields are fixed. Referenced mutable objects may still change.</td></tr>
+              <tr><td>“Record accessors are JavaBean getters.”</td><td>Accessors use the component name, such as <code>age()</code>.</td></tr>
+              <tr><td>“A record can extend a base class.”</td><td>Records are final and already extend <code>java.lang.Record</code>; they may implement interfaces.</td></tr>
+              <tr><td>“A record pattern is just a record declaration.”</td><td>The declaration defines the data type; the pattern matches and extracts components.</td></tr>
+              <tr><td>“A switch default branch matches null.”</td><td>Null needs an explicit <code>case null</code>; otherwise a switch on null throws.</td></tr>
+              <tr><td>“Every record pattern must name each component type.”</td><td><code>var</code> component patterns can infer those types.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="interview">
+        <h2>11. Interview questions and answers</h2>
+        <article class="qa">
+          <h3>1. What is a Java record?</h3>
+          <p>A restricted class designed to model data as a fixed set of components. The compiler supplies component fields, accessors, a canonical constructor, and value-oriented <code>equals</code>, <code>hashCode</code>, and <code>toString</code> implementations.</p>
+        </article>
+        <article class="qa">
+          <h3>2. What members does the compiler derive from a record header?</h3>
+          <p>For each component it derives a private final field and a public accessor, and it provides a canonical constructor plus implementations of <code>equals</code>, <code>hashCode</code>, and <code>toString</code>, unless you explicitly provide compatible implementations.</p>
+        </article>
+        <article class="qa">
+          <h3>3. Are records immutable?</h3>
+          <p>They are shallowly immutable: component fields are final, but an object referenced by a component can be mutable. Use defensive copies when you need to prevent external mutation of referenced data.</p>
+        </article>
+        <article class="qa">
+          <h3>4. Can a record extend a class or implement an interface?</h3>
+          <p>A record cannot extend another class; it implicitly extends <code>java.lang.Record</code> and is final. It can implement one or more interfaces.</p>
+        </article>
+        <article class="qa">
+          <h3>5. What is the canonical constructor?</h3>
+          <p>It is the constructor whose parameters correspond to all record components in declaration order. It is the constructor used to initialize the record state and can be written explicitly or in compact form.</p>
+        </article>
+        <article class="qa">
+          <h3>6. What is a compact constructor?</h3>
+          <p>A concise form of the canonical constructor. It lets you validate or normalize the implicitly declared component parameters; the compiler performs the component field assignments after the body.</p>
+        </article>
+        <article class="qa">
+          <h3>7. Can a record have extra instance fields or setters?</h3>
+          <p>No extra instance state is allowed beyond its components, and the generated component fields are final. Records do not get setters. Static fields and methods are allowed.</p>
+        </article>
+        <article class="qa">
+          <h3>8. How are record accessors named?</h3>
+          <p>They use the component name: a component declared as <code>String name</code> has an accessor <code>name()</code>, not <code>getName()</code>.</p>
+        </article>
+        <article class="qa">
+          <h3>9. What does a record pattern do?</h3>
+          <p>It checks a value against a record type and recursively matches the record components. Successful matching makes the extracted component values available as pattern variables.</p>
+        </article>
+        <article class="qa">
+          <h3>10. Where can record patterns be used in Java 21?</h3>
+          <p>They can be used with <code>instanceof</code> and as patterns in <code>switch</code> labels. They can also be nested to match record-valued components.</p>
+        </article>
+        <article class="qa">
+          <h3>11. What is a guarded pattern?</h3>
+          <p>A pattern followed by a <code>when</code> condition. The pattern first matches and binds its variables; the guard then decides whether that case applies.</p>
+        </article>
+        <article class="qa">
+          <h3>12. How does a record pattern behave with null?</h3>
+          <p>It does not match null. An <code>instanceof</code> check returns false for null; a switch on null needs an explicit <code>case null</code> or it throws <code>NullPointerException</code>.</p>
+        </article>
+        <article class="qa">
+          <h3>13. How do records help with sealed types?</h3>
+          <p>Records can be permitted implementations of a sealed interface. A switch can deconstruct each permitted record type, and the compiler can check that all permitted alternatives are covered.</p>
+        </article>
+        <article class="qa">
+          <h3>14. When should you use a record instead of a regular class?</h3>
+          <p>Use a record when the type’s primary purpose is to represent data with a stable set of components and value-based equality. Use a regular class when you need mutable identity, inheritance from another class, or additional instance state.</p>
+        </article>
+      </section>
+
+      <section id="examples">
+        <h2>12. Numbered Java examples</h2>
+        <p>These examples build from basic matching to switch analysis and null handling:</p>
+        <ol class="links">
+          <li><a href="RecordPattern01Instanceof.java">instanceof deconstruction</a></li>
+          <li><a href="RecordPattern02NestedInstanceof.java">nested instanceof pattern</a></li>
+          <li><a href="RecordPattern03VarPatterns.java">var component patterns</a></li>
+          <li><a href="RecordPattern04Switch.java">record pattern in switch</a></li>
+          <li><a href="RecordPattern05NestedSwitch.java">nested switch pattern</a></li>
+          <li><a href="RecordPattern06GuardedPatterns.java">guarded patterns</a></li>
+          <li><a href="RecordPattern07SealedHierarchy.java">sealed hierarchy switch</a></li>
+          <li><a href="RecordPattern08NullCase.java">null case handling</a></li>
+        </ol>
+        <div class="callout good"><strong>Study sequence:</strong> learn the record declaration first, then component extraction, nested patterns, guards, and finally exhaustiveness across sealed types.</div>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <p>Java 21 feature guide. The examples use standard Java syntax and no external libraries or scripts.</p>
+  </footer>
+</body>
+</html>

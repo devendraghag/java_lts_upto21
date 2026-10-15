@@ -1,0 +1,33 @@
+# Java build output
+target/
+build/
+out/
+*.class
+*.zip
+
+# IDE metadata
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+nbproject/private/
+
+# Logs and JVM crash dumps
+*.log
+hs_err_pid*
+replay_pid*
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Temporary and operating system files
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini

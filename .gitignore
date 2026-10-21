@@ -5,9 +5,21 @@ out/
 *.class
 *.zip
 
+# Maven-generated files (keep .mvn/ and wrapper scripts versioned)
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.flattened-pom.xml
+.mvn/timing.properties
+
 # IDE metadata
 .idea/
 *.iml
+*.ipr
+*.iws
 .vscode/
 .classpath
 .project
@@ -18,6 +30,8 @@ nbproject/private/
 *.log
 hs_err_pid*
 replay_pid*
+*.hprof
+*.jfr
 
 # Local environment and secrets
 .env
@@ -27,6 +41,8 @@ replay_pid*
 # Temporary and operating system files
 *.swp
 *.swo
+*.tmp
+*.temp
 *~
 .DS_Store
 Thumbs.db

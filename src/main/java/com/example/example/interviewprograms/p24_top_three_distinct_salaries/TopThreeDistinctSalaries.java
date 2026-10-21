@@ -1,4 +1,4 @@
-package com.example.interviewprograms.p24_top_three_distinct_salaries;
+package com.example.example.interviewprograms.p24_top_three_distinct_salaries;
 
 import java.util.*;
 import java.util.concurrent.*;

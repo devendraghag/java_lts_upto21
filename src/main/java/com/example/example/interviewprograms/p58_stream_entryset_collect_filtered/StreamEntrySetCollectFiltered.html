@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stream entrySet toMap — Interactive Walkthrough</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172337;
+      --muted: #607087;
+      --paper: #f4f7fb;
+      --panel: #fff;
+      --line: #dce4ef;
+      --blue: #2864dc;
+      --blue-soft: #eaf1ff;
+      --green: #16845b;
+      --green-soft: #e7f7ef;
+      --red: #b54747;
+      --red-soft: #fff0ef;
+      --amber: #9b6600;
+      --amber-soft: #fff5da;
+      --code: #101a2a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 15px/1.5 "Segoe UI", Arial, sans-serif;
+    }
+    .page { width: min(1180px, calc(100% - 32px)); margin: 28px auto 56px; }
+    header { margin-bottom: 20px; }
+    .eyebrow { color: var(--blue); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 12px; }
+    h1 { margin: 5px 0 6px; font-size: clamp(25px, 4vw, 37px); line-height: 1.15; }
+    header p { max-width: 800px; color: var(--muted); margin: 0; }
+    .flow, .panel, .step-card, .controls { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 5px 20px #1d35570a; }
+    .flow { padding: 16px; margin: 18px 0; display: flex; align-items: center; justify-content: space-between; gap: 8px; overflow-x: auto; }
+    .flow-node { min-width: max-content; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--muted); background: #fbfcfe; font-size: 13px; font-weight: 650; }
+    .flow-node.active { background: var(--blue-soft); border-color: #9bbaff; color: #194cae; }
+    .arrow { color: #9aa8ba; font-weight: 800; }
+    .collector-visual { margin-top: 16px; }
+    .collector-grid { display: grid; grid-template-columns: repeat(4, minmax(150px, 1fr)); gap: 10px; align-items: stretch; }
+    .collector-box { border: 1px solid var(--line); border-radius: 11px; padding: 12px; background: #fbfcfe; min-width: 0; }
+    .collector-box.active { background: var(--blue-soft); border-color: #9bbaff; }
+    .collector-box small { display: block; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; font-size: 10px; font-weight: 700; margin-bottom: 5px; }
+    .collector-box strong { display: block; overflow-wrap: anywhere; font: 600 13px/1.5 Consolas, "Courier New", monospace; }
+    .collector-box p { margin: 5px 0 0; color: var(--muted); font-size: 12px; }
+    .collector-bottom { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 10px; margin-top: 10px; }
+    .merge-box, .destination-box { border-radius: 11px; padding: 13px; border: 1px solid var(--line); background: white; }
+    .merge-box { border-left: 4px solid var(--amber); }
+    .destination-box { border-left: 4px solid var(--green); }
+    .merge-box p, .destination-box p { margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+    .duplicate-demo { margin-top: 10px; padding: 10px; border-radius: 8px; background: var(--amber-soft); font: 12px/1.6 Consolas, "Courier New", monospace; white-space: pre-wrap; }
+    .collector-controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 11px; }
+    .collector-controls .sub { margin: 0; }
+    .controls { padding: 12px 14px; display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+    button { border: 1px solid var(--line); border-radius: 9px; padding: 8px 13px; background: white; color: var(--ink); font: inherit; font-weight: 650; cursor: pointer; }
+    button:hover:not(:disabled) { border-color: var(--blue); color: var(--blue); }
+    button.primary { color: white; background: var(--blue); border-color: var(--blue); }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    .progress-wrap { flex: 1 1 200px; min-width: 180px; display: flex; align-items: center; gap: 10px; margin-left: 6px; }
+    progress { width: 100%; height: 9px; accent-color: var(--blue); }
+    #step-count { color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr); gap: 16px; margin-top: 16px; }
+    .panel { padding: 17px; min-width: 0; }
+    h2 { margin: 0 0 10px; font-size: 18px; }
+    h3 { margin: 17px 0 8px; font-size: 14px; }
+    .sub { color: var(--muted); margin: -5px 0 12px; font-size: 13px; }
+    table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+    th, td { text-align: left; padding: 8px 9px; border-bottom: 1px solid #edf1f6; }
+    th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+    td:last-child, th:last-child { text-align: right; }
+    tr.pending { color: #9aa5b3; }
+    tr.checking { background: var(--amber-soft); }
+    tr.kept { background: var(--green-soft); }
+    tr.rejected { background: var(--red-soft); color: #895b5b; }
+    .status { display: inline-block; border-radius: 20px; padding: 2px 8px; font-size: 11px; font-weight: 700; background: #eef1f5; color: #647184; }
+    .status.good { background: var(--green-soft); color: var(--green); }
+    .status.bad { background: var(--red-soft); color: var(--red); }
+    .status.now { background: var(--amber-soft); color: var(--amber); }
+    .empty { color: #9aa5b3; font-style: italic; }
+    .codebox { overflow-x: auto; background: var(--code); color: #e9eff8; border-radius: 10px; padding: 12px 0; font: 12.5px/1.7 Consolas, "Courier New", monospace; }
+    .code-line { display: block; padding: 0 13px; white-space: pre; }
+    .code-line.active { background: #29416a; border-left: 3px solid #7ba6ff; padding-left: 10px; }
+    .explain { min-height: 112px; border-radius: 10px; background: var(--blue-soft); padding: 13px 14px; }
+    .explain strong { display: block; margin-bottom: 4px; }
+    .explain p { margin: 0; }
+    .callout { margin-top: 12px; padding: 11px 12px; border-left: 3px solid var(--amber); background: var(--amber-soft); border-radius: 7px; font-size: 13px; }
+    .console { background: #101a2a; color: #dff7e8; min-height: 72px; border-radius: 10px; padding: 12px; font: 13px/1.7 Consolas, "Courier New", monospace; white-space: pre-wrap; }
+    .legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .legend span::before { content: ""; display: inline-block; vertical-align: -1px; width: 9px; height: 9px; border-radius: 3px; margin-right: 5px; background: #dce4ef; }
+    .legend .lg-pass::before { background: #8ed5b2; }
+    .legend .lg-reject::before { background: #efaaaa; }
+    .legend .lg-active::before { background: #f2cc68; }
+    @media (max-width: 780px) { .grid { grid-template-columns: 1fr; } .flow { justify-content: flex-start; } .collector-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .collector-bottom { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="eyebrow">Java Streams · Map · Interactive walkthrough</div>
+      <h1>From <code>entrySet()</code> to a new map</h1>
+      <p>Step through the actual flow: the source <code>LinkedHashMap</code>, stream filtering, the collector’s key/value mapping, the destination map, and the printed output.</p>
+    </header>
+
+    <section class="flow" aria-label="Data flow">
+      <span class="flow-node" data-stage="source">scoresByStudent</span><span class="arrow">→</span>
+      <span class="flow-node" data-stage="entries">entrySet().stream()</span><span class="arrow">→</span>
+      <span class="flow-node" data-stage="filter">filter(score ≥ 70)</span><span class="arrow">→</span>
+      <span class="flow-node" data-stage="collect">toMap(...) → LinkedHashMap</span><span class="arrow">→</span>
+      <span class="flow-node" data-stage="print">forEach → console</span>
+    </section>
+
+    <nav class="controls" aria-label="Walkthrough controls">
+      <button id="previous" type="button">← Previous</button>
+      <button id="play" class="primary" type="button">▶ Play</button>
+      <button id="next" type="button">Next →</button>
+      <button id="reset" type="button">Reset</button>
+      <div class="progress-wrap">
+        <progress id="progress" max="16" value="0" aria-label="Walkthrough progress"></progress>
+        <span id="step-count"></span>
+      </div>
+    </nav>
+
+    <section class="step-card panel" style="margin-top:16px" aria-live="polite">
+      <h2 id="step-title"></h2>
+      <div class="explain"><strong id="explain-title"></strong><p id="explanation"></p></div>
+    </section>
+
+    <section class="panel collector-visual" aria-live="polite">
+      <h2>Inside <code>Collectors.toMap(...)</code>: one entry becomes one map entry</h2>
+      <p class="sub">The active step controls this diagram. Key and value are extracted from the same filtered <code>Map.Entry</code>.</p>
+      <div class="collector-grid">
+        <div class="collector-box" id="supplier-box">
+          <small>4th argument · map supplier</small>
+          <strong>LinkedHashMap::new</strong>
+          <p id="supplier-detail">Creates the empty destination map when collection begins.</p>
+        </div>
+        <div class="collector-box" id="input-box">
+          <small>Filtered stream item</small>
+          <strong id="collector-entry">Waiting for a passing entry</strong>
+          <p>The item is an entry from scoresByStudent.entrySet().</p>
+        </div>
+        <div class="collector-box" id="key-box">
+          <small>1st argument · key mapper</small>
+          <strong id="mapped-key">Map.Entry::getKey</strong>
+          <p id="key-detail">Gets the key from the current entry.</p>
+        </div>
+        <div class="collector-box" id="value-box">
+          <small>2nd argument · value mapper</small>
+          <strong id="mapped-value">Map.Entry::getValue</strong>
+          <p id="value-detail">Gets the value from that same entry.</p>
+        </div>
+      </div>
+      <div class="collector-bottom">
+        <div class="merge-box">
+          <strong>3rd argument · duplicate key rule</strong>
+          <p><code>(first, second) -&gt; first</code> means: if this key already exists, keep its current value. In this program, source keys are unique, so this function is not called.</p>
+          <div id="duplicate-demo" class="duplicate-demo" hidden></div>
+          <div class="collector-controls">
+            <button id="duplicate-toggle" type="button" aria-expanded="false">Show a duplicate-key example</button>
+            <span class="sub">This example is hypothetical; it does not change the program data.</span>
+          </div>
+        </div>
+        <div class="destination-box">
+          <strong>Collected result · passingScores</strong>
+          <p id="destination-detail">The destination map has not been created yet.</p>
+          <div id="destination-preview" class="duplicate-demo">(empty)</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="panel">
+        <h2>Data at each stage</h2>
+        <p class="sub">Rows change state as the stream processes them.</p>
+        <h3>1. Source map: scoresByStudent</h3>
+        <table>
+          <thead><tr><th>Key · student</th><th>Value · score</th><th>State</th></tr></thead>
+          <tbody id="source-rows"></tbody>
+        </table>
+        <div class="legend"><span class="lg-active">Currently evaluated</span><span class="lg-pass">Passes filter / collected</span><span class="lg-reject">Rejected by filter</span></div>
+
+        <h3>2. Filter output and collector result</h3>
+        <table>
+          <thead><tr><th>Collected key</th><th>Collected value</th><th>State</th></tr></thead>
+          <tbody id="result-rows"></tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h2>Java code in focus</h2>
+        <div class="codebox" id="code"></div>
+        <h3>What happens internally</h3>
+        <div id="internal-note" class="callout"></div>
+        <h3>Console output</h3>
+        <div class="console" id="console">(Nothing printed yet)</div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const sourceEntries = [
+      { name: "Asha", score: 91 },
+      { name: "Ravi", score: 64 },
+      { name: "Mina", score: 78 },
+      { name: "Dev", score: 55 }
+    ];
+
+    const codeLines = [
+      "Map<String, Integer> passingScores = scoresByStudent.entrySet().stream()",
+      "    .filter(entry -> entry.getValue() >= 70)",
+      "    .collect(Collectors.toMap(",
+      "        Map.Entry::getKey,",
+      "        Map.Entry::getValue,",
+      "        (first, second) -> first,",
+      "        LinkedHashMap::new));",
+      "",
+      "passingScores.forEach((name, score) ->",
+      "    System.out.println(name + \" passed with \" + score));"
+    ];
+
+    const steps = [
+      { title: "Step 1 · Declare the source map", heading: "An empty LinkedHashMap is ready", text: "The program creates scoresByStudent as a LinkedHashMap. At this point it has no entries.", line: -1, note: "A map stores unique keys paired with values. LinkedHashMap also remembers the order entries were inserted." },
+      { title: "Step 2 · Insert Asha", heading: "put(\"Asha\", 91)", text: "Asha becomes the first key/value pair in scoresByStudent.", line: -1, note: "The source map currently contains one entry: Asha → 91." },
+      { title: "Step 3 · Insert Ravi", heading: "put(\"Ravi\", 64)", text: "Ravi is appended after Asha, so the source map now has two entries.", line: -1, note: "Insertion order is Asha, then Ravi." },
+      { title: "Step 4 · Insert Mina", heading: "put(\"Mina\", 78)", text: "Mina is added as the third entry.", line: -1, note: "The score travels with its key as one map entry: Mina → 78." },
+      { title: "Step 5 · Insert Dev", heading: "put(\"Dev\", 55)", text: "Dev completes the source map. Four entries are now available to the stream.", line: -1, note: "Source order: Asha → 91, Ravi → 64, Mina → 78, Dev → 55." },
+      { title: "Step 6 · Obtain the entries and create the stream", heading: "entrySet() exposes key/value pairs", text: "entrySet() provides a view of the map’s entries. stream() creates a stream over them, keeping the LinkedHashMap encounter order.", line: 0, note: "A stream pipeline is assembled. Intermediate operations are lazy: the filter has not evaluated any scores yet." },
+      { title: "Step 7 · Filter Asha", heading: "91 >= 70 → true", text: "The predicate reads Asha’s value. Since the score is at least 70, this entry continues downstream.", line: 1, note: "filter keeps the original entry; it does not split the key and value or modify the source map." },
+      { title: "Step 8 · Filter Ravi", heading: "64 >= 70 → false", text: "Ravi’s score is below 70, so this entry is removed from the stream pipeline.", line: 1, note: "Ravi remains in scoresByStudent. Filtering only affects what reaches the collector." },
+      { title: "Step 9 · Filter Mina", heading: "78 >= 70 → true", text: "Mina passes the predicate and continues to the collector.", line: 1, note: "The entries currently eligible for collection are Asha → 91 and Mina → 78." },
+      { title: "Step 10 · Filter Dev", heading: "55 >= 70 → false", text: "Dev does not pass the predicate, so the entry is discarded from this stream result.", line: 1, note: "The source map still contains all four students; only Asha and Mina remain in the filtered stream." },
+      { title: "Step 11 · Start collection", heading: "The collector asks its supplier for a map", text: "The fourth toMap argument, LinkedHashMap::new, creates the destination map that will become passingScores.", line: 2, note: "The collector now consumes the filtered entries. The new destination starts empty; scoresByStudent is untouched." },
+      { title: "Step 12 · Collect Asha", heading: "Map the entry to key and value, then insert", text: "Map.Entry::getKey returns Asha; Map.Entry::getValue returns 91. The collector inserts Asha → 91 into the new map.", line: 3, note: "The merge function is not needed: no duplicate key is encountered." },
+      { title: "Step 13 · Collect Mina", heading: "Insert Mina → 78", text: "The same key mapper and value mapper produce Mina and 78, which are inserted after Asha.", line: 4, note: "Because the destination is a LinkedHashMap, iteration order is Asha then Mina." },
+      { title: "Step 14 · Collection finishes", heading: "passingScores is now complete", text: "The collector returns the new map containing only the entries that passed the filter.", line: 6, note: "passingScores is a separate map: {Asha=91, Mina=78}. The original map still has all four entries." },
+      { title: "Step 15 · Print Asha", heading: "forEach visits the first result entry", text: "The lambda receives name = Asha and score = 91, then concatenates them into a line of text.", line: 8, note: "forEach is a terminal operation on the result map; this is where the first line is printed." },
+      { title: "Step 16 · Print Mina", heading: "forEach visits the next result entry", text: "The lambda receives name = Mina and score = 78 and prints the second line.", line: 9, note: "The result map’s insertion order determines the output order in this example." }
+    ];
+
+    let currentStep = 0;
+    let timer = null;
+    let duplicateExampleOpen = false;
+    const sourceBody = document.getElementById("source-rows");
+    const resultBody = document.getElementById("result-rows");
+    const sourceLabels = ["Asha", "Ravi", "Mina", "Dev"];
+    const resultLabels = ["Asha", "Mina"];
+
+    function statusBadge(text, kind) {
+      return `<span class="status ${kind || ""}">${text}</span>`;
+    }
+
+    function renderSource() {
+      const inserted = Math.max(0, Math.min(4, currentStep));
+      const filtered = Math.max(0, Math.min(4, currentStep - 5));
+      sourceBody.innerHTML = sourceEntries.map((entry, index) => {
+        let status = "Not inserted";
+        let rowClass = "pending";
+        if (index < inserted) {
+          if (index < filtered) {
+            const passed = entry.score >= 70;
+            status = passed ? "Pass" : "Filtered out";
+            rowClass = passed ? "kept" : "rejected";
+          } else if (currentStep >= 5) {
+            status = "In stream";
+            rowClass = "checking";
+          } else {
+            status = "In source map";
+            rowClass = "";
+          }
+        }
+        return `<tr class="${rowClass}"><td>${entry.name}</td><td>${entry.score}</td><td>${statusBadge(status, rowClass === "kept" ? "good" : rowClass === "rejected" ? "bad" : rowClass === "checking" ? "now" : "")}</td></tr>`;
+      }).join("");
+    }
+
+    function renderResults() {
+      const collectorStarted = currentStep >= 10;
+      const collected = Math.max(0, Math.min(2, currentStep - 10));
+      if (!collectorStarted) {
+        resultBody.innerHTML = `<tr><td colspan="3" class="empty">Collector has not started</td></tr>`;
+        return;
+      }
+      resultBody.innerHTML = resultLabels.map((name, index) => {
+        const entry = sourceEntries.find(item => item.name === name);
+        if (index < collected) {
+          return `<tr class="kept"><td>${entry.name}</td><td>${entry.score}</td><td>${statusBadge("Inserted", "good")}</td></tr>`;
+        }
+        return `<tr class="pending"><td>${entry.name}</td><td>${entry.score}</td><td>${statusBadge("Waiting", "")}</td></tr>`;
+      }).join("");
+    }
+
+    function activeLine() {
+      return steps[currentStep].line;
+    }
+
+    function renderCode() {
+      const active = activeLine();
+      document.getElementById("code").innerHTML = codeLines.map((line, index) =>
+        `<span class="code-line ${index === active ? "active" : ""}">${line || " "}</span>`
+      ).join("");
+    }
+
+    function renderConsole() {
+      const printed = Math.max(0, Math.min(2, currentStep - 13));
+      if (printed === 0) {
+        document.getElementById("console").textContent = "(Nothing printed yet)";
+        return;
+      }
+      const lines = sourceEntries
+        .filter(entry => entry.score >= 70)
+        .slice(0, printed)
+        .map(entry => `${entry.name} passed with ${entry.score}`);
+      document.getElementById("console").textContent = lines.join("\n");
+    }
+
+    function renderFlow() {
+      const stage = currentStep < 5 ? "source"
+        : currentStep < 6 ? "entries"
+        : currentStep < 10 ? "filter"
+        : currentStep < 14 ? "collect" : "print";
+      document.querySelectorAll(".flow-node").forEach(node => {
+        node.classList.toggle("active", node.dataset.stage === stage);
+      });
+    }
+
+    function renderCollectorFlow() {
+      const supplierCreated = currentStep >= 10;
+      const collected = Math.max(0, Math.min(2, currentStep - 10));
+      let entry = null;
+
+      if (currentStep >= 6 && currentStep <= 9) {
+        entry = sourceEntries[currentStep - 6];
+      } else if (currentStep === 11) {
+        entry = sourceEntries[0];
+      } else if (currentStep >= 12) {
+        entry = sourceEntries[2];
+      }
+
+      document.getElementById("supplier-box").classList.toggle("active", supplierCreated);
+      document.getElementById("input-box").classList.toggle("active", currentStep >= 6 && currentStep <= 12);
+      document.getElementById("key-box").classList.toggle("active", currentStep >= 11);
+      document.getElementById("value-box").classList.toggle("active", currentStep >= 11);
+      document.getElementById("supplier-detail").textContent = supplierCreated
+        ? "Called once by collect: a new, empty LinkedHashMap is created."
+        : "Waits until collect begins, then creates the empty destination map.";
+
+      if (entry) {
+        document.getElementById("collector-entry").textContent = `${entry.name}=${entry.score}`;
+        document.getElementById("mapped-key").textContent = currentStep >= 11 ? `\"${entry.name}\"` : "Map.Entry::getKey";
+        document.getElementById("mapped-value").textContent = currentStep >= 11 ? String(entry.score) : "Map.Entry::getValue";
+        document.getElementById("key-detail").textContent = currentStep >= 11
+          ? `getKey() returns \"${entry.name}\" from this entry.`
+          : "When collection runs, getKey() reads this entry’s key.";
+        document.getElementById("value-detail").textContent = currentStep >= 11
+          ? `getValue() returns ${entry.score} from the same entry.`
+          : "When collection runs, getValue() reads this entry’s value.";
+      } else {
+        document.getElementById("collector-entry").textContent = currentStep < 6
+          ? "Waiting for the stream"
+          : "No entry is being collected in this step";
+        document.getElementById("mapped-key").textContent = "Map.Entry::getKey";
+        document.getElementById("mapped-value").textContent = "Map.Entry::getValue";
+        document.getElementById("key-detail").textContent = "Returns the key from each entry that reaches toMap.";
+        document.getElementById("value-detail").textContent = "Returns the value from that same entry.";
+      }
+
+      document.getElementById("destination-detail").textContent = supplierCreated
+        ? `The collector inserted ${collected} passing entr${collected === 1 ? "y" : "ies"} so far.`
+        : "The destination map has not been created yet.";
+      const resultEntries = sourceEntries.filter(item => item.score >= 70).slice(0, collected);
+      document.getElementById("destination-preview").textContent = resultEntries.length
+        ? `{${resultEntries.map(item => `${item.name}=${item.score}`).join(", ")}}`
+        : "(empty)";
+
+      const duplicateButton = document.getElementById("duplicate-toggle");
+      duplicateButton.textContent = duplicateExampleOpen ? "Hide duplicate-key example" : "Show a duplicate-key example";
+      duplicateButton.setAttribute("aria-expanded", String(duplicateExampleOpen));
+      const duplicateDemo = document.getElementById("duplicate-demo");
+      duplicateDemo.hidden = !duplicateExampleOpen;
+      duplicateDemo.textContent = "Hypothetical: key=\"Asha\", first=91 (already stored), second=95 (incoming)\nmerge(91, 95) returns 91\nResult keeps Asha=91; this branch is not used by the actual input.";
+    }
+
+    function render() {
+      const step = steps[currentStep];
+      document.getElementById("step-title").textContent = step.title;
+      document.getElementById("explain-title").textContent = step.heading;
+      document.getElementById("explanation").textContent = step.text;
+      document.getElementById("internal-note").textContent = step.note;
+      document.getElementById("step-count").textContent = `${currentStep + 1} / ${steps.length}`;
+      document.getElementById("progress").value = currentStep + 1;
+      document.getElementById("previous").disabled = currentStep === 0;
+      document.getElementById("next").disabled = currentStep === steps.length - 1;
+      renderSource();
+      renderResults();
+      renderCode();
+      renderConsole();
+      renderFlow();
+      renderCollectorFlow();
+    }
+
+    function stop() {
+      if (timer) window.clearInterval(timer);
+      timer = null;
+      document.getElementById("play").textContent = "▶ Play";
+    }
+
+    document.getElementById("previous").addEventListener("click", () => {
+      stop();
+      currentStep = Math.max(0, currentStep - 1);
+      render();
+    });
+    document.getElementById("next").addEventListener("click", () => {
+      stop();
+      currentStep = Math.min(steps.length - 1, currentStep + 1);
+      render();
+    });
+    document.getElementById("reset").addEventListener("click", () => {
+      stop();
+      currentStep = 0;
+      render();
+    });
+    document.getElementById("play").addEventListener("click", () => {
+      if (timer) {
+        stop();
+        return;
+      }
+      if (currentStep === steps.length - 1) currentStep = 0;
+      document.getElementById("play").textContent = "Ⅱ Pause";
+      render();
+      timer = window.setInterval(() => {
+        if (currentStep >= steps.length - 1) {
+          stop();
+          return;
+        }
+        currentStep++;
+        render();
+      }, 1800);
+    });
+    document.getElementById("duplicate-toggle").addEventListener("click", () => {
+      duplicateExampleOpen = !duplicateExampleOpen;
+      renderCollectorFlow();
+    });
+    render();
+  </script>
+</body>
+</html>

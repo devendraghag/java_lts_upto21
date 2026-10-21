@@ -1,4 +1,4 @@
-package com.example.interviewprograms.p25_second_highest_distinct_salary;
+package com.example.example.interviewprograms.p25_second_highest_distinct_salary;
 
 import java.util.*;
 import java.util.concurrent.*;

@@ -1,4 +1,4 @@
-package com.example.interviewprograms.p10_pagination_with_skip_and_limit;
+package com.example.example.interviewprograms.p10_pagination_with_skip_and_limit;
 
 import java.util.*;
 import java.util.concurrent.*;

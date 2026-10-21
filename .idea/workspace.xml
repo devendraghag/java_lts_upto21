@@ -5,27 +5,91 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcaf5a4a-e73c-4c82-a4cd-04b6f1822d6d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.mvn/maven.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/mvnw.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p51_stream_map_keys/StreamMapKeys.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p52_stream_keyset_with_values/StreamKeySetWithValues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p53_stream_map_entries/StreamMapEntries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p54_stream_keyset_filter_ids/StreamKeySetFilterIds.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p55_stream_keyset_project_values/StreamKeySetProjectValues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p56_stream_entryset_find_max/StreamEntrySetFindMax.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p57_stream_entryset_top_three/StreamEntrySetTopThree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p58_stream_entryset_collect_filtered/StreamEntrySetCollectFiltered.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p58_stream_entryset_collect_filtered/StreamEntrySetCollectFiltered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverloading/MethodOverloadingInterviewProgram.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverloading/TestOverloading1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverloading/TestOverloading2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverloading/TestOverloading3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverloading/TestOverloading4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverloading/TestOverloading5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverriding/MethodOverriding.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverriding/MethodOverriding2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverriding/MethodOverriding3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverriding/MethodOverriding4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverriding/MethodOverriding5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverriding/MethodOverriding6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverriding/MethodOverriding7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverriding/MethodOverridingInterviewProgram.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverriding/TestExceptionChild.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverriding/TestExceptionChild1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverriding/TestExceptionChild2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverriding/TestExceptionChild3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverriding/TestExceptionChild4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/methodoverriding/TestExceptionChild5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors13GroupingBySummingInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors13GroupingBySummingInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p09_find_first_and_find_any_employee/FindFirstAndFindAnyEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p09_find_first_and_find_any_employee/FindFirstAndFindAnyEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p10_pagination_with_skip_and_limit/PaginationWithSkipAndLimit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p10_pagination_with_skip_and_limit/PaginationWithSkipAndLimit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p23_flatten_nested_order_items/FlattenNestedOrderItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p23_flatten_nested_order_items/FlattenNestedOrderItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p24_top_three_distinct_salaries/TopThreeDistinctSalaries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p24_top_three_distinct_salaries/TopThreeDistinctSalaries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p25_second_highest_distinct_salary/SecondHighestDistinctSalary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p25_second_highest_distinct_salary/SecondHighestDistinctSalary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors13GroupingBySummingInt$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors13GroupingBySummingInt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p10_pagination_with_skip_and_limit/PaginationWithSkipAndLimit$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p10_pagination_with_skip_and_limit/PaginationWithSkipAndLimit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p23_flatten_nested_order_items/FlattenNestedOrderItems$LineItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p23_flatten_nested_order_items/FlattenNestedOrderItems$Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p23_flatten_nested_order_items/FlattenNestedOrderItems.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p24_top_three_distinct_salaries/TopThreeDistinctSalaries$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p24_top_three_distinct_salaries/TopThreeDistinctSalaries.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p25_second_highest_distinct_salary/SecondHighestDistinctSalary$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p25_second_highest_distinct_salary/SecondHighestDistinctSalary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/Adder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/Adder2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/Adder3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/Adder33.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/CalculatorInterview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/MethodOverloadingInterviewProgram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/TestOverloading1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/TestOverloading2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/TestOverloading3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/TestOverloading4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/TestOverloading5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/AnimalInterview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Child.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Child2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Child3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Child4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Child6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Child7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Child8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/DogInterview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverriding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverriding2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverriding3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverriding4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverriding5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverriding6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverriding7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverridingInterviewProgram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/TestExceptionChild.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/TestExceptionChild1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/TestExceptionChild2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/TestExceptionChild3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/TestExceptionChild4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/TestExceptionChild5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodreferences/constructorreference/Constructor10StreamMapToStudent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/methodreferences/constructorreference/Constructor10StreamMapToStudent.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +106,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\apache-maven-3.10.0\lib" />
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.10.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3,
   &quot;fromUser&quot;: false
@@ -51,58 +124,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AbstractClassBasicsDemo.executor": "Run",
-    "Application.AbstractClassImplementsInterfaceDemo.executor": "Run",
-    "Application.ArbitraryObjectComparator.executor": "Run",
-    "Application.ArrayBlockingQueueDemo.executor": "Run",
-    "Application.Collectors02ToSet.executor": "Run",
-    "Application.Collectors03ToCollectionTreeSet.executor": "Run",
-    "Application.Collectors07SummingInt.executor": "Run",
-    "Application.Collectors21CollectingAndThen.executor": "Run",
-    "Application.Collectors22Teeing.executor": "Run",
-    "Application.Comparable01BuiltInOrder.executor": "Run",
-    "Application.Comparable03NaturalMultiField.executor": "Run",
-    "Application.Comparable03StringNaturalOrder.executor": "Run",
-    "Application.Comparable17CompareToBooleanExpressions.executor": "Run",
-    "Application.Comparable21LocaleNaturalComparable.executor": "Run",
-    "Application.Comparable25SortedLimitSkip.executor": "Run",
-    "Application.Comparable28StreamsMinMax.executor": "Run",
-    "Application.CompletableFuture01AlreadyCompletedDemo.executor": "Run",
-    "Application.CompletableFuture10TimeoutFallbackDemo.executor": "Run",
-    "Application.Constructor10StreamMapToStudent.executor": "Run",
-    "Application.DelayQueueDemo.executor": "Run",
-    "Application.MethodReferencePractice.executor": "Run",
-    "Application.OptionalCreationAndPresenceDemo.executor": "Run",
-    "Application.Pair01BuiltInComparable.executor": "Run",
-    "Application.Pair03VersionComparable.executor": "Run",
-    "Application.Pair09TreeSetNaturalTie.executor": "Run",
-    "Application.Singleton01EagerInitialization.executor": "Run",
-    "Application.Singleton02StaticBlockInitialization.executor": "Run",
-    "Application.Spliterator04TrySplit.executor": "Run",
-    "Application.UnorderedAndModeDemo.executor": "Run",
-    "Application.WrapperComparisonDemo.executor": "Run",
-    "Application.interviewprogram01.executor": "Run",
-    "Maven.java_programs_jdk [clean].executor": "Run",
-    "Maven.java_programs_jdk [compile].executor": "Run",
-    "Maven.java_programs_jdk [install].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Devendra Ghag Interview Preparation/01_Java/java_programs_jdk",
-    "node.js.detected.package.jshint": "true",
-    "node.js.selected.package.jshint": "",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.completion.inline"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AbstractClassBasicsDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AbstractClassImplementsInterfaceDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ArbitraryObjectComparator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ArrayBlockingQueueDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Collectors02ToSet.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Collectors03ToCollectionTreeSet.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Collectors07SummingInt.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Collectors13GroupingBySummingInt.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Collectors21CollectingAndThen.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Collectors22Teeing.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Comparable01BuiltInOrder.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Comparable03NaturalMultiField.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Comparable03StringNaturalOrder.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Comparable17CompareToBooleanExpressions.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Comparable21LocaleNaturalComparable.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Comparable25SortedLimitSkip.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Comparable28StreamsMinMax.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CompletableFuture01AlreadyCompletedDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CompletableFuture10TimeoutFallbackDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Constructor10StreamMapToStudent.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DelayQueueDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FlattenNestedOrderItems.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GroupEmployeesByDepartment.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MethodReferencePractice.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OptionalCreationAndPresenceDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PaginationWithSkipAndLimit.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Pair01BuiltInComparable.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Pair03VersionComparable.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Pair09TreeSetNaturalTie.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SecondHighestDistinctSalary.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Singleton01EagerInitialization.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Singleton02StaticBlockInitialization.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Spliterator04TrySplit.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StreamEntrySetCollectFiltered.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StreamMapKeys.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UnorderedAndModeDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WrapperComparisonDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.interviewprogram01.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.java-programs-jdk [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.java_programs_jdk [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.java_programs_jdk [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.java_programs_jdk [install].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Devendra Ghag Interview Preparation/01_Java/java_programs_jdk&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\java_programs_jdk\src\main\java\com\example" />
@@ -115,13 +197,13 @@
       <recent name="D:\Devendra Ghag Interview Preparation\01_Java\java_programs_jdk\src\main\java\com\example\docs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.OptionalCreationAndPresenceDemo">
-    <configuration name="Collectors03ToCollectionTreeSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.collectors.Collectors03ToCollectionTreeSet" />
-      <module name="java_programs_jdk" />
+  <component name="RunManager" selected="Application.StreamEntrySetCollectFiltered">
+    <configuration name="FlattenNestedOrderItems" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.example.interviewprograms.p23_flatten_nested_order_items.FlattenNestedOrderItems" />
+      <module name="java-programs-jdk" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.collectors.*" />
+          <option name="PATTERN" value="com.example.example.interviewprograms.p23_flatten_nested_order_items.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,12 +211,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompletableFuture10TimeoutFallbackDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.completablefuture.CompletableFuture10TimeoutFallbackDemo" />
-      <module name="java_programs_jdk" />
+    <configuration name="GroupEmployeesByDepartment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.interviewprograms.p13_group_employees_by_department.GroupEmployeesByDepartment" />
+      <module name="java-programs-jdk" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.completablefuture.*" />
+          <option name="PATTERN" value="com.example.interviewprograms.p13_group_employees_by_department.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,12 +224,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Constructor10StreamMapToStudent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.methodreferences.constructorreference.Constructor10StreamMapToStudent" />
-      <module name="java_programs_jdk" />
+    <configuration name="SecondHighestDistinctSalary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.example.interviewprograms.p25_second_highest_distinct_salary.SecondHighestDistinctSalary" />
+      <module name="java-programs-jdk" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.methodreferences.constructorreference.*" />
+          <option name="PATTERN" value="com.example.example.interviewprograms.p25_second_highest_distinct_salary.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,12 +237,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OptionalCreationAndPresenceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.optionalclass.OptionalCreationAndPresenceDemo" />
-      <module name="java_programs_jdk" />
+    <configuration name="StreamEntrySetCollectFiltered" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.example.interviewprograms.p58_stream_entryset_collect_filtered.StreamEntrySetCollectFiltered" />
+      <module name="java-programs-jdk" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.optionalclass.*" />
+          <option name="PATTERN" value="com.example.example.interviewprograms.p58_stream_entryset_collect_filtered.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -168,12 +250,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="interviewprogram01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.interviewprograms.interviewprogram01" />
-      <module name="java_programs_jdk" />
+    <configuration name="StreamMapKeys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.example.interviewprograms.p51_stream_map_keys.StreamMapKeys" />
+      <module name="java-programs-jdk" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.interviewprograms.*" />
+          <option name="PATTERN" value="com.example.example.interviewprograms.p51_stream_map_keys.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -183,11 +265,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.OptionalCreationAndPresenceDemo" />
-        <item itemvalue="Application.Constructor10StreamMapToStudent" />
-        <item itemvalue="Application.Collectors03ToCollectionTreeSet" />
-        <item itemvalue="Application.interviewprogram01" />
-        <item itemvalue="Application.CompletableFuture10TimeoutFallbackDemo" />
+        <item itemvalue="Application.StreamEntrySetCollectFiltered" />
+        <item itemvalue="Application.StreamMapKeys" />
+        <item itemvalue="Application.FlattenNestedOrderItems" />
+        <item itemvalue="Application.SecondHighestDistinctSalary" />
+        <item itemvalue="Application.GroupEmployeesByDepartment" />
       </list>
     </recent_temporary>
   </component>

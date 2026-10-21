@@ -1,7 +1,8 @@
-package com.example.collectors;
+package com.example.example.collectors;
 
 import java.util.List;
 import java.util.Map;
+import java.util.StringJoiner;
 import java.util.stream.Collectors;
 
 public class Collectors13GroupingBySummingInt {
@@ -18,6 +19,9 @@ public class Collectors13GroupingBySummingInt {
                         Employee::department,
                         Collectors.summingInt(Employee::salary)));
 
-        System.out.println(salaryByDepartment);
+        StringJoiner formattedSalaries = new StringJoiner(", ");
+        salaryByDepartment.forEach((department, totalSalary) ->
+                formattedSalaries.add(department + "=" + totalSalary));
+        System.out.println(formattedSalaries);
     }
 }

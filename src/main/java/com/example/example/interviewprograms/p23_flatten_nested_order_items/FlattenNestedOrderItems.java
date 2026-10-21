@@ -1,4 +1,4 @@
-package com.example.interviewprograms.p23_flatten_nested_order_items;
+package com.example.example.interviewprograms.p23_flatten_nested_order_items;
 
 import java.util.*;
 import java.util.concurrent.*;

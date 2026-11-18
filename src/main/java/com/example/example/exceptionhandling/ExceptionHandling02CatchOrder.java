@@ -1,4 +1,4 @@
-package com.example.exceptionhandling;
+package com.example.example.exceptionhandling;
 // JDK history: Introduced in JDK 1.0; this directory marks the introduction baseline for the topic.
 
 /** EASY 2/17: Put the most specific catch before its superclass catch. */

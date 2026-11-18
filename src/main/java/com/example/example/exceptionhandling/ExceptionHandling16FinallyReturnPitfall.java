@@ -1,4 +1,4 @@
-package com.example.exceptionhandling;
+package com.example.example.exceptionhandling;
 // JDK history: Introduced in JDK 1.0; this directory marks the introduction baseline for the topic.
 
 /** HARD 16/17: Avoid return from finally; it can replace a return or exception. */

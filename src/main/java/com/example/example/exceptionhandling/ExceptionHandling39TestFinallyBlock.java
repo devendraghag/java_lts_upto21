@@ -1,4 +1,4 @@
-package com.example.exceptionhandling;
+package com.example.example.exceptionhandling;
 // JDK history: Introduced in JDK 1.0; this directory marks the introduction baseline for the topic.
 
 
@@ -8,7 +8,7 @@ package com.example.exceptionhandling;
  * Medium: Trace the participating threads and compare ordering, visibility, and the final result.
  * Tough: Explain the happens-before relationship and identify any race, deadlock, starvation, or nondeterminism risk.
  */
-class TestFinallyBlock {
+class ExceptionHandling39TestFinallyBlock {
   public static void main(String args[]){    
   try{    
 //below code do not throw any exception  

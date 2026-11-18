@@ -1,4 +1,4 @@
-package com.example.exceptionhandling;
+package com.example.example.exceptionhandling;
 // JDK history: Introduced in JDK 1.0; this directory marks the introduction baseline for the topic.
 
 
@@ -10,7 +10,7 @@ import java.io.*;
  * Medium: Follow normal and exceptional control flow, including which cleanup code runs and what is reported.
  * Tough: Determine the primary exception, suppressed exceptions, return behavior, and resource-closing order.
  */
-public class TestThrow2 {   
+public class ExceptionHandling43TestThrow2 {   
   
     //function to check if person is eligible to vote or not   
     public static void method() throws FileNotFoundException {  

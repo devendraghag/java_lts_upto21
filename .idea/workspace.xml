@@ -5,82 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcaf5a4a-e73c-4c82-a4cd-04b6f1822d6d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling18PreciseRethrow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling19FinallyThrowPitfall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling20StackTraceLogging.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling21LambdaStreamExceptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling22ThreadAndCompletableFuture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling23SwallowingAndCauseLoss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling24OverrideThrowsRules.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling25FinallyReturnSuppressesThrow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling26FinallyThrowOverridesReturn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling27NestedCatchFinallyOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling28MultiCatchRules.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling29ExecutorFutureFailure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling30CompletableFutureRecovery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling52ThrowNullTrap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling53ExceptionCatchDoesNotCatchError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling54InterruptedExceptionTrap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling55WhenCompleteDoesNotRecover.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/BinaryOperator1_Addition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/BinaryOperator1Addition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/BinaryOperator2_StringConcat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/BinaryOperator2StringConcat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/BinaryOperator3_MaxValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/BinaryOperator3MaxValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/BinaryOperator4_StreamReduce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/BinaryOperator4StreamReduce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/BinaryOperator5_CustomObjectMerge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/BinaryOperator5CustomObjectMerge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/BinaryOperatorPattern20_Reduce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/BinaryOperatorPattern20Reduce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/BinaryOperatorPattern21_MapMerge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/BinaryOperatorPattern21MapMerge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/DoubleBinaryOperator1_Average.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/DoubleBinaryOperator1Average.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/DoubleBinaryOperator2_Max.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/DoubleBinaryOperator2Max.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/IntBinaryOperator1_Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/IntBinaryOperator1Add.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/IntBinaryOperator2_Max.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/IntBinaryOperator2Max.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/LongBinaryOperator1_Multiply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/LongBinaryOperator1Multiply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/LongBinaryOperator2_Min.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/binaryinterfaces/LongBinaryOperator2Min.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/functioninterfaces/FunctionPattern15_ClassAndAnonymous.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/functioninterfaces/FunctionPattern15ClassAndAnonymous.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/functioninterfaces/FunctionPattern16_MethodReferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/functioninterfaces/FunctionPattern16MethodReferences.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/functioninterfaces/FunctionPattern17_CompositionAndReuse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/functioninterfaces/FunctionPattern17CompositionAndReuse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/functioninterfaces/FunctionPattern18_StreamOptionalAndAsync.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/functioninterfaces/FunctionPattern18StreamOptionalAndAsync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/BiPredicate1_Equal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/BiPredicate1Equal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/BiPredicate2_StringLength.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/BiPredicate2StringLength.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/BiPredicate3_And.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/BiPredicate3And.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/DoublePredicate1_IsFraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/DoublePredicate1IsFraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/IntPredicate1_IsOdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/IntPredicate1IsOdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/IntPredicate2_RangeCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/IntPredicate2RangeCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/LongPredicate1_IsLarge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/LongPredicate1IsLarge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/Predicate1_IsEven.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/Predicate1IsEven.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/Predicate2_IsPositive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/Predicate2IsPositive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/Predicate3_StringNotEmpty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/Predicate3StringNotEmpty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/Predicate4_AndComposition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/Predicate4AndComposition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/Predicate5_OrNegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/Predicate5OrNegate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern01_ClassImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern01ClassImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern02_AnonymousClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern02AnonymousClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern03_Lambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern03Lambda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern04_MethodReferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern04MethodReferences.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern05_PassAsArgument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern05PassAsArgument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern06_ReuseAndCompose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern06ReuseAndCompose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern07_CollectionsAndStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern07CollectionsAndStreams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern08_OptionalFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/predicateinterfaces/PredicatePattern08OptionalFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/BooleanSupplier1_Flag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/BooleanSupplier1Flag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/BooleanSupplier2_RuntimeCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/BooleanSupplier2RuntimeCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/DoubleSupplier1_PI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/DoubleSupplier1PI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/DoubleSupplier2_RandomDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/DoubleSupplier2RandomDouble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/IntSupplier1_Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/IntSupplier1Counter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/IntSupplier2_ArrayLength.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/IntSupplier2ArrayLength.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/LongSupplier1_CurrentTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/LongSupplier1CurrentTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/LongSupplier2_IdGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/LongSupplier2IdGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/Supplier1_SimpleValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/Supplier1SimpleValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/Supplier2_ObjectCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/Supplier2ObjectCreation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/Supplier3_RandomNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/Supplier3RandomNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/Supplier4_OptionalFallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/Supplier4OptionalFallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/Supplier5_FactoryMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/Supplier5FactoryMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/SupplierPattern09_ClassAndAnonymous.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/SupplierPattern09ClassAndAnonymous.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/SupplierPattern10_LambdaAndMethodReferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/SupplierPattern10LambdaAndMethodReferences.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/SupplierPattern11_LazyOptionalFallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/SupplierPattern11LazyOptionalFallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/SupplierPattern12_StreamGeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/SupplierPattern12StreamGeneration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/SupplierPattern13_AsyncWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/SupplierPattern13AsyncWork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/SupplierPattern14_ReusableFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/supplierinterfaces/SupplierPattern14ReusableFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/DoubleUnaryOperator1_Sqrt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/DoubleUnaryOperator1Sqrt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/DoubleUnaryOperator2_Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/DoubleUnaryOperator2Discount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/IntUnaryOperator1_Double.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/IntUnaryOperator1Double.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/IntUnaryOperator2_ArrayUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/IntUnaryOperator2ArrayUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/LongUnaryOperator1_Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/LongUnaryOperator1Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/LongUnaryOperator2_TimestampAdjust.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/LongUnaryOperator2TimestampAdjust.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/UnaryOperator1_Increment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/UnaryOperator1Increment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/UnaryOperator2_StringUppercase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/UnaryOperator2StringUppercase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/UnaryOperator3_Compose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/UnaryOperator3Compose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/UnaryOperator4_ListReplaceAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/UnaryOperator4ListReplaceAll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/UnaryOperator5_Identity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/UnaryOperator5Identity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/UnaryOperatorPattern19_CollectionTransformations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/functionalinterfaces/unaryinterfaces/UnaryOperatorPattern19CollectionTransformations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/binaryinterfaces/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/binaryinterfaces/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk17/sealedclasses/SealedClasses06GenericResult$Failure.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk17/sealedclasses/SealedClasses06GenericResult$Failure.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk17/sealedclasses/SealedClasses06GenericResult$Success.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk17/sealedclasses/SealedClasses06GenericResult$Success.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk17/sealedclasses/SealedClasses06GenericResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk17/sealedclasses/SealedClasses06GenericResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/CommonExceptionsProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling31CommonExceptionsProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling01TryCatchBasics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling01TryCatchBasics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling02CatchOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling02CatchOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling03SeparateCatchBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling03SeparateCatchBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling04FinallyBasics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling04FinallyBasics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling05ThrowAndThrows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling05ThrowAndThrows.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling06RuntimePropagation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling06RuntimePropagation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling07CheckedPropagation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling07CheckedPropagation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling08NestedTryCatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling08NestedTryCatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling09CustomCheckedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling09CustomCheckedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling10CustomUncheckedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling10CustomUncheckedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling11CommonRuntimeExceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling11CommonRuntimeExceptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling12MultiCatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling12MultiCatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling13TryWithResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling13TryWithResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling14SuppressedExceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling14SuppressedExceptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling15ExceptionChaining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling15ExceptionChaining.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling16FinallyReturnPitfall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling16FinallyReturnPitfall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling17ThrowableHierarchy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling17ThrowableHierarchy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionInterviewFinallyProgram28.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling32ExceptionInterviewFinallyProgram28.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/NestedTryBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling33NestedTryBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/NestedTryBlock2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling34NestedTryBlock2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/TestCustomException1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling35TestCustomException1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/TestCustomException2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling36TestCustomException2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/TestExceptionPropagation1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling37TestExceptionPropagation1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/TestExceptionPropagation2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling38TestExceptionPropagation2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/TestFinallyBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling39TestFinallyBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/TestFinallyBlock1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling40TestFinallyBlock1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/TestFinallyBlock2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling41TestFinallyBlock2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/TestThrow1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling42TestThrow1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/TestThrow2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling43TestThrow2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/TestThrow3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling44TestThrow3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/Testthrows1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling45Testthrows1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/Testthrows2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling46Testthrows2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/Testthrows3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling47Testthrows3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/Testthrows4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling48Testthrows4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ThrowableTypesAndFlowProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling49ThrowableTypesAndFlowProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/TryCatchExample1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling50TryCatchExample1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/TryCatchExample2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/exceptionhandling/ExceptionHandling51TryCatchExample2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,23 +88,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.4081884966447225" />
-      <entry key="MS500" value="2.455375808096856" />
-      <entry key="S2" value="4.185314879726036" />
-      <entry key="S5" value="5.98403893455294" />
-      <entry key="S10" value="7.622399045370888" />
-      <entry key="S30" value="10.98257039289592" />
-      <entry key="S60" value="12.668070513960968" />
-      <entry key="M2" value="13.742444717634461" />
-      <entry key="M5" value="16.71361272496754" />
-      <entry key="M10" value="33.9922553607296" />
-      <entry key="M15" value="54.908308060221366" />
-      <entry key="M30" value="101.89710928111091" />
-      <entry key="H1" value="158.13628451006716" />
-      <entry key="H2" value="219.0482921885809" />
-      <entry key="H4" value="270.27007405717256" />
-      <entry key="D1" value="331.85967984757997" />
-      <entry key="W1" value="344.7698725724134" />
+      <entry key="MS100" value="1.8599384520337083" />
+      <entry key="MS500" value="4.748613666257886" />
+      <entry key="S2" value="7.970454796507459" />
+      <entry key="S5" value="9.364692021822021" />
+      <entry key="S10" value="11.631484663993204" />
+      <entry key="S30" value="18.28476120132809" />
+      <entry key="S60" value="21.897859699117042" />
+      <entry key="M2" value="24.346761593518817" />
+      <entry key="M5" value="31.391563953365328" />
+      <entry key="M10" value="50.249142018326985" />
+      <entry key="M15" value="71.16667604519222" />
+      <entry key="M30" value="125.52510103870154" />
+      <entry key="H1" value="196.28934511268372" />
+      <entry key="H2" value="272.6321783949496" />
+      <entry key="H4" value="337.0694172827656" />
+      <entry key="D1" value="415.5213151666121" />
+      <entry key="W1" value="432.12588470446514" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -146,23 +126,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.256410156352677" />
-      <entry key="MS500" value="2.40363085076767" />
-      <entry key="S2" value="4.144400391028998" />
-      <entry key="S5" value="5.954851567395884" />
-      <entry key="S10" value="7.602331709824569" />
-      <entry key="S30" value="10.972351827379187" />
-      <entry key="S60" value="12.662092054924555" />
-      <entry key="M2" value="13.739179227897154" />
-      <entry key="M5" value="16.71192284841205" />
-      <entry key="M10" value="33.99026984738278" />
-      <entry key="M15" value="54.90608629787749" />
-      <entry key="M30" value="101.8950096348668" />
-      <entry key="H1" value="158.1346236433594" />
-      <entry key="H2" value="219.04710409521223" />
-      <entry key="H4" value="270.2693212921443" />
-      <entry key="D1" value="331.85952143564646" />
-      <entry key="W1" value="344.769848937838" />
+      <entry key="MS100" value="1.6477191998821472" />
+      <entry key="MS500" value="4.503310063458627" />
+      <entry key="S2" value="7.8705940891856905" />
+      <entry key="S5" value="9.3186563090379" />
+      <entry key="S10" value="11.602895850944561" />
+      <entry key="S30" value="18.269833044798823" />
+      <entry key="S60" value="21.88895216227726" />
+      <entry key="M2" value="24.3418243468293" />
+      <entry key="M5" value="31.38906225235155" />
+      <entry key="M10" value="50.24708484267215" />
+      <entry key="M15" value="71.16460461908383" />
+      <entry key="M30" value="125.52306154617821" />
+      <entry key="H1" value="196.28761404729823" />
+      <entry key="H2" value="272.6308917708332" />
+      <entry key="H4" value="337.0685844289542" />
+      <entry key="D1" value="415.5211361984688" />
+      <entry key="W1" value="432.1258578967253" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{

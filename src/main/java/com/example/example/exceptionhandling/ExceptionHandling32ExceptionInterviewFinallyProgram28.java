@@ -1,4 +1,4 @@
-package com.example.exceptionhandling;
+package com.example.example.exceptionhandling;
 // JDK history: Introduced in JDK 1.0; this directory marks the introduction baseline for the topic.
 
 
@@ -16,7 +16,7 @@ package com.example.exceptionhandling;
  * Medium: Follow normal and exceptional control flow, including which cleanup code runs and what is reported.
  * Tough: Determine the primary exception, suppressed exceptions, return behavior, and resource-closing order.
  */
-public class ExceptionInterviewFinallyProgram28 {
+public class ExceptionHandling32ExceptionInterviewFinallyProgram28 {
     public static void main(String[] args) throws Exception {
         try {
             System.out.println("try");

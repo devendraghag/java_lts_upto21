@@ -1,4 +1,4 @@
-package com.example.exceptionhandling;
+package com.example.example.exceptionhandling;
 // JDK history: Introduced in JDK 1.0; this directory marks the introduction baseline for the topic.
 
 /**
@@ -15,7 +15,7 @@ class BusinessRuntimeException extends RuntimeException {
     BusinessRuntimeException(String message) { super(message); }
 }
 
-public class ThrowableTypesAndFlowProgram {
+public class ExceptionHandling49ThrowableTypesAndFlowProgram {
     private static void checkedFailure() throws BusinessException {
         throw new BusinessException("checked failure");
     }

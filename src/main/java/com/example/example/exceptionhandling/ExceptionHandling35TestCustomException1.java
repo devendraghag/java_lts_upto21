@@ -1,4 +1,4 @@
-package com.example.exceptionhandling;
+package com.example.example.exceptionhandling;
 // JDK history: Introduced in JDK 1.0; this directory marks the introduction baseline for the topic.
 
 
@@ -18,7 +18,7 @@ class InvalidAgeException  extends Exception
 }  
     
 // class that uses custom exception InvalidAgeException  
-public class TestCustomException1  
+public class ExceptionHandling35TestCustomException1  
 {  
   
     // method to check the age  

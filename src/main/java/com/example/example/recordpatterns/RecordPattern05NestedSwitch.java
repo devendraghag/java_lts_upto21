@@ -1,4 +1,4 @@
-package level03_advanced.jdk21.recordpatterns;
+package com.example.example.recordpatterns;
 // JDK history: Introduction baseline: JDK 21 (the release bucket for this topic).
 
 /** Level 5: combine switch with nested record patterns. */

@@ -1,4 +1,4 @@
-package com.example.completablefuture;
+package com.example.example.completablefuture;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;

@@ -6,77 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="fcaf5a4a-e73c-4c82-a4cd-04b6f1822d6d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock01BasicSyntax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock01BasicSyntax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock02IndentStrippingBasics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock02IndentStrippingBasics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock03QuotesNoEscape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock03QuotesNoEscape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock04TabEscapeSequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock04TabEscapeSequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock05BackslashLineContinuation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock05BackslashLineContinuation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock06TrailingNewlineLength.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock06TrailingNewlineLength.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock07VsTraditionalString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock07VsTraditionalString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock08SqlQueryUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock08SqlQueryUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock09HtmlTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock09HtmlTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock10JsonBeginner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock10JsonBeginner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock12FormattedReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/textblocks/TextBlock12FormattedReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/trywithresourcesenhancement/TryWithResourcesEnh01BasicValidUsage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/trywithresourcesenhancement/TryWithResourcesEnh01BasicValidUsage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/trywithresourcesenhancement/TryWithResourcesEnh03EffectivelyFinalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/trywithresourcesenhancement/TryWithResourcesEnh03EffectivelyFinalRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/trywithresourcesenhancement/TryWithResourcesEnh04InvalidReassignmentPitfall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/trywithresourcesenhancement/TryWithResourcesEnh04InvalidReassignmentPitfall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/varargs/Varargs01BasicsDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/varargs/Varargs02FixedAndVariableParametersDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/varargs/Varargs03ConstructorDemo$Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/varargs/Varargs03ConstructorDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/varargs/Varargs04OverloadResolutionDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/varargs/Varargs05GenericSafetyDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable01AddTwoNumbersDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable02PrimitiveAndReferenceDemo$Counter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable02PrimitiveAndReferenceDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable03InitializationRulesDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable04KindsDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable05ScopeDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable06ShadowingDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable07FinalAndEffectivelyFinalDemo$User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable07FinalAndEffectivelyFinalDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable08WideningCastingDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable09NarrowingCastingDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable10NumericPromotionDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable11NarrowingOverflowDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable12LocalTypeInferenceDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable13ResourceAndExceptionDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/variables/Variable14PatternMatchingDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/virtualthreads/VirtualThread01BasicStart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/virtualthreads/VirtualThread02BuilderAndNaming.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/virtualthreads/VirtualThread03IsVirtualFlag.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/virtualthreads/VirtualThread04DaemonLifecycleJoin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/virtualthreads/VirtualThread05BlockingSleep.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/virtualthreads/VirtualThread06ManyVirtualThreads.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/virtualthreads/VirtualThread07PerTaskExecutorBasics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk09/trywithresourcesenhancement/TryWithResourcesEnh01BasicValidUsage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk09/trywithresourcesenhancement/TryWithResourcesEnh03EffectivelyFinalRule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk09/trywithresourcesenhancement/TryWithResourcesEnh04InvalidReassignmentPitfall.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread08ExecutorTryWithResources.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread09ThreadLocalUsage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread10InterruptionHandling.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread11ExceptionHandling.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread12BlockingQueueProducerConsumer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread13CompletableFutureExecutor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread14SemaphoreThrottling.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread15PerRequestSimulation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread16PinningAwareness.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread17PinningTrap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread18DiagnosticsBasics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread19CpuBoundLimit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread22UnstartedBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread23ThreadStateTransitions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread24PriorityIsFixed.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread25DefaultUncaughtHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread26CountDownLatchCoordination.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread27CyclicBarrierCoordination.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread28ExecutorInvokeAll.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread29ExecutorInvokeAny.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread30FutureCancelInterrupts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread31DeepRecursionStackScaling.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread32RaceConditionAtomicFix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread33DeadlockAvoidanceTryLock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/virtualthreads/VirtualThread34ScalabilityManyTasksBenchmark.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture01AlreadyCompletedDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture01AlreadyCompletedDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture02SupplyAsyncDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture02SupplyAsyncDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture03RunAsyncDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture03RunAsyncDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture04ThenApplyAndAcceptDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture04ThenApplyAndAcceptDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture05ThenComposeDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture05ThenComposeDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture06ThenCombineDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture06ThenCombineDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture07ExceptionRecoveryDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture07ExceptionRecoveryDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture08AllOfDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture08AllOfDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture09CustomExecutorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture09CustomExecutorDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture10TimeoutFallbackDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/completablefuture/CompletableFuture10TimeoutFallbackDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,61 +43,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.5246108175666793" />
-      <entry key="MS500" value="3.359564918750132" />
-      <entry key="S2" value="8.050017425156422" />
-      <entry key="S5" value="10.613791860572865" />
-      <entry key="S10" value="12.07416223929777" />
-      <entry key="S30" value="20.64572975752846" />
-      <entry key="S60" value="38.25222932054794" />
-      <entry key="M2" value="67.36024952910154" />
-      <entry key="M5" value="118.86191211987217" />
-      <entry key="M10" value="163.04779656192386" />
-      <entry key="M15" value="189.96055466393477" />
-      <entry key="M30" value="250.42453725373724" />
-      <entry key="H1" value="347.27687904705203" />
-      <entry key="H2" value="471.41559922441843" />
-      <entry key="H4" value="587.6947032313439" />
-      <entry key="D1" value="741.7470616541447" />
-      <entry key="W1" value="776.0119789309704" />
+      <entry key="MS100" value="1.4688124736434889" />
+      <entry key="MS500" value="2.969317577577895" />
+      <entry key="S2" value="5.0542183435552905" />
+      <entry key="S5" value="8.686809081115781" />
+      <entry key="S10" value="14.28701925817688" />
+      <entry key="S30" value="28.197877623493657" />
+      <entry key="S60" value="37.74112414118697" />
+      <entry key="M2" value="53.959041656533984" />
+      <entry key="M5" value="105.24543521159457" />
+      <entry key="M10" value="162.69356295115526" />
+      <entry key="M15" value="198.83239668931515" />
+      <entry key="M30" value="271.9267622661759" />
+      <entry key="H1" value="377.0504592687068" />
+      <entry key="H2" value="507.5365701914109" />
+      <entry key="H4" value="628.9973039444603" />
+      <entry key="D1" value="789.9093601481204" />
+      <entry key="W1" value="825.7371109175242" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="8.369223489866033E-103" />
-      <entry key="S5" value="1.475958226980941E-41" />
-      <entry key="S10" value="3.841820176662287E-21" />
-      <entry key="S30" value="1.5661944392846873E-7" />
-      <entry key="S60" value="3.9575174532586533E-4" />
-      <entry key="M2" value="0.019893510130840755" />
-      <entry key="M5" value="0.20868179695537384" />
-      <entry key="M10" value="0.45681702787371503" />
-      <entry key="M15" value="0.5931458860874101" />
-      <entry key="M30" value="0.7701596497398542" />
-      <entry key="H1" value="0.8775874029063152" />
-      <entry key="H2" value="0.93679635081821" />
-      <entry key="H4" value="0.9678824054699022" />
-      <entry key="D1" value="0.9945739940648973" />
-      <entry key="W1" value="0.999223047673471" />
+      <entry key="S2" value="4.766023741569157E-149" />
+      <entry key="S5" value="4.690968110198599E-60" />
+      <entry key="S10" value="2.16586428711464E-30" />
+      <entry key="S30" value="1.2938295924500741E-10" />
+      <entry key="S60" value="1.137466303874569E-5" />
+      <entry key="M2" value="0.0033726344359781505" />
+      <entry key="M5" value="0.10260953228430074" />
+      <entry key="M10" value="0.3203272268857288" />
+      <entry key="M15" value="0.46816172285451085" />
+      <entry key="M30" value="0.6842234451219249" />
+      <entry key="H1" value="0.8271780008691727" />
+      <entry key="H2" value="0.9094932659834113" />
+      <entry key="H4" value="0.9536735636387342" />
+      <entry key="D1" value="0.9921255269603394" />
+      <entry key="W1" value="0.9988712603024013" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.4358186154328563" />
-      <entry key="MS500" value="3.2910860498174968" />
-      <entry key="S2" value="7.9856782552951575" />
-      <entry key="S5" value="10.578376155079184" />
-      <entry key="S10" value="12.053735684628911" />
-      <entry key="S30" value="20.633429232029524" />
-      <entry key="S60" value="38.241076424428385" />
-      <entry key="M2" value="67.36947899436123" />
-      <entry key="M5" value="119.06102981184382" />
-      <entry key="M10" value="163.4969661854348" />
-      <entry key="M15" value="190.5474550041641" />
-      <entry key="M30" value="251.19044623415394" />
-      <entry key="H1" value="348.1514902052387" />
-      <entry key="H2" value="472.35032526738" />
-      <entry key="H4" value="588.6612567684949" />
-      <entry key="D1" value="742.741345311537" />
-      <entry key="W1" value="777.0111582436151" />
+      <entry key="MS100" value="1.3838910461351648" />
+      <entry key="MS500" value="2.930795873896215" />
+      <entry key="S2" value="5.037587302524456" />
+      <entry key="S5" value="8.672389530622423" />
+      <entry key="S10" value="14.271993824633213" />
+      <entry key="S30" value="28.18447701307751" />
+      <entry key="S60" value="37.73128672444629" />
+      <entry key="M2" value="53.95483857164358" />
+      <entry key="M5" value="105.34073959376015" />
+      <entry key="M10" value="163.0071720706568" />
+      <entry key="M15" value="199.29471263397573" />
+      <entry key="M30" value="272.6067448542837" />
+      <entry key="H1" value="377.8745981292963" />
+      <entry key="H2" value="508.4439361570621" />
+      <entry key="H4" value="629.9496093804528" />
+      <entry key="D1" value="790.901186244435" />
+      <entry key="W1" value="826.7359370566008" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{

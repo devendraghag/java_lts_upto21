@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-/** Intermediate: removeIf deletes every element matching a predicate. */
+/** {@code removeIf(filter)} removes every item for which the given test returns true. */
 public class Collection09RemoveIf {
     public static void main(String[] args) {
         Collection<String> words = new ArrayList<>(List.of("map", "collection", "set", "iterator"));

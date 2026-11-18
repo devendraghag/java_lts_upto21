@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-/** Intermediate: build a stream pipeline from a Collection. */
+/** {@code stream()} creates a stream of the collection's items for sequential processing. */
 public class Collection11Streams {
     public static void main(String[] args) {
         Collection<String> names = new ArrayList<>(List.of("Asha", "Arun", "Mina", "Aarav"));

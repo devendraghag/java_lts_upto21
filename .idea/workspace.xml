@@ -5,91 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcaf5a4a-e73c-4c82-a4cd-04b6f1822d6d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.mvn/maven.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/mvnw.ps1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p51_stream_map_keys/StreamMapKeys.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p52_stream_keyset_with_values/StreamKeySetWithValues.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p53_stream_map_entries/StreamMapEntries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p54_stream_keyset_filter_ids/StreamKeySetFilterIds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p55_stream_keyset_project_values/StreamKeySetProjectValues.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p56_stream_entryset_find_max/StreamEntrySetFindMax.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p57_stream_entryset_top_three/StreamEntrySetTopThree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p58_stream_entryset_collect_filtered/StreamEntrySetCollectFiltered.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p58_stream_entryset_collect_filtered/StreamEntrySetCollectFiltered.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors13GroupingBySummingInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors13GroupingBySummingInt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p09_find_first_and_find_any_employee/FindFirstAndFindAnyEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p09_find_first_and_find_any_employee/FindFirstAndFindAnyEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p10_pagination_with_skip_and_limit/PaginationWithSkipAndLimit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p10_pagination_with_skip_and_limit/PaginationWithSkipAndLimit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p23_flatten_nested_order_items/FlattenNestedOrderItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p23_flatten_nested_order_items/FlattenNestedOrderItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p24_top_three_distinct_salaries/TopThreeDistinctSalaries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p24_top_three_distinct_salaries/TopThreeDistinctSalaries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p25_second_highest_distinct_salary/SecondHighestDistinctSalary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/interviewprograms/p25_second_highest_distinct_salary/SecondHighestDistinctSalary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors13GroupingBySummingInt$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors13GroupingBySummingInt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p10_pagination_with_skip_and_limit/PaginationWithSkipAndLimit$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p10_pagination_with_skip_and_limit/PaginationWithSkipAndLimit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p23_flatten_nested_order_items/FlattenNestedOrderItems$LineItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p23_flatten_nested_order_items/FlattenNestedOrderItems$Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p23_flatten_nested_order_items/FlattenNestedOrderItems.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p24_top_three_distinct_salaries/TopThreeDistinctSalaries$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p24_top_three_distinct_salaries/TopThreeDistinctSalaries.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p25_second_highest_distinct_salary/SecondHighestDistinctSalary$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/interviewprograms/p25_second_highest_distinct_salary/SecondHighestDistinctSalary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/Adder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/Adder2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/Adder3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/Adder33.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/CalculatorInterview.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/MethodOverloadingInterviewProgram.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/TestOverloading1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/TestOverloading2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/TestOverloading3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/TestOverloading4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverloading/TestOverloading5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/AnimalInterview.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Child.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Child2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Child3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Child4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Child6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Child7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Child8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/DogInterview.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverriding.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverriding2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverriding3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverriding4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverriding5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverriding6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverriding7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/MethodOverridingInterviewProgram.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent11.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent12.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent13.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent14.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent15.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent16.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/Parent8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/TestExceptionChild.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/TestExceptionChild1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/TestExceptionChild2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/TestExceptionChild3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/TestExceptionChild4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodoverriding/TestExceptionChild5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/methodreferences/constructorreference/Constructor10StreamMapToStudent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/methodreferences/constructorreference/Constructor10StreamMapToStudent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectionclassmethods/Collection06BulkOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectionclassmethods/Collection06BulkOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectionclassmethods/Collection12UnmodifiableViewAndCopy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectionclassmethods/Collection14GenericAlgorithms.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectionclassmethods/Collection15CustomAbstractCollection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectionsinterface/Collection12UnmodifiableViewAndCopy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectionsinterface/Collection14GenericAlgorithms.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +36,65 @@
         <option name="userSettingsFile" value="D:\apache-maven-3.10.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.537733218072527" />
+      <entry key="MS500" value="2.556542031902934" />
+      <entry key="S2" value="5.924217654923041" />
+      <entry key="S5" value="15.043305406249756" />
+      <entry key="S10" value="25.945477956704043" />
+      <entry key="S30" value="44.0631176711725" />
+      <entry key="S60" value="52.16789718730654" />
+      <entry key="M2" value="57.19624280609844" />
+      <entry key="M5" value="60.819824869195685" />
+      <entry key="M10" value="62.875273378168686" />
+      <entry key="M15" value="64.33355302614146" />
+      <entry key="M30" value="67.11149757509747" />
+      <entry key="H1" value="69.48429503626322" />
+      <entry key="H2" value="71.06685494465452" />
+      <entry key="H4" value="71.98473692474829" />
+      <entry key="D1" value="72.8235691609019" />
+      <entry key="W1" value="72.97461247434764" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.4359271125782402" />
+      <entry key="MS500" value="2.5215468882220087" />
+      <entry key="S2" value="5.904390534951687" />
+      <entry key="S5" value="15.018407274291398" />
+      <entry key="S10" value="25.917496991365454" />
+      <entry key="S30" value="44.042354354713574" />
+      <entry key="S60" value="52.15460091269237" />
+      <entry key="M2" value="57.187992592999045" />
+      <entry key="M5" value="60.813638740674776" />
+      <entry key="M10" value="62.8703959941213" />
+      <entry key="M15" value="64.32964847135216" />
+      <entry key="M30" value="67.10911803214253" />
+      <entry key="H1" value="69.48297413082686" />
+      <entry key="H2" value="71.06615804531634" />
+      <entry key="H4" value="71.98437885776087" />
+      <entry key="D1" value="72.82350810192038" />
+      <entry key="W1" value="72.97460371720196" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3,
@@ -276,8 +257,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+        <option value="bundled-jdk-30f59d01ecdd-2df11533d9fe-intellij.indexing.shared.core-IU-262.11879.100" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.11879.100" />
       </set>
     </attachedChunks>
   </component>

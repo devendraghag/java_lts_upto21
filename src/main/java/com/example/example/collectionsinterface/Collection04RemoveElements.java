@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-/** Beginner: remove one matching element by value. */
+/** {@code remove(o)} removes one matching item and returns true if an item was removed. */
 public class Collection04RemoveElements {
     public static void main(String[] args) {
         Collection<String> names = new ArrayList<>(List.of("Asha", "Ravi", "Asha", "Mina"));

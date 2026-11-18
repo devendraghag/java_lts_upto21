@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Spliterator;
 
-/** Advanced: split and traverse a Collection using its Spliterator. */
+/** {@code spliterator()} returns a traversal object that can process or split collection items. */
 public class Collection13Spliterator {
     public static void main(String[] args) {
         Collection<String> subjects = new ArrayList<>(List.of("math", "science", "history", "art"));

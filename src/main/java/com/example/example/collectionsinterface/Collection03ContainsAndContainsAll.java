@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-/** Beginner: search for one element or for all elements in another collection. */
+/** {@code contains(o)} checks one item; {@code containsAll(c)} checks all items from c. */
 public class Collection03ContainsAndContainsAll {
     public static void main(String[] args) {
         Collection<String> pantry = new ArrayList<>(List.of("rice", "beans", "oil", "salt"));

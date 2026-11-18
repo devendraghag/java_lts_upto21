@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-/** Intermediate: use Iterator.remove while traversing the same collection. */
+/** {@code iterator()} returns an iterator for visiting the collection's items. */
 public class Collection08IteratorRemoval {
     public static void main(String[] args) {
         Collection<Integer> values = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6));

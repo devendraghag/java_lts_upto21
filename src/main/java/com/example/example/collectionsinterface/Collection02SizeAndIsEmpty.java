@@ -3,7 +3,7 @@ package com.example.collectionsinterface;
 import java.util.ArrayList;
 import java.util.Collection;
 
-/** Beginner: inspect a collection with size and isEmpty. */
+/** {@code size()} gives the item count; {@code isEmpty()} checks whether the count is zero. */
 public class Collection02SizeAndIsEmpty {
     public static void main(String[] args) {
         Collection<Integer> scores = new ArrayList<>();

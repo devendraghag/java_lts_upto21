@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-/** Beginner: clear removes every element from a mutable collection. */
+/** {@code clear()} removes every item from this collection. */
 public class Collection05Clear {
     public static void main(String[] args) {
         Collection<String> tasks = new ArrayList<>(List.of("read", "practice", "review"));

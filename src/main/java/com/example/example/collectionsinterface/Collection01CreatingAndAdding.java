@@ -3,7 +3,7 @@ package com.example.collectionsinterface;
 import java.util.ArrayList;
 import java.util.Collection;
 
-/** Beginner: create a Collection reference and add elements. */
+/** {@code add(E e)} puts one item {@code e} into this collection and returns whether it changed. */
 public class Collection01CreatingAndAdding {
     public static void main(String[] args) {
         Collection<String> languages = new ArrayList<>();

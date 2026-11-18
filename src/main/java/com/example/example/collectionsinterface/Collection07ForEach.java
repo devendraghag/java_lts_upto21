@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-/** Intermediate: process each element with a loop, lambda, or method reference. */
+/** {@code forEach(action)} runs the given action once for every item. */
 public class Collection07ForEach {
     public static void main(String[] args) {
         Collection<String> tools = new ArrayList<>(List.of("compiler", "debugger", "formatter"));

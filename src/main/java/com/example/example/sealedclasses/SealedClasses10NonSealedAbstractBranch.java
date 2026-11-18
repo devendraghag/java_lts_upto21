@@ -1,6 +1,7 @@
-package level03_advanced.jdk17.sealedclasses;
+package com.example.example.sealedclasses;
 
 // JDK history: Abstract classes were introduced in JDK 1.0. Sealed and non-sealed classes were previewed in JDK 15 and 16, then finalized in JDK 17.
+
 /**
  * Demonstrates Non Sealed Abstract Class through a small, executable example.
  *
@@ -11,6 +12,16 @@ package level03_advanced.jdk17.sealedclasses;
  */
 
 public class SealedClasses10NonSealedAbstractBranch {
+    public static void main(String[] args) {
+        RoadVehicle[] vehicles = {new Car(), new Bus()};
+        for (RoadVehicle vehicle : vehicles) {
+            vehicle.move();
+            System.out.println("Wheels: " + vehicle.wheelCount());
+        }
+
+        System.out.println("non-sealed is legal only for a direct child of a sealed type.");
+    }
+
     sealed abstract static class Vehicle permits RoadVehicle {
         abstract void move();
     }
@@ -41,15 +52,5 @@ public class SealedClasses10NonSealedAbstractBranch {
         int wheelCount() {
             return 6;
         }
-    }
-
-    public static void main(String[] args) {
-        RoadVehicle[] vehicles = {new Car(), new Bus()};
-        for (RoadVehicle vehicle : vehicles) {
-            vehicle.move();
-            System.out.println("Wheels: " + vehicle.wheelCount());
-        }
-
-        System.out.println("non-sealed is legal only for a direct child of a sealed type.");
     }
 }

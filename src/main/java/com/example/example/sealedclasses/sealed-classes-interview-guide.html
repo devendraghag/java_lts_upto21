@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="Interactive senior Java interview guide for sealed classes and interfaces" name="description">
+    <title>Java Sealed Types | Senior Interview Lab</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #0b1020;
+            --panel: #121d31;
+            --ink: #edf3ff;
+            --muted: #a9b7cf;
+            --line: #2b3b59;
+            --cyan: #57d6c7;
+            --blue: #8cb8ff;
+            --gold: #ffd27d
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: radial-gradient(ellipse at 85% 2%, #1b3c58, transparent 34%), linear-gradient(160deg, #0b1020, #10192a 55%, #0b1020);
+            color: var(--ink);
+            font: 15px/1.6 Inter, Segoe UI, system-ui, sans-serif
+        }
+
+        a {
+            color: var(--blue)
+        }
+
+        button, input, select {
+            font: inherit
+        }
+
+        button {
+            cursor: pointer;
+            color: var(--ink);
+            background: #1a2942;
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            padding: 9px 13px
+        }
+
+        button:hover {
+            border-color: var(--cyan);
+            background: #203451
+        }
+
+        .wrap {
+            max-width: 1240px;
+            margin: auto;
+            padding: 26px 22px 65px
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px
+        }
+
+        .brand, .eyebrow, .tag {
+            color: var(--cyan);
+            font-size: 12px;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+            font-weight: 800
+        }
+
+        .toplinks {
+            display: flex;
+            gap: 14px;
+            font-size: 13px
+        }
+
+        .hero {
+            padding: 48px 0 25px;
+            max-width: 850px
+        }
+
+        .eyebrow {
+            color: var(--gold)
+        }
+
+        h1 {
+            font-size: clamp(38px, 6vw, 68px);
+            line-height: 1.02;
+            letter-spacing: -.05em;
+            margin: 14px 0
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 18px
+        }
+
+        .chips {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 20px
+        }
+
+        .chip, .pill {
+            border: 1px solid var(--line);
+            background: #101a2b;
+            padding: 5px 10px;
+            border-radius: 30px;
+            color: #c8d4e8;
+            font-size: 12px
+        }
+
+        .notice {
+            border: 1px solid #38536d;
+            background: #14283a;
+            padding: 13px 16px;
+            border-radius: 12px;
+            color: #d5e6f1;
+            margin: 14px 0 25px
+        }
+
+        .notice b {
+            color: var(--cyan)
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns:230px minmax(0, 1fr);
+            gap: 22px;
+            align-items: start
+        }
+
+        .side {
+            position: sticky;
+            top: 15px;
+            background: #0f1829;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 15px
+        }
+
+        .side h3 {
+            margin: 0 0 9px;
+            color: var(--muted);
+            font-size: 12px;
+            text-transform: uppercase
+        }
+
+        .side a {
+            display: block;
+            padding: 7px 9px;
+            border-radius: 8px;
+            color: #dbe7f7;
+            text-decoration: none;
+            font-size: 13px
+        }
+
+        .side a:hover {
+            background: #17233a;
+            color: var(--cyan)
+        }
+
+        .small {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px
+        }
+
+        .stat, .card, .resource {
+            background: linear-gradient(145deg, #15243a, #101827);
+            border: 1px solid var(--line);
+            border-radius: 13px;
+            padding: 15px
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 22px;
+            color: var(--cyan)
+        }
+
+        .stat span {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .section {
+            margin: 30px 0 38px;
+            scroll-margin-top: 20px
+        }
+
+        .section h2 {
+            font-size: 25px;
+            margin: 0 0 6px;
+            letter-spacing: -.03em
+        }
+
+        .sub {
+            color: var(--muted);
+            margin: 0 0 16px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns:repeat(2, minmax(0, 1fr));
+            gap: 11px
+        }
+
+        .card h3 {
+            font-size: 16px;
+            line-height: 1.35;
+            margin: 5px 0 10px
+        }
+
+        .level {
+            float: right;
+            color: var(--gold);
+            font-size: 10px;
+            text-transform: uppercase
+        }
+
+        .answer {
+            display: none;
+            border-top: 1px solid var(--line);
+            margin-top: 13px;
+            padding-top: 12px;
+            color: #d5deed
+        }
+
+        .card.open .answer {
+            display: block
+        }
+
+        .answer p:first-child {
+            margin-top: 0
+        }
+
+        .answer ul {
+            padding-left: 20px
+        }
+
+        .answer li {
+            margin: 5px 0
+        }
+
+        .talk {
+            border-left: 3px solid var(--gold);
+            padding: 9px 12px;
+            background: #242236;
+            border-radius: 0 8px 8px 0;
+            color: #f5e7c7
+        }
+
+        .reveal {
+            font-size: 12px;
+            padding: 6px 10px
+        }
+
+        .toolbar {
+            display: flex;
+            gap: 9px;
+            flex-wrap: wrap;
+            margin: 15px 0
+        }
+
+        .toolbar input, .toolbar select {
+            background: #101a2b;
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            color: var(--ink);
+            padding: 10px
+        }
+
+        .toolbar input {
+            flex: 1;
+            min-width: 210px
+        }
+
+        .code {
+            position: relative;
+            background: #080e19;
+            border: 1px solid #293754;
+            border-radius: 10px;
+            margin: 12px 0;
+            padding: 14px;
+            overflow: auto;
+            color: #d4e6ff;
+            font: 13px/1.55 Consolas, monospace;
+            white-space: pre
+        }
+
+        .compare {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            background: #101827
+        }
+
+        .compare th, .compare td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid var(--line);
+            vertical-align: top
+        }
+
+        .compare th {
+            color: var(--cyan);
+            font-size: 12px
+        }
+
+        .quizbox {
+            background: linear-gradient(145deg, #182842, #101827);
+            border: 1px solid #3a5475;
+            border-radius: 15px;
+            padding: 19px
+        }
+
+        .quiz-options {
+            display: grid;
+            gap: 8px;
+            margin: 14px 0
+        }
+
+        .quiz-options button {
+            text-align: left
+        }
+
+        .correct {
+            border-color: #8be2a9 !important;
+            background: #123024 !important
+        }
+
+        .wrong {
+            border-color: #ff8c93 !important;
+            background: #351c28 !important
+        }
+
+        .feedback {
+            min-height: 26px;
+            color: var(--gold)
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns:repeat(2, minmax(0, 1fr));
+            gap: 10px
+        }
+
+        .resource {
+            display: block;
+            text-decoration: none;
+            color: var(--ink)
+        }
+
+        .resource:hover {
+            border-color: var(--cyan)
+        }
+
+        .resource small {
+            display: block;
+            color: var(--muted);
+            margin-top: 4px
+        }
+
+        .empty {
+            display: none;
+            color: var(--muted);
+            padding: 18px;
+            border: 1px dashed var(--line);
+            border-radius: 10px
+        }
+
+        .foot {
+            color: var(--muted);
+            border-top: 1px solid var(--line);
+            padding-top: 16px;
+            font-size: 12px;
+            margin-top: 45px
+        }
+
+        @media (max-width: 800px) {
+            .layout {
+                grid-template-columns:1fr
+            }
+
+            .side {
+                position: static;
+                display: flex;
+                overflow: auto;
+                gap: 3px
+            }
+
+            .side h3, .side .small {
+                display: none
+            }
+
+            .side a {
+                white-space: nowrap
+            }
+
+            .stats {
+                grid-template-columns:repeat(2, 1fr)
+            }
+        }
+
+        @media (max-width: 570px) {
+            .wrap {
+                padding: 18px 13px 45px
+            }
+
+            .grid, .resource-grid {
+                grid-template-columns:1fr
+            }
+
+            .top {
+                flex-direction: column
+            }
+
+            .hero {
+                padding-top: 34px
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header class="top">
+        <div class="brand">Java Interview Lab / Type Systems</div>
+        <nav class="toplinks"><a href="#questions">Questions</a><a href="#drills">Code drills</a><a href="#references">References</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="eyebrow">Senior engineer edition · Java 17–25 context</div>
+        <h1>Sealed types,<br>under interview pressure.</h1>
+        <p>A practical guide to the rules, trade-offs, code reading, API design, and failure modes behind Java sealed
+            classes and interfaces. Built around the examples in this folder and aimed at experienced engineers who need
+            to explain both <em>how</em> and <em>when</em>.</p>
+        <div class="chips"><span class="chip">Java 17: sealed types finalized</span><span class="chip">Java 21: pattern switch finalized</span><span
+                class="chip">24 questions</span><span class="chip">Self-check quiz</span><span class="chip">No framework required</span>
+        </div>
+    </section>
+    <div class="notice"><b>Version precision:</b> sealed classes/interfaces became permanent in Java 17 (JEP 409).
+        Pattern matching for <code>switch</code> became permanent in Java 21 (JEP 441). Do not claim Java 17 has stable
+        pattern-switch syntax; Java 17 had it only as preview.
+    </div>
+    <div class="layout">
+        <aside class="side"><h3>On this page</h3><a href="#quick-map">Quick map</a><a href="#questions">Interview
+            questions</a><a href="#design">Senior design lens</a><a href="#drills">Code drills</a><a href="#quiz">Rapid
+            quiz</a><a href="#references">References</a>
+            <p class="small">Search and filter prompts. Open a card for its answer and senior signal.</p></aside>
+        <main class="main">
+            <div class="stats">
+                <div class="stat"><strong>24</strong><span>Interview prompts</span></div>
+                <div class="stat"><strong>6</strong><span>Question themes</span></div>
+                <div class="stat"><strong>4</strong><span>Code/debug drills</span></div>
+                <div class="stat"><strong>17 → 21</strong><span>Version boundary</span></div>
+            </div>
+            <section class="section" id="quick-map"><h2>Two minute mental model</h2>
+                <p class="sub">Lead with this; expand based on the interviewer’s follow-up.</p>
+                <div class="card open">
+                    <div class="answer" style="display:block;border:0;padding:0;margin:0"><p><strong>A sealed type
+                        controls its direct inheritance edges.</strong> The declaration names which classes or
+                        interfaces may directly extend or implement it. Every permitted child continues the policy as
+                        <code>final</code>, <code>sealed</code>, or <code>non-sealed</code>. A sealed hierarchy is
+                        closed at its root, but a <code>non-sealed</code> permitted branch is open below that point.</p>
+                        <p><strong>The payoff</strong> is a modeled finite set of alternatives. In Java 21+, pattern
+                            matching for <code>switch</code> can use that hierarchy for exhaustiveness checks. The cost
+                            is ownership of the subtype set and tighter evolution coupling between producers and
+                            consumers.</p>
+                        <p class="talk">Interview opener: “I use sealed types when the domain has a deliberately bounded
+                            set of variants that I own—such as command outcomes or an expression AST. They make the
+                            boundary explicit and enable exhaustive handling, especially with records and Java 21
+                            pattern switch. I avoid them when third-party extension is a core requirement.”</p></div>
+                </div>
+                <table class="compare">
+                    <thead>
+                    <tr>
+                        <th>Modifier on permitted direct child</th>
+                        <th>Meaning</th>
+                        <th>Inheritance after that child</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>final</code></td>
+                        <td>Closes the branch</td>
+                        <td>No subclasses</td>
+                    </tr>
+                    <tr>
+                        <td><code>sealed</code></td>
+                        <td>Continues controlled admission</td>
+                        <td>Only its permitted children</td>
+                    </tr>
+                    <tr>
+                        <td><code>non-sealed</code></td>
+                        <td>Explicitly reopens the branch</td>
+                        <td>Ordinary unrestricted subclassing</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="section" id="questions"><h2>Interview question bank</h2>
+                <p class="sub">Aim for a crisp answer, then use the senior signal to show design judgment.</p>
+                <div class="toolbar"><input id="search" placeholder="Search question, topic, or answer…"
+                                            type="search"><select id="category">
+                    <option value="all">All topics</option>
+                    <option>Core semantics</option>
+                    <option>Rules and compilation</option>
+                    <option>Pattern matching</option>
+                    <option>API and architecture</option>
+                    <option>Runtime and reflection</option>
+                    <option>Tricky scenarios</option>
+                </select><select id="difficulty">
+                    <option value="all">All levels</option>
+                    <option>Core</option>
+                    <option>Senior</option>
+                    <option>Deep dive</option>
+                </select>
+                    <button id="allAnswers">Expand all</button>
+                </div>
+                <div class="grid" id="cards"></div>
+                <div class="empty" id="empty">No questions match. Try a broader search.</div>
+            </section>
+            <section class="section" id="design"><h2>Senior design lens</h2>
+                <p class="sub">At 10 years’ experience, trade-offs and migration thinking matter as much as syntax.</p>
+                <div class="grid">
+                    <article class="card open"><span class="tag">Model boundaries</span>
+                        <h3>Choose a sealed interface when…</h3>
+                        <div class="answer" style="display:block"><p>You want unrelated implementations to share a
+                            capability while keeping the set of direct implementations under your control. For example,
+                            <code>sealed interface PaymentResult permits Authorized, Declined, Retryable</code>.
+                            Variants can be records, enums, or classes.</p>
+                            <p>Choose an abstract sealed class if variants should share state, constructors, protected
+                                helpers, or common implementation. Java still allows one class superclass, while
+                                interfaces permit multiple inheritance of type.</p></div>
+                    </article>
+                    <article class="card open"><span class="tag">Change management</span>
+                        <h3>Closed-world modeling is an API promise.</h3>
+                        <div class="answer" style="display:block"><p>Adding a permitted subtype can require recompiling
+                            exhaustive switches. With separately compiled Java 21 consumers, a consumer built against
+                            the old hierarchy can fail at runtime with <code>MatchException</code> if the new subtype
+                            reaches an old exhaustive switch. Treat additions as a compatibility and rollout concern:
+                            coordinate versions, recompile downstreams, or provide an intentional fallback where forward
+                            compatibility matters.</p>
+                            <p>Adding <code>default</code> trades compiler pressure to handle new variants for runtime
+                                fallback behavior. It can hide missed business handling, so make it intentional and
+                                observable.</p></div>
+                    </article>
+                    <article class="card open"><span class="tag">Domain modeling</span>
+                        <h3>Sealed vs enum vs open interface</h3>
+                        <div class="answer" style="display:block"><p>Use <code>enum</code> for fixed singleton constants
+                            with the same shape. Use a sealed hierarchy when alternatives carry different data or
+                            behavior, need distinct types, or form multiple controlled levels. Use an open interface
+                            when third-party extension is central.</p>
+                            <p>A sealed hierarchy is not a complete algebraic data type facility: nulls, generic
+                                variance, serialization, mutation, and evolution still need deliberate design.</p></div>
+                    </article>
+                    <article class="card open"><span class="tag">Production boundary</span>
+                        <h3>Where are permitted types restricted?</h3>
+                        <div class="answer" style="display:block"><p>For a named module, the sealed type and its
+                            permitted direct subclasses/subinterfaces belong to the same module, but can be in different
+                            packages. In the unnamed module, they must be in the same package.</p>
+                            <p>Consider module ownership, package layout, and source organization before sealing a
+                                public API.</p></div>
+                    </article>
+                </div>
+            </section>
+            <section class="section" id="drills"><h2>Code and debugging drills</h2>
+                <p class="sub">Predict the result before opening the explanation.</p>
+                <div class="grid">
+                    <article class="card"><span class="tag">Drill 01 · classify</span>
+                        <h3>Which declarations compile?</h3>
+                        <div class="code">sealed interface Event permits Created, Updated {}
+                            record Created(String id) implements Event {}
+                            non-sealed class Updated implements Event {}
+                            class Patched extends Updated {}
+                            class Deleted implements Event {}
+                        </div>
+                        <button class="reveal" onclick="toggleDrill(this)">Reveal outcome</button>
+                        <div class="answer"><p><code>Created</code> compiles and is implicitly <code>final</code>.
+                            <code>Updated</code> declares <code>non-sealed</code>; <code>Patched</code> may extend it.
+                            <code>Deleted</code> fails because it is not permitted by <code>Event</code>.</p></div>
+                    </article>
+                    <article class="card"><span class="tag">Drill 02 · inferred permits</span>
+                        <h3>Can permits be omitted?</h3>
+                        <div class="code">sealed interface Outcome {}
+                            final class Ok implements Outcome {}
+                            final class Error implements Outcome {}
+                        </div>
+                        <button class="reveal" onclick="toggleDrill(this)">Reveal outcome</button>
+                        <div class="answer"><p>Yes, when permitted direct types are declared in the same compilation
+                            unit. The compiler infers <code>Ok</code> and <code>Error</code>. When variants are in
+                            separate source files, list them in <code>permits</code>.</p></div>
+                    </article>
+                    <article class="card"><span class="tag">Drill 03 · switch coverage</span>
+                        <h3>Is this Java 21 switch exhaustive?</h3>
+                        <div class="code">sealed interface Reply permits Success, Failure {}
+                            record Success(String value) implements Reply {}
+                            record Failure(String reason) implements Reply {}
+                            static String message(Reply r) {
+                            return switch (r) {
+                            case Success s -&gt; s.value();
+                            case Failure f -&gt; f.reason();
+                            };
+                            }
+                        </div>
+                        <button class="reveal" onclick="toggleDrill(this)">Reveal outcome</button>
+                        <div class="answer"><p>Yes. It covers both permitted variants; records are final. Java 21
+                            pattern-switch syntax is final. A null selector still throws
+                            <code>NullPointerException</code> unless <code>case null</code> is present.</p></div>
+                    </article>
+                    <article class="card"><span class="tag">Drill 04 · runtime evolution</span>
+                        <h3>Old consumer, newly permitted subtype</h3>
+                        <div class="code">// Old consumer compiled for Success, Failure:
+                            return switch (reply) {
+                            case Success s -&gt; "ok";
+                            case Failure f -&gt; "failed";
+                            };
+                            // Library later adds Retryable to Reply
+                        </div>
+                        <button class="reveal" onclick="toggleDrill(this)">Reveal outcome</button>
+                        <div class="answer"><p>Recompile the consumer. If the new subtype reaches stale
+                            exhaustive-switch bytecode, Java 21+ throws <code>MatchException</code>. Exhaustiveness is
+                            reasoned about at compile time; independently deployed binaries can drift.</p></div>
+                    </article>
+                </div>
+                <div class="card" style="margin-top:11px"><span class="tag">Design exercise · 5 minutes</span>
+                    <h3>Model a payment processing result</h3>
+                    <div class="answer" style="display:block"><p>Model authorized (authorization id + amount), declined
+                        (reason + retryability), and pending (provider reference). Discuss whether retryable decline is
+                        a separate variant, API ownership, serialization versioning, and whether behavior belongs in
+                        variants or a Java 21 switch. Strong answers use variants that reflect meaningful domain
+                        distinctions, validate invariants at construction, and seal only when the owning module really
+                        owns the full variant set.</p></div>
+                </div>
+            </section>
+            <section class="section" id="quiz"><h2>Rapid self-check</h2>
+                <p class="sub">One question at a time. Your answers stay in this page.</p>
+                <div class="quizbox"><h3 id="quizQuestion"></h3>
+                    <div class="quiz-options" id="quizOptions"></div>
+                    <div aria-live="polite" class="feedback" id="feedback"></div>
+                    <button id="nextQuiz">Next question</button>
+                    <span class="pill" id="quizCount"></span></div>
+            </section>
+            <section class="section" id="references"><h2>References and further practice</h2>
+                <p class="sub">Primary sources establish language/runtime rules. Community material helps with practice;
+                    verify version-specific claims against the JLS and Oracle docs.</p>
+                <div class="resource-grid">
+                    <a class="resource"
+                       href="https://docs.oracle.com/en/java/javase/17/language/sealed-classes-and-interfaces.html"
+                       rel="noopener" target="_blank">Oracle Java 17 guide<small>Declarations, permits, constraints,
+                        sealed interfaces.</small></a>
+                    <a class="resource" href="https://openjdk.org/jeps/409" rel="noopener" target="_blank">OpenJDK JEP
+                        409<small>Motivation and finalization in Java 17.</small></a>
+                    <a class="resource" href="https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.1.1.2"
+                       rel="noopener" target="_blank">Java 21 JLS, class rules<small>Normative sealed, non-sealed, and
+                        final rules.</small></a>
+                    <a class="resource" href="https://docs.oracle.com/javase/specs/jls/se21/html/jls-9.html#jls-9.1.1.4"
+                       rel="noopener" target="_blank">Java 21 JLS, interface rules<small>Normative rules for sealed
+                        interfaces.</small></a>
+                    <a class="resource"
+                       href="https://docs.oracle.com/en/java/javase/21/language/pattern-matching-switch.html"
+                       rel="noopener" target="_blank">Oracle Java 21 pattern switch<small>Exhaustiveness, null and
+                        dominance behavior.</small></a>
+                    <a class="resource"
+                       href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Class.html"
+                       rel="noopener" target="_blank">Java 21 Class API<small><code>isSealed()</code> and <code>getPermittedSubclasses()</code>.</small></a>
+                    <a class="resource" href="https://www.baeldung.com/java-sealed-classes-interfaces" rel="noopener"
+                       target="_blank">Baeldung overview<small>Community explanations and examples; cross-check language
+                        rules.</small></a>
+                    <a class="resource" href="https://leetcode.com/discuss/interview-question/" rel="noopener"
+                       target="_blank">LeetCode interview discussions<small>Practice prompts; not a Java language
+                        specification.</small></a>
+                    <a class="resource"
+                       href="https://www.linkedin.com/search/results/content/?keywords=java%20sealed%20classes%20interview"
+                       rel="noopener" target="_blank">LinkedIn discussion search<small>Candidate/practitioner anecdotes;
+                        treat reports as unverified.</small></a>
+                </div>
+                <div class="notice"><b>Practice plan:</b> Explain the model in 60 seconds, whiteboard a sealed result
+                    hierarchy, solve the four drills, then discuss whether a new subtype is safe for consumers. This is
+                    a curated synthesis, not copied interview content; no page can literally cover every public post or
+                    private interview bank.
+                </div>
+            </section>
+            <footer class="foot">Prepared for this repository’s <code>sealedclasses</code> examples. Open locally in a
+                modern browser; search, filters, answer toggles, and quiz need no server or external JavaScript.
+            </footer>
+        </main>
+    </div>
+</div>
+<script>
+    const questions = [
+        {
+            cat: 'Core semantics',
+            level: 'Core',
+            q: 'What problem do sealed classes and interfaces solve?',
+            a: 'They let an API owner explicitly bound which types may directly extend or implement a hierarchy. This makes domain alternatives visible and enables compiler reasoning such as exhaustive pattern switches. They complement, rather than replace, access control or validation.',
+            signal: 'Tie the feature to domain invariants and exhaustive handling, not merely “more restrictive inheritance.”'
+        },
+        {
+            cat: 'Core semantics',
+            level: 'Core',
+            q: 'What is the difference between sealed, final, and non-sealed?',
+            a: 'sealed allows a declared set of direct children; final allows no subclasses; non-sealed marks a permitted child as an open branch whose descendants are not enumerated by the root.',
+            signal: 'The root can be closed while one branch is intentionally open.'
+        },
+        {
+            cat: 'Rules and compilation',
+            level: 'Core',
+            q: 'What must every permitted direct subclass declare?',
+            a: 'Exactly one of final, sealed, or non-sealed. A record is implicitly final, so it can directly implement a sealed interface without writing final.',
+            signal: 'The modifier says how the inheritance policy continues.'
+        },
+        {
+            cat: 'Rules and compilation',
+            level: 'Core',
+            q: 'Can a class implement a sealed interface without appearing in permits?',
+            a: 'No. It must be a permitted direct subtype. Otherwise compilation fails. A class extending a permitted non-sealed implementation is allowed because that branch was explicitly reopened.',
+            signal: 'Distinguish direct subtype membership from descendants below a non-sealed branch.'
+        },
+        {
+            cat: 'Rules and compilation',
+            level: 'Senior',
+            q: 'When may the permits clause be omitted?',
+            a: 'When permitted direct subtypes can be inferred because they are declared in the same compilation unit as the sealed type. Otherwise declare permits explicitly.',
+            signal: 'Compilation unit means source file, not package or module.'
+        },
+        {
+            cat: 'Rules and compilation',
+            level: 'Senior',
+            q: 'Can permitted subclasses live in another package?',
+            a: 'Yes, in a named module: the sealed type and permitted subtypes must belong to that module, and may be in different packages. In an unnamed module, they must be in the same package.',
+            signal: 'The rule depends on named versus unnamed module.'
+        },
+        {
+            cat: 'Rules and compilation',
+            level: 'Senior',
+            q: 'Can a sealed class be abstract? Can it be instantiated?',
+            a: 'Yes, sealed and abstract control different properties: admission of subclasses versus instantiation. A concrete sealed class can be instantiated, so handling only its permitted child types may not cover instances of the class itself.',
+            signal: 'Abstractness is not implied by sealed.'
+        },
+        {
+            cat: 'Rules and compilation',
+            level: 'Deep dive',
+            q: 'Can a sealed interface permit another interface?',
+            a: 'Yes. A permitted direct child may be a class or subinterface. A subinterface must itself be sealed or non-sealed; interfaces cannot be final.',
+            signal: 'Say direct subinterface as well as implementing class.'
+        },
+        {
+            cat: 'Rules and compilation',
+            level: 'Senior',
+            q: 'Can a type implement multiple sealed interfaces?',
+            a: 'Yes, provided it is listed as a permitted direct subtype by each sealed interface it directly implements. Sealing does not change Java’s single class-superclass rule.',
+            signal: 'Admission is checked independently for each sealed parent.'
+        },
+        {
+            cat: 'Pattern matching',
+            level: 'Core',
+            q: 'When did sealed types and pattern matching for switch become final?',
+            a: 'Sealed classes/interfaces were finalized in Java 17 (JEP 409). Pattern matching for switch was finalized in Java 21 (JEP 441). Java 17 had switch pattern preview iterations, so flags/source compatibility matter.',
+            signal: 'Name the release; interviewers often probe this boundary.'
+        },
+        {
+            cat: 'Pattern matching',
+            level: 'Senior',
+            q: 'How does a sealed hierarchy help a Java 21 switch expression?',
+            a: 'The compiler can reason over the permitted subtype graph and reject a switch that does not cover all possible types. A non-sealed branch usually allows unknown descendants, so total handling needs a suitable supertype or default catch-all.',
+            signal: 'Exhaustiveness follows type coverage, not just a flat list of permits names.'
+        },
+        {
+            cat: 'Pattern matching',
+            level: 'Senior',
+            q: 'Does an exhaustive switch match null?',
+            a: 'No. A null selector throws NullPointerException unless the switch includes case null. Type coverage and null handling are separate concerns.',
+            signal: 'Mention this explicitly.'
+        },
+        {
+            cat: 'Pattern matching',
+            level: 'Deep dive',
+            q: 'What are dominance and guarded patterns?',
+            a: 'A case is dominated if an earlier case already matches every value it could match, so the compiler rejects it as unreachable. A guarded pattern adds a boolean condition (case Type t when condition). A guarded case generally does not cover every value of the type.',
+            signal: 'Order specific cases before broader ones; guarded coverage is not whole-type coverage.'
+        },
+        {
+            cat: 'Pattern matching',
+            level: 'Deep dive',
+            q: 'What if a hierarchy changes after a consumer is compiled?',
+            a: 'A Java 21 exhaustive switch can be compiled assuming the old hierarchy. If the library adds a permitted subtype and an instance reaches stale switch bytecode, MatchException can be thrown. Recompile consumers and plan rollout; default offers fallback but reduces compiler pressure.',
+            signal: 'Separate source recompilation failures from stale-binary runtime behavior.'
+        },
+        {
+            cat: 'API and architecture',
+            level: 'Senior',
+            q: 'When choose a sealed interface over a sealed abstract class?',
+            a: 'Use an interface for a capability or family whose variants may have unrelated class ancestry, or where multiple inheritance of type helps. Use an abstract class for shared state, constructors, protected helpers, or implementation.',
+            signal: 'Discuss state and likely evolution.'
+        },
+        {
+            cat: 'API and architecture',
+            level: 'Senior',
+            q: 'When is an enum better?',
+            a: 'Use an enum for a fixed set of singleton values with a uniform shape. Use sealed variants when alternatives have different payloads, distinct APIs, or multiple controlled hierarchy levels.',
+            signal: 'Avoid one class per constant unless type-level differences matter.'
+        },
+        {
+            cat: 'API and architecture',
+            level: 'Senior',
+            q: 'Would you use sealed types for a plugin API?',
+            a: 'Usually not if third parties are expected to add implementations. Sealing restricts direct implementations to the declaring module/package boundary. Use an open interface or controlled SPI when extension is a requirement.',
+            signal: 'The answer depends on ownership of the variant set.'
+        },
+        {
+            cat: 'API and architecture',
+            level: 'Deep dive',
+            q: 'How do sealed types relate to algebraic data types?',
+            a: 'They provide a useful sum-type-like set of alternatives; records can model product-shaped payloads. Java does not supply every ADT property: null, generic variance, mutability, serialization, and evolution remain design concerns.',
+            signal: '“Sum-type-like” is more accurate than promising a perfect ADT.'
+        },
+        {
+            cat: 'API and architecture',
+            level: 'Senior',
+            q: 'How would you model Result<T,E>?',
+            a: 'A typical design is sealed interface Result<T,E> permits Ok, Err, with final records Ok<T,E>(T value) and Err<T,E>(E error). Decide parameter ergonomics, null policy, invariants, and whether Java 21 switch is useful at call sites.',
+            signal: 'Mention nulls and generic record ergonomics if probed.'
+        },
+        {
+            cat: 'API and architecture',
+            level: 'Deep dive',
+            q: 'Switch-based behavior or polymorphic methods?',
+            a: 'A switch centralizes an operation and exposes new variants at each exhaustive consumer; adding a new operation is easy. Polymorphic methods distribute behavior and make new operations more invasive. Choose based on which axis changes more and who owns behavior.',
+            signal: 'Connect to the expression problem without claiming one style always wins.'
+        },
+        {
+            cat: 'Runtime and reflection',
+            level: 'Core',
+            q: 'How can code inspect a sealed type at runtime?',
+            a: 'Since Java 17, Class.isSealed() reports whether it is sealed; getPermittedSubclasses() returns Class<?>[] for direct permitted types, or null for an unsealed type. Order is unspecified and unavailable classes may be omitted.',
+            signal: 'Do not use reflection as an ordered registry or plugin discovery mechanism.'
+        },
+        {
+            cat: 'Runtime and reflection',
+            level: 'Deep dive',
+            q: 'Is sealed a security boundary?',
+            a: 'No. It is a language and class-file verified inheritance constraint, not a substitute for authorization, module encapsulation, or input validation. Class files carry PermittedSubclasses metadata and the JVM enforces direct subtype admission.',
+            signal: 'State the threat model it does not address.'
+        },
+        {
+            cat: 'Runtime and reflection',
+            level: 'Senior',
+            q: 'Can serialization frameworks handle sealed hierarchies?',
+            a: 'Yes, with explicit polymorphic type mapping and safe subtype policy. Do not trust arbitrary class names from untrusted payloads. Schema evolution and unknown-variant handling are separate from Java permits.',
+            signal: 'The permits list is not a wire format.'
+        },
+        {
+            cat: 'Tricky scenarios',
+            level: 'Deep dive',
+            q: 'Can a record be a permitted subtype?',
+            a: 'Yes, typically as a final implementation of a sealed interface. Records cannot extend arbitrary classes; they implicitly extend java.lang.Record, so they cannot extend a sealed class.',
+            signal: 'Do not imply that records extend user-defined sealed classes.'
+        },
+        {
+            cat: 'Tricky scenarios',
+            level: 'Senior',
+            q: 'What to review before sealing a public existing interface?',
+            a: 'Audit current implementors, external consumers, modules/packages, serializers, proxies/frameworks, generated code, source/binary compatibility, and migration plan. Sealing an open extension point is a deliberate compatibility break for implementors.',
+            signal: 'Discuss impact analysis and release strategy.'
+        },
+        {
+            cat: 'Tricky scenarios',
+            level: 'Senior',
+            q: 'How do sealed types fit independently deployed services?',
+            a: 'Use sealing inside a bounded model whose owner controls subtype evolution. For wire contracts, unknown variant behavior and schema versioning matter; a closed Java hierarchy does not make consumers upgrade atomically.',
+            signal: 'Separate the in-process type contract from external schema contracts.'
+        }
+    ];
+    const cards = document.getElementById('cards');
+
+    function esc(s) {
+        return s.replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]))
+    }
+
+    function render() {
+        const term = document.getElementById('search').value.toLowerCase(),
+            cat = document.getElementById('category').value, level = document.getElementById('difficulty').value;
+        const list = questions.filter(x => (cat === 'all' || x.cat === cat) && (level === 'all' || x.level === level) && (x.q + ' ' + x.a + ' ' + x.signal + ' ' + x.cat).toLowerCase().includes(term));
+        cards.innerHTML = list.map(x => `<article class="card"><span class="tag">${esc(x.cat)}</span><span class="level">${esc(x.level)}</span><h3>${esc(x.q)}</h3><button class="reveal">Show answer</button><div class="answer"><p>${esc(x.a)}</p><p class="talk"><strong>Senior signal:</strong> ${esc(x.signal)}</p></div></article>`).join('');
+        document.getElementById('empty').style.display = list.length ? 'none' : 'block';
+        cards.querySelectorAll('.reveal').forEach(b => b.onclick = () => {
+            const c = b.closest('.card');
+            c.classList.toggle('open');
+            b.textContent = c.classList.contains('open') ? 'Hide answer' : 'Show answer'
+        })
+    }
+
+    ['search', 'category', 'difficulty'].forEach(id => document.getElementById(id).addEventListener(id === 'search' ? 'input' : 'change', render));
+    document.getElementById('allAnswers').onclick = () => {
+        const expand = cards.querySelectorAll('.card:not(.open)').length > 0;
+        cards.querySelectorAll('.card').forEach(c => {
+            c.classList.toggle('open', expand);
+            const b = c.querySelector('.reveal');
+            if (b) b.textContent = expand ? 'Hide answer' : 'Show answer'
+        });
+        document.getElementById('allAnswers').textContent = expand ? 'Collapse all' : 'Expand all'
+    };
+
+    function toggleDrill(b) {
+        const c = b.closest('.card');
+        c.classList.toggle('open');
+        b.textContent = c.classList.contains('open') ? 'Hide outcome' : 'Reveal outcome'
+    }
+
+    const quiz = [{
+        q: 'Which modifier explicitly reopens a permitted branch?',
+        o: ['sealed', 'non-sealed', 'abstract'],
+        a: 1,
+        e: 'non-sealed opens the branch to arbitrary descendants.'
+    }, {
+        q: 'What happens with a null Java 21 switch selector without case null?',
+        o: ['Matches default automatically', 'Throws NullPointerException', 'Throws MatchException'],
+        a: 1,
+        e: 'Type exhaustiveness does not imply null handling.'
+    }, {
+        q: 'Where must permitted subtypes live if the sealed type is in an unnamed module?',
+        o: ['Same package', 'Always same source file', 'Any classpath package'],
+        a: 0,
+        e: 'Unnamed-module types must share a package; explicit permits can name separate files.'
+    }, {
+        q: 'Which release finalized sealed types?',
+        o: ['Java 16', 'Java 17', 'Java 21'],
+        a: 1,
+        e: 'Previewed in 15 and 16; final in 17.'
+    }, {
+        q: 'Which exception can stale Java 21 exhaustive-switch bytecode throw after a new subtype arrives?',
+        o: ['IncompatibleClassChangeError', 'MatchException', 'ClassCastException'],
+        a: 1,
+        e: 'MatchException is the specified migration case.'
+    }, {
+        q: 'What does getPermittedSubclasses() return for an unsealed type?',
+        o: ['Empty array', 'null', 'UnsupportedOperationException'],
+        a: 1,
+        e: 'It returns null if the Class is not sealed.'
+    }];
+    let qi = 0;
+
+    function showQuiz() {
+        const x = quiz[qi];
+        document.getElementById('quizQuestion').textContent = x.q;
+        document.getElementById('quizCount').textContent = `${qi + 1} / ${quiz.length}`;
+        document.getElementById('feedback').textContent = '';
+        const box = document.getElementById('quizOptions');
+        box.innerHTML = x.o.map((v, i) => `<button data-i="${i}">${esc(v)}</button>`).join('');
+        box.querySelectorAll('button').forEach(b => b.onclick = () => {
+            box.querySelectorAll('button').forEach(z => z.disabled = true);
+            const ok = Number(b.dataset.i) === x.a;
+            b.classList.add(ok ? 'correct' : 'wrong');
+            if (!ok) box.children[x.a].classList.add('correct');
+            document.getElementById('feedback').textContent = (ok ? 'Correct. ' : 'Not quite. ') + x.e
+        })
+    }
+
+    document.getElementById('nextQuiz').onclick = () => {
+        qi = (qi + 1) % quiz.length;
+        showQuiz()
+    };
+    document.querySelectorAll('.code').forEach(block => {
+        const b = document.createElement('button');
+        b.className = 'copy';
+        b.textContent = 'Copy';
+        b.onclick = async () => {
+            await navigator.clipboard.writeText(block.innerText);
+            b.textContent = 'Copied';
+            setTimeout(() => b.textContent = 'Copy', 1000)
+        };
+        block.append(b)
+    });
+    render();
+    showQuiz();
+</script>
+</body>
+</html>

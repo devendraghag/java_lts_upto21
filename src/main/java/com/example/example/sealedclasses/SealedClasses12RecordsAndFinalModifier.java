@@ -1,4 +1,4 @@
-package level03_advanced.jdk17.sealedclasses;
+package com.example.example.sealedclasses;
 // JDK history: The final modifier was introduced in JDK 1.0. Records were previewed in JDK 14 and 15, then finalized in JDK 16; sealed types were previewed in JDK 15 and 16, then finalized in JDK 17.
 
 /**
@@ -6,6 +6,13 @@ package level03_advanced.jdk17.sealedclasses;
  * sealed types restrict which classes may extend or implement them.
  */
 public class SealedClasses12RecordsAndFinalModifier {
+    public static void main(String[] args) {
+        Payment card = new CardPayment();
+        Payment cash = new CashPayment(25);
+        System.out.println(card.description());
+        System.out.println(cash.description());
+    }
+
     sealed interface Payment permits CardPayment, CashPayment {
         String description();
     }
@@ -24,12 +31,5 @@ public class SealedClasses12RecordsAndFinalModifier {
         public String description() {
             return "Cash payment: $" + dollars;
         }
-    }
-
-    public static void main(String[] args) {
-        Payment card = new CardPayment();
-        Payment cash = new CashPayment(25);
-        System.out.println(card.description());
-        System.out.println(cash.description());
     }
 }

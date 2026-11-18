@@ -1,4 +1,4 @@
-package level03_advanced.jdk17.sealedclasses;
+package com.example.example.sealedclasses;
 // JDK history: Sealed classes and interfaces were previewed in JDK 15 and 16, then finalized in JDK 17.
 
 /**
@@ -7,11 +7,6 @@ package level03_advanced.jdk17.sealedclasses;
  * only a preview feature in Java 17 and is intentionally not used here.
  */
 public class SealedClasses08ClosedExpressionModel {
-    sealed interface Expression permits NumberValue, Add { }
-
-    record NumberValue(int value) implements Expression { }
-    record Add(Expression left, Expression right) implements Expression { }
-
     static int evaluate(Expression expression) {
         if (expression instanceof NumberValue number) {
             return number.value();
@@ -28,5 +23,14 @@ public class SealedClasses08ClosedExpressionModel {
                 new Add(new NumberValue(10), new Add(new NumberValue(4), new NumberValue(3)));
 
         System.out.println(evaluate(expression)); // 17
+    }
+
+    sealed interface Expression permits NumberValue, Add {
+    }
+
+    record NumberValue(int value) implements Expression {
+    }
+
+    record Add(Expression left, Expression right) implements Expression {
     }
 }

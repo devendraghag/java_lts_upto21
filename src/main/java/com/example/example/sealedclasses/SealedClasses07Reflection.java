@@ -1,15 +1,12 @@
-package level03_advanced.jdk17.sealedclasses;
+package com.example.example.sealedclasses;
 // JDK history: Sealed classes and interfaces were previewed in JDK 15 and 16, then finalized in JDK 17.
 
 import java.util.Arrays;
 
-/** Level 7: inspect sealed status and permitted subclasses at runtime. */
+/**
+ * Level 7: inspect sealed status and permitted subclasses at runtime.
+ */
 public class SealedClasses07Reflection {
-    sealed interface Command permits Start, Stop { }
-
-    record Start(String service) implements Command { }
-    record Stop(String service) implements Command { }
-
     public static void main(String[] args) {
         Class<Command> type = Command.class;
 
@@ -18,5 +15,14 @@ public class SealedClasses07Reflection {
                 .map(Class::getSimpleName)
                 .sorted()
                 .forEach(System.out::println);
+    }
+
+    sealed interface Command permits Start, Stop {
+    }
+
+    record Start(String service) implements Command {
+    }
+
+    record Stop(String service) implements Command {
     }
 }

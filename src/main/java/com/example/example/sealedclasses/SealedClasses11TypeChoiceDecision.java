@@ -1,5 +1,6 @@
-package level03_advanced.jdk17.sealedclasses;
+package com.example.example.sealedclasses;
 // JDK history: Introduced in JDK 1.0; this directory marks the introduction baseline for the topic.
+
 /**
  * Demonstrates Type Choice Decision Demo through a small, executable example.
  *

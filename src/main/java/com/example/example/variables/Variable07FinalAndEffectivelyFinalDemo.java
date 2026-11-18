@@ -1,4 +1,4 @@
-package com.example.variables;
+package com.example.example.variables;
 
 /** Level 07: Demonstrates final variables, blank final fields, and effectively final locals. */
 public class Variable07FinalAndEffectivelyFinalDemo {

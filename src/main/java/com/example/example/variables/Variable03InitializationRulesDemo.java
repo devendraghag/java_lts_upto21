@@ -1,4 +1,4 @@
-package com.example.variables;
+package com.example.example.variables;
 
 /** Level 03: fields receive defaults, but local variables must be initialized before use. */
 public class Variable03InitializationRulesDemo {

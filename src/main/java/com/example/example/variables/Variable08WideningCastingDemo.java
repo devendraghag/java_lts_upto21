@@ -1,4 +1,4 @@
-package com.example.variables;
+package com.example.example.variables;
 
 /** Level 08: Implicit widening primitive conversions. */
 public class Variable08WideningCastingDemo {

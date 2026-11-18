@@ -1,4 +1,4 @@
-package com.example.variables;
+package com.example.example.variables;
 
 /** Level 02: Demonstrates primitive variables and reference variables. */
 public class Variable02PrimitiveAndReferenceDemo {

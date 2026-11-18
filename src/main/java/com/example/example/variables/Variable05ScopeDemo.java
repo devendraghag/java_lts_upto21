@@ -1,4 +1,4 @@
-package com.example.variables;
+package com.example.example.variables;
 
 /** Level 05: Demonstrates local variable scope and the lifetime of an instance field. */
 public class Variable05ScopeDemo {

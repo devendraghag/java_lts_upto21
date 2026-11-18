@@ -1,4 +1,4 @@
-package com.example.variables;
+package com.example.example.variables;
 
 /** Level 01: Stores two values in variables, adds them, and prints the result. */
 public class Variable01AddTwoNumbersDemo {

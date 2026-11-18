@@ -1,4 +1,4 @@
-package com.example.variables;
+package com.example.example.variables;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

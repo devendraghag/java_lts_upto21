@@ -1,4 +1,4 @@
-package com.example.variables;
+package com.example.example.variables;
 
 /** Level 14: Demonstrates pattern variables from instanceof (Java 16+) and switch (Java 21). */
 public class Variable14PatternMatchingDemo {

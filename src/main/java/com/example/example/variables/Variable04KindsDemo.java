@@ -1,4 +1,4 @@
-package com.example.variables;
+package com.example.example.variables;
 
 /** Level 04: Local variables, parameters, instance fields, and class (static) fields. */
 public class Variable04KindsDemo {

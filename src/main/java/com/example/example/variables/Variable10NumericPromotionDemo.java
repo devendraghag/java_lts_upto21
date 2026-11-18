@@ -1,4 +1,4 @@
-package com.example.variables;
+package com.example.example.variables;
 
 /** Level 10: Binary numeric promotion for byte, short, and char arithmetic. */
 public class Variable10NumericPromotionDemo {

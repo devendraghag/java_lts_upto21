@@ -1,4 +1,4 @@
-package com.example.variables;
+package com.example.example.variables;
 
 /** Level 06: Demonstrates field shadowing and explicit access with this and the class name. */
 public class Variable06ShadowingDemo {

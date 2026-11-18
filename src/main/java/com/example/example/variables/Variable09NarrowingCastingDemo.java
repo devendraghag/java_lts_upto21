@@ -1,4 +1,4 @@
-package com.example.variables;
+package com.example.example.variables;
 
 /** Level 09: Explicit narrowing conversions and truncation toward zero. */
 public class Variable09NarrowingCastingDemo {

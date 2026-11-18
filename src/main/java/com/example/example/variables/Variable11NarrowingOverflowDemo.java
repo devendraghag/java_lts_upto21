@@ -1,4 +1,4 @@
-package com.example.variables;
+package com.example.example.variables;
 
 /** Level 11: Shows the result of narrowing an int outside the byte range. */
 public class Variable11NarrowingOverflowDemo {

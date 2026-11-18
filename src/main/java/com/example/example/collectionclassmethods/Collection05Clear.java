@@ -1,4 +1,4 @@
-package com.example.collectionclassmethods;
+package com.example.example.collectionclassmethods;
 
 import java.util.ArrayList;
 import java.util.Collection;

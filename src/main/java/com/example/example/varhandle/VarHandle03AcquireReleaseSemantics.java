@@ -1,4 +1,4 @@
-package com.example.varhandle;
+package com.example.example.varhandle;
 
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.VarHandle;

@@ -1,4 +1,4 @@
-package com.example.collectionsinterface;
+package com.example.example.collectionsinterface;
 
 import java.util.Collection;
 import java.util.List;

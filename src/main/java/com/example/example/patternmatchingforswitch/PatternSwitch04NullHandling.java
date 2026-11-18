@@ -1,4 +1,4 @@
-package level03_advanced.jdk21.patternmatchingforswitch;
+package com.example.example.patternmatchingforswitch;
 // JDK history: Introduction baseline: JDK 21 (the release bucket for this topic).
 
 /** Level 4: handle null explicitly in a pattern switch. */

@@ -1,4 +1,4 @@
-package level03_advanced.jdk21.patternmatchingforswitch;
+package com.example.example.patternmatchingforswitch;
 // JDK history: Introduction baseline: JDK 21 (the release bucket for this topic).
 
 /** Level 1: match different runtime types with switch pattern labels. */

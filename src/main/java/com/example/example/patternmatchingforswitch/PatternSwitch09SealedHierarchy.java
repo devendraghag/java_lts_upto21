@@ -1,4 +1,4 @@
-package level03_advanced.jdk21.patternmatchingforswitch;
+package com.example.example.patternmatchingforswitch;
 // JDK history: Abstract classes were introduced in JDK 1.0. Records were finalized in JDK 16, sealed types in JDK 17, and pattern matching for switch in JDK 21 after previews in JDK 17 through 20.
 /**
  * Demonstrates Sealed Pattern Matching through a small, executable example.

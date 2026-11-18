@@ -1,4 +1,4 @@
-package level03_advanced.jdk21.virtualthreads;
+package com.example.example.virtualthreads;
 // JDK history: Virtual threads were previewed in JDK 19 and 20, then finalized in JDK 21. The preview-only Thread.Builder.allowSetThreadLocals option was dropped before finalization.
 
 import java.util.concurrent.ExecutionException;

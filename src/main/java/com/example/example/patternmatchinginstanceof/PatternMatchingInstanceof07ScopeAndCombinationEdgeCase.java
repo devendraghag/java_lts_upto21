@@ -1,4 +1,4 @@
-package org.example.lts_features.level03_advanced.jdk16.patternmatchinginstanceof;
+package com.example.example.patternmatchinginstanceof;
 // JDK history: Pattern matching for instanceof was previewed in JDK 14 and 15, then finalized in JDK 16.
 
 

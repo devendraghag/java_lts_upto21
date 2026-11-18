@@ -1,4 +1,4 @@
-package org.example.lts_features.level03_advanced.jdk16.patternmatchinginstanceof;
+package com.example.example.patternmatchinginstanceof;
 // JDK history: Abstract classes and instanceof were introduced in JDK 1.0. Pattern matching for instanceof was previewed in JDK 14 and 15, then finalized in JDK 16.
 /**
  * Demonstrates Upcasting And Downcasting Matrix through a small, executable example.

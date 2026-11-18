@@ -6,289 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fcaf5a4a-e73c-4c82-a4cd-04b6f1822d6d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection01CreatingAndAdding.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection02SizeAndIsEmpty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection03ContainsAndContainsAll.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection04RemoveElements.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection05Clear.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection06BulkOperations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection07ForEach.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection08IteratorRemoval.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection09RemoveIf.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection10ToArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection11Streams.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection12UnmodifiableViewAndCopy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection13Spliterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection14GenericAlgorithms.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection15CustomAbstractCollection$TagCollection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionclassmethods/Collection15CustomAbstractCollection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection01CreatingAndAdding.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection02SizeAndIsEmpty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection03ContainsAndContainsAll.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection04RemoveElements.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection05Clear.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection06BulkOperations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection07ForEach.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection08IteratorRemoval.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection09RemoveIf.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection10ToArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection11Streams.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection12UnmodifiableViewAndCopy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection13Spliterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection14GenericAlgorithms.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection15CustomAbstractCollection$TagCollection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectionsinterface/Collection15CustomAbstractCollection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/AgeRequirementException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/BusinessException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/BusinessRuntimeException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/CommonExceptionsProgram$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/CommonExceptionsProgram$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/CommonExceptionsProgram$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/CommonExceptionsProgram$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/CommonExceptionsProgram$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/CommonExceptionsProgram$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/CommonExceptionsProgram.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ConfigurationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling01TryCatchBasics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling02CatchOrder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling03SeparateCatchBlocks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling04FinallyBasics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling05ThrowAndThrows.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling06RuntimePropagation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling07CheckedPropagation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling08NestedTryCatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling09CustomCheckedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling10CustomUncheckedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling11CommonRuntimeExceptions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling12MultiCatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling13TryWithResources$DemoResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling13TryWithResources.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling14SuppressedExceptions$FailingResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling14SuppressedExceptions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling15ExceptionChaining.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling16FinallyReturnPitfall.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionHandling17ThrowableHierarchy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ExceptionInterviewFinallyProgram28.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/InvalidAgeException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/InvalidQuantityException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/M.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/M1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/M2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/MyCustomException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/NestedTryBlock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/NestedTryBlock2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/TestCustomException1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/TestCustomException2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/TestExceptionPropagation1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/TestExceptionPropagation2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/TestFinallyBlock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/TestFinallyBlock1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/TestFinallyBlock2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/TestThrow1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/TestThrow2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/TestThrow3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/Testthrows1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/Testthrows2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/Testthrows3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/Testthrows4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/ThrowableTypesAndFlowProgram.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/TryCatchExample1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/TryCatchExample2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/exceptionhandling/UserDefinedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/binaryinterfaces/BinaryOperatorPattern20_Reduce.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/binaryinterfaces/BinaryOperatorPattern21_MapMerge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/functioninterfaces/FunctionPattern15_ClassAndAnonymous$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/functioninterfaces/FunctionPattern15_ClassAndAnonymous$TextLength.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/functioninterfaces/FunctionPattern15_ClassAndAnonymous.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/functioninterfaces/FunctionPattern16_MethodReferences.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/functioninterfaces/FunctionPattern17_CompositionAndReuse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/functioninterfaces/FunctionPattern18_StreamOptionalAndAsync.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/predicateinterfaces/Predicate1_IsEven.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/predicateinterfaces/PredicatePattern01_ClassImplementation$IsEven.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/predicateinterfaces/PredicatePattern01_ClassImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/predicateinterfaces/PredicatePattern02_AnonymousClass$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/predicateinterfaces/PredicatePattern02_AnonymousClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/predicateinterfaces/PredicatePattern03_Lambda.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/predicateinterfaces/PredicatePattern04_MethodReferences.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/predicateinterfaces/PredicatePattern05_PassAsArgument.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/predicateinterfaces/PredicatePattern06_ReuseAndCompose.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/predicateinterfaces/PredicatePattern07_CollectionsAndStreams.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/predicateinterfaces/PredicatePattern08_OptionalFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/supplierinterfaces/SupplierPattern09_ClassAndAnonymous$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/supplierinterfaces/SupplierPattern09_ClassAndAnonymous$GreetingSupplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/supplierinterfaces/SupplierPattern09_ClassAndAnonymous.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/supplierinterfaces/SupplierPattern10_LambdaAndMethodReferences.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/supplierinterfaces/SupplierPattern11_LazyOptionalFallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/supplierinterfaces/SupplierPattern12_StreamGeneration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/supplierinterfaces/SupplierPattern13_AsyncWork.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/supplierinterfaces/SupplierPattern14_ReusableFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/unaryinterfaces/DoubleUnaryOperator1_Sqrt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/functionalinterfaces/unaryinterfaces/UnaryOperatorPattern19_CollectionTransformations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/varhandle/VarHandle01CounterFieldAccess$Counter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/varhandle/VarHandle01CounterFieldAccess.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/varhandle/VarHandle02ArrayElementAccess.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/varhandle/VarHandle03AcquireReleaseSemantics$PublishedData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/varhandle/VarHandle03AcquireReleaseSemantics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/binaryinterfaces/BinaryOperator1_Addition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/binaryinterfaces/BinaryOperator2_StringConcat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/binaryinterfaces/BinaryOperator3_MaxValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/binaryinterfaces/BinaryOperator4_StreamReduce.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/binaryinterfaces/BinaryOperator5_CustomObjectMerge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/binaryinterfaces/DoubleBinaryOperator1_Average.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/binaryinterfaces/DoubleBinaryOperator2_Max.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/binaryinterfaces/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/binaryinterfaces/IntBinaryOperator1_Add.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/binaryinterfaces/IntBinaryOperator2_Max.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/binaryinterfaces/LongBinaryOperator1_Multiply.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/binaryinterfaces/LongBinaryOperator2_Min.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/BooleanSupplier1_Flag.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/BooleanSupplier2_RuntimeCheck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/DoubleSupplier1_PI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/DoubleSupplier2_RandomDouble.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/IntSupplier1_Counter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/IntSupplier2_ArrayLength.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/LongSupplier1_CurrentTime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/LongSupplier2_IdGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/Supplier1_SimpleValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/Supplier2_ObjectCreation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/Supplier3_RandomNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/Supplier4_OptionalFallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/Supplier5_FactoryMethod.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/supplierinterfaces/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/unaryinterfaces/DoubleUnaryOperator2_Discount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/unaryinterfaces/IntUnaryOperator1_Double.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/unaryinterfaces/IntUnaryOperator2_ArrayUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/unaryinterfaces/LongUnaryOperator1_Square.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/unaryinterfaces/LongUnaryOperator2_TimestampAdjust.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/unaryinterfaces/UnaryOperator1_Increment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/unaryinterfaces/UnaryOperator2_StringUppercase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/unaryinterfaces/UnaryOperator3_Compose.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/unaryinterfaces/UnaryOperator4_ListReplaceAll.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level02_intermediate/jdk8/functionalinterfaces/unaryinterfaces/UnaryOperator5_Identity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses01BasicClass$Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses01BasicClass$Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses01BasicClass$Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses01BasicClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses02SealedInterface$CardPayment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses02SealedInterface$CashPayment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses02SealedInterface$Payment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses02SealedInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses03SubclassChoices$Branch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses03SubclassChoices$CustomBranch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses03SubclassChoices$Leaf.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses03SubclassChoices$LeftBranch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses03SubclassChoices$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses03SubclassChoices$OpenBranch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses03SubclassChoices$RightBranch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses03SubclassChoices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses04ImplicitPermits$Click.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses04ImplicitPermits$KeyPress.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses04ImplicitPermits$Signal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses04ImplicitPermits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses05MultilevelHierarchy$Add.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses05MultilevelHierarchy$BinaryExpression.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses05MultilevelHierarchy$Expression.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses05MultilevelHierarchy$Multiply.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses05MultilevelHierarchy$NumberValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses05MultilevelHierarchy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses07Reflection$Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses07Reflection$Start.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses07Reflection$Stop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses07Reflection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses08ClosedExpressionModel$Add.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses08ClosedExpressionModel$Expression.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses08ClosedExpressionModel$NumberValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses08ClosedExpressionModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses09AbstractHierarchy$Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses09AbstractHierarchy$CommercialVehicle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses09AbstractHierarchy$Truck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses09AbstractHierarchy$Vehicle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses09AbstractHierarchy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses10NonSealedAbstractBranch$Bus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses10NonSealedAbstractBranch$Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses10NonSealedAbstractBranch$RoadVehicle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses10NonSealedAbstractBranch$Vehicle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses10NonSealedAbstractBranch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses11TypeChoiceDecision.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses12RecordsAndFinalModifier$CardPayment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses12RecordsAndFinalModifier$CashPayment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses12RecordsAndFinalModifier$Payment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk17/sealedclasses/SealedClasses12RecordsAndFinalModifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch01TypePatterns.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch02SwitchExpression.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch03GuardedCases.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch04NullHandling.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch05CaseOrdering.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch06SealedExhaustive$Expr.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch06SealedExhaustive$Negate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch06SealedExhaustive$Sum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch06SealedExhaustive$Value.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch06SealedExhaustive.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch07RecordPattern$Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch07RecordPattern.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch08NestedRecordPatterns$Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch08NestedRecordPatterns$Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch08NestedRecordPatterns.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch09SealedHierarchy$Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch09SealedHierarchy$Polygon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch09SealedHierarchy$Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch09SealedHierarchy$Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch09SealedHierarchy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch10RecordSealedHierarchy$Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch10RecordSealedHierarchy$Transport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch10RecordSealedHierarchy$Vehicle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch10RecordSealedHierarchy$VehicleSnapshot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/patternmatchingforswitch/PatternSwitch10RecordSealedHierarchy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern01Instanceof$Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern01Instanceof.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern02NestedInstanceof$Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern02NestedInstanceof$Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern02NestedInstanceof.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern03VarPatterns$Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern03VarPatterns.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern04Switch$Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern04Switch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern05NestedSwitch$Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern05NestedSwitch$Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern05NestedSwitch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern06GuardedPatterns$Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern06GuardedPatterns.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern07SealedHierarchy$Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern07SealedHierarchy$RectangleShape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern07SealedHierarchy$Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern07SealedHierarchy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern08NullCase$Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk21/recordpatterns/RecordPattern08NullCase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level02_intermediate/jdk8/functionalinterfaces/predicateinterfaces/BiPredicate1_Equal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level02_intermediate/jdk8/functionalinterfaces/predicateinterfaces/BiPredicate2_StringLength.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level02_intermediate/jdk8/functionalinterfaces/predicateinterfaces/BiPredicate3_And.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level02_intermediate/jdk8/functionalinterfaces/predicateinterfaces/DoublePredicate1_IsFraction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level02_intermediate/jdk8/functionalinterfaces/predicateinterfaces/IntPredicate1_IsOdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level02_intermediate/jdk8/functionalinterfaces/predicateinterfaces/IntPredicate2_RangeCheck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level02_intermediate/jdk8/functionalinterfaces/predicateinterfaces/LongPredicate1_IsLarge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level02_intermediate/jdk8/functionalinterfaces/predicateinterfaces/Predicate2_IsPositive.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level02_intermediate/jdk8/functionalinterfaces/predicateinterfaces/Predicate3_StringNotEmpty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level02_intermediate/jdk8/functionalinterfaces/predicateinterfaces/Predicate4_AndComposition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level02_intermediate/jdk8/functionalinterfaces/predicateinterfaces/Predicate5_OrNegate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof01BasicDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof02ScopeRules.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof03NullHandling.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof04NegatedPattern.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof05CombiningWithAnd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof06WithRecord$Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof06WithRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof07ScopeAndCombinationEdgeCase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof08SafeDowncast$Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof08SafeDowncast$Vehicle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof08SafeDowncast.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof09CastingMatrix$Animal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof09CastingMatrix$Cat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof09CastingMatrix$Dog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof09CastingMatrix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof10PolymorphicCollection$Animal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof10PolymorphicCollection$Cat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof10PolymorphicCollection$Dog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/lts_features/level03_advanced/jdk16/patternmatchinginstanceof/PatternMatchingInstanceof10PolymorphicCollection.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,23 +33,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.5429465698260794" />
-      <entry key="MS500" value="2.493902037971079" />
-      <entry key="S2" value="2.8563996436914705" />
-      <entry key="S5" value="2.9410283502781427" />
-      <entry key="S10" value="2.9702525444740178" />
-      <entry key="S30" value="3.0211430554437073" />
-      <entry key="S60" value="4.017984818994057" />
-      <entry key="M2" value="10.986227985218738" />
-      <entry key="M5" value="35.583717025730664" />
-      <entry key="M10" value="65.65379204855759" />
-      <entry key="M15" value="91.0230586312141" />
-      <entry key="M30" value="152.16890685529648" />
-      <entry key="H1" value="230.48301363603244" />
-      <entry key="H2" value="314.1303211487889" />
-      <entry key="H4" value="384.5896563297398" />
-      <entry key="D1" value="470.59000427626626" />
-      <entry key="W1" value="488.83934443127134" />
+      <entry key="MS100" value="1.0152993796749625" />
+      <entry key="MS500" value="2.5100921052833263" />
+      <entry key="S2" value="5.884161780456979" />
+      <entry key="S5" value="11.98046384398886" />
+      <entry key="S10" value="20.41224951070594" />
+      <entry key="S30" value="34.1689843389708" />
+      <entry key="S60" value="39.85397577114048" />
+      <entry key="M2" value="43.219822819633244" />
+      <entry key="M5" value="46.1906444832084" />
+      <entry key="M10" value="55.78106609120015" />
+      <entry key="M15" value="71.68631968996371" />
+      <entry key="M30" value="126.82655830930003" />
+      <entry key="H1" value="214.08059863030843" />
+      <entry key="H2" value="314.4966214890734" />
+      <entry key="H4" value="401.9074690532014" />
+      <entry key="D1" value="511.33407666106854" />
+      <entry key="W1" value="534.9056900846091" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -354,23 +71,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.456930460056739" />
-      <entry key="MS500" value="2.4652413109121163" />
-      <entry key="S2" value="2.848159857825356" />
-      <entry key="S5" value="2.9376323283195784" />
-      <entry key="S10" value="2.9685372574995745" />
-      <entry key="S30" value="3.0205575952960086" />
-      <entry key="S60" value="4.0174402047160855" />
-      <entry key="M2" value="10.98487862542476" />
-      <entry key="M5" value="35.581504312301625" />
-      <entry key="M10" value="65.65155234292705" />
-      <entry key="M15" value="91.02081810498359" />
-      <entry key="M30" value="152.16674643425137" />
-      <entry key="H1" value="230.48118328348727" />
-      <entry key="H2" value="314.1289599397517" />
-      <entry key="H4" value="384.5887738461919" />
-      <entry key="D1" value="470.5898141060928" />
-      <entry key="W1" value="488.839315926109" />
+      <entry key="MS100" value="0.045533907838011096" />
+      <entry key="MS500" value="1.9828936550329115" />
+      <entry key="S2" value="5.7014284156235675" />
+      <entry key="S5" value="11.88562186161847" />
+      <entry key="S10" value="20.34801973491279" />
+      <entry key="S30" value="34.13754402709325" />
+      <entry key="S60" value="39.83609469409095" />
+      <entry key="M2" value="43.21023445166848" />
+      <entry key="M5" value="46.186590452543804" />
+      <entry key="M10" value="55.778705936225386" />
+      <entry key="M15" value="71.68433647312217" />
+      <entry key="M30" value="126.8247365069783" />
+      <entry key="H1" value="214.07892751677585" />
+      <entry key="H2" value="314.49529024834277" />
+      <entry key="H4" value="401.9065686386836" />
+      <entry key="D1" value="511.33387468196247" />
+      <entry key="W1" value="534.9056595858344" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -460,20 +177,7 @@
       <recent name="D:\Devendra Ghag Interview Preparation\01_Java\java_programs_jdk\src\main\java\com\example\docs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ExceptionHandling52ThrowNullTrap">
-    <configuration name="ExceptionHandling01TryCatchBasics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.example.exceptionhandling.ExceptionHandling01TryCatchBasics" />
-      <module name="java-programs-jdk" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.example.exceptionhandling.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.WrapperClass05MinMaxConstants">
     <configuration name="ExceptionHandling02CatchOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.example.exceptionhandling.ExceptionHandling02CatchOrder" />
       <module name="java-programs-jdk" />
@@ -526,13 +230,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WrapperClass05MinMaxConstants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.example.wrapperclasses.WrapperClass05MinMaxConstants" />
+      <module name="java-programs-jdk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.example.wrapperclasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WrapperClass05MinMaxConstants" />
         <item itemvalue="Application.ExceptionHandling52ThrowNullTrap" />
         <item itemvalue="Application.ExceptionHandling53ExceptionCatchDoesNotCatchError" />
         <item itemvalue="Application.ExceptionHandling03SeparateCatchBlocks" />
         <item itemvalue="Application.ExceptionHandling02CatchOrder" />
-        <item itemvalue="Application.ExceptionHandling01TryCatchBasics" />
       </list>
     </recent_temporary>
   </component>

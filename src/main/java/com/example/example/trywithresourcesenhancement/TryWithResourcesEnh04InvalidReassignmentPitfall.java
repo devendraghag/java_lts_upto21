@@ -1,4 +1,4 @@
-package level03_advanced.jdk09.trywithresourcesenhancement;
+package com.example.example.trywithresourcesenhancement;
 // JDK history: Introduction baseline: JDK 9 (the release bucket for this topic).
 
 

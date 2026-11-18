@@ -1,4 +1,4 @@
-package level03_advanced.jdk15.textblocks;
+package com.example.example.textblocks;
 // JDK history: Introduction baseline: JDK 15 (the release bucket for this topic).
 
 

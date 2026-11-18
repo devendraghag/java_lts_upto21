@@ -1,4 +1,4 @@
-package com.example.varargs;
+package com.example.example.varargs;
 
 import java.util.ArrayList;
 import java.util.List;

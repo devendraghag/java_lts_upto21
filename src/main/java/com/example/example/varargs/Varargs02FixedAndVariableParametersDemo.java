@@ -1,4 +1,4 @@
-package com.example.varargs;
+package com.example.example.varargs;
 
 /** Level 2: put required fixed parameters before the final varargs parameter. */
 public class Varargs02FixedAndVariableParametersDemo {

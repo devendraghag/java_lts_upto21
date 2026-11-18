@@ -1,4 +1,4 @@
-package com.example.varargs;
+package com.example.example.varargs;
 
 /** Level 4: see how Java chooses fixed-arity overloads before varargs overloads. */
 public class Varargs04OverloadResolutionDemo {

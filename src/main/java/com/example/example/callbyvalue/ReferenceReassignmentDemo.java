@@ -1,4 +1,4 @@
-package com.example.callbyvalue;
+package com.example.example.callbyvalue;
 
 /** Demonstrates that reassigning a copied reference does not change the caller's variable. */
 public class ReferenceReassignmentDemo {

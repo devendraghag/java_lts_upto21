@@ -1,4 +1,4 @@
-package com.example.callbyvalue;
+package com.example.example.callbyvalue;
 
 /** Demonstrates that a primitive argument is passed as a copied value. */
 public class PrimitiveValueDemo {

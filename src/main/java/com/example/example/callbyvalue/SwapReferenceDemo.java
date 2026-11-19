@@ -1,4 +1,4 @@
-package com.example.callbyvalue;
+package com.example.example.callbyvalue;
 
 /** Demonstrates why assigning parameter references cannot swap caller variables. */
 public class SwapReferenceDemo {

@@ -1,4 +1,4 @@
-package com.example.callbyvalue;
+package com.example.example.callbyvalue;
 
 /** Demonstrates that a copied object reference can mutate the shared object. */
 public class ObjectMutationDemo {

@@ -1,4 +1,4 @@
-package com.example.blockingqueue;
+package com.example.example.blockingqueue;
 // JDK history: Introduction baseline: JDK 21 (the release bucket for this topic).
 
 import java.util.concurrent.BlockingQueue;

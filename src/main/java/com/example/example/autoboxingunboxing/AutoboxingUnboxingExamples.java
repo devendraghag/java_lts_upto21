@@ -1,4 +1,4 @@
-package com.example.autoboxingunboxing;
+package com.example.example.autoboxingunboxing;
 
 import java.util.ArrayList;
 import java.util.List;

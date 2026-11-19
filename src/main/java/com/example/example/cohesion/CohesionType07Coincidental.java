@@ -1,4 +1,4 @@
-package com.example.cohesion;
+package com.example.example.cohesion;
 // JDK history: Introduced in JDK 1.0; this directory marks the introduction baseline for the topic.
 
 /**

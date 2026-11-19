@@ -1,4 +1,4 @@
-package com.example.breakstatement;
+package com.example.example.breakstatement;
 
 /**
  * Demonstrates Java's unlabeled and labeled break statements, including their

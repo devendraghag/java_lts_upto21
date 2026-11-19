@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Combines shared concrete behavior with a required subclass implementation. */
 public class AbstractClass04ConcreteAndAbstractMethodsDemo {

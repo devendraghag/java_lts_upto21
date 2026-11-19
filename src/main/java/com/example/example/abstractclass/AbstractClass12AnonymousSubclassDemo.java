@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Creates an anonymous subclass to implement an abstract class inline. */
 public class AbstractClass12AnonymousSubclassDemo {

@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Demonstrates a sealed abstract class with a closed set of direct subclasses. */
 public class AbstractClass18SealedHierarchyDemo {

@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** A concrete subclass must implement every inherited abstract method. */
 public class AbstractClass05MultipleMethodsDemo {

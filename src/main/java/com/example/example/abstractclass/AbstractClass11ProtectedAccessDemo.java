@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Abstract methods can use access modifiers; implementations cannot reduce visibility. */
 public class AbstractClass11ProtectedAccessDemo {

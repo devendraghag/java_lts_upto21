@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** A static factory can hide the concrete subclass from callers. */
 public class AbstractClass16FactoryMethodDemo {

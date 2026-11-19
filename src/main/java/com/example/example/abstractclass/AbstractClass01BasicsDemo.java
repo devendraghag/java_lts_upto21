@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Demonstrates an abstract class with shared state, concrete, and abstract methods. */
 public class AbstractClass01BasicsDemo {

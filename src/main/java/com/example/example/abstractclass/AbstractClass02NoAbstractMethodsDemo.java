@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Shows an abstract class may contain no abstract methods. */
 public class AbstractClass02NoAbstractMethodsDemo {

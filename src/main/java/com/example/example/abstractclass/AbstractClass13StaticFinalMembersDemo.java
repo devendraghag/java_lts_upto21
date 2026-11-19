@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Abstract classes may also declare static and final members. */
 public class AbstractClass13StaticFinalMembersDemo {

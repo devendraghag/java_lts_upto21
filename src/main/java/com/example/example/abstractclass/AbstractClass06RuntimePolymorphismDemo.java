@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Abstract references can point to different concrete subclasses. */
 public class AbstractClass06RuntimePolymorphismDemo {

@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Demonstrates an abstract class implementing only part of an interface. */
 public class AbstractClass08ImplementsInterfaceDemo {

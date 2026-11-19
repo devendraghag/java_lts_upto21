@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Generic abstract classes provide reusable behavior over a chosen type. */
 public class AbstractClass14GenericBaseDemo {

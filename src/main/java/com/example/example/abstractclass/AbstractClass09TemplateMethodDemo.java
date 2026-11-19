@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Template method fixes the algorithm order and lets subclasses fill in steps. */
 public class AbstractClass09TemplateMethodDemo {

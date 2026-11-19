@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Java 21: exhaustive pattern matching in switch over a sealed abstract hierarchy. */
 public class AbstractClass19Java21PatternSwitchDemo {

@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Abstract classes have constructors; a subclass constructor calls one with super(...). */
 public class AbstractClass03ConstructorDemo {

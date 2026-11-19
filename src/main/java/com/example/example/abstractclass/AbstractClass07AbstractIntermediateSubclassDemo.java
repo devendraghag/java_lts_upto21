@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Shows an intermediate abstract subclass that leaves work to a concrete class. */
 public class AbstractClass07AbstractIntermediateSubclassDemo {

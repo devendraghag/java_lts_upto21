@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** Common declaration rules; invalid forms are documented in comments below. */
 public class AbstractClass17PitfallsDemo {

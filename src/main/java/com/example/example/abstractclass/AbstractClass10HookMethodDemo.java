@@ -1,4 +1,4 @@
-package com.example.abstractclass;
+package com.example.example.abstractclass;
 
 /** A hook is an overridable concrete method that supplies an optional step. */
 public class AbstractClass10HookMethodDemo {

@@ -1,4 +1,4 @@
-package com.example.collectors;
+package com.example.example.collectors;
 
 import java.util.IntSummaryStatistics;
 import java.util.List;

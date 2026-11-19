@@ -1,4 +1,4 @@
-package com.example.collectors;
+package com.example.example.collectors;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -10,7 +10,13 @@ public class Collectors07SummingInt {
         int total = prices.stream()
                 .collect(Collectors.summingInt(Integer::intValue));
 
-//        int total = prices.stream().mapToInt(Integer::intValue).sum();
+//        int total = prices.stream()
+//                .mapToInt(Integer::intValue)
+//                .sum();
+
+
+//        int total = prices.stream()
+//                .collect(Collectors.summingInt(price -> price));
 
         System.out.println("total price = " + total);
     }

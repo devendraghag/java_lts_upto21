@@ -1,4 +1,4 @@
-package com.example.collectors;
+package com.example.example.collectors;
 
 import java.util.List;
 import java.util.Map;
@@ -20,5 +20,7 @@ public class Collectors12GroupingByCounting {
                         Collectors.counting()));
 
         System.out.println(countByDepartment);
+
+        countByDepartment.forEach((name,count) -> System.out.print(name + "" +  count));
     }
 }

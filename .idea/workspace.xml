@@ -6,203 +6,69 @@
   <component name="ChangeListManager">
     <list default="true" id="fcaf5a4a-e73c-4c82-a4cd-04b6f1822d6d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/helloworldways/HelloWorldEntryPointDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/helloworldways/HelloWorldSourceFileDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/helloworldways/HelloWorldVarargsEntryPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/helloworldways/HelloWorldWaysDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/helloworldways/HelloWorldWriterDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass01BasicsDemo$ElectricCar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass01BasicsDemo$Vehicle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass01BasicsDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass02NoAbstractMethodsDemo$Document.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass02NoAbstractMethodsDemo$PdfDocument.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass02NoAbstractMethodsDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass03ConstructorDemo$Appliance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass03ConstructorDemo$Mixer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass03ConstructorDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass04ConcreteAndAbstractMethodsDemo$RoomSensor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass04ConcreteAndAbstractMethodsDemo$TemperatureSensor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass04ConcreteAndAbstractMethodsDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass05MultipleMethodsDemo$Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass05MultipleMethodsDemo$Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass05MultipleMethodsDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass06RuntimePolymorphismDemo$Email.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass06RuntimePolymorphismDemo$Notification.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass06RuntimePolymorphismDemo$Sms.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass06RuntimePolymorphismDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass07AbstractIntermediateSubclassDemo$Polygon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass07AbstractIntermediateSubclassDemo$Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass07AbstractIntermediateSubclassDemo$Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass07AbstractIntermediateSubclassDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass08ImplementsInterfaceDemo$Exportable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass08ImplementsInterfaceDemo$Report.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass08ImplementsInterfaceDemo$SalesReport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass08ImplementsInterfaceDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass09TemplateMethodDemo$CsvImporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass09TemplateMethodDemo$DataImporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass09TemplateMethodDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass10HookMethodDemo$AuditedReport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass10HookMethodDemo$BasicReport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass10HookMethodDemo$Report.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass10HookMethodDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass11ProtectedAccessDemo$Authenticator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass11ProtectedAccessDemo$BasicAuthenticator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass11ProtectedAccessDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass12AnonymousSubclassDemo$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass12AnonymousSubclassDemo$Greeting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass12AnonymousSubclassDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass13StaticFinalMembersDemo$Developer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass13StaticFinalMembersDemo$Worker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass13StaticFinalMembersDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass14GenericBaseDemo$Box.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass14GenericBaseDemo$StringBox.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass14GenericBaseDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass15CheckedExceptionDemo$MemoryStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass15CheckedExceptionDemo$Store.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass15CheckedExceptionDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass16FactoryMethodDemo$Bike.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass16FactoryMethodDemo$Transport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass16FactoryMethodDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass17PitfallsDemo$CleanupTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass17PitfallsDemo$Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass17PitfallsDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass18SealedHierarchyDemo$CardPayment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass18SealedHierarchyDemo$CashPayment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass18SealedHierarchyDemo$Payment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass18SealedHierarchyDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass19Java21PatternSwitchDemo$Failure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass19Java21PatternSwitchDemo$Outcome.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass19Java21PatternSwitchDemo$Success.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/abstractclass/AbstractClass19Java21PatternSwitchDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/aggregation/AggregationVsCompositionDemo$House.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/aggregation/AggregationVsCompositionDemo$Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/aggregation/AggregationVsCompositionDemo$Room.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/aggregation/AggregationVsCompositionDemo$Team.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/aggregation/AggregationVsCompositionDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/aggregation/BidirectionalManyToManyAggregationDemo$Course.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/aggregation/BidirectionalManyToManyAggregationDemo$Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/aggregation/BidirectionalManyToManyAggregationDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/aggregation/OneToManyAggregationDemo$Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/aggregation/OneToManyAggregationDemo$Team.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/aggregation/OneToManyAggregationDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/aggregation/OneToOneAggregationDemo$Department.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/aggregation/OneToOneAggregationDemo$Manager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/aggregation/OneToOneAggregationDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/AggregationAssociationDemo$Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/AggregationAssociationDemo$Team.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/AggregationAssociationDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/CompositionAssociationDemo$House.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/CompositionAssociationDemo$Room.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/CompositionAssociationDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/ManyToManyAssociationDemo$Course.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/ManyToManyAssociationDemo$Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/ManyToManyAssociationDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/OneToManyAssociationDemo$Department.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/OneToManyAssociationDemo$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/OneToManyAssociationDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/OneToOneAssociationDemo$Passport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/OneToOneAssociationDemo$Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/OneToOneAssociationDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/UnidirectionalAssociationDemo$Playlist.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/UnidirectionalAssociationDemo$Song.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/association/UnidirectionalAssociationDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/autoboxingunboxing/AutoboxingUnboxingExamples.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue01ArrayBasicsPutTake.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue01BasicOperations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue02OfferPollTimeout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue02OfferPollTimeouts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue03LinkedUnboundedVsBounded.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue03ProducerConsumer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue04FairnessOrdering.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue04PriorityBlockingQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue05DelayQueue$DelayedTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue05DelayQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue05PriorityOrderingRecord$Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue05PriorityOrderingRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue06DelayQueueScheduledJobs$DelayedJob.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue06DelayQueueScheduledJobs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue06SynchronousQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue07SynchronousQueueHandoff.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue07TransferQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue08BlockingDeque.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue08TransferVsPut.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue09DrainToBatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue10MultiProducerMultiConsumerVirtualThreads.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue11PoisonPillSealedShutdown$Job.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue11PoisonPillSealedShutdown$Shutdown.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue11PoisonPillSealedShutdown$WorkItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue11PoisonPillSealedShutdown.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue12RecordPatternTaskRouting$Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue12RecordPatternTaskRouting$Event.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue12RecordPatternTaskRouting$OrderEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue12RecordPatternTaskRouting$PaymentEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue12RecordPatternTaskRouting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue13BackpressureBoundedQueueVirtualThreads.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue14ImplementationSelectionSwitch$QueueNeed.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue14ImplementationSelectionSwitch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue15StructuredVirtualThreadPerTaskPipeline$Job.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue15StructuredVirtualThreadPerTaskPipeline$Shutdown.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue15StructuredVirtualThreadPerTaskPipeline$WorkItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blockingqueue/BlockingQueue15StructuredVirtualThreadPerTaskPipeline.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/breakstatement/BreakStatementExamples.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/callbyvalue/ArrayArgumentDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/callbyvalue/ObjectMutationDemo$Box.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/callbyvalue/ObjectMutationDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/callbyvalue/PrimitiveValueDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/callbyvalue/ReferenceReassignmentDemo$Box.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/callbyvalue/ReferenceReassignmentDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/callbyvalue/SwapReferenceDemo$Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/callbyvalue/SwapReferenceDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cohesion/CohesionType01Functional$InvoiceTotalCalculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cohesion/CohesionType01Functional.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cohesion/CohesionType02Sequential$RegistrationPipeline.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cohesion/CohesionType02Sequential.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cohesion/CohesionType03Communicational$CustomerRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cohesion/CohesionType03Communicational.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cohesion/CohesionType04Procedural$LoginProcedure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cohesion/CohesionType04Procedural.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cohesion/CohesionType05Temporal$ApplicationStartup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cohesion/CohesionType05Temporal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cohesion/CohesionType07Coincidental$GeneralUtilityBox.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cohesion/CohesionType07Coincidental.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/completablefuture/CompletableFuture01AlreadyCompletedDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/completablefuture/CompletableFuture02SupplyAsyncDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/completablefuture/CompletableFuture03RunAsyncDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/completablefuture/CompletableFuture04ThenApplyAndAcceptDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/completablefuture/CompletableFuture05ThenComposeDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/completablefuture/CompletableFuture06ThenCombineDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/completablefuture/CompletableFuture07ExceptionRecoveryDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/completablefuture/CompletableFuture08AllOfDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/completablefuture/CompletableFuture09CustomExecutorDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/completablefuture/CompletableFuture10TimeoutFallbackDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/composition/CompositionExamples$Address.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/composition/CompositionExamples$ConsoleMessageSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/composition/CompositionExamples$Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/composition/CompositionExamples$Document.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/composition/CompositionExamples$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/composition/CompositionExamples$Greeter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/composition/CompositionExamples$GreetingStyle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/composition/CompositionExamples$MessageSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/composition/CompositionExamples$NotificationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/composition/CompositionExamples$Section.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/composition/CompositionExamples$Team.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/composition/CompositionExamples.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/helloworldways/HelloWorldEntryPointDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/helloworldways/HelloWorldSourceFileDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/helloworldways/HelloWorldVarargsEntryPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/helloworldways/HelloWorldWaysDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/helloworldways/HelloWorldWriterDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk15/textblocks/TextBlock01BasicSyntax.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk15/textblocks/TextBlock02IndentStrippingBasics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk15/textblocks/TextBlock03QuotesNoEscape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk15/textblocks/TextBlock04TabEscapeSequence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk15/textblocks/TextBlock05BackslashLineContinuation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk15/textblocks/TextBlock06TrailingNewlineLength.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk15/textblocks/TextBlock07VsTraditionalString.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk15/textblocks/TextBlock08SqlQueryUseCase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk15/textblocks/TextBlock09HtmlTemplate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk15/textblocks/TextBlock10JsonBeginner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk15/textblocks/TextBlock12FormattedReport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors01ToList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors01ToList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors02ToSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors02ToSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors03ToCollectionTreeSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors03ToCollectionTreeSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors04ToUnmodifiableList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors04ToUnmodifiableList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors05Joining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors05Joining.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors06Counting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors06Counting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors07SummingInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors07SummingInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors08AveragingInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors08AveragingInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors09SummarizingInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors09SummarizingInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors10Reducing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors10Reducing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors11GroupingBy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors11GroupingBy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors12GroupingByCounting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors12GroupingByCounting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors14PartitioningBy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors14PartitioningBy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors15ToMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors15ToMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors16ToMapMergeFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors16ToMapMergeFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors17ToMapMapSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors17ToMapMapSupplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors18DownstreamMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors18DownstreamMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors19DownstreamFiltering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors19DownstreamFiltering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors20DownstreamFlatMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors20DownstreamFlatMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors21CollectingAndThen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors21CollectingAndThen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors22Teeing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors22Teeing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors01ToList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors02ToSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors03ToCollectionTreeSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors04ToUnmodifiableList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors05Joining.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors06Counting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors07SummingInt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors08AveragingInt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors09SummarizingInt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors10Reducing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors11GroupingBy$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors11GroupingBy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors12GroupingByCounting$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors12GroupingByCounting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors14PartitioningBy$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors14PartitioningBy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors15ToMap$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors15ToMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors16ToMapMergeFunction$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors16ToMapMergeFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors17ToMapMapSupplier$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors17ToMapMapSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors18DownstreamMapping$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors18DownstreamMapping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors19DownstreamFiltering$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors19DownstreamFiltering.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors20DownstreamFlatMapping$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors20DownstreamFlatMapping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors21CollectingAndThen$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors21CollectingAndThen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors22Teeing$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors22Teeing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyof/list/ListCopyOf01SnapshotDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyof/list/ListCopyOf02UnmodifiableListDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyof/list/ListCopyOf03NullElementsDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyof/list/ListCopyOf04MutableCopyDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyonwritearraylist/list/CopyOnWriteArrayList01BasicOperationsDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyonwritearraylist/list/CopyOnWriteArrayList02SnapshotIteratorDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyonwritearraylist/list/CopyOnWriteArrayList03IteratorRemovalDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyonwritearraylist/list/CopyOnWriteArrayList04ConcurrentWritesDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk10/copyofcollections/CopyOfCollections01ListSetMapCopyOf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk10/copyofcollections/CopyOfCollections02CopyOfVsUnmodifiableList.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,61 +96,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="3.745733618672814E-90" />
-      <entry key="S2" value="9.994583978862359E-23" />
-      <entry key="S5" value="3.0823556676330202E-9" />
-      <entry key="S10" value="1.1750741315243374E-4" />
-      <entry key="S30" value="0.32734888210914104" />
-      <entry key="S60" value="3.087389230861254" />
-      <entry key="M2" value="12.510047002574087" />
-      <entry key="M5" value="49.590064018092306" />
-      <entry key="M10" value="101.45969625027271" />
-      <entry key="M15" value="134.10739197116308" />
-      <entry key="M30" value="180.93375078882977" />
-      <entry key="H1" value="211.74386897094735" />
-      <entry key="H2" value="229.82937445660582" />
-      <entry key="H4" value="255.9854923216489" />
-      <entry key="D1" value="701.9170374401009" />
-      <entry key="W1" value="1051.7489161300596" />
+      <entry key="MS100" value="1.1580641989318594" />
+      <entry key="MS500" value="3.2488722717552343" />
+      <entry key="S2" value="8.545695756241994" />
+      <entry key="S5" value="11.755946744415475" />
+      <entry key="S10" value="13.237241092675005" />
+      <entry key="S30" value="14.377604067678764" />
+      <entry key="S60" value="14.684987077794343" />
+      <entry key="M2" value="14.907573919114736" />
+      <entry key="M5" value="16.066645682713435" />
+      <entry key="M10" value="22.75104747766824" />
+      <entry key="M15" value="37.48854957784032" />
+      <entry key="M30" value="91.12885152928357" />
+      <entry key="H1" value="160.49332810055438" />
+      <entry key="H2" value="217.79014618402496" />
+      <entry key="H4" value="269.1307622530489" />
+      <entry key="D1" value="734.6817773674301" />
+      <entry key="W1" value="1097.2845282775968" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0000001398133966" />
-      <entry key="MS500" value="1.0461352725221382" />
-      <entry key="S2" value="1.6985780478655905" />
-      <entry key="S5" value="2.298426049535" />
-      <entry key="S10" value="2.608394452468498" />
-      <entry key="S30" value="2.8590833159619975" />
-      <entry key="S60" value="2.928151876589225" />
-      <entry key="M2" value="2.9637211638061487" />
-      <entry key="M5" value="2.9854023628964486" />
-      <entry key="M10" value="2.9926867504923487" />
-      <entry key="M15" value="2.9951212874564552" />
-      <entry key="M30" value="2.997559035791528" />
-      <entry key="H1" value="2.9987794365990625" />
-      <entry key="H2" value="2.9999559986766" />
-      <entry key="H4" value="3.023496834940057" />
-      <entry key="D1" value="3.5362839112699325" />
-      <entry key="W1" value="3.9148387365288926" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="6.922504378181009E-116" />
+      <entry key="S5" value="9.385923064043944E-47" />
+      <entry key="S10" value="1.3638252417981415E-23" />
+      <entry key="S30" value="5.845407840334608E-8" />
+      <entry key="S60" value="5.264857456001811E-4" />
+      <entry key="M2" value="0.05096551366326985" />
+      <entry key="M5" value="0.8120906552985429" />
+      <entry key="M10" value="2.288817721225499" />
+      <entry key="M15" value="3.5083228517593112" />
+      <entry key="M30" value="5.864126224456399" />
+      <entry key="H1" value="7.907149740302776" />
+      <entry key="H2" value="9.289783406965066" />
+      <entry key="H4" value="10.11932931769074" />
+      <entry key="D1" value="11.367262160021804" />
+      <entry key="W1" value="11.889285927767487" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.988351007741581E-6" />
-      <entry key="MS500" value="0.07889144809452014" />
-      <entry key="S2" value="0.9664287236135494" />
-      <entry key="S5" value="1.8616172902237382" />
-      <entry key="S10" value="2.353809564622208" />
-      <entry key="S30" value="3.0915689717108417" />
-      <entry key="S60" value="5.965680515415845" />
-      <entry key="M2" value="15.44657690079534" />
-      <entry key="M5" value="52.56172165004155" />
-      <entry key="M10" value="104.44378337353076" />
-      <entry key="M15" value="137.09609947735552" />
-      <entry key="M30" value="183.92763041681314" />
-      <entry key="H1" value="214.74065665697088" />
-      <entry key="H2" value="232.8282898908772" />
-      <entry key="H4" value="259.00842267649824" />
-      <entry key="D1" value="705.4530650576675" />
-      <entry key="W1" value="1055.663699591888" />
+      <entry key="MS100" value="0.9825483743927674" />
+      <entry key="MS500" value="3.0295458582245467" />
+      <entry key="S2" value="8.425036394736138" />
+      <entry key="S5" value="11.69172913635124" />
+      <entry key="S10" value="13.201414976048767" />
+      <entry key="S30" value="14.364704201042056" />
+      <entry key="S60" value="14.678911031645933" />
+      <entry key="M2" value="14.954217453070259" />
+      <entry key="M5" value="16.871340418264765" />
+      <entry key="M10" value="25.030484345131157" />
+      <entry key="M15" value="40.98724730061764" />
+      <entry key="M30" value="96.98464659827621" />
+      <entry key="H1" value="168.39467965991176" />
+      <entry key="H2" value="227.07645472321693" />
+      <entry key="H4" value="279.2481518832884" />
+      <entry key="D1" value="746.0485322631722" />
+      <entry key="W1" value="1109.1737220323103" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -304,8 +170,15 @@
     "Application.ArrayBlockingQueueDemo.executor": "Run",
     "Application.Collectors02ToSet.executor": "Run",
     "Application.Collectors03ToCollectionTreeSet.executor": "Run",
+    "Application.Collectors05Joining.executor": "Run",
     "Application.Collectors07SummingInt.executor": "Run",
+    "Application.Collectors10Reducing.executor": "Run",
+    "Application.Collectors11GroupingBy.executor": "Run",
+    "Application.Collectors12GroupingByCounting.executor": "Run",
     "Application.Collectors13GroupingBySummingInt.executor": "Run",
+    "Application.Collectors14PartitioningBy.executor": "Run",
+    "Application.Collectors15ToMap.executor": "Run",
+    "Application.Collectors16ToMapMergeFunction.executor": "Run",
     "Application.Collectors21CollectingAndThen.executor": "Run",
     "Application.Collectors22Teeing.executor": "Run",
     "Application.Comparable01BuiltInOrder.executor": "Run",
@@ -327,6 +200,7 @@
     "Application.FlattenNestedOrderItems.executor": "Run",
     "Application.GroupEmployeesByDepartment.executor": "Run",
     "Application.HelloWorld02Print.executor": "Run",
+    "Application.HelloWorld03FormattedOutput.executor": "Run",
     "Application.MethodReferencePractice.executor": "Run",
     "Application.OptionalCreationAndPresenceDemo.executor": "Run",
     "Application.PaginationWithSkipAndLimit.executor": "Run",
@@ -377,13 +251,13 @@
       <recent name="D:\Devendra Ghag Interview Preparation\01_Java\java_programs_jdk\src\main\java\com\example\docs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HelloWorld03FormattedOutput">
-    <configuration name="ExceptionHandling52ThrowNullTrap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.example.exceptionhandling.ExceptionHandling52ThrowNullTrap" />
+  <component name="RunManager" selected="Application.Collectors22Teeing">
+    <configuration name="Collectors12GroupingByCounting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.example.collectors.Collectors12GroupingByCounting" />
       <module name="java-programs-jdk" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.example.exceptionhandling.*" />
+          <option name="PATTERN" value="com.example.example.collectors.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -391,12 +265,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloWorld02Print" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.example.helloworldways.HelloWorld02Print" />
+    <configuration name="Collectors14PartitioningBy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.example.collectors.Collectors14PartitioningBy" />
       <module name="java-programs-jdk" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.example.helloworldways.*" />
+          <option name="PATTERN" value="com.example.example.collectors.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -404,12 +278,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloWorld03FormattedOutput" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.example.helloworldways.HelloWorld03FormattedOutput" />
+    <configuration name="Collectors15ToMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.example.collectors.Collectors15ToMap" />
       <module name="java-programs-jdk" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.example.helloworldways.*" />
+          <option name="PATTERN" value="com.example.example.collectors.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -417,12 +291,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TextBlock01BasicSyntax" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="level03_advanced.jdk15.textblocks.TextBlock01BasicSyntax" />
+    <configuration name="Collectors16ToMapMergeFunction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.example.collectors.Collectors16ToMapMergeFunction" />
       <module name="java-programs-jdk" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="level03_advanced.jdk15.textblocks.*" />
+          <option name="PATTERN" value="com.example.example.collectors.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -430,12 +304,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WrapperClass05MinMaxConstants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.example.wrapperclasses.WrapperClass05MinMaxConstants" />
+    <configuration name="Collectors22Teeing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.example.collectors.Collectors22Teeing" />
       <module name="java-programs-jdk" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.example.wrapperclasses.*" />
+          <option name="PATTERN" value="com.example.example.collectors.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -445,11 +319,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloWorld03FormattedOutput" />
-        <item itemvalue="Application.HelloWorld02Print" />
-        <item itemvalue="Application.TextBlock01BasicSyntax" />
-        <item itemvalue="Application.WrapperClass05MinMaxConstants" />
-        <item itemvalue="Application.ExceptionHandling52ThrowNullTrap" />
+        <item itemvalue="Application.Collectors22Teeing" />
+        <item itemvalue="Application.Collectors16ToMapMergeFunction" />
+        <item itemvalue="Application.Collectors15ToMap" />
+        <item itemvalue="Application.Collectors14PartitioningBy" />
+        <item itemvalue="Application.Collectors12GroupingByCounting" />
       </list>
     </recent_temporary>
   </component>

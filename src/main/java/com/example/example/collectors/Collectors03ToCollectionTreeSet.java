@@ -1,4 +1,4 @@
-package com.example.collectors;
+package com.example.example.collectors;
 
 import java.util.List;
 import java.util.TreeSet;

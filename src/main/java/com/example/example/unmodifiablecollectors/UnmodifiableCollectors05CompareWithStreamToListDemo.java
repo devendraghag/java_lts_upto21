@@ -1,4 +1,4 @@
-package level03_advanced.jdk10.unmodifiablecollectors;
+package com.example.example.unmodifiablecollectors;
 
 import java.util.List;
 import java.util.stream.Collectors;

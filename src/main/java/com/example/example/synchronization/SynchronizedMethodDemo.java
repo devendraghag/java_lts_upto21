@@ -1,4 +1,4 @@
-package com.example.synchronization;
+package com.example.example.synchronization;
 
 /** Demonstrates mutual exclusion with a synchronized instance method. */
 public class SynchronizedMethodDemo {

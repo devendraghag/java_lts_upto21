@@ -1,4 +1,4 @@
-package com.example.thiskeyword;
+package com.example.example.thiskeyword;
 
 /**
  * Demonstrates common uses of the Java this keyword through JDK 21.

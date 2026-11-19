@@ -1,4 +1,4 @@
-package com.example.switchstatement;
+package com.example.example.switchstatement;
 
 /** Demonstrates arrow labels, multiple labels, and no fall-through (Java 14+). */
 public class ArrowSwitchStatementDemo {

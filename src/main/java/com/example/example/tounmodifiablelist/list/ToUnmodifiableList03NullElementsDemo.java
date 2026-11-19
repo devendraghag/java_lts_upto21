@@ -1,4 +1,4 @@
-package com.example.tounmodifiablelist.list;
+package com.example.example.tounmodifiablelist.list;
 
 import java.util.Arrays;
 import java.util.List;

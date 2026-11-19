@@ -1,4 +1,4 @@
-package level03_advanced.jdk14.switchexpressions;
+package com.example.example.switchexpressions;
 // JDK history: Switch expressions were previewed in JDK 12 and 13, then finalized in JDK 14.
 
 

@@ -1,4 +1,4 @@
-package com.example.synchronization;
+package com.example.example.synchronization;
 
 /** Demonstrates limiting a critical section with a synchronized block. */
 public class SynchronizedBlockDemo {

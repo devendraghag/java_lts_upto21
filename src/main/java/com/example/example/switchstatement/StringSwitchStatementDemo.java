@@ -1,4 +1,4 @@
-package com.example.switchstatement;
+package com.example.example.switchstatement;
 
 /** Demonstrates switching on String values (supported since Java 7). */
 public class StringSwitchStatementDemo {

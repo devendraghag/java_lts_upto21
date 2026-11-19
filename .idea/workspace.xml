@@ -5,70 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcaf5a4a-e73c-4c82-a4cd-04b6f1822d6d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors01ToList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors01ToList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors02ToSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors02ToSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors03ToCollectionTreeSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors03ToCollectionTreeSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors04ToUnmodifiableList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors04ToUnmodifiableList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors05Joining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors05Joining.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors06Counting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors06Counting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors07SummingInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors07SummingInt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors08AveragingInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors08AveragingInt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors09SummarizingInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors09SummarizingInt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors10Reducing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors10Reducing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors11GroupingBy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors11GroupingBy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors12GroupingByCounting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors12GroupingByCounting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors14PartitioningBy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors14PartitioningBy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors15ToMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors15ToMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors16ToMapMergeFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors16ToMapMergeFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors17ToMapMapSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors17ToMapMapSupplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors18DownstreamMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors18DownstreamMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors19DownstreamFiltering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors19DownstreamFiltering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors20DownstreamFlatMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors20DownstreamFlatMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors21CollectingAndThen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors21CollectingAndThen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors22Teeing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/collectors/Collectors22Teeing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors01ToList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors02ToSet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors03ToCollectionTreeSet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors04ToUnmodifiableList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors05Joining.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors06Counting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors07SummingInt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors08AveragingInt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors09SummarizingInt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors10Reducing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors11GroupingBy$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors11GroupingBy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors12GroupingByCounting$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors12GroupingByCounting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors14PartitioningBy$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors14PartitioningBy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors15ToMap$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors15ToMap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors16ToMapMergeFunction$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors16ToMapMergeFunction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors17ToMapMapSupplier$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors17ToMapMapSupplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors18DownstreamMapping$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors18DownstreamMapping.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors19DownstreamFiltering$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors19DownstreamFiltering.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors20DownstreamFlatMapping$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors20DownstreamFlatMapping.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors21CollectingAndThen$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors21CollectingAndThen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors22Teeing$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/collectors/Collectors22Teeing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyof/list/ListCopyOf01SnapshotDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyof/list/ListCopyOf02UnmodifiableListDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyof/list/ListCopyOf03NullElementsDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyof/list/ListCopyOf04MutableCopyDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyonwritearraylist/list/CopyOnWriteArrayList01BasicOperationsDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyonwritearraylist/list/CopyOnWriteArrayList02SnapshotIteratorDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyonwritearraylist/list/CopyOnWriteArrayList03IteratorRemovalDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/copyonwritearraylist/list/CopyOnWriteArrayList04ConcurrentWritesDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk10/copyofcollections/CopyOfCollections01ListSetMapCopyOf.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/level03_advanced/jdk10/copyofcollections/CopyOfCollections02CopyOfVsUnmodifiableList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/AtomicAndVolatileDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/AtomicAndVolatileDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/ClassLevelSynchronizationDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/ClassLevelSynchronizationDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/ReadWriteLockDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/ReadWriteLockDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/ReentrantLockDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/ReentrantLockDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/SemaphoreDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/SemaphoreDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/StampedLockDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/StampedLockDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/SynchronizedBlockDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/SynchronizedBlockDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/SynchronizedMethodDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/SynchronizedMethodDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/WaitNotifyProducerConsumerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/synchronization/WaitNotifyProducerConsumerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/thiskeyword/ThisKeywordExamples.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/thiskeyword/ThisKeywordExamples.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/tounmodifiablelist/list/ToUnmodifiableList01BasicCollectorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/tounmodifiablelist/list/ToUnmodifiableList01BasicCollectorDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/tounmodifiablelist/list/ToUnmodifiableList02BlocksChangesDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/tounmodifiablelist/list/ToUnmodifiableList02BlocksChangesDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/tounmodifiablelist/list/ToUnmodifiableList03NullElementsDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/tounmodifiablelist/list/ToUnmodifiableList03NullElementsDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/tounmodifiablelist/list/ToUnmodifiableList04MutableCopyDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/tounmodifiablelist/list/ToUnmodifiableList04MutableCopyDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiable/list/UnmodifiableList01BackedViewDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiable/list/UnmodifiableList01BackedViewDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiable/list/UnmodifiableList02BlocksChangesDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiable/list/UnmodifiableList02BlocksChangesDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiable/list/UnmodifiableList03NullElementsDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiable/list/UnmodifiableList03NullElementsDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiable/list/UnmodifiableList04MutableCopyDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiable/list/UnmodifiableList04MutableCopyDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors01ListDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors01ListDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors01ListSetMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors01ListSetMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors02CollectorVsStreamToList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors02CollectorVsStreamToList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors02SetDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors02SetDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors03MapDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors03MapDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors04DuplicateKeysDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors04DuplicateKeysDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors05CompareWithStreamToListDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors05CompareWithStreamToListDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors06EmptyAndNullDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/unmodifiablecollectors/UnmodifiableCollectors06EmptyAndNullDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/example/whileloops/WhileLoopExamples.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/example/whileloops/WhileLoopExamples.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,61 +59,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.1580641989318594" />
-      <entry key="MS500" value="3.2488722717552343" />
-      <entry key="S2" value="8.545695756241994" />
-      <entry key="S5" value="11.755946744415475" />
-      <entry key="S10" value="13.237241092675005" />
-      <entry key="S30" value="14.377604067678764" />
-      <entry key="S60" value="14.684987077794343" />
-      <entry key="M2" value="14.907573919114736" />
-      <entry key="M5" value="16.066645682713435" />
-      <entry key="M10" value="22.75104747766824" />
-      <entry key="M15" value="37.48854957784032" />
-      <entry key="M30" value="91.12885152928357" />
-      <entry key="H1" value="160.49332810055438" />
-      <entry key="H2" value="217.79014618402496" />
-      <entry key="H4" value="269.1307622530489" />
-      <entry key="D1" value="734.6817773674301" />
-      <entry key="W1" value="1097.2845282775968" />
+      <entry key="MS100" value="1.6316982280537975" />
+      <entry key="MS500" value="2.565394374477107" />
+      <entry key="S2" value="3.6258855238786594" />
+      <entry key="S5" value="6.883429625795087" />
+      <entry key="S10" value="13.062673289800449" />
+      <entry key="S30" value="26.2355199103893" />
+      <entry key="S60" value="35.42834277138194" />
+      <entry key="M2" value="44.350764576333376" />
+      <entry key="M5" value="53.685671901264804" />
+      <entry key="M10" value="63.06302873143747" />
+      <entry key="M15" value="77.78815369260926" />
+      <entry key="M30" value="130.7968275133455" />
+      <entry key="H1" value="201.04376270520345" />
+      <entry key="H2" value="260.11327452559476" />
+      <entry key="H4" value="312.866377983635" />
+      <entry key="D1" value="779.6682973176142" />
+      <entry key="W1" value="1143.0689855453743" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="6.922504378181009E-116" />
-      <entry key="S5" value="9.385923064043944E-47" />
-      <entry key="S10" value="1.3638252417981415E-23" />
-      <entry key="S30" value="5.845407840334608E-8" />
-      <entry key="S60" value="5.264857456001811E-4" />
-      <entry key="M2" value="0.05096551366326985" />
-      <entry key="M5" value="0.8120906552985429" />
-      <entry key="M10" value="2.288817721225499" />
-      <entry key="M15" value="3.5083228517593112" />
-      <entry key="M30" value="5.864126224456399" />
-      <entry key="H1" value="7.907149740302776" />
-      <entry key="H2" value="9.289783406965066" />
-      <entry key="H4" value="10.11932931769074" />
-      <entry key="D1" value="11.367262160021804" />
-      <entry key="W1" value="11.889285927767487" />
+      <entry key="S2" value="1.7368780143430813E-141" />
+      <entry key="S5" value="5.398578509045063E-57" />
+      <entry key="S10" value="1.0343319496696392E-28" />
+      <entry key="S30" value="1.1484582794053322E-9" />
+      <entry key="S60" value="7.379667930880361E-5" />
+      <entry key="M2" value="0.019081016495423448" />
+      <entry key="M5" value="0.5481943480917869" />
+      <entry key="M10" value="1.8805125131230789" />
+      <entry key="M15" value="3.0775815220881975" />
+      <entry key="M30" value="5.492351413267063" />
+      <entry key="H1" value="7.652396539292967" />
+      <entry key="H2" value="9.138908731695448" />
+      <entry key="H4" value="10.03681930249217" />
+      <entry key="D1" value="11.351761867505417" />
+      <entry key="W1" value="11.886968556116988" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9825483743927674" />
-      <entry key="MS500" value="3.0295458582245467" />
-      <entry key="S2" value="8.425036394736138" />
-      <entry key="S5" value="11.69172913635124" />
-      <entry key="S10" value="13.201414976048767" />
-      <entry key="S30" value="14.364704201042056" />
-      <entry key="S60" value="14.678911031645933" />
-      <entry key="M2" value="14.954217453070259" />
-      <entry key="M5" value="16.871340418264765" />
-      <entry key="M10" value="25.030484345131157" />
-      <entry key="M15" value="40.98724730061764" />
-      <entry key="M30" value="96.98464659827621" />
-      <entry key="H1" value="168.39467965991176" />
-      <entry key="H2" value="227.07645472321693" />
-      <entry key="H4" value="279.2481518832884" />
-      <entry key="D1" value="746.0485322631722" />
-      <entry key="W1" value="1109.1737220323103" />
+      <entry key="MS100" value="1.496914442786689" />
+      <entry key="MS500" value="2.524596359550938" />
+      <entry key="S2" value="3.611364669225184" />
+      <entry key="S5" value="6.871700376383242" />
+      <entry key="S10" value="13.05038211446414" />
+      <entry key="S30" value="26.22526987671628" />
+      <entry key="S60" value="35.42024548614971" />
+      <entry key="M2" value="44.363691872486775" />
+      <entry key="M5" value="54.22676862830169" />
+      <entry key="M10" value="64.93472521992824" />
+      <entry key="M15" value="80.8565396386565" />
+      <entry key="M30" value="136.2809931375424" />
+      <entry key="H1" value="208.69035475161635" />
+      <entry key="H2" value="269.2486678335566" />
+      <entry key="H4" value="322.90122481030636" />
+      <entry key="D1" value="791.019544496761" />
+      <entry key="W1" value="1154.9558607866347" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{

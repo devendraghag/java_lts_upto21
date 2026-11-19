@@ -1,4 +1,4 @@
-package com.example.synchronization;
+package com.example.example.synchronization;
 
 /** Demonstrates wait/notifyAll with a condition checked in a loop. */
 public class WaitNotifyProducerConsumerDemo {

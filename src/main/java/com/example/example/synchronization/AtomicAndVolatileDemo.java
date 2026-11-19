@@ -1,4 +1,4 @@
-package com.example.synchronization;
+package com.example.example.synchronization;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

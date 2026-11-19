@@ -1,4 +1,4 @@
-package com.example.switchstatement;
+package com.example.example.switchstatement;
 
 /** Demonstrates the traditional colon-label switch statement. */
 public class ClassicSwitchStatementDemo {

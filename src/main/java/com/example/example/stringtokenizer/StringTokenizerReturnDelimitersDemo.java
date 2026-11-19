@@ -1,4 +1,4 @@
-package com.example.stringtokenizer;
+package com.example.example.stringtokenizer;
 
 import java.util.Enumeration;
 import java.util.StringTokenizer;

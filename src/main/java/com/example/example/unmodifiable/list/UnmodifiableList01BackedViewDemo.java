@@ -1,4 +1,4 @@
-package com.example.unmodifiable.list;
+package com.example.example.unmodifiable.list;
 
 import java.util.ArrayList;
 import java.util.Collections;

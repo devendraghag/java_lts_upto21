@@ -1,4 +1,4 @@
-package com.example.synchronization;
+package com.example.example.synchronization;
 
 /** Demonstrates class-level locking with a static synchronized method. */
 public class ClassLevelSynchronizationDemo {

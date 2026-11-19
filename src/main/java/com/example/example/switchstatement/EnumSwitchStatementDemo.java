@@ -1,4 +1,4 @@
-package com.example.switchstatement;
+package com.example.example.switchstatement;
 
 /** Demonstrates switching on enum constants. */
 public class EnumSwitchStatementDemo {

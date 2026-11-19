@@ -1,4 +1,4 @@
-package com.example.whileloops;
+package com.example.example.whileloops;
 
 /**
  * Demonstrates while-loop forms and common control-flow techniques in Java.

@@ -1,4 +1,4 @@
-package com.example.switchstatement;
+package com.example.example.switchstatement;
 
 /** Demonstrates pattern matching and guarded cases in switch statements (final in Java 21). */
 public class PatternMatchingSwitchStatementDemo {

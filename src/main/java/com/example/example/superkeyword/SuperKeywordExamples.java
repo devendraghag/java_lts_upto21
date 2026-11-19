@@ -1,4 +1,4 @@
-package com.example.superkeyword;
+package com.example.example.superkeyword;
 
 /**
  * Demonstrates common uses of Java's super keyword through JDK 21.

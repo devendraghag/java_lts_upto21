@@ -1,4 +1,4 @@
-package com.example.switchstatement;
+package com.example.example.switchstatement;
 
 /** Demonstrates intentional fall-through and explicit break in classic switch statements. */
 public class FallThroughSwitchStatementDemo {
